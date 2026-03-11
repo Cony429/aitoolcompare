@@ -2,9 +2,11 @@ const apiKey = 'pub_22d0f1b1183945bebaff43a1f9acbe04';
 const newsContainer = document.getElementById('news-container');
 
 async function getNews() {
+    newsContainer.innerHTML = '<div class="loader"></div>';
     try {
-        const response = await fetch(`https://newsdata.io/api/1/news?apikey=${apiKey}&language=en`);
+        const response = await fetch(`https://newsdata.io/api/1/latest?apikey=${apiKey}&language=en`);
         const data = await response.json();
+        newsContainer.innerHTML = '';
 
         if (data.results) {
             data.results.forEach(article => {
