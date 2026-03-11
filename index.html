@@ -3,12 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>AI Tool Comparator</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <h1>Hottest AI Tools</h1>
+  <div class="container">
+    <div class="tool">
+      <h2>Tool 1: Gemini</h2>
+      <p>A powerful, multimodal AI model from Google.</p>
+      <button onclick="showDescription('gemini')">Learn More</button>
+    </div>
+    <div class="tool">
+      <h2>Tool 2: ChatGPT</h2>
+      <p>A large language model from OpenAI.</p>
+      <button onclick="showDescription('chatgpt')">Learn More</button>
+    </div>
+    <div class="tool">
+      <h2>Tool 3: Copilot</h2>
+      <p>An AI-powered code assistant from GitHub and Microsoft.</p>
+      <button onclick="showDescription('copilot')">Learn More</button>
+    </div>
+  </div>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
