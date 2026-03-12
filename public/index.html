@@ -5,24 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tool Compare - Discover & Compare</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .t-tags { text-align: center; }
-        .tag {
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: capitalize;
-        }
-        .tag.free { background-color: #e6f4ea; color: #34a853; }
-        .tag.paid { background-color: #fce8e6; color: #ea4335; }
-        .tag.beta { background-color: #e8f0fe; color: #4285f4; }
-        .tool-row { 
-            display: grid; grid-template-columns: 1.5fr 3.5fr 1fr 0.8fr 1.2fr; 
-            align-items: center; background: white; padding: 20px; 
-            border-radius: 12px; margin-bottom: 10px; border: 1px solid #eee;
-        }
-    </style>
 </head>
 <body>
 
@@ -37,17 +19,20 @@
     </header>
 
     <div class="hero">
-        <h1>Find Your AI from Top 50+ Directory</h1>
+        <h1>가장 적합한 AI를 찾아보세요</h1>
+        <p>다양한 AI 도구를 비교하고 최고의 선택을 하세요.</p>
         <div class="search-container">
-            <input type="text" id="search-input" placeholder="Try 'video', 'image', 'text', 'coding'...">
+            <input type="text" id="search-input" class="search-bar" placeholder="Try 'video', 'image', 'text', 'coding'...">
             <button id="search-btn">Search</button>
         </div>
     </div>
 
-    <div class="list-area">
-        <h2 style="text-align: center; margin-bottom: 30px;">Top AI Tools Directory</h2>
-        <div id="tool-display"></div>
-    </div>
+    <main>
+        <div class="list-area">
+            <h2>Top AI Tools Directory</h2>
+            <div id="tool-display"></div>
+        </div>
+    </main>
 
     <script>
         const aiTools = [
