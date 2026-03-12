@@ -5,170 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tool Compare - Discover & Compare</title>
     <style>
-        /* 기본 스타일 */
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; color: #333; }
-        
-        /* 헤더: 사용자님이 요청하신 가운데 정렬 복구 */
-        header { 
-            text-align: center; 
-            padding: 40px 20px; 
-            background: white; 
-            border-bottom: 1px solid #eee; 
-        }
-        header .logo { 
-            font-size: 2.5rem; 
-            font-weight: 800; 
-            color: #007bff; 
-            text-decoration: none;
-            display: block;
-            margin-bottom: 20px;
-        }
-        header nav { 
-            display: flex; 
-            justify-content: center; 
-            gap: 30px; 
-        }
-        header nav a { 
-            text-decoration: none; 
-            color: #666; 
-            font-weight: 600; 
-            font-size: 1.1rem;
-        }
+        header { text-align: center; padding: 40px 20px; background: white; border-bottom: 1px solid #eee; }
+        header .logo { font-size: 2.5rem; font-weight: 800; color: #007bff; text-decoration: none; display: block; margin-bottom: 20px; }
+        header nav { display: flex; justify-content: center; gap: 30px; }
+        header nav a { text-decoration: none; color: #555; font-size: 1rem; font-weight: 500; transition: color 0.3s; }
         header nav a:hover { color: #007bff; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        
+        /* 검색창 & 버튼 스타일 */
+        .search-wrapper { display: flex; margin-bottom: 40px; }
+        #search-input {
+            flex-grow: 1;
+            padding: 15px 20px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px 0 0 8px;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        #search-input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+        }
+        #search-button {
+            padding: 0 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #search-button:hover { background-color: #0056b3; }
 
-        /* 검색창 */
-        .hero { padding: 40px 5%; text-align: center; }
-        .search-box { max-width: 600px; margin: 0 auto; }
-        #search-input { 
-            width: 100%; padding: 18px 25px; border-radius: 50px; 
-            border: 2px solid #ddd; font-size: 1.1rem; outline: none;
-            transition: 0.3s;
-        }
-        #search-input:focus { border-color: #007bff; box-shadow: 0 0 10px rgba(0,123,255,0.1); }
-
-        /* 비교 배틀 카드 */
-        .section-h2 { text-align: center; margin: 50px 0 30px; font-size: 2rem; }
-        .battle-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-            gap: 25px; padding: 0 5% 50px; 
-        }
-        .battle-card { 
-            background: white; border-radius: 15px; padding: 25px; 
-            text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: 0.3s; border: 1px solid #eee;
-        }
-        .battle-card:hover { transform: translateY(-7px); }
-        .vs-tag { color: #ff4757; font-weight: 900; margin: 0 10px; }
-        .btn-compare { 
-            display: inline-block; margin-top: 15px; color: #007bff; 
-            text-decoration: none; font-weight: bold; 
-        }
-
-        /* Top 10 한 줄 리스트 */
-        .list-container { max-width: 1100px; margin: 0 auto 100px; padding: 0 20px; }
-        .tool-row { 
-            display: grid; 
-            grid-template-columns: 1.5fr 3.5fr 0.8fr 1.2fr; 
-            align-items: center; 
-            background: white; 
-            padding: 20px 25px; 
-            border-radius: 12px;
-            margin-bottom: 15px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-            border: 1px solid #eee;
-        }
-        .t-name { font-weight: bold; font-size: 1.2rem; }
-        .t-desc { color: #777; font-size: 0.95rem; }
-        .t-star { color: #f1c40f; font-weight: bold; text-align: center; }
-        .t-link { 
-            background: #007bff; color: white; padding: 12px; 
-            border-radius: 8px; text-decoration: none; text-align: center; 
-            font-size: 0.9rem; font-weight: bold; transition: 0.2s;
-        }
-        .t-link:hover { background: #0056b3; }
-
-        @media (max-width: 850px) {
-            .tool-row { grid-template-columns: 1fr; text-align: center; gap: 15px; }
-        }
+        /* 도구 리스트 스타일 */
+        #list { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        .list-row { display: flex; align-items: center; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; }
+        .list-row:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .list-row img { width: 50px; height: 50px; border-radius: 6px; margin-right: 20px; }
+        .list-row .info { flex-grow: 1; }
+        .list-row .info h2 { font-size: 1.25rem; margin: 0 0 5px 0; }
+        .list-row .info p { margin: 0; color: #666; font-size: 0.95rem; }
+        .list-row .stars { font-size: 1.1rem; color: #ffc107; margin: 0 20px; }
+        .list-row .visit-btn { text-decoration: none; background-color: #e9ecef; color: #333; padding: 10px 20px; border-radius: 5px; font-weight: 600; transition: background-color 0.3s, color 0.3s; }
+        .list-row .visit-btn:hover { background-color: #007bff; color: white; }
     </style>
 </head>
 <body>
-
     <header>
-        <a href="index.html" class="logo">AI Tool Compare</a>
+        <a href="/" class="logo">AI Tool Compare</a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="news.html">News</a>
-            <a href="free-ai-tools.html">Free Tools</a>
-            <a href="compare.html">Compare</a>
+            <a href="#">Reviews</a>
+            <a href="#">Top Lists</a>
+            <a href="#">News</a>
+            <a href="#">Submit Tool</a>
         </nav>
     </header>
 
-    <div class="hero">
-        <h1>Find Your Perfect AI Partner</h1>
-        <div class="search-box">
-            <input type="text" id="search-input" placeholder="Search AI tools (e.g. ChatGPT, Midjourney)...">
+    <div class="container">
+        <div class="search-wrapper">
+            <input type="text" id="search-input" placeholder="Try 'image', 'video', 'code' or tool name...">
+            <button id="search-button">Search</button>
         </div>
-    </div>
-
-    <h2 class="section-h2">Head-to-Head Battles</h2>
-    <div class="battle-grid">
-        <div class="battle-card"><h3>ChatGPT <span class="vs-tag">VS</span> Claude</h3><a href="chatgpt-vs-claude.html" class="btn-compare">Read Comparison →</a></div>
-        <div class="battle-card"><h3>Midjourney <span class="vs-tag">VS</span> DALL-E</h3><a href="#" class="btn-compare">Read Comparison →</a></div>
-        <div class="battle-card"><h3>Jasper <span class="vs-tag">VS</span> Copy.ai</h3><a href="#" class="btn-compare">Read Comparison →</a></div>
-        <div class="battle-card"><h3>Perplexity <span class="vs-tag">VS</span> Google</h3><a href="#" class="btn-compare">Read Comparison →</a></div>
-        <div class="battle-card"><h3>Sora <span class="vs-tag">VS</span> Runway</h3><a href="#" class="btn-compare">Read Comparison →</a></div>
-    </div>
-
-    <div class="list-container">
-        <h2 class="section-h2">Top 10 AI Tools Directory</h2>
-        <div id="target-list">
-            </div>
+        <div id="list"></div>
     </div>
 
     <script>
         const myTools = [
-            { name: "ChatGPT", desc: "The gold standard for AI conversation and coding.", rate: "4.9", url: "https://chat.openai.com" },
-            { name: "Claude", desc: "Best for natural writing and nuanced reasoning.", rate: "4.8", url: "https://claude.ai" },
-            { name: "Gemini", desc: "Google's smart assistant with deep ecosystem links.", rate: "4.7", url: "https://gemini.google.com" },
-            { name: "Midjourney", desc: "Stunning high-quality artistic image generation.", rate: "4.9", url: "https://midjourney.com" },
-            { name: "Jasper", desc: "Professional AI suite for marketing and business.", rate: "4.6", url: "https://jasper.ai" },
-            { name: "Canva AI", desc: "Intuitive AI design tools for everyone.", rate: "4.5", url: "https://canva.com" },
-            { name: "Perplexity", desc: "AI search engine with real-time source citations.", rate: "4.8", url: "https://perplexity.ai" },
-            { name: "Notion AI", desc: "Write and organize faster inside your Notion pages.", rate: "4.7", url: "https://notion.so" },
-            { name: "Leonardo.ai", desc: "Advanced creative platform for digital assets.", rate: "4.7", url: "https://leonardo.ai" },
-            { name: "ElevenLabs", desc: "Incredible AI voice cloning and speech synthesis.", rate: "4.9", url: "https://elevenlabs.io" }
+            { name: "ChatGPT", desc: "Advanced conversational AI for various tasks.", stars: 5, url: "#", img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=50", tags: ['text', 'chat', 'writing', 'coding', 'productivity', 'assistant', 'openai'] },
+            { name: "Midjourney", desc: "Generates high-quality, artistic images from text prompts.", stars: 5, url: "#", img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=50", tags: ['image', 'art', 'design', 'creative', 'drawing', 'graphics', 'visuals', 'generator'] },
+            { name: "Leonardo.ai", desc: "Create production-quality assets for your creative projects.", stars: 4, url: "#", img: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=50", tags: ['image', 'art', 'design', 'creative', 'drawing', 'assets', 'gaming', 'generator'] },
+            { name: "Sora", desc: "OpenAI's model that can create realistic and imaginative scenes from text instructions.", stars: 5, url: "#", img: "https://images.unsplash.com/photo-1621155346337-7d1947ea715d?w=50", tags: ['video', 'animation', 'movie', 'motion', 'film', 'scenery', 'generator', 'openai'] },
+            { name: "Runway", desc: "AI-powered video creation and editing suite for creators.", stars: 4, url: "#", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=50", tags: ['video', 'animation', 'editing', 'motion', 'vfx', 'generator', 'film', 'magic tools'] },
+            { name: "Perplexity AI", desc: "An AI-powered research and conversational search engine.", stars: 4, url: "#", img: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=50", tags: ['search', 'research', 'answer', 'information', 'knowledge', 'engine', 'conversational', 'ask'] },
+            { name: "Gemini", desc: "Google's most capable and versatile multimodal AI model.", stars: 4, url: "#", img: "https://images.unsplash.com/photo-1675271591211-126ad94e495d?w=50", tags: ['search', 'research', 'answer', 'information', 'multimodal', 'google', 'chat', 'bard'] },
+            { name: "ElevenLabs", desc: "The most realistic and versatile AI speech software, ever.", stars: 5, url: "#", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=50", tags: ['audio', 'voice', 'speech', 'sound', 'narration', 'dubbing', 'tts', 'cloning'] },
+            { name: "Jasper", desc: "AI Content Generator for marketing, blog posts, and more.", stars: 4, url: "#", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=50", tags: ['writing', 'marketing', 'copywriting', 'content', 'seo', 'automation', 'business'] },
+            { name: "Notion AI", desc: "Integrated AI assistant to help you write, plan, and organize.", stars: 4, url: "#", img: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=50", tags: ['productivity', 'writing', 'organization', 'notes', 'workspace', 'assistant', 'database'] }
         ];
 
-        function drawList(filter = "") {
-            const listDiv = document.getElementById('target-list');
-            listDiv.innerHTML = "";
-            
-            const filtered = myTools.filter(t => t.name.toLowerCase().includes(filter.toLowerCase()));
-            
-            if(filtered.length === 0) {
-                listDiv.innerHTML = "<p style='text-align:center;'>No tools found.</p>";
-                return;
-            }
+        const listDiv = document.getElementById('list');
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
 
-            filtered.forEach(item => {
-                const row = document.createElement('div');
-                row.className = "tool-row";
-                row.innerHTML = `
-                    <div class="t-name">${item.name}</div>
-                    <div class="t-desc">${item.desc}</div>
-                    <div class="t-star">⭐ ${item.rate}</div>
-                    <a href="${item.url}" target="_blank" class="t-link">Visit Website</a>
-                `;
-                listDiv.appendChild(row);
-            });
+        function drawList(query) {
+            listDiv.innerHTML = "";
+            const searchTerm = (query || '').toLowerCase().trim();
+
+            myTools
+                .filter(tool => {
+                    if (!searchTerm) return true; // Show all if search is empty
+                    const nameMatch = tool.name.toLowerCase().includes(searchTerm);
+                    const descMatch = tool.desc.toLowerCase().includes(searchTerm);
+                    const tagsMatch = tool.tags.some(tag => tag.toLowerCase().includes(searchTerm));
+                    return nameMatch || descMatch || tagsMatch;
+                })
+                .forEach(tool => {
+                    const row = document.createElement('div');
+                    row.className = 'list-row';
+                    
+                    let starRating = Array(5).fill('☆');
+                    for(let i=0; i < tool.stars; i++) {
+                        starRating[i] = '★';
+                    }
+
+                    row.innerHTML = `
+                        <img src="${tool.img}" alt="${tool.name} logo">
+                        <div class="info">
+                            <h2>${tool.name}</h2>
+                            <p>${tool.desc}</p>
+                        </div>
+                        <div class="stars">${starRating.join('')}</div>
+                        <a href="${tool.url}" target="_blank" class="visit-btn">Visit</a>
+                    `;
+                    listDiv.appendChild(row);
+                });
         }
 
-        // 검색 이벤트
-        document.getElementById('search-input').addEventListener('input', (e) => drawList(e.target.value));
+        function performSearch() {
+            drawList(searchInput.value);
+        }
 
-        // 시작하자마자 그리기
+        // Search event listeners
+        searchButton.addEventListener('click', performSearch);
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // Initial draw
         drawList();
     </script>
 </body>
