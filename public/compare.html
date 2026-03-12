@@ -4,42 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tool Comparison - Interactive & Battles</title>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; color: #333; }
-        
-        /* 통일된 가운데 정렬 헤더 */
-        header { text-align: center; padding: 40px 20px; background: white; border-bottom: 1px solid #eee; }
-        header .logo { font-size: 2.5rem; font-weight: 800; color: #007bff; text-decoration: none; display: block; margin-bottom: 20px; }
-        header nav { display: flex; justify-content: center; gap: 30px; }
-        header nav a { text-decoration: none; color: #666; font-weight: 600; font-size: 1.1rem; }
-        header nav a:hover { color: #007bff; }
-
-        /* 비교 빌더 섹션 */
-        .compare-hero { padding: 60px 5%; text-align: center; background: white; }
-        .builder-box { max-width: 800px; margin: 0 auto; padding: 40px; background: #fff; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
-        .select-group { display: flex; gap: 20px; justify-content: center; align-items: center; margin-bottom: 30px; }
-        select { padding: 15px; border-radius: 10px; border: 1px solid #ddd; font-size: 1rem; width: 250px; outline: none; background: white; }
-        .vs-badge { background: #ff4757; color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
-        #compare-btn { padding: 15px 50px; background: #007bff; color: white; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1.1rem; }
-
-        /* 비교 결과 표 */
-        #result-display-area { max-width: 900px; margin: 40px auto; padding: 0 20px; display: none; }
-        .result-table { width: 100%; border-collapse: collapse; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        .result-table th { background: #007bff; color: white; padding: 20px; }
-        .result-table td { padding: 18px; border-bottom: 1px solid #eee; text-align: center; }
-        .feature-name { font-weight: bold; background: #f8f9fa; text-align: left !important; width: 30%; }
-
-        /* Head-to-Head Battles (복구된 디자인) */
-        .battle-section { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
-        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
-        .battle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
-        .battle-card { background: white; border: 1px solid #eee; padding: 30px; border-radius: 15px; text-align: center; transition: 0.3s; }
-        .battle-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .vs-tag { color: #ff4757; font-weight: bold; font-size: 1.2rem; }
-        .battle-link { display: inline-block; margin-top: 15px; color: #007bff; text-decoration: none; font-weight: bold; }
-
-        @media (max-width: 768px) { .select-group { flex-direction: column; } select { width: 100%; } }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
