@@ -9,23 +9,34 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; color: #333; }
         
-        /* 사용자님의 가운데 정렬 헤더 디자인 보존 */
-        header { text-align: center; padding: 40px 20px; background: white; border-bottom: 1px solid #eee; }
-        header .logo { font-size: 2.5rem; font-weight: 800; color: #007bff; text-decoration: none; display: block; margin-bottom: 20px; }
-        header nav { display: flex; justify-content: center; gap: 30px; }
-        header nav a { text-decoration: none; color: #666; font-weight: 600; font-size: 1.1rem; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header {
+            background: white;
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo { font-size: 1.5rem; font-weight: 800; color: #007bff; text-decoration: none; }
+        header nav { display: flex; gap: 30px; }
+        header nav a { text-decoration: none; color: #666; font-weight: 600; font-size: 1rem; }
         header nav a:hover { color: #007bff; }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">AI Tool Compare</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="compare.html">Compare</a>
-            <a href="free-ai-tools.html">AI Tools</a>
-            <a href="news.html">News</a>
-        </nav>
+        <div class="container">
+            <a href="index.html" class="logo">AI Tool Compare</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="compare.html">Compare</a>
+                <a href="free-ai-tools.html">AI Tools</a>
+                <a href="news.html">News</a>
+            </nav>
+        </div>
     </header>
     <main>
         <h1>Latest News</h1>
