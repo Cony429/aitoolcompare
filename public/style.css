@@ -113,11 +113,25 @@ h1 {
 }
 
 .tag {
-    background-color: #eee;
     padding: 0.45rem 0.9rem;
     border-radius: 10px;
     font-size: 0.8rem;
     margin-right: 0.75rem;
+}
+
+.tag.free {
+    background-color: #e6f4ea;
+    color: #34a853;
+}
+
+.tag.paid {
+    background-color: #fce8e6;
+    color: #ea4335;
+}
+
+.tag.beta {
+    background-color: #e8f0fe;
+    color: #4285f4;
 }
 
 .more-tools-btn {
