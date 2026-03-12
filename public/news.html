@@ -3,30 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI News - AI Tool Compare</title>
+    <title>Latest News</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        header { text-align: center; padding: 40px 20px; background: white; border-bottom: 1px solid #eee; }
-        header .logo { font-size: 2.5rem; font-weight: 800; color: #007bff; text-decoration: none; display: block; margin-bottom: 20px; }
-        header nav { display: flex; justify-content: center; gap: 30px; }
-        header nav a { text-decoration: none; color: #666; font-weight: 600; font-size: 1.1rem; }
-        header nav a:hover { color: #007bff; }
-    </style>
+    <link rel="stylesheet" href="news.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">AI Tool Compare</a>
+        <div class="logo">AIToolCompare</div>
         <nav>
             <a href="index.html">Home</a>
             <a href="news.html">News</a>
-            <a href="free-ai-tools.html">Free Tools</a>
-            <a href="compare.html">Compare</a>
+            <a href="free-ai-tools.html">Free AI Tools</a>
+            <a href="compare.html">Interactive Compare</a>
         </nav>
+        <a href="#" class="subscribe-btn">Subscribe</a>
     </header>
-
-    <main class="container">
-        <h1>Latest AI News</h1>
-        <p>Coming soon...</p>
+    <main>
+        <h1>Latest News</h1>
+        <div id="news-container"></div>
     </main>
+    <script src="news.js"></script>
 </body>
 </html>
