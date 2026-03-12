@@ -4,40 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tool Compare - Discover & Compare</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; color: #333; }
-        
-        /* 사용자님의 가운데 정렬 헤더 디자인 보존 */
         header { text-align: center; padding: 40px 20px; background: white; border-bottom: 1px solid #eee; }
         header .logo { font-size: 2.5rem; font-weight: 800; color: #007bff; text-decoration: none; display: block; margin-bottom: 20px; }
         header nav { display: flex; justify-content: center; gap: 30px; }
         header nav a { text-decoration: none; color: #666; font-weight: 600; font-size: 1.1rem; }
         header nav a:hover { color: #007bff; }
-
-        /* 검색 섹션 */
-        .hero { padding: 40px 5%; text-align: center; }
-        .search-container { max-width: 700px; margin: 0 auto; display: flex; gap: 10px; justify-content: center; }
-        #search-input { flex: 1; padding: 15px 25px; border-radius: 30px; border: 2px solid #ddd; font-size: 1.1rem; outline: none; }
-        #search-btn { padding: 15px 30px; background: #007bff; color: white; border: none; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 1.1rem; }
-        #search-btn:hover { background: #0056b3; }
-
-        /* 한 줄 리스트 디자인 */
-        .list-area { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
-        .tool-row { 
-            display: grid; grid-template-columns: 1.5fr 3.5fr 0.8fr 1.2fr; 
-            align-items: center; background: white; padding: 20px; 
-            border-radius: 12px; margin-bottom: 10px; border: 1px solid #eee;
-        }
-        .t-name { font-weight: bold; font-size: 1.2rem; }
-        .t-desc { color: #777; font-size: 0.95rem; padding-right: 10px; }
-        .t-rating { color: #f1c40f; font-weight: bold; text-align: center; }
-        .visit-link { background: #007bff; color: white; padding: 10px; border-radius: 8px; text-decoration: none; text-align: center; font-weight: bold; }
-
-        @media (max-width: 850px) { .tool-row { grid-template-columns: 1fr; text-align: center; gap: 15px; } }
+        .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .tool-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .tool-card h3 { margin-top: 0; }
+        .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+        .tag { background: #eee; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-
     <header>
         <a href="index.html" class="logo">AI Tool Compare</a>
         <nav>
@@ -48,85 +29,131 @@
         </nav>
     </header>
 
-    <div class="hero">
-        <h1>Find Your AI from Top 50+ Directory</h1>
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Try 'video', 'image', 'text', 'coding'...">
-            <button id="search-btn">Search</button>
+    <main class="container">
+        <div class="intro-box">
+            <h1>AI Tool Directory</h1>
+            <p>Your ultimate guide to the world of AI tools. Find the best, compare rivals, and make informed decisions.</p>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Try 'image', 'video', 'code' or tool name...">
+                <button id="search-btn">Search</button>
+            </div>
         </div>
-    </div>
 
-    <div class="list-area">
-        <h2 style="text-align: center; margin-bottom: 30px;">Top AI Tools Directory</h2>
-        <div id="tool-display"></div>
-    </div>
+        <div class="list-area">
+            <h2 class="section-title">Top 50+ AI Tools Directory</h2>
+            <div id="tool-display" class="tool-grid"></div>
+        </div>
+    </main>
 
     <script>
-        const aiTools = [
-            // 텍스트/채팅
-            { name: "ChatGPT", desc: "Leader in text generation and coding.", rate: "4.9", url: "https://chat.openai.com", tags: "text, chat, writing, coding, productivity" },
-            { name: "Claude", desc: "Best for natural writing and reasoning.", rate: "4.8", url: "https://claude.ai", tags: "text, writing, reasoning, research" },
-            { name: "Gemini", desc: "Google's smart assistant for search and work.", rate: "4.7", url: "https://gemini.google.com", tags: "search, google, assistant, research" },
-            { name: "Jasper", desc: "AI writing assistant for businesses.", rate: "4.6", url: "https://jasper.ai", tags: "text, marketing, writing, copy" },
-            { name: "Copy.ai", desc: "AI-powered copywriter for marketing.", rate: "4.5", url: "https://copy.ai", tags: "text, marketing, sales, copy" },
-            // 이미지/디자인
-            { name: "Midjourney", desc: "Professional artistic image generation.", rate: "4.9", url: "https://midjourney.com", tags: "image, art, design, creative" },
-            { name: "DALL-E 3", desc: "OpenAI's high-precision image generator.", rate: "4.8", url: "https://openai.com/dall-e-3", tags: "image, art, drawing, design" },
-            { name: "Canva AI", desc: "Simple AI tools for graphic design.", rate: "4.5", url: "https://canva.com", tags: "image, design, creative, editing" },
-            { name: "Leonardo.ai", desc: "Creative platform for pro image assets.", rate: "4.7", url: "https://leonardo.ai", tags: "image, art, game, creative" },
-            { name: "Adobe Firefly", desc: "Adobe's creative generative AI.", rate: "4.6", url: "https://firefly.adobe.com", tags: "image, design, photo, adobe" },
-            // 비디오/애니메이션
-            { name: "Sora", desc: "Next-gen realistic video generation.", rate: "4.9", url: "https://openai.com/sora", tags: "video, movie, animation, motion" },
-            { name: "Runway", desc: "Pro-level AI tools for video editing.", rate: "4.7", url: "https://runwayml.com", tags: "video, movie, editing, motion" },
-            { name: "Pika", desc: "AI video generation and animation.", rate: "4.6", url: "https://pika.art", tags: "video, animation, motion" },
-            { name: "HeyGen", desc: "AI avatar and video translation.", rate: "4.8", url: "https://heygen.com", tags: "video, avatar, translation, business" },
-            { name: "Synthesia", desc: "AI video generation with avatars.", rate: "4.7", url: "https://synthesia.io", tags: "video, avatar, training, business" },
-            // 검색/연구
-            { name: "Perplexity", desc: "Search engine with real-time sources.", rate: "4.8", url: "https://perplexity.ai", tags: "search, research, information, answer" },
-            { name: "You.com", desc: "Private AI-driven search engine.", rate: "4.4", url: "https://you.com", tags: "search, chat, research" },
-            { name: "Consensus", desc: "AI search engine for research papers.", rate: "4.7", url: "https://consensus.app", tags: "search, science, research, academic" },
-            { name: "Elicit", desc: "The AI research assistant for papers.", rate: "4.6", url: "https://elicit.org", tags: "search, research, paper, science" },
-            // 오디오/목소리
-            { name: "ElevenLabs", desc: "Realistic AI voice synthesis.", rate: "4.9", url: "https://elevenlabs.io", tags: "audio, voice, sound, speech" },
-            { name: "Suno", desc: "AI music generation by simple prompts.", rate: "4.8", url: "https://suno.com", tags: "audio, music, sound, song" },
-            { name: "Udio", desc: "High-fidelity AI music creation.", rate: "4.8", url: "https://udio.com", tags: "audio, music, sound, song" },
-            { name: "Descript", desc: "All-in-one audio and video editor.", rate: "4.7", url: "https://descript.com", tags: "audio, video, editing, podcast" },
-            { name: "Murf AI", desc: "Professional AI voice-overs.", rate: "4.5", url: "https://murf.ai", tags: "audio, voice, business, speech" },
-            // 생산성/노트
-            { name: "Notion AI", desc: "AI writing inside your Notion workspace.", rate: "4.7", url: "https://notion.so", tags: "text, writing, productivity, notes" },
-            { name: "Gamma", desc: "AI-powered presentations and decks.", rate: "4.8", url: "https://gamma.app", tags: "productivity, design, slide, business" },
-            { name: "Otter.ai", desc: "AI meeting notes and transcription.", rate: "4.6", url: "https://otter.ai", tags: "text, audio, meeting, transcription" },
-            { name: "Beautiful.ai", desc: "AI presentation design software.", rate: "4.5", url: "https://beautiful.ai", tags: "design, slide, business, productivity" },
-            { name: "QuillBot", desc: "AI paraphrasing and grammar tool.", rate: "4.5", url: "https://quillbot.com", tags: "text, writing, education, grammar" }
-            // ... (데이터를 더 추가할 수 있습니다)
+        const myTools = [
+            // Chat & Writing
+            { name: "ChatGPT", desc: "Advanced conversational AI for various tasks.", stars: 5, url: "https://openai.com/chatgpt", img: "https://.../chatgpt.png", tags: ['text', 'chat', 'writing', 'coding', 'productivity', 'assistant', 'openai'] },
+            { name: "Gemini", desc: "Google's most capable and versatile multimodal AI model.", stars: 4, url: "https://gemini.google.com/", tags: ['search', 'research', 'answer', 'information', 'multimodal', 'google', 'chat', 'bard'] },
+            { name: "Jasper", desc: "AI Content Generator for marketing, blog posts, and more.", stars: 4, url: "#", tags: ['writing', 'marketing', 'copywriting', 'content', 'seo', 'automation', 'business'] },
+            { name: "Copy.ai", desc: "Generates high-quality marketing copy and content.", stars: 4, url: "#", tags: ['writing', 'marketing', 'copywriting', 'content', 'automation', 'business'] },
+            { name: "Notion AI", desc: "Integrated AI assistant to help you write, plan, and organize.", stars: 4, url: "#", tags: ['productivity', 'writing', 'organization', 'notes', 'workspace', 'assistant', 'database'] },
+            { name: "Writesonic", desc: "AI writer that creates SEO-friendly content for blogs, ads, and more.", stars: 4, url: "#", tags: ['writing', 'seo', 'marketing', 'content', 'copywriting'] },
+            { name: "Grammarly", desc: "AI-powered writing assistant for grammar, spelling, and style.", stars: 5, url: "#", tags: ['writing', 'productivity', 'assistant', 'grammar', 'editing'] },
+            { name: "QuillBot", desc: "Paraphrasing and summarizing tool to improve your writing.", stars: 4, url: "#", tags: ['writing', 'paraphrasing', 'summarizing', 'editing'] },
+            
+            // Image & Design
+            { name: "Midjourney", desc: "Generates high-quality, artistic images from text prompts.", stars: 5, url: "#", tags: ['image', 'art', 'design', 'creative', 'drawing', 'graphics', 'visuals', 'generator'] },
+            { name: "DALL-E 3", desc: "OpenAI's image generator, creating highly detailed images from text.", stars: 4, url: "https://openai.com/dall-e-3", tags: ['image', 'art', 'design', 'openai', 'generator'] },
+            { name: "Leonardo.ai", desc: "Create production-quality assets for your creative projects.", stars: 4, url: "#", tags: ['image', 'art', 'design', 'creative', 'drawing', 'assets', 'gaming', 'generator'] },
+            { name: "Stable Diffusion", desc: "Powerful open-source model for generating images from text.", stars: 4, url: "#", tags: ['image', 'art', 'open-source', 'generator', 'creative'] },
+            { name: "Canva", desc: "Online design platform with AI features for creating graphics.", stars: 5, url: "#", tags: ['design', 'graphics', 'social media', 'presentation', 'ui'] },
+            { name: "Figma", desc: "Collaborative interface design tool with growing AI capabilities.", stars: 5, url: "#", tags: ['design', 'ui', 'ux', 'prototyping', 'collaboration'] },
+            { name: "Adobe Firefly", desc: "Adobe's family of creative generative AI models.", stars: 4, url: "#", tags: ['image', 'design', 'adobe', 'generator', 'creative'] },
+            { name: "Uizard", desc: "AI-powered tool for designing wireframes, mockups, and prototypes.", stars: 3, url: "#", tags: ['design', 'ui', 'ux', 'prototyping', 'wireframing'] },
+            
+            // Video & Audio
+            { name: "Sora", desc: "OpenAI's model for creating realistic video from text.", stars: 5, url: "https://openai.com/sora", tags: ['video', 'animation', 'movie', 'motion', 'film', 'generator', 'openai'] },
+            { name: "Runway", desc: "AI-powered video creation and editing suite for creators.", stars: 4, url: "#", tags: ['video', 'animation', 'editing', 'motion', 'vfx', 'generator', 'film', 'magic tools'] },
+            { name: "Pika", desc: "AI video platform that can generate and edit videos from text and images.", stars: 4, url: "#", tags: ['video', 'generator', 'animation', 'creative'] },
+            { name: "Descript", desc: "All-in-one audio and video editor with powerful AI features.", stars: 4, url: "#", tags: ['video', 'audio', 'editing', 'transcription', 'podcast'] },
+            { name: "ElevenLabs", desc: "The most realistic and versatile AI speech software.", stars: 5, url: "#", tags: ['audio', 'voice', 'speech', 'sound', 'narration', 'dubbing', 'tts', 'cloning'] },
+            { name: "Synthesia", desc: "AI video generation platform to create videos with AI avatars.", stars: 4, url: "#", tags: ['video', 'avatar', 'presentation', 'corporate', 'training'] },
+            { name: "Murf.ai", desc: "Versatile AI voice generator for lifelike text-to-speech.", stars: 4, url: "#", tags: ['audio', 'voice', 'tts', 'narration', 'presentation'] },
+
+            // Code & Development
+            { name: "GitHub Copilot", desc: "AI pair programmer that helps you write code faster.", stars: 5, url: "#", tags: ['code', 'development', 'github', 'assistant', 'programming'] },
+            { name: "Tabnine", desc: "AI code completion assistant for all programming languages.", stars: 4, url: "#", tags: ['code', 'development', 'assistant', 'programming', 'ide'] },
+            { name: "Replit", desc: "Online IDE with AI features for coding, deploying, and hosting.", stars: 4, url: "#", tags: ['code', 'development', 'ide', 'hosting', 'collaboration'] },
+            { name: "Amazon CodeWhisperer", desc: "AI coding companion from AWS.", stars: 4, url: "#", tags: ['code', 'development', 'aws', 'assistant', 'programming'] },
+            
+            // Business & Productivity
+            { name: "Perplexity AI", desc: "An AI-powered research and conversational search engine.", stars: 4, url: "#", tags: ['search', 'research', 'answer', 'information', 'knowledge', 'engine', 'conversational', 'ask'] },
+            { name: "Tome", desc: "AI-powered storytelling format for creating presentations and narratives.", stars: 4, url: "#", tags: ['presentation', 'storytelling', 'productivity', 'design'] },
+            { name: "Fireflies.ai", desc: "AI assistant for your meetings. Records, transcribes, and analyzes voice conversations.", stars: 4, url: "#", tags: ['productivity', 'meetings', 'transcription', 'assistant', 'automation'] },
+            { name: "Otter.ai", desc: "AI meeting assistant that records audio, writes notes, and generates summaries.", stars: 4, url: "#", tags: ['productivity', 'meetings', 'transcription', 'notes'] },
+            { name: "Synthesia", desc: "Create professional videos with AI avatars and voices.", stars: 4, url: "#", tags: ['video', 'business', 'training', 'presentation'] },
+            { name: "Beautiful.ai", desc: "Presentation software that makes it easy to create beautiful designs.", stars: 4, url: "#", tags: ['presentation', 'design', 'business', 'productivity'] },
+            { name: "Glean", desc: "AI-powered work search that finds exactly what you need across all your company’s apps.", stars: 4, url: "#", tags: ['search', 'enterprise', 'productivity', 'knowledge management'] },
+            { name: "ClickUp AI", desc: "A productivity platform's AI assistant to manage tasks, docs, and goals.", stars: 4, url: "#", tags: ['productivity', 'project management', 'assistant', 'automation'] },
+
+            // More & Niche Tools
+            { name: "Character.AI", desc: "Create and talk to intelligent chatbots with distinct personalities.", stars: 4, url: "#", tags: ['chat', 'entertainment', 'character', 'roleplay'] },
+            { name: "Luma AI", desc: "Create lifelike 3D models and scenes with your phone.", stars: 4, url: "#", tags: ['3d', 'nerf', 'reality capture', 'creative'] },
+            { name: "Riffusion", desc: "Real-time music generation with stable diffusion.", stars: 3, url: "#", tags: ['audio', 'music', 'sound', 'generator', 'creative'] },
+            { name: "Suno AI", desc: "AI music generator that creates songs with vocals from a simple prompt.", stars: 4, url: "#", tags: ['audio', 'music', 'song', 'generator', 'creative'] },
+            { name: "DeepL", desc: "AI-powered translation service known for its accuracy and nuance.", stars: 5, url: "#", tags: ['translation', 'language', 'writing', 'productivity'] },
+            { name: "Consensus", desc: "An AI search engine for research papers.", stars: 4, url: "#", tags: ['research', 'science', 'academic', 'search'] },
+            { name: "Elicit", desc: "AI research assistant to automate literature reviews.", stars: 4, url: "#", tags: ['research', 'science', 'academic', 'writing'] },
+            { name: "PlayHT", desc: "AI voice generator with realistic text-to-speech voices.", stars: 4, url: "#", tags: ['audio', 'voice', 'tts', 'podcast', 'video'] },
+            { name: "HeyGen", desc: "AI video platform for creating engaging business videos.", stars: 4, url: "#", tags: ['video', 'avatar', 'business', 'marketing'] },
+            { name: "Klaviyo", desc: "Marketing automation platform with AI-powered features.", stars: 4, url: "#", tags: ['marketing', 'automation', 'email', 'business'] },
+            { name: "Zapier", desc: "Automation platform that connects your apps, now with AI features.", stars: 5, url: "#", tags: ['automation', 'productivity', 'workflow', 'integration'] },
+            { name: "Veed.io", desc: "Online video editor with a simple interface and powerful AI tools.", stars: 4, url: "#", tags: ['video', 'editing', 'subtitles', 'marketing'] },
+            { name: "Spline", desc: "A collaborative 3D design tool for the web.", stars: 4, url: "#", tags: ['3d', 'design', 'web', 'interactive', 'animation'] },
+            { name: "Looka", desc: "AI-powered platform to design a logo and build a brand you love.", stars: 4, url: "#", tags: ['design', 'logo', 'branding', 'business'] },
+            { name: "Bardeen", desc: "AI to automate your manual workflows.", stars: 4, url: "#", tags: ['automation', 'productivity', 'workflow', 'scraping'] }
         ];
 
-        function render(val = "") {
-            const div = document.getElementById('tool-display');
-            div.innerHTML = "";
-            const filtered = aiTools.filter(t => 
-                t.name.toLowerCase().includes(val.toLowerCase()) || 
-                t.tags.toLowerCase().includes(val.toLowerCase()) ||
-                t.desc.toLowerCase().includes(val.toLowerCase())
-            );
+        document.addEventListener('DOMContentLoaded', () => {
+            const toolDisplay = document.getElementById('tool-display');
+            const searchInput = document.getElementById('search-input');
+            const searchBtn = document.getElementById('search-btn');
 
-            if(filtered.length === 0) {
-                div.innerHTML = "<p style='text-align:center; padding: 20px;'>No matching AI tools found.</p>";
-                return;
-            }
+            const renderTools = (tools) => {
+                toolDisplay.innerHTML = '';
+                tools.forEach(tool => {
+                    const toolCard = document.createElement('div');
+                    toolCard.className = 'tool-card';
+                    toolCard.innerHTML = \`
+                        <h3>\${tool.name}</h3>
+                        <p>\${tool.desc}</p>
+                        <div class="tags">
+                            \${tool.tags.map(tag => \`<span class="tag">\${tag}</span>\`).join('')}
+                        </div>
+                    \`;
+                    toolDisplay.appendChild(toolCard);
+                });
+            };
 
-            filtered.forEach(t => {
-                const row = document.createElement('div');
-                row.className = "tool-row";
-                row.innerHTML = `<div class="t-name">${t.name}</div><div class="t-desc">${t.desc}</div><div class="t-rating">⭐ ${t.rate}</div><a href="${t.url}" target="_blank" class="visit-link">Visit Site</a>`;
-                div.appendChild(row);
+            const filterTools = () => {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const filteredTools = myTools.filter(tool => {
+                    const searchableContent = [
+                        tool.name,
+                        tool.desc,
+                        ...tool.tags
+                    ].join(' ').toLowerCase();
+                    return searchableContent.includes(searchTerm);
+                });
+                renderTools(filteredTools);
+            };
+
+            searchBtn.addEventListener('click', filterTools);
+            searchInput.addEventListener('keyup', (e) => {
+                if (e.key === 'Enter') {
+                    filterTools();
+                }
             });
-        }
 
-        document.getElementById('search-btn').onclick = () => render(document.getElementById('search-input').value);
-        document.getElementById('search-input').onkeyup = (e) => { if(e.key === "Enter") render(e.target.value); };
-
-        render();
+            // Initial render
+            renderTools(myTools);
+        });
     </script>
 </body>
 </html>

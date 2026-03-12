@@ -3,40 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tool Comparison - Interactive & Battles</title>
+    <title>Compare AI Tools - AI Tool Compare</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; color: #333; }
-        
-        /* 헤더: 메인 페이지와 동일한 가운데 정렬 */
         header { text-align: center; padding: 40px 20px; background: white; border-bottom: 1px solid #eee; }
         header .logo { font-size: 2.5rem; font-weight: 800; color: #007bff; text-decoration: none; display: block; margin-bottom: 20px; }
         header nav { display: flex; justify-content: center; gap: 30px; }
         header nav a { text-decoration: none; color: #666; font-weight: 600; font-size: 1.1rem; }
         header nav a:hover { color: #007bff; }
-
-        /* 인터랙티브 비교 섹션 */
-        .compare-hero { padding: 60px 5%; text-align: center; background: white; }
-        .comparison-builder { max-width: 800px; margin: 0 auto; padding: 30px; background: #fff; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        .select-group { display: flex; gap: 20px; justify-content: center; align-items: center; margin-bottom: 20px; }
-        select { padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 1rem; width: 200px; }
-        .vs-circle { background: #ff4757; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
-        #compare-btn { padding: 12px 40px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
-
-        /* 요청하신 Head-to-Head Battles (기존 디자인 복구) */
-        .battle-section { padding: 60px 5%; }
-        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
-        .battle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-        .battle-card { background: white; border: 1px solid #eee; padding: 25px; border-radius: 15px; text-align: center; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
-        .battle-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
-        .vs-tag { color: #ff4757; font-weight: bold; font-size: 1.2rem; }
-        .battle-link { display: inline-block; margin-top: 15px; color: #007bff; text-decoration: none; font-weight: bold; }
-
-        @media (max-width: 600px) { .select-group { flex-direction: column; } }
     </style>
 </head>
 <body>
-
     <header>
         <a href="index.html" class="logo">AI Tool Compare</a>
         <nav>
@@ -47,56 +24,66 @@
         </nav>
     </header>
 
-    <section class="compare-hero">
-        <h1>Build Your Own Comparison</h1>
-        <div class="comparison-builder">
-            <div class="select-group">
-                <select id="tool1">
-                    <option value="chatgpt">ChatGPT</option>
-                    <option value="claude">Claude</option>
-                    <option value="gemini">Gemini</option>
-                </select>
-                <div class="vs-circle">VS</div>
-                <select id="tool2">
-                    <option value="claude">Claude</option>
-                    <option value="chatgpt">ChatGPT</option>
-                    <option value="perplexity">Perplexity</option>
-                </select>
+    <main class="container">
+        <div class="compare-box">
+            <h2>Build your own comparison</h2>
+            <div class="tool-selector">
+                <select id="tool1-select"></select>
+                <span>VS</span>
+                <select id="tool2-select"></select>
+                <button id="compare-btn">Compare</button>
             </div>
-            <button id="compare-btn">Compare Now</button>
+            <div id="comparison-result"></div>
         </div>
-    </section>
 
-    <section class="battle-section">
-        <h2 class="section-title">Popular Head-to-Head Battles</h2>
-        <div class="battle-grid">
-            <div class="battle-card">
-                <h3>ChatGPT <span class="vs-tag">VS</span> Claude</h3>
-                <p>Natural Writing & Reasoning</p>
-                <a href="chatgpt-vs-claude.html" class="battle-link">View Battle →</a>
+        <!-- VS Section -->
+        <section class="vs-section">
+            <h2>Head-to-Head Battles</h2>
+            <div class="vs-grid">
+                <a href="chatgpt-vs-claude.html" class="vs-card">
+                    <div class="vs-card-content">
+                        <span>ChatGPT</span>
+                        <span class="vs-separator">VS</span>
+                        <span>Claude</span>
+                    </div>
+                    <p>View Comparison &rarr;</p>
+                </a>
+                <a href="midjourney-vs-dalle.html" class="vs-card">
+                    <div class="vs-card-content">
+                        <span>Midjourney</span>
+                        <span class="vs-separator">VS</span>
+                        <span>DALL-E 3</span>
+                    </div>
+                    <p>View Comparison &rarr;</p>
+                </a>
+                <a href="#" class="vs-card">
+                    <div class="vs-card-content">
+                        <span>Jasper</span>
+                        <span class="vs-separator">VS</span>
+                        <span>Copy.ai</span>
+                    </div>
+                    <p>View Comparison &rarr;</p>
+                </a>
+                <a href="#" class="vs-card">
+                    <div class="vs-card-content">
+                        <span>Perplexity</span>
+                        <span class="vs-separator">VS</span>
+                        <span>Google</span>
+                    </div>
+                    <p>View Comparison &rarr;</p>
+                </a>
+                 <a href="#" class="vs-card">
+                    <div class="vs-card-content">
+                        <span>Sora</span>
+                        <span class="vs-separator">VS</span>
+                        <span>Runway</span>
+                    </div>
+                    <p>View Comparison &rarr;</p>
+                </a>
             </div>
-            <div class="battle-card">
-                <h3>Midjourney <span class="vs-tag">VS</span> DALL-E 3</h3>
-                <p>Artistic vs Creative Precision</p>
-                <a href="#" class="battle-link">View Battle →</a>
-            </div>
-            <div class="battle-card">
-                <h3>Jasper <span class="vs-tag">VS</span> Copy.ai</h3>
-                <p>Marketing & Copywriting AI</p>
-                <a href="#" class="battle-link">View Battle →</a>
-            </div>
-            <div class="battle-card">
-                <h3>Perplexity <span class="vs-tag">VS</span> Google</h3>
-                <p>AI Search vs Search Engine</p>
-                <a href="#" class="battle-link">View Battle →</a>
-            </div>
-            <div class="battle-card">
-                <h3>Sora <span class="vs-tag">VS</span> Runway</h3>
-                <p>The Future of AI Video</p>
-                <a href="#" class="battle-link">View Battle →</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
+    <script src="compare.js"></script>
 </body>
 </html>
