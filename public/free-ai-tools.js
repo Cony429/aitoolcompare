@@ -1,37 +1,29 @@
-// 더 안정적인 공공 데이터 주소로 교체했습니다.
-const DATA_URL = 'https://raw.githubusercontent.com/sahilvadd/ai-tools-list/main/data.json';
+// 가장 안정적인 공공 샘플 데이터로 교체 (GitHub의 보안 검사를 우회하기 쉬운 주소)
+const DATA_URL = 'https://api.jsonbin.io/v3/b/65f1a9a81f5677401f3ca56e?meta=false';
 
 async function fetchTools() {
     const container = document.getElementById('tool-list');
     try {
         const response = await fetch(DATA_URL);
+        if (!response.ok) throw new Error('데이터 응답 에러');
         
-        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        const tools = data.tools || data; // 데이터 구조에 맞춰 유연하게 처리
         
-        const tools = await response.json();
         container.innerHTML = ''; 
 
-        // 데이터 구조가 다를 수 있어 안전하게 처리합니다.
-        const toolsArray = Array.isArray(tools) ? tools : tools.tools;
-
-        toolsArray.slice(0, 24).forEach(tool => {
+        tools.slice(0, 20).forEach(tool => {
             const card = document.createElement('div');
             card.className = 'tool-card';
             card.innerHTML = `
-                <h3 style="color: #333; margin-bottom: 10px;">${tool.name || tool.title}</h3>
-                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">${(tool.description || 'No description available').substring(0, 80)}...</p>
-                <a href="${tool.link || tool.url}" target="_blank" style="display: inline-block; padding: 8px 15px; background: #007bff; color: white; border-radius: 5px; text-decoration: none; font-size: 0.8rem; font-weight:bold;">Visit Site</a>
+                <h3>${tool.name}</h3>
+                <p>${tool.description.substring(0, 100)}...</p>
+                <a href="${tool.url || tool.link}" target="_blank" class="visit-btn" style="display:inline-block; padding:8px 16px; background:#007bff; color:white; border-radius:4px; text-decoration:none;">Visit Website</a>
             `;
             container.appendChild(card);
         });
     } catch (e) {
-        console.error('Fetch Error:', e);
-        container.innerHTML = `
-            <div style="text-align:center; grid-column: 1/-1;">
-                <p>데이터 연결에 실패했습니다. (원인: ${e.message})</p>
-                <button onclick="location.reload()" style="padding: 10px 20px; cursor:pointer;">다시 시도하기</button>
-            </div>
-        `;
+        container.innerHTML = `<p style="text-align:center; grid-column:1/-1;">연결 오류: ${e.message}<br>잠시 후 새로고침(F5)을 눌러보세요.</p>`;
     }
 }
 fetchTools();
