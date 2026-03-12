@@ -1,19 +1,144 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tool Compare</title>
+    <title>AI Tool Compare - Compare, Review & Rank the Best AI Tools</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #f8f9fa;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #6c757d;
+        }
+        .search-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 1rem;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            border: 1px solid #ced4da;
+            font-size: 1.1rem;
+        }
+        .hero .filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* VS Section */
+        .vs-section {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .vs-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .vs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .vs-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s;
+        }
+        .vs-card:hover {
+            transform: translateY(-5px);
+        }
+        .vs-card-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .vs-card .vs-separator {
+            color: #ffc107;
+            font-style: italic;
+        }
+        .vs-card p {
+            margin-top: 1rem;
+            color: #007bff;
+        }
+
+        /* Ranking Table Section */
+        .ranking-section {
+            padding: 3rem 2rem;
+        }
+        .ranking-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .ranking-table {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .ranking-table th, .ranking-table td {
+            padding: 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .ranking-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .ranking-table tr:last-child td {
+            border-bottom: none;
+        }
+        .star-rating {
+            color: #ffc107;
+        }
+        .tool-name-cell {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .tool-name-cell img {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">AI Tool Compare</div>
         <nav style="gap: 2rem;">
             <a href="index.html">Home</a>
-            <a href="index.html#categories">Categories</a>
-            <a href="index.html#trending">Trending</a>
             <a href="news.html">News</a>
             <a href="free-ai-tools.html">Free AI Tools</a>
         </nav>
@@ -21,89 +146,117 @@
     </header>
 
     <main>
-        <h1>Discover, Compare & Review the Best AI Tools</h1>
-        <input type="text" class="search-bar" placeholder="Search 1,500+ AI tools...">
-        <div class="filters" id="categories">
-            <button class="filter-btn">All</button>
-            <button class="filter-btn">Writing</button>
-            <button class="filter-btn">Image</button>
-            <button class="filter-btn">Chatbots</button>
-            <button class="filter-btn">Video</button>
-            <button class="filter-btn">Marketing</button>
-            <button class="filter-btn">Code</button>
-        </div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Discover, Compare & Review</h1>
+            <p>Your ultimate guide to the world of AI tools. Find the best, compare rivals, and make informed decisions.</p>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search over 1,500+ AI tools...">
+            </div>
+            <div class="filters">
+                <button class="filter-btn">Writing</button>
+                <button class="filter-btn">Image</button>
+                <button class="filter-btn">Video</button>
+                <button class="filter-btn">Marketing</button>
+                <button class="filter-btn">Chatbots</button>
+            </div>
+        </section>
 
-        <div class="tool-grid" id="trending">
-            <div class="tool-card">
-                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400" alt="ChatGPT">
-                <h3>ChatGPT</h3>
-                <p>Advanced AI chat bot by OpenAI</p>
-                <div class="tags">
-                    <span class="tag">Chatbots</span>
-                    <span class="tag">Free</span>
-                </div>
+        <!-- VS Section -->
+        <section class="vs-section">
+            <h2>Head-to-Head Battles</h2>
+            <div class="vs-grid">
+                <a href="chatgpt-vs-claude.html" class="vs-card">
+                    <div class="vs-card-content">
+                        <span>ChatGPT</span>
+                        <span class="vs-separator">VS</span>
+                        <span>Claude</span>
+                    </div>
+                    <p>View Comparison &rarr;</p>
+                </a>
+                <a href="midjourney-vs-dalle.html" class="vs-card">
+                    <div class="vs-card-content">
+                        <span>Midjourney</span>
+                        <span class="vs-separator">VS</span>
+                        <span>DALL-E 3</span>
+                    </div>
+                    <p>View Comparison &rarr;</p>
+                </a>
             </div>
-            <div class="tool-card">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400" alt="Midjourney">
-                <h3>Midjourney</h3>
-                <p>AI art generator for unique visuals</p>
-                <div class="tags">
-                    <span class="tag">Image</span>
-                </div>
-            </div>
-            <div class="tool-card">
-                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400" alt="Jasper">
-                <h3>Jasper</h3>
-                <p>AI writing assistant for content creation</p>
-                <div class="tags">
-                    <span class="tag">Writing</span>
-                </div>
-            </div>
-            <div class="tool-card">
-                <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=400" alt="DALL-E 3">
-                <h3>DALL-E 3</h3>
-                <p>Generate realistic creative images</p>
-                 <div class="tags">
-                    <span class="tag">Image</span>
-                </div>
-            </div>
-            <div class="tool-card">
-                <img src="https://images.unsplash.com/photo-1675271591211-126ad94e495d?w=400" alt="Gemini">
-                <h3>Gemini</h3>
-                <p>Google's versatile AI assistant</p>
-                <div class="tags">
-                    <span class="tag">Chatbots</span>
-                    <span class="tag">Free</span>
-                </div>
-            </div>
-            <div class="tool-card">
-                <img src="https://images.unsplash.com/photo-1620712943543-bcc4628c9757?w=400" alt="Claude">
-                <h3>Claude</h3>
-                <p>Anthropic's helpful AI chatbot</p>
-                <div class="tags">
-                    <span class="tag">Chatbots</span>
-                </div>
-            </div>
-            <div class="tool-card">
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400" alt="Runway">
-                <h3>Runway</h3>
-                <p>Generative AI video creation platform</p>
-                <div class="tags">
-                    <span class="tag">Video</span>
-                    <span class="tag">Free</span>
-                </div>
-            </div>
-            <div class="tool-card">
-                <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=400" alt="Notion AI">
-                <h3>Notion AI</h3>
-                <p>AI powered writing in Notion AI</p>
-                <div class="tags">
-                    <span class="tag">Writing</span>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <button class="more-tools-btn">More Tools</button>
+        <!-- Ranking/Comparison Table Section -->
+        <section class="ranking-section">
+            <h2>Top AI Tools Ranked</h2>
+            <table class="ranking-table">
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Category</th>
+                        <th>Rating</th>
+                        <th>Key Feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="tool-name-cell">
+                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=40" alt="ChatGPT">
+                                <strong>ChatGPT</strong>
+                            </div>
+                        </td>
+                        <td>Chatbot</td>
+                        <td class="star-rating">★★★★★</td>
+                        <td>Advanced conversational AI</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tool-name-cell">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=40" alt="Midjourney">
+                                <strong>Midjourney</strong>
+                            </div>
+                        </td>
+                        <td>Image Generation</td>
+                        <td class="star-rating">★★★★☆</td>
+                        <td>Artistic and high-quality visuals</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tool-name-cell">
+                                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=40" alt="Jasper">
+                                <strong>Jasper</strong>
+                            </div>
+                        </td>
+                        <td>Writing Assistant</td>
+                        <td class="star-rating">★★★★☆</td>
+                        <td>Content creation for marketing</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tool-name-cell">
+                                <img src="https://images.unsplash.com/photo-1675271591211-126ad94e495d?w=40" alt="Gemini">
+                                <strong>Gemini</strong>
+                            </div>
+                        </td>
+                        <td>Chatbot</td>
+                        <td class="star-rating">★★★★☆</td>
+                        <td>Google's versatile multimodal AI</td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <div class="tool-name-cell">
+                                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=40" alt="Runway">
+                                <strong>Runway</strong>
+                            </div>
+                        </td>
+                        <td>Video Generation</td>
+                        <td class="star-rating">★★★★☆</td>
+                        <td>AI-powered video editing & generation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
     </main>
     <script src="main.js"></script>
 </body>
