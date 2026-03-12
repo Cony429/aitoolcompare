@@ -3,78 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tool Compare - Discover, Compare & Review</title>
+    <title>AI Tool Compare - Discover & Compare</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* 기본 레이아웃 */
-        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; }
+        /* 1. 기본 레이아웃 및 폰트 */
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; color: #333; }
         
-        /* Hero & 검색창 */
-        .hero { padding: 80px 5%; text-align: center; background: white; border-bottom: 1px solid #eee; }
-        .search-container { margin-top: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        /* 2. 헤더 복구 및 유지 */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: white; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: bold; font-size: 1.5rem; color: #007bff; text-decoration: none; }
+        nav { display: flex; gap: 1.5rem; }
+        nav a { text-decoration: none; color: #555; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: #007bff; }
+
+        /* 3. Hero & 검색창 */
+        .hero { padding: 60px 5%; text-align: center; background: white; }
+        .search-container { margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto; }
         #search-input { 
             width: 100%; padding: 15px 25px; border-radius: 30px; 
             border: 1px solid #ddd; font-size: 1.1rem; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.05); outline: none;
         }
 
-        /* 비교 섹션 (Battles) */
-        .battle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 40px 5%; }
-        .battle-card { background: white; padding: 25px; border-radius: 15px; border: 1px solid #eee; text-align: center; transition: 0.3s; }
-        .battle-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .vs-text { font-weight: bold; color: #ff4757; margin: 0 10px; }
-        .battle-link { text-decoration: none; color: #007bff; font-weight: bold; font-size: 0.9rem; }
+        /* 4. 비교 박스 (5 Battles) */
+        .section-title { text-align: center; margin-top: 50px; font-size: 1.8rem; }
+        .battle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 30px 5%; }
+        .battle-card { background: white; padding: 20px; border-radius: 12px; border: 1px solid #eee; text-align: center; transition: 0.3s; }
+        .battle-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .vs-text { font-weight: bold; color: #ff4757; }
+        .battle-link { display: inline-block; margin-top: 10px; text-decoration: none; color: #007bff; font-weight: bold; font-size: 0.9rem; }
 
-        /* 한 줄 리스트 (Top 10 Tools) */
-        .tool-list-container { max-width: 1000px; margin: 0 auto 50px; padding: 0 5%; }
+        /* 5. 한 줄 리스트 (Top 10 Tools) */
+        .tool-list-area { max-width: 1100px; margin: 0 auto 80px; padding: 0 5%; }
         .tool-row { 
             display: grid; 
             grid-template-columns: 1.5fr 3.5fr 1fr 1.2fr; 
             align-items: center; 
             background: white; 
-            padding: 15px 25px; 
-            border-radius: 12px; 
-            margin-bottom: 12px; 
+            padding: 15px 20px; 
+            border-radius: 10px; 
+            margin-bottom: 10px; 
             border: 1px solid #eee; 
-            transition: 0.2s;
         }
-        .tool-row:hover { border-color: #007bff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .tool-name { font-weight: bold; color: #333; }
+        .tool-name { font-weight: 700; color: #222; }
         .tool-desc { color: #666; font-size: 0.9rem; padding-right: 15px; }
         .tool-rating { color: #ffc107; font-weight: bold; text-align: center; }
         .visit-btn-small { 
             padding: 10px; background: #007bff; color: white; 
             border-radius: 6px; text-decoration: none; 
             font-size: 0.85rem; text-align: center; font-weight: bold;
+            transition: 0.2s;
         }
+        .visit-btn-small:hover { background: #0056b3; }
 
         @media (max-width: 768px) {
-            .tool-row { grid-template-columns: 1fr; text-align: center; gap: 10px; padding: 20px; }
+            .tool-row { grid-template-columns: 1fr; text-align: center; gap: 10px; }
         }
     </style>
 </head>
 <body>
-    <header style="display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: white; border-bottom: 1px solid #eee;">
-        <div class="logo" style="font-weight: bold; font-size: 1.5rem; color: #007bff;">AI Tool Compare</div>
-        <nav style="display: flex; gap: 1.5rem;">
-            <a href="index.html" style="text-decoration: none; color: #333; font-weight: 500;">Home</a>
-            <a href="news.html" style="text-decoration: none; color: #333; font-weight: 500;">News</a>
-            <a href="free-ai-tools.html" style="text-decoration: none; color: #333; font-weight: 500;">Free Tools</a>
-            <a href="compare.html" style="text-decoration: none; color: #333; font-weight: 500;">Interactive Compare</a>
+    <header>
+        <a href="index.html" class="logo">AI Tool Compare</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="free-ai-tools.html">Free Tools</a>
+            <a href="compare.html">Compare</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Find the Best AI Tool for Your Work</h1>
+        <h1>Find and Compare the Best AI Tools</h1>
         <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search by tool name (e.g. ChatGPT, Midjourney)...">
+            <input type="text" id="search-input" placeholder="Search AI tools...">
         </div>
     </section>
 
-    <section>
-        <h2 style="text-align: center; margin-top: 50px;">Head-to-Head Battles</h2>
-        <div class="battle-grid">
-            <div class="battle-card"><h3>ChatGPT <span class="vs-text">VS</span> Claude</h3><p>Writing & Coding</p><a href="chatgpt-vs-claude.html" class="battle-link">View Comparison →</a></div>
-            <div class="battle-card"><h3>Midjourney <span class="vs-text">VS</span> DALL-E 3</h3><p>Artistic Image Gen</p><a href="#" class="battle-link">View Comparison →</a></div>
-            <div class="battle-card"><h3>Jasper <span class="vs-text">VS</span> Copy.ai</h3><p>Marketing Copy</p><a href="#" class="battle-link">View Comparison →</a></div>
-            <div class="battle-card"><h3>Perplexity <span class="vs-text">VS</span>
+    <h2 class="section-title">Head-to-Head Battles</h2>
+    <div class="battle-grid">
+        <div class="battle-card"><h3>ChatGPT <span class="vs-text">VS</span> Claude</h3><p>Text & Code</p><a href="chatgpt-vs-claude.html" class="battle-link">Compare Now →</a></div>
+        <div class="battle-card"><h3>Midjourney <span class="vs-text">VS</span> DALL-E</h3><p>Image Generation</p><a href="#" class="battle-link">Compare Now →</a></div>
+        <div class="battle-card"><h3>Jasper <span class="vs-text">VS</span> Copy.ai</h3><p>Marketing Copy</p><a href="#" class="battle-link">Compare Now →</a></div>
+        <div class="battle-card"><h3>Perplexity <span class="vs-text">VS</span> Google</h3><p>AI Search</p><a href="#" class="battle-link">Compare Now →</a></div>
+        <div class="battle-card"><h3>Sora <span class="vs-text">VS</span> Runway</h3><p>Video Generation</p><a href="#" class="battle-link">Compare Now →</a></div>
+    </div>
+
+    <div class="tool-list-area">
+        <h2 class="section-title" style="margin-bottom: 30px;">Top AI Tools Directory</h2>
+        <div id="main-tool-list">
+            </div>
+    </div>
+
+    <script>
+        const topTools = [
+            { name: "ChatGPT", desc: "Most popular AI for writing, coding, and brainstorming.", rating: "4.9", link: "https://chat.openai.com" },
+            { name: "Claude", desc: "Exceptional reasoning and highly natural writing style.", rating: "4.8", link: "https://claude.ai" },
+            { name: "Gemini", desc: "Google's smart assistant integrated with Google Workspace.", rating: "4.7", link: "https://gemini.google.com" },
+            { name: "Midjourney", desc: "The gold standard for high-quality AI art and images.", rating: "4.9", link: "https://midjourney.com" },
+            { name: "Jasper", desc: "Powerful AI content platform for business marketing.", rating: "4.6", link: "https://jasper.ai" },
+            { name: "Canva AI", desc: "Generate designs and edit photos with AI magic.", rating: "4.5", link: "https://canva.com" },
+            { name: "Perplexity", desc: "An AI search engine that cites sources in real-time.", rating: "4.8", link: "https://perplexity.ai" },
+            { name: "Notion AI", desc: "Seamless AI writing assistant built into Notion.",
