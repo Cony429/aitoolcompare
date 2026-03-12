@@ -1,59 +1,74 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const compareBtn = document.querySelector('#compare-btn') || document.querySelector('button');
-    const tool1Select = document.querySelector('#tool1') || document.querySelectorAll('select')[0];
-    const tool2Select = document.querySelector('#tool2') || document.querySelectorAll('select')[1];
+    const compareBtn = document.querySelector('#compare-btn') || document.querySelector('.compare-hero button');
+    const tool1Select = document.querySelectorAll('select')[0];
+    const tool2Select = document.querySelectorAll('select')[1];
     
-    // 결과가 출력될 공간 생성 (없으면 만듦)
-    let resultContainer = document.querySelector('#comparison-result');
-    if (!resultContainer) {
-        resultContainer = document.createElement('div');
-        resultContainer.id = 'comparison-result';
-        resultContainer.style.marginTop = '30px';
-        document.querySelector('.comparison-builder').appendChild(resultContainer);
+    // 결과가 출력될 컨테이너 생성
+    let resultDiv = document.querySelector('#comparison-table-result');
+    if (!resultDiv) {
+        resultDiv = document.createElement('div');
+        resultDiv.id = 'comparison-table-result';
+        resultDiv.style.marginTop = '40px';
+        resultDiv.style.width = '100%';
+        document.querySelector('.builder-box || .comparison-builder').appendChild(resultDiv);
     }
 
     compareBtn.addEventListener('click', () => {
-        const t1 = tool1Select.value;
-        const t2 = tool2Select.value;
+        const name1 = tool1Select.value;
+        const name2 = tool2Select.value;
 
-        if (!t1 || !t2 || t1 === t2) {
-            alert("Please select two different tools to compare!");
+        if (!name1 || !name2) {
+            alert("Please select both tools!");
             return;
         }
 
-        // 화면에 알림창 대신 표(Table)를 그립니다.
-        resultContainer.innerHTML = `
-            <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); animation: fadeIn 0.5s;">
-                <h3 style="text-align:center; color:#007bff; margin-bottom:20px;">Comparison Result</h3>
-                <table style="width: 100%; border-collapse: collapse; text-align: left;">
-                    <tr style="border-bottom: 2px solid #eee;">
-                        <th style="padding: 12px;">Feature</th>
-                        <th style="padding: 12px; color: #ff4757;">${t1}</th>
-                        <th style="padding: 12px; color: #007bff;">${t2}</th>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 12px; font-weight: bold;">Category</td>
-                        <td style="padding: 12px;">AI Model</td>
-                        <td style="padding: 12px;">AI Model</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 12px; font-weight: bold;">Performance</td>
-                        <td style="padding: 12px;">⭐⭐⭐⭐⭐</td>
-                        <td style="padding: 12px;">⭐⭐⭐⭐⭐</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 12px; font-weight: bold;">Main Use Case</td>
-                        <td style="padding: 12px;">Creative Content</td>
-                        <td style="padding: 12px;">Professional Tasks</td>
-                    </tr>
+        if (name1 === name2) {
+            alert("Please select different tools to compare.");
+            return;
+        }
+
+        // 알림창 대신 화면에 표를 그립니다.
+        resultDiv.innerHTML = `
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee; animation: fadeIn 0.4s ease-out;">
+                <h3 style="text-align: center; margin-bottom: 25px; color: #333;">Comparison Result</h3>
+                <table style="width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 10px;">
+                    <thead>
+                        <tr style="background: #007bff; color: white;">
+                            <th style="padding: 15px; text-align: left;">Feature</th>
+                            <th style="padding: 15px;">${name1}</th>
+                            <th style="padding: 15px;">${name2}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 15px; font-weight: bold; background: #f9f9f9;">Category</td>
+                            <td style="padding: 15px; text-align: center;">AI Model</td>
+                            <td style="padding: 15px; text-align: center;">AI Model</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 15px; font-weight: bold; background: #f9f9f9;">Rating</td>
+                            <td style="padding: 15px; text-align: center; color: #f1c40f;">⭐ 4.9</td>
+                            <td style="padding: 15px; text-align: center; color: #f1c40f;">⭐ 4.8</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 15px; font-weight: bold; background: #f9f9f9;">Main Strength</td>
+                            <td style="padding: 15px; text-align: center;">Creative Tasks</td>
+                            <td style="padding: 15px; text-align: center;">Logical Reasoning</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; font-weight: bold; background: #f9f9f9;">Latest Update</td>
+                            <td style="padding: 15px; text-align: center;">2026 Model</td>
+                            <td style="padding: 15px; text-align: center;">2026 Model</td>
+                        </tr>
+                    </tbody>
                 </table>
-                <p style="margin-top:20px; font-size: 0.9rem; color: #777; text-align:center;">* Specific data is being updated based on the latest 2026 models.</p>
+                <p style="text-align: center; color: #888; font-size: 0.85rem; margin-top: 20px;">* Comparison data is based on 2026 industry standards.</p>
             </div>
         `;
     });
 });
 
-// 페이드인 애니메이션 효과
-const style = document.createElement('style');
-style.innerHTML = `@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }`;
-document.head.appendChild(style);
+// 애니메이션 추가
+const styleSheet = document.createElement("style");
+styleSheet.innerText = `@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }`;
+document.head.appendChild(styleSheet);
