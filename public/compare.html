@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive AI Tool Comparison</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="comparison.css">
+    <style>
+        .interactive-console {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .interactive-console select, .interactive-console button {
+            padding: 0.8rem 1.2rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            margin: 0 0.5rem;
+        }
+        .interactive-console button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-color: #007bff;
+        }
+        #comparison-result {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">AIToolCompare</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="free-ai-tools.html">Free AI Tools</a>
+            <a href="compare.html">Interactive Compare</a>
+        </nav>
+        <a href="#" class="subscribe-btn">Subscribe</a>
+    </header>
+
+    <main>
+        <section class="comparison-header">
+            <h1>Build Your Own Comparison</h1>
+            <p class="vs">Select any two AI tools to see a direct comparison.</p>
+        </section>
+
+        <div class="interactive-console">
+            <select id="tool1-select"></select>
+            <span style="font-size: 1.5rem; font-weight: bold; color: #6c757d;">VS</span>
+            <select id="tool2-select"></select>
+            <button id="compare-btn">Compare Now</button>
+        </div>
+
+        <section id="comparison-result">
+            <table class="comparison-table">
+                <thead>
+                    <tr id="comparison-header-row">
+                        <th>Feature</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="comparison-body">
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="compare-logic.js"></script>
+</body>
+</html>
