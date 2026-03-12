@@ -1,243 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tool Compare - Compare, Review & Rank the Best AI Tools</title>
+    <title>AI Tool Compare - Discover, Compare & Review</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .tool-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin-bottom: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* 기본 레이아웃 */
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; }
+        
+        /* Hero & 검색창 */
+        .hero { padding: 80px 5%; text-align: center; background: white; border-bottom: 1px solid #eee; }
+        .search-container { margin-top: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        #search-input { 
+            width: 100%; padding: 15px 25px; border-radius: 30px; 
+            border: 1px solid #ddd; font-size: 1.1rem; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); outline: none;
         }
-        .tool-info {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
+
+        /* 비교 섹션 (Battles) */
+        .battle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 40px 5%; }
+        .battle-card { background: white; padding: 25px; border-radius: 15px; border: 1px solid #eee; text-align: center; transition: 0.3s; }
+        .battle-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .vs-text { font-weight: bold; color: #ff4757; margin: 0 10px; }
+        .battle-link { text-decoration: none; color: #007bff; font-weight: bold; font-size: 0.9rem; }
+
+        /* 한 줄 리스트 (Top 10 Tools) */
+        .tool-list-container { max-width: 1000px; margin: 0 auto 50px; padding: 0 5%; }
+        .tool-row { 
+            display: grid; 
+            grid-template-columns: 1.5fr 3.5fr 1fr 1.2fr; 
+            align-items: center; 
+            background: white; 
+            padding: 15px 25px; 
+            border-radius: 12px; 
+            margin-bottom: 12px; 
+            border: 1px solid #eee; 
+            transition: 0.2s;
         }
-        .tool-info img {
-            width: 50px;
-            height: 50px;
-            border-radius: 5px;
+        .tool-row:hover { border-color: #007bff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .tool-name { font-weight: bold; color: #333; }
+        .tool-desc { color: #666; font-size: 0.9rem; padding-right: 15px; }
+        .tool-rating { color: #ffc107; font-weight: bold; text-align: center; }
+        .visit-btn-small { 
+            padding: 10px; background: #007bff; color: white; 
+            border-radius: 6px; text-decoration: none; 
+            font-size: 0.85rem; text-align: center; font-weight: bold;
         }
-        .tool-details h3 {
-            margin: 0;
-            font-size: 1.4rem;
-        }
-        .tool-details p {
-            margin: 0.3rem 0 0;
-            color: #6c757d;
-        }
-        .tool-actions {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-        .star-rating {
-            color: #ffc107;
-            font-size: 1.2rem;
-        }
-        .visit-btn {
-            background-color: #007bff;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.2s;
-        }
-        .visit-btn:hover {
-            background-color: #0056b3;
+
+        @media (max-width: 768px) {
+            .tool-row { grid-template-columns: 1fr; text-align: center; gap: 10px; padding: 20px; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">AI Tool Compare</div>
-        <nav style="gap: 2rem;">
-            <a href="index.html">Home</a>
-            <a href="news.html">News</a>
-            <a href="free-ai-tools.html">Free AI Tools</a>
-            <a href="compare.html">Interactive Compare</a>
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: white; border-bottom: 1px solid #eee;">
+        <div class="logo" style="font-weight: bold; font-size: 1.5rem; color: #007bff;">AI Tool Compare</div>
+        <nav style="display: flex; gap: 1.5rem;">
+            <a href="index.html" style="text-decoration: none; color: #333; font-weight: 500;">Home</a>
+            <a href="news.html" style="text-decoration: none; color: #333; font-weight: 500;">News</a>
+            <a href="free-ai-tools.html" style="text-decoration: none; color: #333; font-weight: 500;">Free Tools</a>
+            <a href="compare.html" style="text-decoration: none; color: #333; font-weight: 500;">Interactive Compare</a>
         </nav>
-        <a href="#" class="subscribe-btn">Subscribe</a>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Discover, Compare & Review</h1>
-            <p>Your ultimate guide to the world of AI tools. Find the best, compare rivals, and make informed decisions.</p>
-            <div class="search-container">
-                <input type="text" id="search-bar" class="search-bar" placeholder="Search for AI tools...">
-            </div>
-        </section>
+    <section class="hero">
+        <h1>Find the Best AI Tool for Your Work</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by tool name (e.g. ChatGPT, Midjourney)...">
+        </div>
+    </section>
 
-        <!-- Top AI Tools Section -->
-        <section class="ranking-section">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">Top AI Tools</h2>
-            <div id="ai-tools-container" style="max-width: 1200px; margin: 0 auto;">
-                <!-- AI Tool Cards will be dynamically inserted here if using JS, or hardcoded -->
-                <div class="tool-card" data-name="ChatGPT">
-                    <div class="tool-info">
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=50" alt="ChatGPT">
-                        <div class="tool-details">
-                            <h3>ChatGPT</h3>
-                            <p>Advanced conversational AI for various tasks.</p>
-                        </div>
-                    </div>
-                    <div class="tool-actions">
-                        <span class="star-rating">★★★★★</span>
-                        <a href="#" class="visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="tool-card" data-name="Claude">
-                    <div class="tool-info">
-                        <img src="https://images.unsplash.com/photo-1675271591211-126ad94e495d?w=50" alt="Claude">
-                        <div class="tool-details">
-                            <h3>Claude</h3>
-                            <p>A next-generation AI assistant for your tasks.</p>
-                        </div>
-                    </div>
-                    <div class="tool-actions">
-                        <span class="star-rating">★★★★☆</span>
-                        <a href="#" class="visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="tool-card" data-name="Gemini">
-                    <div class="tool-info">
-                        <img src="https://images.unsplash.com/photo-1675271591211-126ad94e495d?w=50" alt="Gemini">
-                        <div class="tool-details">
-                            <h3>Gemini</h3>
-                            <p>Google's most capable and versatile multimodal AI model.</p>
-                        </div>
-                    </div>
-                    <div class="tool-actions">
-                        <span class="star-rating">★★★★☆</span>
-                        <a href="#" class="visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="tool-card" data-name="Midjourney">
-                    <div class="tool-info">
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=50" alt="Midjourney">
-                        <div class="tool-details">
-                            <h3>Midjourney</h3>
-                            <p>An independent research lab exploring new mediums of thought.</p>
-                        </div>
-                    </div>
-                    <div class="tool-actions">
-                        <span class="star-rating">★★★★☆</span>
-                        <a href="#" class="visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="tool-card" data-name="Jasper">
-                    <div class="tool-info">
-                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=50" alt="Jasper">
-                        <div class="tool-details">
-                            <h3>Jasper</h3>
-                            <p>The AI Content Generator that helps you create amazing content.</p>
-                        </div>
-                    </div>
-                    <div class="tool-actions">
-                        <span class="star-rating">★★★★☆</span>
-                        <a href="#" class="visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="tool-card" data-name="Canva">
-                    <div class="tool-info">
-                        <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=50" alt="Canva">
-                        <div class="tool-details">
-                            <h3>Canva</h3>
-                            <p>Design anything. Publish anywhere. With the power of AI.</p>
-                        </div>
-                    </div>
-                    <div class="tool-actions">
-                        <span class="star-rating">★★★★☆</span>
-                        <a href="#" class="visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="tool-card" data-name="Perplexity">
-                    <div class="tool-info">
-                        <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=50" alt="Perplexity">
-                        <div class="tool-details">
-                            <h3>Perplexity</h3>
-                            <p>An AI-powered research and conversational search engine.</p>
-                        </div>
-                    </div>
-                    <div class="tool-actions">
-                        <span class="star-rating">★★★★☆</span>
-                        <a href="#" class="visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="tool-card" data-name="Notion AI">
-                    <div class="tool-info">
-                        <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=50" alt="Notion AI">
-                        <div class="tool-details">
-                            <h3>Notion AI</h3>
-                            <p>Integrated AI assistant to help you write, plan, and organize.</p>
-                        </div>
-                    </div>
-                    <div class="tool-actions">
-                        <span class="star-rating">★★★★☆</span>
-                        <a href="#" class="visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="tool-card" data-name="Leonardo.ai">
-                    <div class="tool-info">
-                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=50" alt="Leonardo.ai">
-                        <div class="tool-details">
-                            <h3>Leonardo.ai</h3>
-                            <p>Generate production-quality assets for your creative projects.</p>
-                        </div>
-                    </div>
-                    <div class="tool-actions">
-                        <span class="star-rating">★★★★☆</span>
-                        <a href="#" class="visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="tool-card" data-name="ElevenLabs">
-                    <div class="tool-info">
-                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=50" alt="ElevenLabs">
-                        <div class="tool-details">
-                            <h3>ElevenLabs</h3>
-                            <p>The most realistic and versatile AI speech software, ever.</p>
-                        </div>
-                    </div>
-                    <div class="tool-actions">
-                        <span class="star-rating">★★★★★</span>
-                        <a href="#" class="visit-btn">Visit</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchBar = document.getElementById('search-bar');
-            const toolCards = document.querySelectorAll('.tool-card');
-
-            searchBar.addEventListener('input', (e) => {
-                const searchTerm = e.target.value.toLowerCase();
-
-                toolCards.forEach(card => {
-                    const toolName = card.dataset.name.toLowerCase();
-                    if (toolName.includes(searchTerm)) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+    <section>
+        <h2 style="text-align: center; margin-top: 50px;">Head-to-Head Battles</h2>
+        <div class="battle-grid">
+            <div class="battle-card"><h3>ChatGPT <span class="vs-text">VS</span> Claude</h3><p>Writing & Coding</p><a href="chatgpt-vs-claude.html" class="battle-link">View Comparison →</a></div>
+            <div class="battle-card"><h3>Midjourney <span class="vs-text">VS</span> DALL-E 3</h3><p>Artistic Image Gen</p><a href="#" class="battle-link">View Comparison →</a></div>
+            <div class="battle-card"><h3>Jasper <span class="vs-text">VS</span> Copy.ai</h3><p>Marketing Copy</p><a href="#" class="battle-link">View Comparison →</a></div>
+            <div class="battle-card"><h3>Perplexity <span class="vs-text">VS</span>
