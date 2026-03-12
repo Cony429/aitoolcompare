@@ -151,3 +151,30 @@ main {
     background-color: #e8f0fe;
     color: #4285f4;
 }
+
+footer {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 2rem 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.footer-content p {
+    margin: 0;
+    color: #666;
+}
+
+.footer-content nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 1rem;
+}
