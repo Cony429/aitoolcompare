@@ -49,9 +49,17 @@
   {"name": "Consensus", "category": "Search", "description": "An AI search engine for research.", "link": "https://consensus.app/"},
   {"name": "Codeium", "category": "Developer Tools", "description": "The modern coding superpower.", "link": "https://codeium.com/"},
   {"name": "Tabnine", "category": "Developer Tools", "description": "AI assistant for software developers.", "link": "https://www.tabnine.com/"},
-    {"name": "Kuki", "category": "Chatbot", "description": "An embodied AI being to chat with.", "link": "https://www.kuki.ai/"},
-    {"name": "Playground AI", "category": "Image Generation", "description": "Online AI image creator.", "link": "https://playgroundai.com/"},
-    {"name": "Veed.io", "category": "Video Generation", "description": "Online video suite for professionals.", "link": "https://www.veed.io/"},
-    {"name": "Lovo.ai", "category": "Audio", "description": "AI Voice Generator & Text to Speech.", "link": "https://lovo.ai/"},
-    {"name": "AssemblyAI", "category": "Developer Tools", "description": "AI models for speech-to-text, and more.", "link": "https://www.assemblyai.com/"}
+  {"name": "Kuki", "category": "Chatbot", "description": "An embodied AI being to chat with.", "link": "https://www.kuki.ai/"},
+  {"name": "Playground AI", "category": "Image Generation", "description": "Online AI image creator.", "link": "https://playgroundai.com/"},
+  {"name": "Veed.io", "category": "Video Generation", "description": "Online video suite for professionals.", "link": "https://www.veed.io/"},
+  {"name": "Lovo.ai", "category": "Audio", "description": "AI Voice Generator & Text to Speech.", "link": "https://lovo.ai/"},
+  {"name": "AssemblyAI", "category": "Developer Tools", "description": "AI models for speech-to-text, and more.", "link": "https://www.assemblyai.com/"},
+  {"name": "Vidnami", "category": "Video Generation", "description": "Create stunning videos fast.", "link": "https://www.vidnami.com/"},
+  {"name": "Designs.ai", "category": "Design", "description": "All-in-one platform for creating marketing content.", "link": "https://designs.ai/"},
+  {"name": "Luminar AI", "category": "Image Editing", "description": "AI-powered photo editor.", "link": "https://skylum.com/luminar-ai"},
+  {"name": "Topaz Labs", "category": "Image/Video Enhancement", "description": "AI-powered image and video enhancement software.", "link": "https://www.topazlabs.com/"},
+  {"name": "Suno", "category": "Music Generation", "description": "Create music with AI.", "link": "https://www.suno.ai/"},
+  {"name": "Udio", "category": "Music Generation", "description": "Create music with AI.", "link": "https://www.udio.com/"},
+  {"name": "Retouch4me", "category": "Photo Retouching", "description": "AI-powered photo retouching plugins.", "link": "https://retouch4.me/"},
+  {"name": "Adcreative.ai", "category": "Advertising", "description": "Generate ad creatives with AI.", "link": "https://www.adcreative.ai/"}
 ]

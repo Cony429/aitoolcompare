@@ -10,7 +10,19 @@ const tools = [
     { name: "Luma AI", description: "Cutting-edge AI for creating realistic 3D objects and cinematic videos.", link: "https://lumalabs.ai" },
     { name: "Gamma", description: "Create beautiful presentations, memos, and briefs in seconds with AI.", link: "https://gamma.app" },
     { name: "Notion AI", description: "Enhance your workflow with AI-powered writing and organization in Notion.", link: "https://notion.so" },
-    { name: "Leonardo.ai", description: "Powerful image generation platform optimized for creative assets and gaming.", link: "https://leonardo.ai" }
+    { name: "Leonardo.ai", description: "Powerful image generation platform optimized for creative assets and gaming.", link: "https://leonardo.ai" },
+    { name: "Sora", description: "An AI model that can create realistic and imaginative scenes from text instructions.", link: "https://openai.com/sora" },
+    { name: "Runway", description: "Real-time video editing and generation.", link: "https://runwayml.com/" },
+    { name: "ElevenLabs", description: "AI voice generator.", link: "https://elevenlabs.io/" },
+    { name: "HeyGen", description: "AI video generator for business.", link: "https://www.heygen.com/" },
+    { name: "Pika", description: "Idea to video platform.", link: "https://pika.art/" },
+    { name: "Suno", description: "Create music with AI.", link: "https://www.suno.ai/" },
+    { name: "Udio", description: "Create music with AI.", link: "https://www.udio.com/" },
+    { name: "Copy.ai", description: "Automated creativity tools for copywriters.", link: "https://www.copy.ai/" },
+    { name: "QuillBot", description: "AI-powered paraphrasing tool.", link: "https://quillbot.com/" },
+    { name: "Grammarly", description: "AI-powered writing assistant.", link: "https://www.grammarly.com/" },
+    { name: "GitHub Copilot", description: "AI pair programmer.", link: "https://github.com/features/copilot" },
+    { name: "Writesonic", description: "AI writer for creating SEO-friendly content.", link: "https://writesonic.com/" }
 ];
 
 function displayTools() {
