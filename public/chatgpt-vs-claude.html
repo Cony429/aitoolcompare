@@ -1,69 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT vs Claude - AIToolCompare</title>
+    <title>ChatGPT vs Claude - AI Tool Comparison</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="comparison.css"> <!-- Link to the new CSS -->
 </head>
 <body>
     <header>
+        <div class="logo">AIToolCompare</div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ai-writing-tools.html">AI Writing Tools</a></li>
-                <li><a href="ai-video-tools.html">AI Video Tools</a></li>
-                <li><a href="best-ai-tools-marketing.html">Best AI Tools for Marketing</a></li>
-                <li><a href="best-ai-image-generators.html">Best AI Image Generators</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="free-ai-tools.html">Free AI Tools</a>
         </nav>
+        <a href="#" class="subscribe-btn">Subscribe</a>
     </header>
 
     <main>
-        <h1>ChatGPT vs Claude</h1>
-        <div class="placeholder-image"></div>
+        <section class="comparison-header">
+            <h1>ChatGPT vs Claude</h1>
+            <p class="vs">A Head-to-Head Analysis</p>
+        </section>
 
-        <h2>Overview</h2>
-        <p>This page provides a detailed comparison of two popular AI writing tools: ChatGPT and Claude.</p>
+        <div class="comparison-grid">
+            <!-- ChatGPT Column -->
+            <div class="tool-column">
+                <h2>ChatGPT</h2>
+                <table class="comparison-table">
+                    <tr><th>Feature</th><th>Details</th></tr>
+                    <tr><td class="feature-name">Core Strength</td><td>Advanced reasoning and wide knowledge base.</td></tr>
+                    <tr><td class="feature-name">Use Case</td><td>Content creation, coding, complex problem-solving.</td></tr>
+                    <tr><td class="feature-name">Pricing</td><td>Freemium, with a $20/month Plus plan.</td></tr>
+                </table>
+            </div>
 
-        <h2>Feature Comparison</h2>
-        <table>
-            <tr>
-                <th>Feature</th>
-                <th>ChatGPT</th>
-                <th>Claude</th>
-            </tr>
-            <tr>
-                <td>Use Cases</td>
-                <td>General purpose, content creation, coding</td>
-                <td>Creative writing, in-depth analysis, safety-focused</td>
-            </tr>
-            <tr>
-                <td>Strengths</td>
-                <td>Versatile, large community, extensive features</td>
-                <td>Focus on safety and ethical AI, strong creative writing</td>
-            </tr>
-        </table>
-
-        <h2>Pricing Comparison</h2>
-        <p>Both tools offer free and paid plans. Visit their official websites for the latest pricing.</p>
-
-        <h2>Pros and Cons</h2>
-        <h3>ChatGPT</h3>
-        <ul>
-            <li>Pros: Highly versatile, easy to use, large community</li>
-            <li>Cons: Can sometimes generate incorrect information</li>
-        </ul>
-        <h3>Claude</h3>
-        <ul>
-            <li>Pros: Focus on safety, good for creative and analytical tasks</li>
-            <li>Cons: Less known, smaller feature set</li>
-        </ul>
-
-        <h2>Which one is right for you?</h2>
-        <p>If you need a versatile, all-purpose AI assistant, ChatGPT is a great choice. If you prioritize AI safety and need a tool for creative writing or analysis, Claude is a better option.</p>
-
-        <a href="ai-writing-tools.html" class="button-link">Back to AI Writing Tools</a>
+            <!-- Claude Column -->
+            <div class="tool-column">
+                <h2>Claude</h2>
+                <table class="comparison-table">
+                    <tr><th>Feature</th><th>Details</th></tr>
+                    <tr><td class="feature-name">Core Strength</td><td>Focus on safety and handling large documents.</td></tr>
+                    <tr><td class="feature-name">Use Case</td><td>Summarizing long texts, nuanced conversation.</td></tr>
+                    <tr><td class="feature-name">Pricing</td><td>API access, with a free tier.</td></tr>
+                </table>
+            </div>
+        </div>
     </main>
 </body>
 </html>

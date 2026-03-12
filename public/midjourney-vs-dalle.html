@@ -1,66 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midjourney vs DALL-E - AIToolCompare</title>
+    <title>Midjourney vs DALL-E 3 - AI Image Generator Battle</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="comparison.css"> <!-- Link to the new CSS -->
 </head>
 <body>
     <header>
+        <div class="logo">AIToolCompare</div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ai-writing-tools.html">AI Writing Tools</a></li>
-                <li><a href="ai-video-tools.html">AI Video Tools</a></li>
-                <li><a href="best-ai-tools-marketing.html">Best AI Tools for Marketing</a></li>
-                <li><a href="best-ai-image-generators.html">Best AI Image Generators</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="free-ai-tools.html">Free AI Tools</a>
         </nav>
+        <a href="#" class="subscribe-btn">Subscribe</a>
     </header>
 
     <main>
-        <h1>Midjourney vs DALL-E</h1>
-        <div class="placeholder-image"></div>
+        <section class="comparison-header">
+            <h1>Midjourney vs DALL-E 3</h1>
+            <p class="vs">The Ultimate Image Generation Showdown</p>
+        </section>
 
-        <h2>Overview</h2>
-        <p>This page compares two leading AI image generators: Midjourney and DALL-E.</p>
+        <div class="comparison-grid">
+            <!-- Midjourney Column -->
+            <div class="tool-column">
+                <h2>Midjourney</h2>
+                <table class="comparison-table">
+                    <tr><th>Feature</th><th>Details</th></tr>
+                    <tr><td class="feature-name">Artistic Style</td><td>Highly artistic and photorealistic results.</td></tr>
+                    <tr><td class="feature-name">Ease of Use</td><td>Operates via Discord commands. Steeper learning curve.</td></tr>
+                    <tr><td class="feature-name">Pricing</td><td>Subscription-based, starting at $10/month.</td></tr>
+                </table>
+            </div>
 
-        <h2>Feature Comparison</h2>
-        <table>
-            <tr>
-                <th>Feature</th>
-                <th>Midjourney</th>
-                <th>DALL-E</th>
-            </tr>
-            <tr>
-                <td>Image Style</td>
-                <td>Artistic, high-quality images</td>
-                <td>Creative and diverse image styles</td>
-            </tr>
-            <tr>
-                <td>Ease of Use</td>
-                <td>Requires Discord</td>
-                <td>Web-based interface</td>
-            </tr>
-        </table>
-
-        <h2>Pricing</h2>
-        <p>Both tools have different pricing models. Check their official websites for details.</p>
-
-        <h2>Pros and Cons</h2>
-        <h3>Midjourney</h3>
-        <ul>
-            <li>Pros: Produces highly artistic and quality images</li>
-            <li>Cons: Steeper learning curve due to Discord interface</li>
-        </ul>
-        <h3>DALL-E</h3>
-        <ul>
-            <li>Pros: Easy to use, generates creative and diverse styles</li>
-            <li>Cons: Image quality may vary</li>
-        </ul>
-
-        <a href="best-ai-image-generators.html" class="button-link">Back to AI Image Generators</a>
+            <!-- DALL-E 3 Column -->
+            <div class="tool-column">
+                <h2>DALL-E 3</h2>
+                <table class="comparison-table">
+                    <tr><th>Feature</th><th>Details</th></tr>
+                    <tr><td class="feature-name">Integration</td><td>Natively integrated with ChatGPT Plus.</td></tr>
+                    <tr><td class="feature-name">Ease of Use</td><td>Very easy to use with natural language prompts.</td></tr>
+                    <tr><td class="feature-name">Pricing</td><td>Included with ChatGPT Plus subscription.</td></tr>
+                </table>
+            </div>
+        </div>
     </main>
 </body>
 </html>
