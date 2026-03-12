@@ -12,46 +12,41 @@ const myTools = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-    const toolDisplay = document.getElementById('tool-display');
-    const searchInput = document.getElementById('search-input');
-    const searchBtn = document.getElementById('search-btn');
+    const tool1Select = document.getElementById('tool1-select');
+    const tool2Select = document.getElementById('tool2-select');
+    const compareBtn = document.getElementById('compare-btn');
+    const comparisonResult = document.getElementById('comparison-result');
 
-    const renderTools = (tools) => {
-        toolDisplay.innerHTML = '';
-        tools.forEach(tool => {
-            const toolCard = document.createElement('div');
-            toolCard.className = 'tool-card';
-            toolCard.innerHTML = `
-                <img src="${tool.img}" alt="${tool.name}">
-                <h3>${tool.name}</h3>
-                <p>${tool.desc}</p>
-                <div class="tags">
-                    ${tool.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                </div>
-            `;
-            toolDisplay.appendChild(toolCard);
-        });
-    };
+    // Populate select options
+    myTools.forEach(tool => {
+        const option1 = document.createElement('option');
+        option1.value = tool.name;
+        option1.textContent = tool.name;
+        tool1Select.appendChild(option1);
 
-    const filterTools = () => {
-        const searchTerm = searchInput.value.toLowerCase();
-        const filteredTools = myTools.filter(tool => {
-            return (
-                tool.name.toLowerCase().includes(searchTerm) ||
-                tool.desc.toLowerCase().includes(searchTerm) ||
-                tool.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-            );
-        });
-        renderTools(filteredTools);
-    };
-
-    searchBtn.addEventListener('click', filterTools);
-    searchInput.addEventListener('keyup', (e) => {
-        if (e.key === 'Enter') {
-            filterTools();
-        }
+        const option2 = document.createElement('option');
+        option2.value = tool.name;
+        option2.textContent = tool.name;
+        tool2Select.appendChild(option2);
     });
 
-    // Initial render
-    renderTools(myTools);
+    compareBtn.addEventListener('click', () => {
+        const tool1Name = tool1Select.value;
+        const tool2Name = tool2Select.value;
+
+        if (tool1Name === tool2Name) {
+            comparisonResult.innerHTML = '<p>Please select two different tools to compare.</p>';
+            return;
+        }
+
+        const tool1 = myTools.find(t => t.name === tool1Name);
+        const tool2 = myTools.find(t => t.name === tool2Name);
+
+        comparisonResult.innerHTML = `
+            <h3>${tool1.name} vs ${tool2.name}</h3>
+            <p><strong>${tool1.name}:</strong> ${tool1.desc}</p>
+            <p><strong>${tool2.name}:</strong> ${tool2.desc}</p>
+            <!-- Add more detailed comparison points here -->
+        `;
+    });
 });
