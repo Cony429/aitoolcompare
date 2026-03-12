@@ -6,6 +6,15 @@
     <title>Free AI Tools - AI Tool Compare</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; color: #333; }
+        
+        /* 사용자님의 가운데 정렬 헤더 디자인 보존 */
+        header { text-align: center; padding: 40px 20px; background: white; border-bottom: 1px solid #eee; }
+        header .logo { font-size: 2.5rem; font-weight: 800; color: #007bff; text-decoration: none; display: block; margin-bottom: 20px; }
+        header nav { display: flex; justify-content: center; gap: 30px; }
+        header nav a { text-decoration: none; color: #666; font-weight: 600; font-size: 1.1rem; }
+        header nav a:hover { color: #007bff; }
+
         .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 40px 5%; }
         .tool-card { border: 1px solid #eee; padding: 20px; border-radius: 12px; background: white; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .tool-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
@@ -16,14 +25,13 @@
 </head>
 <body>
     <header>
-        <div class="logo">AIToolCompare</div>
+        <a href="index.html" class="logo">AI Tool Compare</a>
         <nav>
             <a href="index.html">Home</a>
             <a href="news.html">News</a>
-            <a href="free-ai-tools.html">Free AI Tools</a>
-            <a href="compare.html">Interactive Compare</a>
+            <a href="free-ai-tools.html">Free Tools</a>
+            <a href="compare.html">Compare</a>
         </nav>
-        <a href="#" class="subscribe-btn">Subscribe</a>
     </header>
 
     <main>
