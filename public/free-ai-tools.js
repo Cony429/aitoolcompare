@@ -1,24 +1,27 @@
 const DATA_URL = 'https://raw.githubusercontent.com/steven-tey/heavy/main/lib/ai-tools.json';
 
 async function fetchTools() {
-    const container = document.getElementById('tool-list'); // 스샷의 id인 tool-list로 맞췄습니다
+    const container = document.getElementById('tool-list');
     try {
         const response = await fetch(DATA_URL);
         const tools = await response.json();
-        container.innerHTML = ''; 
+        
+        container.innerHTML = ''; // "불러오는 중" 메시지 삭제
 
-        tools.slice(0, 24).forEach(tool => {
+        tools.slice(0, 30).forEach(tool => {
             const card = document.createElement('div');
             card.className = 'tool-card';
             card.innerHTML = `
-                <h3 style="color: #333; margin-bottom: 10px;">${tool.name}</h3>
-                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">${tool.description.substring(0, 80)}...</p>
-                <a href="${tool.link}" target="_blank" style="display: inline-block; padding: 8px 15px; background: #007bff; color: white; border-radius: 5px; text-decoration: none; font-size: 0.8rem;">Visit Site</a>
+                <h3>${tool.name}</h3>
+                <p>${tool.description.substring(0, 100)}...</p>
+                <a href="${tool.link}" target="_blank" class="visit-btn">Visit Website</a>
             `;
             container.appendChild(card);
         });
-    } catch (e) {
-        container.innerHTML = '데이터를 불러오지 못했습니다.';
+    } catch (error) {
+        console.error('Fetch Error:', error);
+        container.innerHTML = '<p style="text-align:center; grid-column:1/-1;">데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>';
     }
 }
+
 fetchTools();

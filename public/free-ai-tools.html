@@ -3,58 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free AI Tools - AIToolCompare</title>
+    <title>Free AI Tools - AI Tool Compare</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        #tool-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        .tool-card {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .tool-card h3 {
-            margin-top: 0;
-        }
+        .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 40px 5%; }
+        .tool-card { border: 1px solid #eee; padding: 20px; border-radius: 12px; background: white; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .tool-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .tool-card h3 { margin: 0 0 10px 0; color: #333; }
+        .tool-card p { font-size: 0.9rem; color: #666; line-height: 1.5; margin-bottom: 20px; }
+        .visit-btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">AIToolCompare</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="news.html">News</a>
-            <a href="free-ai-tools.html">Free AI Tools</a>
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: white; border-bottom: 1px solid #eee;">
+        <div class="logo" style="font-weight: bold; font-size: 1.5rem;">AI Tool Compare</div>
+        <nav style="display: flex; gap: 2rem; align-items: center;">
+            <a href="index.html" style="text-decoration: none; color: #555;">Home</a>
+            <a href="news.html" style="text-decoration: none; color: #555;">News</a>
+            <a href="free-ai-tools.html" style="text-decoration: none; color: #007bff; font-weight: bold;">Free Tools</a>
         </nav>
-        <a href="#subscribe" class="subscribe-btn">Subscribe</a>
+        <a href="#" class="subscribe-btn" style="background: #ffc107; color: #333; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; font-weight: bold;">Subscribe</a>
     </header>
 
     <main>
-        <h1>Free AI Tools</h1>
-        <div id="tool-list"></div>
+        <h1 style="text-align: center; margin-top: 50px;">Free AI Tools Directory</h1>
+        <div id="tool-list" class="tool-grid">
+            <p style="text-align: center; grid-column: 1/-1;">데이터를 불러오는 중입니다...</p>
+        </div>
     </main>
 
-    <script>
-        fetch('https://raw.githubusercontent.com/successtar/free-ai-tools-list/main/free-ai-tools.json')
-            .then(response => response.json())
-            .then(data => {
-                const toolList = document.getElementById('tool-list');
-                data.forEach(tool => {
-                    const toolCard = document.createElement('div');
-                    toolCard.className = 'tool-card';
-                    toolCard.innerHTML = `
-                        <h3><a href="${tool.url}" target="_blank">${tool.name}</a></h3>
-                        <p>${tool.description}</p>
-                        <p><strong>Category:</strong> ${tool.category}</p>
-                    `;
-                    toolList.appendChild(toolCard);
-                });
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    </script>
+    <script src="free-ai-tools.js"></script>
 </body>
 </html>
