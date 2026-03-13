@@ -19,14 +19,18 @@
 </head>
 <body>
     <header>
-        <div class="logo">AI Tool Compare</div>
-        <nav style="gap: 2rem;">
+        <a href="index.html" class="logo">AI Tool Compare</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
             <a href="index.html">Home</a>
             <a href="compare.html">Compare</a>
             <a href="free-ai-tools.html">AI Tools</a>
             <a href="news.html">News</a>
         </nav>
-        <a href="#" class="subscribe-btn">Subscribe</a>
     </header>
 
     <main>
@@ -39,5 +43,13 @@
             <li><a href="claude-review.html">Claude Review</a></li>
         </ul>
     </main>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

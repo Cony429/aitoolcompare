@@ -19,6 +19,12 @@
 </head>
 <body>
     <header>
+        <a href="index.html" class="logo">AI Tool Compare</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="compare.html">Compare</a>
@@ -37,5 +43,13 @@
             <li><a href="#">Synthesia</a> - For creating AI-powered videos.</li>
         </ul>
     </main>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
