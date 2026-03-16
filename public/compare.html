@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tool Comparison - Interactive & Battles</title>
+    <title>ChatGPT vs Claude vs Gemini: Side-by-Side AI Analysis</title>
+    <meta name="description" content="Interactively compare AI tools like ChatGPT, Claude, and Gemini. See head-to-head battles and find the best AI for your needs.">
+    <meta property="og:title" content="ChatGPT vs Claude vs Gemini: Side-by-Side AI Analysis">
+    <meta property="og:description" content="Interactively compare AI tools like ChatGPT, Claude, and Gemini. See head-to-head battles and find the best AI for your needs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.example.com/compare.html">
+    <meta property="og:image" content="https://www.example.com/og-image-compare.jpg">
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5933569238212175"
      crossorigin="anonymous"></script>
@@ -26,7 +32,7 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; color: #333; }
         
-        /* 비교 빌더 섹션 */
+        /* Comparison Builder Section */
         .compare-hero { padding: 60px 5%; text-align: center; background: white; }
         .builder-box { max-width: 800px; margin: 0 auto; padding: 40px; background: #fff; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
         .select-group { display: flex; gap: 20px; justify-content: center; align-items: center; margin-bottom: 30px; }
@@ -34,14 +40,14 @@
         .vs-badge { background: #ff4757; color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
         #compare-btn { padding: 15px 50px; background: #007bff; color: white; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1.1rem; }
 
-        /* 비교 결과 표 */
+        /* Comparison Result Table */
         #result-display-area { max-width: 900px; margin: 40px auto; padding: 0 20px; display: none; }
         .result-table { width: 100%; border-collapse: collapse; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
         .result-table th { background: #007bff; color: white; padding: 20px; }
         .result-table td { padding: 18px; border-bottom: 1px solid #eee; text-align: center; }
         .feature-name { font-weight: bold; background: #f8f9fa; text-align: left !important; width: 30%; }
 
-        /* Head-to-Head Battles (복구된 디자인) */
+        /* Head-to-Head Battles */
         .battle-section { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
         .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
         .battle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
@@ -97,7 +103,7 @@
         <h2 class="section-title">Popular Head-to-Head Battles</h2>
         <div class="battle-grid">
             <div class="battle-card"><h3>ChatGPT <span class="vs-tag">VS</span> Claude</h3><p>Natural Writing & Coding</p><a href="chatgpt-vs-claude.html" class="battle-link">View Battle →</a></div>
-            <div class="battle-card"><h3>Midjourney <span class="vs-tag">VS</span> DALL-E</h3><p>Artistic vs Creative Precision</p><a href="#" class="battle-link">View Battle →</a></div>
+            <div class="battle-card"><h3>Midjourney <span class="vs-tag">VS</span> DALL-E</h3><p>Artistic vs Creative Precision</p><a href="midjourney-vs-dalle.html" class="battle-link">View Battle →</a></div>
             <div class="battle-card"><h3>Jasper <span class="vs-tag">VS</span> Copy.ai</h3><p>Marketing & Business Writing</p><a href="#" class="battle-link">View Battle →</a></div>
             <div class="battle-card"><h3>Perplexity <span class="vs-tag">VS</span> Google</h3><p>Search vs AI Answer</p><a href="#" class="battle-link">View Battle →</a></div>
             <div class="battle-card"><h3>Sora <span class="vs-tag">VS</span> Runway</h3><p>Next-gen AI Video Generation</p><a href="#" class="battle-link">View Battle →</a></div>
@@ -123,13 +129,13 @@
             nav.classList.toggle('active');
         });
 
-        // 50개 이상의 전체 리스트
+        // Full list of 50+ tools
         const tools = ["ChatGPT", "Claude", "Midjourney", "Gemini", "Perplexity", "Sora", "Runway", "ElevenLabs", "Leonardo.ai", "Canva AI", "Jasper", "Notion AI", "Gamma", "HeyGen", "Pika", "Suno", "Udio", "Copy.ai", "QuillBot", "Grammarly", "GitHub Copilot", "Cursor", "Replit Ghostwriter", "Phind", "Adobe Firefly", "Beautiful.ai", "Otter.ai", "Descript", "Luma Dream Machine", "Kling AI", "Murf AI", "Veed.io", "Character.ai", "DeepL", "InVideo", "Pictory", "CapCut AI", "Remini", "Play.ht", "D-ID", "Clipchamp", "Writesonic", "Rytr", "Craiyon", "Looka", "Brandmark", "Mubert", "AIVA", "Tome", "Riffusion", "Synthesia", "Consensus", "Elicit", "You.com"];
 
         const s1 = document.getElementById('tool1-select');
         const s2 = document.getElementById('tool2-select');
 
-        // 드롭다운 채우기 (50개+)
+        // Populate dropdown (50+)
         tools.sort().forEach(t => {
             s1.add(new Option(t, t));
             s2.add(new Option(t, t));
