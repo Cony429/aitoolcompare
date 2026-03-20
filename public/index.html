@@ -84,38 +84,74 @@
 
         const aiTools = [
             // Text/Chat
-            { 
-                name: "ChatGPT", 
-                desc: "ChatGPT, created by OpenAI, is a highly advanced conversational AI built on the GPT (Generative Pre-trained Transformer) architecture. It excels at understanding and generating human-like text, making it a versatile tool for a vast range of tasks. Its core strength lies in its ability to engage in dynamic, context-aware dialogues, answer complex follow-up questions, and even admit when it's wrong. For professionals, it's an indispensable assistant for drafting emails, writing articles, and generating marketing copy. Developers leverage its power for writing, debugging, and explaining code in various programming languages. The model's creative capabilities extend to composing poetry, writing scripts, and brainstorming ideas. Its unique selling point is its adaptability; it can be fine-tuned for specific applications and integrated into existing workflows via the OpenAI API. The free version offers broad access, while the 'Plus' subscription provides priority access to new features and faster response times, making it a leader in productivity and creative AI.", 
-                rate: "4.9", 
-                url: "https://chat.openai.com", 
-                tags: "text, chat, writing, coding, productivity", 
-                type: "Freemium" 
-            },
-            { 
-                name: "Claude", 
-                desc: "Claude, developed by Anthropic, is a next-generation AI assistant designed with a strong emphasis on safety and ethical considerations. Its unique 'Constitutional AI' framework ensures that its responses are helpful, harmless, and honest. Claude's standout feature is its exceptionally large context window, allowing it to process and analyze hundreds of thousands of words at once. This makes it the ideal tool for summarizing lengthy research papers, financial reports, or legal documents with high accuracy. It excels in tasks requiring deep contextual understanding, nuanced writing, and collaborative brainstorming. For businesses, Claude offers a reliable solution for customer service, content moderation, and internal knowledge management. Its unique selling point is its commitment to responsible AI development, providing users with a powerful tool they can trust. Available through an API and a public beta, Claude is quickly becoming a favorite among researchers, writers, and professionals who handle large volumes of text.", 
-                rate: "4.8", 
-                url: "https://claude.ai", 
-                tags: "text, writing, reasoning, research", 
-                type: "Freemium" 
-            },
-            { 
-                name: "Gemini", 
-                desc: "Gemini is Google's most advanced and flexible AI model, engineered to be natively multimodal. This means it can seamlessly understand, operate across, and combine different types of information, including text, code, audio, images, and video. This multimodality allows for incredibly intuitive and powerful new user experiences. For instance, you can show Gemini a picture of a meal and it can provide a recipe, or give it a complex math problem and it can explain the solution step-by-step. Gemini is offered in several sizes—Ultra for highly complex tasks, Pro for a balance of performance and scalability, and Nano for on-device applications. Its key selling point is its deep integration into the Google ecosystem, powering features in Google Search, Ads, and Workspace. This allows Gemini to draw on real-time information and provide highly contextual, accurate, and creative responses, making it a formidable tool for both personal productivity and enterprise-level solutions.", 
-                rate: "4.7", 
-                url: "https://gemini.google.com", 
-                tags: "search, google, assistant, research", 
-                type: "Free" 
-            },
-            { 
-                name: "Jasper", 
-                desc: "Jasper is a premium AI writing assistant tailored for marketing and business content creation. It's designed to help teams produce high-quality, on-brand content at scale. Jasper's extensive library of over 50 templates covers everything from blog posts and social media captions to ad copy and video scripts. Its core feature, 'Brand Voice,' allows businesses to upload their style guides, ensuring that all generated content aligns with their specific tone and messaging. The 'Boss Mode' feature provides a long-form editor for writing complete articles and reports with AI assistance. A key selling point for Jasper is its focus on producing conversion-focused copy. It integrates with tools like Surfer SEO to optimize content for search engines and Grammarly for error-free writing. With its collaborative interface and robust feature set, Jasper positions itself as an end-to-end solution for enterprise content marketing, helping businesses overcome writer's block and accelerate their content pipeline.", 
-                rate: "4.6", 
-                url: "https://jasper.ai", 
-                tags: "text, marketing, writing, copy", 
-                type: "Paid" 
-            },
+            { name: "ChatGPT", desc: "A versatile conversational AI for drafting emails, writing articles, debugging code, and creative brainstorming.", rate: "4.9", url: "https://chat.openai.com", tags: "text, chat, writing, coding, productivity", type: "Freemium" },
+            { name: "Claude", desc: "A safety-focused AI assistant with a large context window, ideal for summarizing long documents and nuanced writing tasks.", rate: "4.8", url: "https://claude.ai", tags: "text, writing, reasoning, research", type: "Freemium" },
+            { name: "Gemini", desc: "Google's natively multimodal AI that understands text, images, audio, and video for intuitive and powerful user experiences.", rate: "4.7", url: "https://gemini.google.com", tags: "search, google, assistant, research, multimodal", type: "Free" },
+            { name: "Jasper", desc: "A premium AI writing assistant for marketing teams, designed to create high-quality, on-brand content at scale.", rate: "4.6", url: "https://jasper.ai", tags: "text, marketing, writing, copy", type: "Paid" },
+            
+            // Image Generation
+            { name: "Midjourney", desc: "A leading AI image generator known for producing highly artistic, detailed, and photorealistic visuals from text prompts.", rate: "4.9", url: "https://www.midjourney.com", tags: "image, art, design, graphics", type: "Paid" },
+            { name: "DALL-E 3", desc: "OpenAI's image generator, integrated into ChatGPT, excels at creating coherent and contextually relevant images from natural language.", rate: "4.7", url: "https://openai.com/dall-e-3", tags: "image, art, integrated, chatgpt", type: "Freemium" },
+            { name: "Stable Diffusion", desc: "A powerful, open-source image generation model that offers deep customization and control for developers and artists.", rate: "4.6", url: "https://stability.ai", tags: "image, open-source, art, code", type: "Free" },
+            { name: "Leonardo.Ai", desc: "A platform for creating stunning game assets, concept art, and illustrations with a suite of fine-tuned AI models.", rate: "4.7", url: "https://leonardo.ai", tags: "image, gamedev, art, assets", type: "Freemium" },
+            { name: "Ideogram", desc: "An AI image generator that excels at rendering coherent and creative text within images, a common challenge for other models.", rate: "4.5", url: "https://ideogram.ai", tags: "image, text, typography, design", type: "Freemium" },
+
+            // Video Generation
+            { name: "Sora", desc: "OpenAI's highly anticipated text-to-video model, capable of generating high-fidelity, cinematic video clips from prompts.", rate: "4.9", url: "https://openai.com/sora", tags: "video, cinematic, generation, text-to-video", type: "Paid" },
+            { name: "RunwayML", desc: "A comprehensive video editing and generation suite with AI-powered tools for professionals and creators.", rate: "4.7", url: "https://runwayml.com", tags: "video, editing, generation, professional", type: "Freemium" },
+            { name: "Pika", desc: "An easy-to-use AI video generator that transforms ideas and simple text prompts into compelling videos.", rate: "4.6", url: "https://pika.art", tags: "video, easy, text-to-video, creative", type: "Freemium" },
+            { name: "HeyGen", desc: "A platform for creating realistic AI avatar videos for marketing, training, and communication without cameras or crews.", rate: "4.8", url: "https://www.heygen.com", tags: "video, avatar, marketing, corporate", type: "Freemium" },
+            { name: "Synthesia", desc: "A leading AI video creation platform that generates professional videos with AI avatars and voiceovers in minutes.", rate: "4.7", url: "https://www.synthesia.io", tags: "video, corporate, training, avatar", type: "Paid" },
+
+            // Audio/Music
+            { name: "Suno", desc: "An AI music generator that creates impressive songs, complete with vocals and instruments, from a simple text prompt.", rate: "4.8", url: "https://suno.com", tags: "audio, music, song, generation", type: "Freemium" },
+            { name: "Udio", desc: "A new and powerful AI music creation tool that generates high-quality, full-length tracks in various genres.", rate: "4.7", url: "https://www.udio.com", tags: "audio, music, generation, high-quality", type: "Free" },
+            { name: "ElevenLabs", desc: "A top-tier AI voice generator for creating realistic, human-like voiceovers and dubbing in multiple languages.", rate: "4.9", url: "https://elevenlabs.io", tags: "audio, voice, speech, dubbing", type: "Freemium" },
+            { name: "Descript", desc: "An all-in-one audio and video editor that transcribes content and allows editing by simply editing the text.", rate: "4.6", url: "https://www.descript.com", tags: "audio, video, editing, transcription", type: "Freemium" },
+            { name: "AIVA", desc: "An AI music composer that generates emotional and epic soundtracks for films, games, and other creative projects.", rate: "4.5", url: "https://www.aiva.ai", tags: "audio, music, soundtrack, composition", type: "Freemium" },
+
+            // Coding/Developer
+            { name: "GitHub Copilot", desc: "An AI pair programmer that provides autocompletions, suggestions, and full function generation directly in your editor.", rate: "4.8", url: "https://copilot.github.com", tags: "coding, developer, productivity, code", type: "Paid" },
+            { name: "Tabnine", desc: "An AI code completion assistant that learns from your code and provides highly personalized suggestions.", rate: "4.6", url: "https://www.tabnine.com", tags: "coding, developer, autocomplete, personalization", type: "Freemium" },
+            { name: "Replit Ghostwriter", desc: "A suite of AI coding tools within the Replit IDE, including code completion, generation, and debugging.", rate: "4.7", url: "https://replit.com/ghostwriter", tags: "coding, ide, developer, debugging", type: "Freemium" },
+            { name: "Amazon CodeWhisperer", desc: "A machine learning-powered service that helps improve developer productivity by generating code recommendations.", rate: "4.5", url: "https://aws.amazon.com/codewhisperer/", tags: "coding, aws, developer, enterprise", type: "Free" },
+            { name: "Codeium", desc: "A free AI-powered toolkit for developers, offering code completion and search capabilities across many languages.", rate: "4.7", url: "https://codeium.com", tags: "coding, developer, free, autocomplete", type: "Free" },
+
+            // Productivity/Assistant
+            { name: "Notion AI", desc: "AI features integrated into the Notion workspace to summarize, rewrite, and generate text within your notes and docs.", rate: "4.8", url: "https://www.notion.so/product/ai", tags: "productivity, writing, assistant, workspace", type: "Freemium" },
+            { name: "Microsoft 365 Copilot", desc: "An AI assistant embedded in Microsoft Office apps like Word, Excel, and Teams to boost productivity and creativity.", rate: "4.7", url: "https://www.microsoft.com/en-us/microsoft-365/copilot", tags: "productivity, office, enterprise, assistant", type: "Paid" },
+            { name: "Fireflies.ai", desc: "An AI meeting assistant that records, transcribes, and summarizes your calls, creating automated meeting notes.", rate: "4.6", url: "https://fireflies.ai", tags: "productivity, meeting, assistant, transcription", type: "Freemium" },
+            { name: "Otter.ai", desc: "An AI-powered transcription service that provides real-time notes and summaries for meetings, interviews, and lectures.", rate: "4.5", url: "https://otter.ai", tags: "productivity, transcription, meeting, notes", type: "Freemium" },
+            { name: "Motion", desc: "An intelligent calendar and project management tool that uses AI to automatically schedule your tasks and meetings.", rate: "4.7", url: "https://www.usemotion.com/", tags: "productivity, scheduling, assistant, calendar", type: "Paid" },
+
+            // Writing/Text (More)
+            { name: "Copy.ai", desc: "A versatile AI writer for generating marketing copy, social media content, and emails with a wide array of templates.", rate: "4.5", url: "https://www.copy.ai", tags: "writing, copy, marketing, text", type: "Freemium" },
+            { name: "Writesonic", desc: "An AI writing platform that helps create SEO-friendly articles, ad copy, and landing pages quickly.", rate: "4.6", url: "https://writesonic.com", tags: "writing, seo, marketing, text", type: "Freemium" },
+            { name: "Rytr", desc: "A fast and affordable AI writing assistant for creating high-quality content for blogs, emails, and social media.", rate: "4.4", url: "https://rytr.me", tags: "writing, text, copy, affordable", type: "Freemium" },
+            { name: "Grammarly", desc: "An AI-powered writing assistant that checks grammar, spelling, style, and tone to improve your writing.", rate: "4.8", url: "https://www.grammarly.com", tags: "writing, grammar, productivity, assistant", type: "Freemium" },
+            { name: "QuillBot", desc: "A paraphrasing tool and writing assistant that helps you rewrite sentences, summarize text, and check grammar.", rate: "4.5", url: "https://quillbot.com", tags: "writing, paraphrasing, summarizing, text", type: "Freemium" },
+
+            // Research/Search
+            { name: "Perplexity AI", desc: "A conversational search engine that provides direct answers with citations, combining a search engine with an AI chatbot.", rate: "4.8", url: "https://www.perplexity.ai", tags: "research, search, assistant, conversational", type: "Freemium" },
+            { name: "Consensus", desc: "An AI-powered search engine that extracts and distills findings directly from scientific research papers.", rate: "4.7", url: "https://consensus.app", tags: "research, science, academic, search", type: "Freemium" },
+            { name: "Elicit", desc: "An AI research assistant that helps automate literature reviews by finding relevant papers and summarizing key takeaways.", rate: "4.6", url: "https://elicit.org", tags: "research, academic, science, literature review", type: "Free" },
+            { name: "Scite", desc: "A platform that helps researchers discover and evaluate scientific articles via Smart Citations, which show how a paper has been cited.", rate: "4.5", url: "https://scite.ai", tags: "research, science, citation, academic", type: "Freemium" },
+            
+            // 3D & Design
+            { name: "Luma AI", desc: "A tool for creating cinematic 3D videos and realistic assets from your phone, making 3D capture accessible to everyone.", rate: "4.8", url: "https://lumalabs.ai", tags: "3d, video, mobile, generation", type: "Freemium" },
+            { name: "Spline", desc: "A collaborative 3D design tool that allows you to create and export 3D web experiences, scenes, and characters easily.", rate: "4.7", url: "https://spline.design", tags: "3d, design, web, collaborative", type: "Freemium" },
+            { name: "Krea", desc: "An AI-powered design tool that offers real-time image generation, upscaling, and creative enhancement features.", rate: "4.6", url: "https://www.krea.ai", tags: "design, image, real-time, creative", type: "Freemium" },
+            { name: "Beautiful.ai", desc: "An AI presentation maker that automatically applies design principles to create stunning, professional slides.", rate: "4.5", url: "https://www.beautiful.ai", tags: "design, presentation, productivity, slides", type: "Freemium" },
+            { name: "Tome", desc: "A generative storytelling format for creating compelling presentations, documents, and one-pagers with AI.", rate: "4.6", url: "https://tome.app", tags: "design, presentation, storytelling, productivity", type: "Freemium" },
+            { name: "Looka", desc: "An AI-powered platform for designing a brand identity, including logos, websites, and marketing materials.", rate: "4.4", url: "https://looka.com", tags: "design, logo, brand, marketing", type: "Paid" },
+
+            // Other & Niche Tools
+            { name: "Character.AI", desc: "A chatbot service where you can create and talk to a wide range of AI characters, each with their own personality.", rate: "4.7", url: "https://character.ai", tags: "chat, entertainment, characters, fun", type: "Freemium" },
+            { name: "Murf.ai", desc: "A versatile AI voice generator with a library of studio-quality voices for podcasts, videos, and presentations.", rate: "4.6", url: "https://murf.ai", tags: "audio, voice, generation, podcast", type: "Freemium" },
+            { name: "InVideo", desc: "An online video editor with AI-powered features and templates to create professional videos quickly and easily.", rate: "4.5", url: "https://invideo.io", tags: "video, editor, marketing, social media", type: "Freemium" },
+            { name: "DeepL", desc: "A highly accurate AI-powered translation service known for its nuanced and natural-sounding translations.", rate: "4.8", url: "https://www.deepl.com", tags: "translation, language, productivity, writing", type: "Freemium" },
+            { name: "Gamma", desc: "An AI tool for creating engaging presentations, websites, and documents from simple text prompts.", rate: "4.6", url: "https://gamma.app", tags: "presentation, design, document, website", type: "Freemium" },
+            { name: "SurferSEO", desc: "A content intelligence tool that helps you write SEO-optimized articles that rank high on Google.", rate: "4.7", url: "https://surferseo.com", tags: "seo, marketing, writing, content", type: "Paid" }
         ];
 
         function render(val = "") {
@@ -137,12 +173,16 @@
                 item.href = t.url;
                 item.target = "_blank";
                 item.className = "tool-item";
+                
+                const roundedRating = Math.round(parseFloat(t.rate));
+                const stars = '★'.repeat(roundedRating) + '☆'.repeat(5 - roundedRating);
+
                 item.innerHTML = `
                     <div class="tool-info">
                         <div class="tool-header">
                             <div class="tool-title">${t.name}</div>
                             <div class="tool-meta">
-                                <span class="tool-rating">${t.rate}/5</span>
+                                <span class="tool-rating" title="${t.rate}/5">${stars}</span>
                                 <span class="tool-price ${t.type.toLowerCase()}">${t.type}</span>
                             </div>
                         </div>
