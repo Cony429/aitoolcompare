@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,40 +84,38 @@
 
         const aiTools = [
             // Text/Chat
-            { name: "ChatGPT", desc: "Leader in text generation and coding.", rate: "4.9", url: "https://chat.openai.com", tags: "text, chat, writing, coding, productivity", type: "free" },
-            { name: "Claude", desc: "Best for natural writing and reasoning.", rate: "4.8", url: "https://claude.ai", tags: "text, writing, reasoning, research", type: "free" },
-            { name: "Gemini", desc: "Google's smart assistant for search and work.", rate: "4.7", url: "https://gemini.google.com", tags: "search, google, assistant, research", type: "free" },
-            { name: "Jasper", desc: "AI writing assistant for businesses.", rate: "4.6", url: "https://jasper.ai", tags: "text, marketing, writing, copy", type: "paid" },
-            { name: "Copy.ai", desc: "AI-powered copywriter for marketing.", rate: "4.5", url: "https://copy.ai", tags: "text, marketing, sales, copy", type: "paid" },
-            // Image/Design
-            { name: "Midjourney", desc: "Professional artistic image generation.", rate: "4.9", url: "https://midjourney.com", tags: "image, art, design, creative", type: "paid" },
-            { name: "DALL-E 3", desc: "OpenAI's high-precision image generator.", rate: "4.8", url: "https://openai.com/dall-e-3", tags: "image, art, drawing, design", type: "paid" },
-            { name: "Canva AI", desc: "Simple AI tools for graphic design.", rate: "4.5", url: "https://canva.com", tags: "image, design, creative, editing", type: "free" },
-            { name: "Leonardo.ai", desc: "Creative platform for pro image assets.", rate: "4.7", url: "https://leonardo.ai", tags: "image, art, game, creative", type: "free" },
-            { name: "Adobe Firefly", desc: "Adobe's creative generative AI.", rate: "4.6", url: "https://firefly.adobe.com", tags: "image, design, photo, adobe", type: "paid" },
-            // Video/Animation
-            { name: "Sora", desc: "Next-gen realistic video generation.", rate: "4.9", url: "https://openai.com/sora", tags: "video, movie, animation, motion", type: "beta" },
-            { name: "Runway", desc: "Pro-level AI tools for video editing.", rate: "4.7", url: "https://runwayml.com", tags: "video, movie, editing, motion", type: "free" },
-            { name: "Pika", desc: "AI video generation and animation.", rate: "4.6", url: "https.pika.art", tags: "video, animation, motion", type: "free" },
-            { name: "HeyGen", desc: "AI avatar and video translation.", rate: "4.8", url: "https://heygen.com", tags: "video, avatar, translation, business", type: "paid" },
-            { name: "Synthesia", desc: "AI video generation with avatars.", rate: "4.7", url: "https.synthesia.io", tags: "video, avatar, training, business", type: "paid" },
-            // Search/Research
-            { name: "Perplexity", desc: "Search engine with real-time sources.", rate: "4.8", url: "https://perplexity.ai", tags: "search, research, information, answer", type: "free" },
-            { name: "You.com", desc: "Private AI-driven search engine.", rate: "4.4", url: "https://you.com", tags: "search, chat, research", type: "free" },
-            { name: "Consensus", desc: "AI search engine for research papers.", rate: "4.7", url: "https://consensus.app", tags: "search, science, research, academic", type: "free" },
-            { name: "Elicit", desc: "The AI research assistant for papers.", rate: "4.6", url: "https.elicit.org", tags: "search, research, paper, science", type: "free" },
-            // Audio/Voice
-            { name: "ElevenLabs", desc: "Realistic AI voice synthesis.", rate: "4.9", url: "https://elevenlabs.io", tags: "audio, voice, sound, speech", type: "paid" },
-            { name: "Suno", desc: "AI music generation by simple prompts.", rate: "4.8", url: "https://suno.com", tags: "audio, music, sound, song", type: "free" },
-            { name: "Udio", desc: "High-fidelity AI music creation.", rate: "4.8", url: "https://udio.com", tags: "audio, music, sound, song", type: "free" },
-            { name: "Descript", desc: "All-in-one audio and video editor.", rate: "4.7", url: "https.descript.com", tags: "audio, video, editing, podcast", type: "paid" },
-            { name: "Murf AI", desc: "Professional AI voice-overs.", rate: "4.5", url: "https://murf.ai", tags: "audio, voice, business, speech", type: "paid" },
-            // Productivity/Notes
-            { name: "Notion AI", desc: "AI writing inside your Notion workspace.", rate: "4.7", url: "https://notion.so", tags: "text, writing, productivity, notes", type: "paid" },
-            { name: "Gamma", desc: "AI-powered presentations and decks.", rate: "4.8", url: "https://gamma.app", tags: "productivity, design, slide, business", type: "free" },
-            { name: "Otter.ai", desc: "AI meeting notes and transcription.", rate: "4.6", url: "https://otter.ai", tags: "text, audio, meeting, transcription", type: "free" },
-            { name: "Beautiful.ai", desc: "AI presentation design software.", rate: "4.5", url: "https://beautiful.ai", tags: "design, slide, business, productivity", type: "paid" },
-            { name: "QuillBot", desc: "AI paraphrasing and grammar tool.", rate: "4.5", url: "https://quillbot.com", tags: "text, writing, education, grammar", type: "free" }
+            { 
+                name: "ChatGPT", 
+                desc: "ChatGPT, created by OpenAI, is a highly advanced conversational AI built on the GPT (Generative Pre-trained Transformer) architecture. It excels at understanding and generating human-like text, making it a versatile tool for a vast range of tasks. Its core strength lies in its ability to engage in dynamic, context-aware dialogues, answer complex follow-up questions, and even admit when it's wrong. For professionals, it's an indispensable assistant for drafting emails, writing articles, and generating marketing copy. Developers leverage its power for writing, debugging, and explaining code in various programming languages. The model's creative capabilities extend to composing poetry, writing scripts, and brainstorming ideas. Its unique selling point is its adaptability; it can be fine-tuned for specific applications and integrated into existing workflows via the OpenAI API. The free version offers broad access, while the 'Plus' subscription provides priority access to new features and faster response times, making it a leader in productivity and creative AI.", 
+                rate: "4.9", 
+                url: "https://chat.openai.com", 
+                tags: "text, chat, writing, coding, productivity", 
+                type: "Freemium" 
+            },
+            { 
+                name: "Claude", 
+                desc: "Claude, developed by Anthropic, is a next-generation AI assistant designed with a strong emphasis on safety and ethical considerations. Its unique 'Constitutional AI' framework ensures that its responses are helpful, harmless, and honest. Claude's standout feature is its exceptionally large context window, allowing it to process and analyze hundreds of thousands of words at once. This makes it the ideal tool for summarizing lengthy research papers, financial reports, or legal documents with high accuracy. It excels in tasks requiring deep contextual understanding, nuanced writing, and collaborative brainstorming. For businesses, Claude offers a reliable solution for customer service, content moderation, and internal knowledge management. Its unique selling point is its commitment to responsible AI development, providing users with a powerful tool they can trust. Available through an API and a public beta, Claude is quickly becoming a favorite among researchers, writers, and professionals who handle large volumes of text.", 
+                rate: "4.8", 
+                url: "https://claude.ai", 
+                tags: "text, writing, reasoning, research", 
+                type: "Freemium" 
+            },
+            { 
+                name: "Gemini", 
+                desc: "Gemini is Google's most advanced and flexible AI model, engineered to be natively multimodal. This means it can seamlessly understand, operate across, and combine different types of information, including text, code, audio, images, and video. This multimodality allows for incredibly intuitive and powerful new user experiences. For instance, you can show Gemini a picture of a meal and it can provide a recipe, or give it a complex math problem and it can explain the solution step-by-step. Gemini is offered in several sizes—Ultra for highly complex tasks, Pro for a balance of performance and scalability, and Nano for on-device applications. Its key selling point is its deep integration into the Google ecosystem, powering features in Google Search, Ads, and Workspace. This allows Gemini to draw on real-time information and provide highly contextual, accurate, and creative responses, making it a formidable tool for both personal productivity and enterprise-level solutions.", 
+                rate: "4.7", 
+                url: "https://gemini.google.com", 
+                tags: "search, google, assistant, research", 
+                type: "Free" 
+            },
+            { 
+                name: "Jasper", 
+                desc: "Jasper is a premium AI writing assistant tailored for marketing and business content creation. It's designed to help teams produce high-quality, on-brand content at scale. Jasper's extensive library of over 50 templates covers everything from blog posts and social media captions to ad copy and video scripts. Its core feature, 'Brand Voice,' allows businesses to upload their style guides, ensuring that all generated content aligns with their specific tone and messaging. The 'Boss Mode' feature provides a long-form editor for writing complete articles and reports with AI assistance. A key selling point for Jasper is its focus on producing conversion-focused copy. It integrates with tools like Surfer SEO to optimize content for search engines and Grammarly for error-free writing. With its collaborative interface and robust feature set, Jasper positions itself as an end-to-end solution for enterprise content marketing, helping businesses overcome writer's block and accelerate their content pipeline.", 
+                rate: "4.6", 
+                url: "https://jasper.ai", 
+                tags: "text, marketing, writing, copy", 
+                type: "Paid" 
+            },
         ];
 
         function render(val = "") {
@@ -134,16 +133,24 @@
             }
 
             filtered.forEach(t => {
-                const row = document.createElement('a');
-                row.href = t.url;
-                row.target = "_blank";
-                row.className = "tool-item";
-                row.innerHTML = `<div class="tool-info">
-                                    <div class="tool-title">${t.name}</div>
-                                    <div class="tool-description">${t.desc}</div>
-                                 </div>
-                                 <div class="btn-read-more">Visit Site</div>`;
-                div.appendChild(row);
+                const item = document.createElement('a');
+                item.href = t.url;
+                item.target = "_blank";
+                item.className = "tool-item";
+                item.innerHTML = `
+                    <div class="tool-info">
+                        <div class="tool-header">
+                            <div class="tool-title">${t.name}</div>
+                            <div class="tool-meta">
+                                <span class="tool-rating">${t.rate}/5</span>
+                                <span class="tool-price ${t.type.toLowerCase()}">${t.type}</span>
+                            </div>
+                        </div>
+                        <p class="tool-description">${t.desc}</p>
+                    </div>
+                    <div class="btn-read-more">Visit Site</div>
+                `;
+                div.appendChild(item);
             });
         }
 

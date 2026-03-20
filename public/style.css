@@ -42,8 +42,20 @@ body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333;
 
 /* Text Styling */
 .tool-info { flex: 1; }
-.tool-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 5px; color: #1a73e8; }
-.tool-description { color: #666; font-size: 0.95rem; line-height: 1.5; margin: 0; }
+.tool-header { 
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 12px; 
+}
+@media (min-width: 768px) { 
+    .tool-header { 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between; 
+    } 
+}
+.tool-title { font-size: 1.25rem; font-weight: 700; color: #1a73e8; }
+.tool-description { color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0; }
 
 /* Button Styling */
 .btn-read-more {
@@ -55,4 +67,37 @@ body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333;
   font-weight: 600;
   white-space: nowrap;
   text-align: center;
+}
+
+.tool-meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.tool-rating {
+    font-size: 0.9rem;
+    color: #f5b32e;
+}
+
+.tool-price {
+    font-size: 0.9rem;
+    padding: 3px 10px;
+    border-radius: 14px;
+    font-weight: 600;
+}
+
+.tool-price.free {
+    background-color: #d1e7dd;
+    color: #146c43;
+}
+
+.tool-price.paid {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.tool-price.freemium {
+    background-color: #cfe2ff;
+    color: #0c5460;
 }
