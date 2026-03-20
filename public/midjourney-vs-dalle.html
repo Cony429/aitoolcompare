@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midjourney vs DALL-E 3 - AI Image Generator Battle</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="comparison.css"> <!-- Link to the new CSS -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5933569238212175"
      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="comparison.css"> <!-- Link to the new CSS -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CZ21VR3EM"></script>
 <script>
@@ -21,13 +21,18 @@
 </head>
 <body>
     <header>
-        <div class="logo">AIToolCompare</div>
+        <a href="index.html" class="logo">AI Tool Compare</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav>
             <a href="index.html">Home</a>
+            <a href="compare.html">Compare</a>
+            <a href="blog.html">Blog</a>
             <a href="news.html">News</a>
-            <a href="free-ai-tools.html">Free AI Tools</a>
         </nav>
-        <a href="#" class="subscribe-btn">Subscribe</a>
     </header>
 
     <main>
@@ -60,5 +65,25 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 AI Tool Compare. All rights reserved.</p>
+            <nav>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
