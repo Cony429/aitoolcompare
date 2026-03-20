@@ -61,20 +61,20 @@
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo">AI Tool Compare</a>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="compare.html">Compare</a>
-            <a href="blog.html">Blog</a>
-            <a href="news.html">News</a>
-        </nav>
-    </header>
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="logo">AI Tool Compare</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="compare.html">Compare</a>
+      <a href="blog.html">Blog</a>
+      <a href="news.html">News</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="index.html">EN</a> | <a href="index-ko.html">KO</a>
+    </div>
+  </div>
+</header>
 
     <section class="compare-hero">
         <h1>Interactive AI Comparison</h1>
@@ -122,13 +122,6 @@
     </footer>
 
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const nav = document.querySelector('nav');
-
-        hamburger.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-
         // Full list of 50+ tools
         const tools = ["ChatGPT", "Claude", "Midjourney", "Gemini", "Perplexity", "Sora", "Runway", "ElevenLabs", "Leonardo.ai", "Canva AI", "Jasper", "Notion AI", "Gamma", "HeyGen", "Pika", "Suno", "Udio", "Copy.ai", "QuillBot", "Grammarly", "GitHub Copilot", "Cursor", "Replit Ghostwriter", "Phind", "Adobe Firefly", "Beautiful.ai", "Otter.ai", "Descript", "Luma Dream Machine", "Kling AI", "Murf AI", "Veed.io", "Character.ai", "DeepL", "InVideo", "Pictory", "CapCut AI", "Remini", "Play.ht", "D-ID", "Clipchamp", "Writesonic", "Rytr", "Craiyon", "Looka", "Brandmark", "Mubert", "AIVA", "Tome", "Riffusion", "Synthesia", "Consensus", "Elicit", "You.com"];
 
