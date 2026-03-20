@@ -93,22 +93,30 @@ main {
 
 .news-card, .tool-item {
     background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 1.5rem 2rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    display: block;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .news-card:hover, .tool-item:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
+}
+
+.news-card-content, .tool-item-content {
+    flex: 1;
+    padding-right: 1.5rem;
 }
 
 .news-card h3, .tool-item h3 {
-    margin-top: 0;
+    margin: 0 0 0.5rem 0;
     font-size: 1.4rem;
     font-weight: 600;
 }
@@ -121,14 +129,13 @@ main {
 .news-card p, .tool-item p {
     color: #666;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin: 0;
 }
 
 .read-more {
     font-weight: 600;
     color: #007bff;
-    display: inline-block;
-    margin-top: 0.5rem;
+    white-space: nowrap;
 }
 
 footer {
@@ -181,5 +188,15 @@ footer {
 
     .hero h1 {
         font-size: 2.5rem;
+    }
+
+    .news-card, .tool-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news-card-content, .tool-item-content {
+        padding-right: 0;
+        margin-bottom: 1rem;
     }
 }
