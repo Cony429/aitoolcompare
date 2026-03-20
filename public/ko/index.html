@@ -1,18 +1,18 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best AI Tools Comparison 2026 | Find the Right AI for You</title>
-    <meta name="description" content="Compare the best AI tools of 2026. Side-by-side analysis of AI for video, image, writing, and more. Find the perfect AI tool for your needs.">
-    <meta property="og:title" content="Best AI Tools Comparison 2026 | Find the Right AI for You">
-    <meta property="og:description" content="Compare the best AI tools of 2026. Side-by-side analysis of AI for video, image, writing, and more. Find the perfect AI tool for your needs.">
+    <title>최고의 AI 도구 비교 2026 | 당신에게 맞는 AI 찾기</title>
+    <meta name="description" content="2026년 최고의 AI 도구를 비교하세요. 비디오, 이미지, 글쓰기 등을 위한 AI를 나란히 분석합니다. 당신의 필요에 맞는 완벽한 AI 도구를 찾아보세요.">
+    <meta property="og:title" content="최고의 AI 도구 비교 2026 | 당신에게 맞는 AI 찾기">
+    <meta property="og:description" content="2026년 최고의 AI 도구를 비교하세요. 비디오, 이미지, 글쓰기 등을 위한 AI를 나란히 분석합니다. 당신의 필요에 맞는 완벽한 AI 도구를 찾아보세요.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bestaitoolcompare.com/index.html">
-    <link rel="canonical" href="https://bestaitoolcompare.com/index.html">
+    <meta property="og:url" content="https://bestaitoolcompare.com/ko/index.html">
+    <link rel="canonical" href="https://bestaitoolcompare.com/ko/index.html">
     <meta property="og:image" content="https://bestaitoolcompare.com/og-image.jpg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5933569238212175"
      crossorigin="anonymous"></script>
 <!-- Google tag (gtag.js) -->
@@ -50,42 +50,42 @@
 <body>
 
     <header>
-        <a href="index.html" class="logo">AI Tool Compare</a>
-        <div class="lang-switcher"><a href="ko/index.html">한국어</a></div>
+        <a href="index.html" class="logo">AI 도구 비교</a>
+        <div class="lang-switcher"><a href="../index.html">English</a></div>
         <div class="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="compare.html">Compare</a>
-            <a href="blog.html">Blog</a>
-            <a href="news.html">News</a>
+            <a href="index.html">홈</a>
+            <a href="compare.html">비교</a>
+            <a href="blog.html">블로그</a>
+            <a href="news.html">뉴스</a>
         </nav>
     </header>
 
     <div class="hero">
-        <h1>Find the Best AI for You</h1>
-        <p>Compare various AI tools and make the best choice.</p>
+        <h1>당신에게 맞는 최고의 AI를 찾아보세요</h1>
+        <p>다양한 AI 도구를 비교하고 최적의 선택을 하세요.</p>
         <div class="search-container">
-            <input type="text" id="search-input" class="search-bar" placeholder="Try 'video', 'image', 'text', 'coding'...">
-            <button id="search-btn">Search</button>
+            <input type="text" id="search-input" class="search-bar" placeholder="'비디오', '이미지', '텍스트', '코딩' 등을 입력해보세요...">
+            <button id="search-btn">검색</button>
         </div>
     </div>
 
     <main class="container">
-        <h2 class="section-title">Top AI Tools Directory</h2>
+        <h2 class="section-title">최고의 AI 도구 디렉토리</h2>
         <div id="tool-display"></div>
     </main>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 AI Tool Compare. All rights reserved.</p>
+            <p>&copy; 2024 AI 도구 비교. 모든 권리 보유.</p>
             <nav>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="about.html">소개</a>
+                <a href="contact.html">문의</a>
+                <a href="privacy-policy.html">개인정보 처리방침</a>
             </nav>
         </div>
     </footer>
@@ -102,12 +102,12 @@
 
         async function fetchTools() {
             try {
-                const response = await fetch('ai-tools.json');
+                const response = await fetch('../ai-tools.json');
                 aiTools = await response.json();
                 render();
             } catch (error) {
-                console.error('Error fetching AI tools:', error);
-                document.getElementById('tool-display').innerHTML = "<p style='text-align:center; padding: 20px;'>Could not load AI tools.</p>";
+                console.error('AI 도구를 불러오는 중 오류 발생:', error);
+                document.getElementById('tool-display').innerHTML = "<p style='text-align:center; padding: 20px;'>AI 도구를 불러올 수 없습니다.</p>";
             }
         }
 
@@ -121,7 +121,7 @@
             );
 
             if(filtered.length === 0) {
-                div.innerHTML = "<p style='text-align:center; padding: 20px;'>No matching AI tools found.</p>";
+                div.innerHTML = "<p style='text-align:center; padding: 20px;'>일치하는 AI 도구를 찾을 수 없습니다.</p>";
                 return;
             }
 
@@ -131,7 +131,6 @@
                 item.target = "_blank";
                 item.className = "tool-item";
 
-                // Simplified display - no rating or price type as it's not in the new data source
                 item.innerHTML = `
                     <div class="tool-info">
                         <div class="tool-header">
@@ -139,7 +138,7 @@
                         </div>
                         <p class="tool-description">${t.description}</p>
                     </div>
-                    <div class="btn-read-more">Visit Site</div>
+                    <div class="btn-read-more">사이트 방문</div>
                 `;
                 div.appendChild(item);
             });
@@ -148,7 +147,6 @@
         document.getElementById('search-btn').onclick = () => render(document.getElementById('search-input').value);
         document.getElementById('search-input').onkeyup = (e) => { if(e.key === "Enter") render(e.target.value); };
 
-        // Fetch tools when the page loads
         fetchTools();
     </script>
 </body>
