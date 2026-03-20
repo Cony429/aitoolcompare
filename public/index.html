@@ -57,29 +57,9 @@
         </div>
     </div>
 
-    <main>
-        <div class="latest-news-area">
-            <h2>Latest News</h2>
-            <div class="news-card">
-                <h3><a href="ai-job-replacement-2026.html">Will AI Replace My Job in 2026? 3 Essential Skills to Stay Ahead</a></h3>
-                <p>Is your job at risk from AI? Discover the 3 essential skills you need to thrive in the age of automation and future-proof your career for 2026 and beyond.</p>
-                <a href="ai-job-replacement-2026.html" class="read-more">Read More</a>
-            </div>
-            <div class="news-card">
-                <h3><a href="blog-claude-vs-gpt-2026.html">Claude 4 vs GPT-5.4: The Ultimate AI Showdown (2026)</a></h3>
-                <p>A detailed comparison of Claude 4 and GPT-5.4, focusing on reasoning, coding, and creative writing. See which AI model comes out on top in 2026.</p>
-                <a href="blog-claude-vs-gpt-2026.html" class="read-more">Read More</a>
-            </div>
-            <div class="news-card">
-                <h3><a href="blog-march-2026-trends.html">March 2026 AI Trends Review</a></h3>
-                <p>Explore the latest AI trends from March 2026, including breakthroughs like GPT-5.4, Sora 2, and Gemini 3.1. Get insights into the future of AI.</p>
-                <a href="blog-march-2026-trends.html" class="read-more">Read More</a>
-            </div>
-        </div>
-        <div class="list-area">
-            <h2>Top AI Tools Directory</h2>
-            <div id="tool-display"></div>
-        </div>
+    <main class="container">
+        <h2 class="section-title">Top AI Tools Directory</h2>
+        <div id="tool-display"></div>
     </main>
 
     <footer>
@@ -119,17 +99,17 @@
             { name: "Runway", desc: "Pro-level AI tools for video editing.", rate: "4.7", url: "https://runwayml.com", tags: "video, movie, editing, motion", type: "free" },
             { name: "Pika", desc: "AI video generation and animation.", rate: "4.6", url: "https.pika.art", tags: "video, animation, motion", type: "free" },
             { name: "HeyGen", desc: "AI avatar and video translation.", rate: "4.8", url: "https://heygen.com", tags: "video, avatar, translation, business", type: "paid" },
-            { name: "Synthesia", desc: "AI video generation with avatars.", rate: "4.7", url: "https://synthesia.io", tags: "video, avatar, training, business", type: "paid" },
+            { name: "Synthesia", desc: "AI video generation with avatars.", rate: "4.7", url: "https.synthesia.io", tags: "video, avatar, training, business", type: "paid" },
             // Search/Research
             { name: "Perplexity", desc: "Search engine with real-time sources.", rate: "4.8", url: "https://perplexity.ai", tags: "search, research, information, answer", type: "free" },
             { name: "You.com", desc: "Private AI-driven search engine.", rate: "4.4", url: "https://you.com", tags: "search, chat, research", type: "free" },
             { name: "Consensus", desc: "AI search engine for research papers.", rate: "4.7", url: "https://consensus.app", tags: "search, science, research, academic", type: "free" },
-            { name: "Elicit", desc: "The AI research assistant for papers.", rate: "4.6", url: "https://elicit.org", tags: "search, research, paper, science", type: "free" },
+            { name: "Elicit", desc: "The AI research assistant for papers.", rate: "4.6", url: "https.elicit.org", tags: "search, research, paper, science", type: "free" },
             // Audio/Voice
             { name: "ElevenLabs", desc: "Realistic AI voice synthesis.", rate: "4.9", url: "https://elevenlabs.io", tags: "audio, voice, sound, speech", type: "paid" },
             { name: "Suno", desc: "AI music generation by simple prompts.", rate: "4.8", url: "https://suno.com", tags: "audio, music, sound, song", type: "free" },
             { name: "Udio", desc: "High-fidelity AI music creation.", rate: "4.8", url: "https://udio.com", tags: "audio, music, sound, song", type: "free" },
-            { name: "Descript", desc: "All-in-one audio and video editor.", rate: "4.7", url: "https://descript.com", tags: "audio, video, editing, podcast", type: "paid" },
+            { name: "Descript", desc: "All-in-one audio and video editor.", rate: "4.7", url: "https.descript.com", tags: "audio, video, editing, podcast", type: "paid" },
             { name: "Murf AI", desc: "Professional AI voice-overs.", rate: "4.5", url: "https://murf.ai", tags: "audio, voice, business, speech", type: "paid" },
             // Productivity/Notes
             { name: "Notion AI", desc: "AI writing inside your Notion workspace.", rate: "4.7", url: "https://notion.so", tags: "text, writing, productivity, notes", type: "paid" },
@@ -154,9 +134,15 @@
             }
 
             filtered.forEach(t => {
-                const row = document.createElement('div');
-                row.className = "tool-row";
-                row.innerHTML = `<div class="t-name">${t.name}</div><div class="t-desc">${t.desc}</div><div class="t-tags"><span class="tag ${t.type}">${t.type}</span></div><div class="t-rating">⭐ ${t.rate}</div><a href="${t.url}" target="_blank" class="visit-link">Visit Site</a>`;
+                const row = document.createElement('a');
+                row.href = t.url;
+                row.target = "_blank";
+                row.className = "tool-item";
+                row.innerHTML = `<div class="tool-info">
+                                    <div class="tool-title">${t.name}</div>
+                                    <div class="tool-description">${t.desc}</div>
+                                 </div>
+                                 <div class="btn-read-more">Visit Site</div>`;
                 div.appendChild(row);
             });
         }

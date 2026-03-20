@@ -1,202 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+/* Main Layout */
+body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333; margin: 0; padding: 0; }
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    background-color: #f0f2f5;
-    color: #333;
+/* Hero Section */
+.hero { text-align: center; padding: 60px 20px; background-color: white; border-bottom: 1px solid #e0e0e0; }
+.hero h1 { font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin: 0; }
+.hero p { font-size: 1.1rem; color: #666; margin: 10px 0 0; }
+
+/* Top AI Tools Directory Title */
+.section-title { font-size: 1.5rem; font-weight: 700; color: #333; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #1a73e8; display: inline-block; }
+
+/* Tool Item Card Style */
+.tool-item {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Stack for mobile */
+  gap: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  text-decoration: none; /* Make entire card clickable */
+  color: inherit;
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.tool-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-a:hover {
-    color: #0056b3;
-}
-
-header {
-    display: flex;
+/* Flex row for Desktop */
+@media (min-width: 768px) {
+  .tool-item {
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 3rem;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-    position: relative;
+  }
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #333;
-}
+/* Text Styling */
+.tool-info { flex: 1; }
+.tool-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 5px; color: #1a73e8; }
+.tool-description { color: #666; font-size: 0.95rem; line-height: 1.5; margin: 0; }
 
-nav {
-    display: flex;
-}
-
-nav a {
-    color: #333;
-    margin: 0 1.5rem;
-    font-weight: 600;
-}
-
-.hero {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 4rem 1.5rem;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 2.5rem;
-}
-
-.search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.search-bar {
-    width: 100%;
-    max-width: 600px;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 1rem;
-}
-
-main {
-    padding: 2rem 1.5rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.latest-news-area h2,
-.list-area h2 {
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
-}
-
-.news-card, .tool-item {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.news-card:hover, .tool-item:hover {
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.news-card-content, .tool-item-content {
-    flex: 1;
-    padding-right: 1.5rem;
-}
-
-.news-card h3, .tool-item h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.news-card h3 a, .tool-item h3 a {
-    color: #333;
-    text-decoration: none;
-}
-
-.news-card p, .tool-item p {
-    color: #666;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.read-more {
-    font-weight: 600;
-    color: #007bff;
-    white-space: nowrap;
-}
-
-footer {
-    text-align: center;
-    padding: 2rem 1.5rem;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-    margin-top: 3rem;
-}
-
-.footer-content nav {
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.hamburger {
-    display: none; /* Hidden on desktop */
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 1rem 1.5rem;
-    }
-
-    nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        border-top: 1px solid #ddd;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    nav a {
-        padding: 1rem;
-        text-align: center;
-        border-bottom: 1px solid #f0f0f0;
-    }
-
-    .hamburger {
-        display: block; /* Show on mobile */
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .news-card, .tool-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .news-card-content, .tool-item-content {
-        padding-right: 0;
-        margin-bottom: 1rem;
-    }
+/* Button Styling */
+.btn-read-more {
+  background-color: #1a73e8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
 }
