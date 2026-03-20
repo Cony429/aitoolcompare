@@ -50,42 +50,50 @@
     <main class="container">
         <h2 class="section-title">AI Insights & Latest News</h2>
         <div id="blog-posts">
-            <a href="#" class="tool-item">
+            <div class="tool-item" data-href="ai-job-replacement-2026.html">
                 <div class="tool-info">
                     <div class="tool-header">
-                        <div class="tool-title">Will AI Replace Your Job in 2026?</div>
+                        <a href="ai-job-replacement-2026.html" class="tool-title-link">
+                            <div class="tool-title">Will AI Replace Your Job in 2026?</div>
+                        </a>
                     </div>
                     <p class="tool-description">An in-depth look at which professions are most at risk and how you can adapt to the changing landscape. We analyze the latest trends and expert opinions.</p>
                 </div>
-                <div class="btn-read-more">Read More</div>
-            </a>
-            <a href="#" class="tool-item">
+                <a href="ai-job-replacement-2026.html" class="btn-read-more">Read More</a>
+            </div>
+            <div class="tool-item" data-href="blog-claude-vs-gpt-2026.html">
                 <div class="tool-info">
                     <div class="tool-header">
-                        <div class="tool-title">Claude 4 vs. GPT-5.4: The Ultimate Showdown</div>
+                        <a href="blog-claude-vs-gpt-2026.html" class="tool-title-link">
+                            <div class="tool-title">Claude 4 vs. GPT-5.4: The Ultimate Showdown</div>
+                        </a>
                     </div>
                     <p class="tool-description">A head-to-head comparison of the two leading language models. We test them on creativity, reasoning, and coding to see which one comes out on top.</p>
                 </div>
-                <div class="btn-read-more">Read More</div>
-            </a>
-            <a href="#" class="tool-item">
+                <a href="blog-claude-vs-gpt-2026.html" class="btn-read-more">Read More</a>
+            </div>
+            <div class="tool-item" data-href="#">
                 <div class="tool-info">
                     <div class="tool-header">
-                        <div class="tool-title">The Rise of AI-Generated Video: Sora and Beyond</div>
+                        <a href="#" class="tool-title-link">
+                            <div class="tool-title">The Rise of AI-Generated Video: Sora and Beyond</div>
+                        </a>
                     </div>
                     <p class="tool-description">OpenAI's Sora is just the beginning. Explore the future of cinematic AI and what it means for creators, Hollywood, and the media industry.</p>
                 </div>
-                <div class="btn-read-more">Read More</div>
-            </a>
-             <a href="#" class="tool-item">
+                <a href="#" class="btn-read-more">Read More</a>
+            </div>
+             <div class="tool-item" data-href="#">
                 <div class="tool-info">
                     <div class="tool-header">
-                        <div class="tool-title">How to Use AI for Maximum Productivity</div>
+                         <a href="#" class="tool-title-link">
+                            <div class="tool-title">How to Use AI for Maximum Productivity</div>
+                        </a>
                     </div>
                     <p class="tool-description">Discover practical tips and workflows for integrating AI assistants into your daily routine to save time, automate tasks, and get more done.</p>
                 </div>
-                <div class="btn-read-more">Read More</div>
-            </a>
+                <a href="#" class="btn-read-more">Read More</a>
+            </div>
         </div>
     </main>
 
@@ -106,6 +114,14 @@
 
         hamburger.addEventListener('click', () => {
             nav.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.tool-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                if (e.target.tagName !== 'A') {
+                    window.location.href = item.dataset.href;
+                }
+            });
         });
     </script>
 </body>
