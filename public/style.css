@@ -1,21 +1,28 @@
-body { font-family: 'Inter', sans-serif; background-color: #f0f2f5; margin: 0; }
-.container { max-width: 800px; margin: 0 auto; padding: 20px; }
-.tool-card {
-  background: white !important;
-  border: 1px solid #ddd !important;
-  border-radius: 12px !important;
-  padding: 20px !important;
-  margin-bottom: 15px !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
-  text-decoration: none !important;
-  color: #333 !important;
-}
-.card-left { flex: 1; }
-.tool-name { font-size: 1.2rem; font-weight: bold; color: #1a73e8; display: block; }
-.tool-rating { color: #fbbc05; font-weight: bold; margin-top: 5px; }
-.tag { padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; color: white; font-weight: bold; }
-.free-tag { background-color: #28a745; }
-.paid-tag { background-color: #dc3545; }
+/* Basic Setup */
+body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; color: #333; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* Clean Header Navigation */
+nav { background: white; border-bottom: 1px solid #eee; padding: 15px 0; }
+.nav-content { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+.nav-links a { text-decoration: none; color: #555; margin-right: 20px; font-weight: 600; font-size: 0.95rem; }
+.lang-switch a { text-decoration: none; color: #1a73e8; font-weight: bold; border: 1px solid #1a73e8; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; }
+
+/* Hero Section (Centered) */
+.hero { text-align: center; padding: 80px 0 40px; }
+.hero h1 { font-size: 3rem; font-weight: 800; color: #111; margin-bottom: 15px; letter-spacing: -1.5px; }
+.hero p { font-size: 1.15rem; color: #666; margin-bottom: 40px; }
+
+/* Perfect Search Bar */
+.search-box { position: relative; max-width: 600px; margin: 0 auto 80px; }
+.search-box input { width: 100%; padding: 18px 30px; border-radius: 50px; border: 1px solid #ddd; box-shadow: 0 4px 20px rgba(0,0,0,0.08); font-size: 1rem; outline: none; box-sizing: border-box; }
+.search-box button { position: absolute; right: 10px; top: 8px; padding: 10px 25px; border-radius: 40px; border: none; background: #1a73e8; color: white; font-weight: bold; cursor: pointer; }
+
+/* The Tool Cards (Keep this!) */
+.section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; }
+.tool-card { background: white; border: 1px solid #e0e0e0; border-radius: 15px; padding: 25px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; transition: 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.tool-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+.card-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.tag { padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: white; }
+.free-tag { background: #28a745; }
+.paid-tag { background: #dc3545; }

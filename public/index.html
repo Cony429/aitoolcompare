@@ -35,27 +35,25 @@
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo">AI Tool Compare</a>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <nav>
+        <div class="nav-content">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="compare.html">Compare</a>
+                <a href="blog.html">Blog</a>
+                <a href="news.html">News</a>
+            </div>
+            <div class="lang-switch">
+                <a href="index.html">EN</a> | <a href="index-ko.html">KO</a>
+            </div>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="compare.html">Compare</a>
-            <a href="blog.html">Blog</a>
-            <a href="news.html">News</a>
-            <div class="lang-switch"><a href="index.html">EN</a> | <a href="index-ko.html">KO</a></div>
-        </nav>
-    </header>
+    </nav>
 
     <div class="hero">
         <h1>Find the Best AI for You</h1>
         <p>Compare various AI tools and make the best choice.</p>
-        <div class="search-container">
-            <input type="text" id="search-input" class="search-bar" placeholder="Try 'video', 'image', 'text', 'coding'...">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Try 'video', 'image', 'text', 'coding'...">
             <button id="search-btn">Search</button>
         </div>
     </div>
@@ -77,13 +75,6 @@
     </footer>
 
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const nav = document.querySelector('nav');
-
-        hamburger.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-
         let aiTools = [];
 
         async function fetchTools() {
