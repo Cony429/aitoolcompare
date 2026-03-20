@@ -1,53 +1,27 @@
-/* --- [진짜 최종] 헤더 + 검색창 + 카드 박스 통합 디자인 --- */
+/* --- [최종 통합 디자인] 모든 페이지 적용 --- */
 body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; color: #333; }
-.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
-/* 1. 헤더 (상단 메뉴) */
-.site-header { background: white; border-bottom: 1px solid #eee; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
-.nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-.logo { font-size: 1.5rem; font-weight: 800; color: #1a73e8; text-decoration: none; }
-.nav-links a { text-decoration: none; color: #555; margin: 0 15px; font-weight: 600; font-size: 0.95rem; }
-.lang-switch a { text-decoration: none; color: #1a73e8; font-weight: bold; border: 1px solid #1a73e8; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; }
-
-/* 2. 메인 섹션 (중앙 정렬) */
-.hero-section { text-align: center; padding: 80px 20px 40px; display: flex; flex-direction: column; align-items: center; }
+/* 1. 상단 섹션 (실버 그레이 배경 추가) */
+.hero-section { 
+  text-align: center; 
+  padding: 80px 20px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  background-color: #f1f3f4; /* 질문하신 실버 그레이 바탕색 */
+  border-bottom: 1px solid #eee;
+}
 .hero-section h1 { font-size: 3rem; font-weight: 850; color: #111; margin-bottom: 15px; letter-spacing: -1.5px; }
 .subtitle { font-size: 1.15rem; color: #666; margin-bottom: 40px; }
 
-/* 3. 검색창 (세련된 스타일) */
-.search-box { width: 100%; max-width: 600px; position: relative; margin-bottom: 60px; display: flex; align-items: center; }
+/* 2. 헤더 및 검색창 (중앙 정렬) */
+.site-header { background: white; border-bottom: 1px solid #eee; padding: 15px 0; }
+.nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+.search-box { width: 100%; max-width: 600px; position: relative; margin-top: 20px; display: flex; align-items: center; }
 .search-box input { width: 100%; padding: 18px 25px; border-radius: 50px; border: 1px solid #ddd; box-shadow: 0 4px 15px rgba(0,0,0,0.05); font-size: 1rem; outline: none; }
 .search-box button { position: absolute; right: 8px; background: #1a73e8; color: white; border: none; padding: 12px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; }
 
-/* 4. AI 도구 카드 박스 (가로형) */
-.section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; }
-.tool-card {
-  background: white !important;
-  border: 1px solid #e0e0e0 !important;
-  border-radius: 15px !important;
-  padding: 25px !important;
-  margin-bottom: 20px !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  text-decoration: none !important;
-  color: inherit !important;
-  transition: 0.3s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
-}
-.tool-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.1) !important; }
-
-.card-left { flex: 1; }
-.tool-name { font-size: 1.3rem; font-weight: bold; color: #1a73e8; display: block; margin-bottom: 8px; }
-.tool-desc { color: #666; font-size: 0.95rem; line-height: 1.5; margin: 0; }
-
-.card-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; min-width: 160px; }
-.tool-rating { color: #fbbc05; font-weight: bold; font-size: 0.9rem; }
-.tag { padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: white; }
-.free-tag { background: #28a745; }
-.paid-tag { background: #dc3545; }
-.visit-site { color: #1a73e8; font-weight: bold; font-size: 0.85rem; margin-top: 5px; }
-/* --- 5. 블로그 리스트 디자인 --- */
+/* 3. 블로그 포스트 디자인 */
 .blog-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
 .blog-post { 
   background: white; 
@@ -57,31 +31,15 @@ body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; p
   border: 1px solid #eee; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
-.blog-post h2 a { 
-  color: #1a73e8; 
-  text-decoration: none; 
-  font-size: 1.5rem; 
-  font-weight: 700; 
-}
-.blog-post p { 
-  color: #555; 
-  line-height: 1.7; 
-  margin: 15px 0; 
-}
-.read-more { 
-  color: #1a73e8; 
-  font-weight: bold; 
-  text-decoration: none; 
-  font-size: 0.9rem;
-}
-.read-more:hover { text-decoration: underline; }
 
-/* 하단 푸터 디자인 */
+/* 4. 푸터 (가운데 정렬 및 미화) */
 footer { 
   text-align: center; 
-  padding: 40px 0; 
-  color: #888; 
+  padding: 50px 20px; 
+  background-color: #f1f3f4; /* 푸터도 동일한 실버 그레이 */
   border-top: 1px solid #eee; 
-  margin-top: 60px; 
+  margin-top: 80px; 
+  color: #5f6368;
 }
-footer a { color: #1a73e8; text-decoration: none; margin: 0 10px; }
+.footer-links { margin-bottom: 20px; display: flex; justify-content: center; gap: 20px; }
+.footer-links a { text-decoration: none; color: #1a73e8; font-size: 0.9rem; font-weight: 500; }
