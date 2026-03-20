@@ -2,6 +2,91 @@
 body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333; margin: 0; padding: 0; }
 .container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
+/* Header */
+header {
+    background-color: #1a73e8; /* Blue background */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: white; 
+    text-decoration: none; 
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.lang-switcher {
+    margin-left: 20px;
+}
+
+.lang-switcher a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-switcher a:hover {
+    background-color: white;
+    color: #1a73e8;
+}
+
+
+/* Hamburger Menu for Mobile */
+.hamburger { display: none; cursor: pointer; }
+.hamburger span { display: block; width: 25px; height: 3px; background: white; margin: 5px 0; }
+
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide nav by default */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: #1a73e8;
+    }
+
+    nav.active {
+        display: flex; /* Show nav when active */
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
+    .lang-switcher {
+        position: absolute;
+        top: 22px;
+        right: 80px;
+    }
+}
+
+
 /* Hero Section */
 .hero { text-align: center; padding: 60px 20px; background-color: white; border-bottom: 1px solid #e0e0e0; }
 .hero h1 { font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin: 0; }
@@ -23,6 +108,8 @@ body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .tool-item:hover {
@@ -55,7 +142,6 @@ body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333;
 }
 .tool-title { font-size: 1.25rem; font-weight: 700; color: #1a73e8; }
 .tool-description { color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0; }
-.tool-title-link { text-decoration: none; color: inherit; }
 
 /* Button Styling */
 .btn-read-more {
@@ -69,35 +155,28 @@ body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333;
   text-align: center;
 }
 
-.tool-meta {
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     align-items: center;
 }
 
-.tool-rating {
-    font-size: 0.9rem;
-    color: #f5b32e;
+.footer-content nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
 }
 
-.tool-price {
-    font-size: 0.9rem;
-    padding: 3px 10px;
-    border-radius: 14px;
-    font-weight: 600;
-}
-
-.tool-price.free {
-    background-color: #d1e7dd;
-    color: #146c43;
-}
-
-.tool-price.paid {
-    background-color: #f8d7da;
-    color: #842029;
-}
-
-.tool-price.freemium {
-    background-color: #cfe2ff;
-    color: #0c5460;
+.footer-content nav a:hover {
+    text-decoration: underline;
 }
