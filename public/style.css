@@ -47,3 +47,41 @@ body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; p
 .free-tag { background: #28a745; }
 .paid-tag { background: #dc3545; }
 .visit-site { color: #1a73e8; font-weight: bold; font-size: 0.85rem; margin-top: 5px; }
+/* --- 5. 블로그 리스트 디자인 --- */
+.blog-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.blog-post { 
+  background: white; 
+  padding: 30px; 
+  border-radius: 15px; 
+  margin-bottom: 30px; 
+  border: 1px solid #eee; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+.blog-post h2 a { 
+  color: #1a73e8; 
+  text-decoration: none; 
+  font-size: 1.5rem; 
+  font-weight: 700; 
+}
+.blog-post p { 
+  color: #555; 
+  line-height: 1.7; 
+  margin: 15px 0; 
+}
+.read-more { 
+  color: #1a73e8; 
+  font-weight: bold; 
+  text-decoration: none; 
+  font-size: 0.9rem;
+}
+.read-more:hover { text-decoration: underline; }
+
+/* 하단 푸터 디자인 */
+footer { 
+  text-align: center; 
+  padding: 40px 0; 
+  color: #888; 
+  border-top: 1px solid #eee; 
+  margin-top: 60px; 
+}
+footer a { color: #1a73e8; text-decoration: none; margin: 0 10px; }
