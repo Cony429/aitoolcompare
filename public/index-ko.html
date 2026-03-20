@@ -114,6 +114,8 @@
 
                 const freeTag = tool.pricing.includes("무료") ? '<span class="tag free-tag"><i class="fas fa-gift"></i> 무료</span>' : "";
                 const paidTag = tool.pricing.includes("유료") ? '<span class="tag paid-tag"><i class="fas fa-credit-card"></i> 유료</span>' : "";
+                const freemiumTag = tool.pricing.includes("부분 유료") ? '<span class="tag freemium-tag"><i class="fas fa-unlock-alt"></i> 부분 유료</span>' : "";
+
 
                 toolItem.innerHTML = `
                     <div class="card-left">
@@ -125,6 +127,7 @@
                         <div class="tool-tags">
                             ${freeTag}
                             ${paidTag}
+                            ${freemiumTag}
                         </div>
                         <span class="visit-site">사이트 방문</span>
                     </div>

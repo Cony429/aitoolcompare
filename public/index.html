@@ -119,6 +119,8 @@
 
                 const freeTag = t.pricing.includes("Free") ? '<span class="tag free-tag"><i class="fas fa-gift"></i> Free</span>' : "";
                 const paidTag = t.pricing.includes("Paid") ? '<span class="tag paid-tag"><i class="fas fa-credit-card"></i> Paid</span>' : "";
+                const freemiumTag = t.pricing.includes("Freemium") ? '<span class="tag freemium-tag"><i class="fas fa-unlock-alt"></i> Freemium</span>' : "";
+
 
                 item.innerHTML = `
                     <div class="card-left">
@@ -130,6 +132,7 @@
                         <div class="tool-tags">
                             ${freeTag}
                             ${paidTag}
+                            ${freemiumTag}
                         </div>
                         <span class="visit-site">Visit Site</span>
                     </div>

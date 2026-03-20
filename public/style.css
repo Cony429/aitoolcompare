@@ -161,32 +161,28 @@ nav a:hover {
 
 .tool-tags {
     display: flex;
+    flex-direction: column; /* Align tags vertically */
+    align-items: flex-end; /* Align tags to the right */
     gap: 6px;
     margin-bottom: 12px;
 }
 
 .tag {
-    display: flex;
-    align-items: center;
-    padding: 4px 8px;
-    border-radius: 15px;
-    font-size: 0.75rem;
-    font-weight: 600;
+  display: inline-flex; 
+  align-items: center; 
+  gap: 5px;
+  padding: 5px 10px; 
+  border-radius: 20px; 
+  font-size: 0.8rem; 
+  font-weight: bold; 
+  color: white; 
+  margin-bottom: 5px;
 }
 
-.tag .fas {
-    margin-right: 4px;
-}
+.free-tag { background-color: #28a745; } /* Green for Free */
+.paid-tag { background-color: #dc3545; } /* Red for Paid */
+.freemium-tag { background-color: #fd7e14; } /* Orange for Freemium */
 
-.free-tag {
-    background-color: #e6f4ea;
-    color: #34a853;
-}
-
-.paid-tag {
-    background-color: #fce8e6;
-    color: #ea4335;
-}
 
 .visit-site {
     background-color: #1a73e8;
