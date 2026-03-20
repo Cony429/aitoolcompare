@@ -112,9 +112,16 @@
                 toolItem.target = "_blank";
                 toolItem.className = "tool-card";
 
-                const freeTag = tool.pricing.includes("무료") ? '<span class="tag free-tag"><i class="fas fa-gift"></i> 무료</span>' : "";
-                const paidTag = tool.pricing.includes("유료") ? '<span class="tag paid-tag"><i class="fas fa-credit-card"></i> 유료</span>' : "";
-                const freemiumTag = tool.pricing.includes("부분 유료") ? '<span class="tag freemium-tag"><i class="fas fa-unlock-alt"></i> 부분 유료</span>' : "";
+                let tagsHTML = '';
+                if (tool.pricing.includes("무료")) {
+                    tagsHTML += `<span class="tag free-tag">무료</span>`;
+                }
+                if (tool.pricing.includes("유료")) {
+                    tagsHTML += `<span class="tag paid-tag">유료</span>`;
+                }
+                if (tool.pricing.includes("부분 유료")) {
+                    tagsHTML += `<span class="tag freemium-tag">부분 유료</span>`;
+                }
 
 
                 toolItem.innerHTML = `
@@ -123,13 +130,9 @@
                         <p class="tool-desc">${tool.description}</p>
                     </div>
                     <div class="card-right">
-                        <div class="tool-rating">${"&#11088;".repeat(Math.round(tool.rating))} ${tool.rating.toFixed(1)}</div>
-                        <div class="tool-tags">
-                            ${freeTag}
-                            ${paidTag}
-                            ${freemiumTag}
-                        </div>
-                        <span class="visit-site">사이트 방문 <i class="fas fa-arrow-right"></i></span>
+                        <div class="tool-rating">${"⭐".repeat(Math.round(tool.rating))} ${tool.rating.toFixed(1)}</div>
+                        ${tagsHTML}
+                        <span class="visit-site">사이트 방문</span>
                     </div>
                 `;
                 toolDisplay.appendChild(toolItem);

@@ -117,10 +117,16 @@
                 item.target = "_blank";
                 item.className = "tool-card";
 
-                const freeTag = t.pricing.includes("Free") ? '<span class="tag free-tag"><i class="fas fa-gift"></i> Free</span>' : "";
-                const paidTag = t.pricing.includes("Paid") ? '<span class="tag paid-tag"><i class="fas fa-credit-card"></i> Paid</span>' : "";
-                const freemiumTag = t.pricing.includes("Freemium") ? '<span class="tag freemium-tag"><i class="fas fa-unlock-alt"></i> Freemium</span>' : "";
-
+                let tagsHTML = '';
+                if (t.pricing.includes("Free")) {
+                    tagsHTML += `<span class="tag free-tag">Free</span>`;
+                }
+                if (t.pricing.includes("Paid")) {
+                    tagsHTML += `<span class="tag paid-tag">Paid</span>`;
+                }
+                if (t.pricing.includes("Freemium")) {
+                    tagsHTML += `<span class="tag freemium-tag">Freemium</span>`;
+                }
 
                 item.innerHTML = `
                     <div class="card-left">
@@ -128,13 +134,9 @@
                         <p class="tool-desc">${t.description}</p>
                     </div>
                     <div class="card-right">
-                        <div class="tool-rating">${"&#11088;".repeat(Math.round(t.rating))} ${t.rating.toFixed(1)}</div>
-                        <div class="tool-tags">
-                            ${freeTag}
-                            ${paidTag}
-                            ${freemiumTag}
-                        </div>
-                        <span class="visit-site">Visit Site <i class="fas fa-arrow-right"></i></span>
+                        <div class="tool-rating">${"⭐".repeat(Math.round(t.rating))} ${t.rating.toFixed(1)}</div>
+                        ${tagsHTML}
+                        <span class="visit-site">Visit Site</span>
                     </div>
                 `;
                 div.appendChild(item);
@@ -144,7 +146,6 @@
         document.getElementById('search-btn').onclick = () => render(document.getElementById('search-input').value);
         document.getElementById('search-input').onkeyup = (e) => { if(e.key === "Enter") render(e.target.value); };
 
-        // Fetch tools when the page loads
         fetchTools();
     </script>
 </body>
