@@ -22,8 +22,7 @@ body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333;
   gap: 15px;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  text-decoration: none; /* Make entire card clickable */
-  color: inherit;
+  cursor: pointer;
 }
 
 .tool-item:hover {
@@ -56,6 +55,7 @@ body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333;
 }
 .tool-title { font-size: 1.25rem; font-weight: 700; color: #1a73e8; }
 .tool-description { color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0; }
+.tool-title-link { text-decoration: none; color: inherit; }
 
 /* Button Styling */
 .btn-read-more {
