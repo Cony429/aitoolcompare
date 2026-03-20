@@ -13,6 +13,7 @@
     <link rel="canonical" href="https://bestaitoolcompare.com/index.html">
     <meta property="og:image" content="https://bestaitoolcompare.com/og-image.jpg">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5933569238212175"
      crossorigin="anonymous"></script>
 <!-- Google tag (gtag.js) -->
@@ -114,17 +115,24 @@
                 const item = document.createElement('a');
                 item.href = t.link;
                 item.target = "_blank";
-                item.className = "tool-item";
+                item.className = "tool-card";
 
-                // Simplified display - no rating or price type as it's not in the new data source
+                const freeTag = t.pricing.includes("Free") ? '<span class="tag free-tag"><i class="fas fa-gift"></i> Free</span>' : "";
+                const paidTag = t.pricing.includes("Paid") ? '<span class="tag paid-tag"><i class="fas fa-credit-card"></i> Paid</span>' : "";
+
                 item.innerHTML = `
-                    <div class="tool-info">
-                        <div class="tool-header">
-                            <div class="tool-title">${t.name}</div>
-                        </div>
-                        <p class="tool-description">${t.description}</p>
+                    <div class="card-left">
+                        <span class="tool-name">${t.name}</span>
+                        <p class="tool-desc">${t.description}</p>
                     </div>
-                    <div class="btn-read-more">Visit Site</div>
+                    <div class="card-right">
+                        <div class="tool-rating">${"&#11088;".repeat(Math.round(t.rating))} ${t.rating.toFixed(1)}</div>
+                        <div class="tool-tags">
+                            ${freeTag}
+                            ${paidTag}
+                        </div>
+                        <span class="visit-site">Visit Site</span>
+                    </div>
                 `;
                 div.appendChild(item);
             });
