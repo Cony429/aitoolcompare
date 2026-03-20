@@ -1,45 +1,160 @@
-/* --- [최종 통합 디자인] 모든 페이지 적용 --- */
-body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; color: #333; }
+/* --- [Final Master Design] All Pages Unified --- */
 
-/* 1. 상단 섹션 (실버 그레이 배경 추가) */
-.hero-section { 
-  text-align: center; 
-  padding: 80px 20px; 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  background-color: #f1f3f4; /* 질문하신 실버 그레이 바탕색 */
-  border-bottom: 1px solid #eee;
+/* 1. Global Reset */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
 }
-.hero-section h1 { font-size: 3rem; font-weight: 850; color: #111; margin-bottom: 15px; letter-spacing: -1.5px; }
-.subtitle { font-size: 1.15rem; color: #666; margin-bottom: 40px; }
 
-/* 2. 헤더 및 검색창 (중앙 정렬) */
-.site-header { background: white; border-bottom: 1px solid #eee; padding: 15px 0; }
-.nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-.search-box { width: 100%; max-width: 600px; position: relative; margin-top: 20px; display: flex; align-items: center; }
-.search-box input { width: 100%; padding: 18px 25px; border-radius: 50px; border: 1px solid #ddd; box-shadow: 0 4px 15px rgba(0,0,0,0.05); font-size: 1rem; outline: none; }
-.search-box button { position: absolute; right: 8px; background: #1a73e8; color: white; border: none; padding: 12px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; }
+/* 2. Header Navigation (Common for All Pages) */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1a73e8;
+  text-decoration: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.nav-links a:hover { color: #1a73e8; }
+.lang-switch a {
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: bold;
+  border: 1px solid #1a73e8;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
 
-/* 3. 블로그 포스트 디자인 */
+/* 3. Hero Section (Silver Background - All Pages) */
+.hero-section {
+  background-color: #f1f3f4 !important; /* 질문하신 실버 그레이 배경 */
+  text-align: center;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+.hero-section h1 {
+  font-size: 3.2rem;
+  font-weight: 850;
+  margin-bottom: 15px;
+  letter-spacing: -2px;
+  color: #111;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 35px;
+  max-width: 700px;
+}
+
+/* 4. Search Box (Centered) */
+.search-box {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-box input {
+  width: 100%;
+  padding: 18px 25px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  outline: none;
+}
+.search-box button {
+  position: absolute;
+  right: 8px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 5. Tool Cards (Main Page) */
+.main-content { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+.tool-card {
+  background: white !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 15px !important;
+  padding: 25px !important;
+  margin-bottom: 20px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+  transition: 0.3s;
+}
+.tool-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.1) !important; }
+.tool-name { font-size: 1.3rem; font-weight: bold; color: #1a73e8; }
+.card-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.tag { padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: white; }
+.free-tag { background: #28a745; }
+.paid-tag { background: #dc3545; }
+
+/* 6. Blog Post Styling */
 .blog-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
 .blog-post { 
-  background: white; 
-  padding: 30px; 
-  border-radius: 15px; 
-  margin-bottom: 30px; 
-  border: 1px solid #eee; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  background: white; padding: 30px; border-radius: 15px; 
+  margin-bottom: 30px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
 }
 
-/* 4. 푸터 (가운데 정렬 및 미화) */
-footer { 
-  text-align: center; 
-  padding: 50px 20px; 
-  background-color: #f1f3f4; /* 푸터도 동일한 실버 그레이 */
-  border-top: 1px solid #eee; 
-  margin-top: 80px; 
-  color: #5f6368;
+/* 7. Footer (Centered & Silver Background) */
+footer {
+  background-color: #f1f3f4 !important; /* 푸터도 실버 그레이 적용 */
+  text-align: center !important;
+  padding: 60px 20px;
+  margin-top: 100px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.footer-links { margin-bottom: 20px; display: flex; justify-content: center; gap: 20px; }
-.footer-links a { text-decoration: none; color: #1a73e8; font-size: 0.9rem; font-weight: 500; }
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.copyright { color: #888; font-size: 0.85rem; }
