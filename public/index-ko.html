@@ -82,7 +82,7 @@
 
         async function fetchTools() {
             try {
-                const response = await fetch('ai-tools.json');
+                const response = await fetch('ai-tools-ko.json');
                 aiTools = await response.json();
                 render();
             } catch (error) {
