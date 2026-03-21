@@ -1,66 +1,606 @@
 
 [
-  {"name": "ChatGPT", "category": "Chatbot", "description": "Language model for conversation.", "link": "https://openai.com/chatgpt", "rating": 5.0, "pricing": ["Free", "Paid"]},
-  {"name": "Gemini", "category": "Chatbot", "description": "Collaborative AI partner from Google.", "link": "https://gemini.google.com/", "rating": 4.8, "pricing": ["Free", "Paid"]},
-  {"name": "Claude", "category": "Chatbot", "description": "A next-generation AI assistant for your tasks, no matter the scale.", "link": "https://www.anthropic.com/claude", "rating": 4.7, "pricing": ["Free", "Paid"]},
-  {"name": "Perplexity AI", "category": "Search", "description": "An AI-powered search engine.", "link": "https://www.perplexity.ai/", "rating": 4.6, "pricing": ["Free", "Paid"]},
-  {"name": "Midjourney", "category": "Image Generation", "description": "Generates images from textual descriptions.", "link": "https://www.midjourney.com/", "rating": 4.9, "pricing": ["Paid"]},
-  {"name": "DALL-E 3", "category": "Image Generation", "description": "An AI system that can create realistic images and art from a description in natural language.", "link": "https://openai.com/dall-e-3", "rating": 4.8, "pricing": ["Paid"]},
-  {"name": "Stable Diffusion", "category": "Image Generation", "description": "A deep learning, text-to-image model.", "link": "https://stability.ai/stable-diffusion", "rating": 4.7, "pricing": ["Free"]},
-  {"name": "Sora", "category": "Video Generation", "description": "An AI model that can create realistic and imaginative scenes from text instructions.", "link": "https://openai.com/sora", "rating": 4.9, "pricing": ["Paid"]},
-  {"name": "Runway", "category": "Video Generation", "description": "Real-time video editing and generation.", "link": "https://runwayml.com/", "rating": 4.6, "pricing": ["Free", "Paid"]},
-  {"name": "Notion AI", "category": "Productivity", "description": "AI-powered assistant integrated into Notion.", "link": "https://www.notion.so/product/ai", "rating": 4.7, "pricing": ["Paid"]},
-  {"name": "GitHub Copilot", "category": "Developer Tools", "description": "AI pair programmer.", "link": "https://github.com/features/copilot", "rating": 4.8, "pricing": ["Paid"]},
-  {"name": "Jasper", "category": "Copywriting", "description": "AI copywriter for marketing and content.", "link": "https://www.jasper.ai/", "rating": 4.5, "pricing": ["Paid"]},
-  {"name": "Copy.ai", "category": "Copywriting", "description": "Automated creativity tools for copywriters.", "link": "https://www.copy.ai/", "rating": 4.4, "pricing": ["Free", "Paid"]},
-  {"name": "Synthesia", "category": "Video Generation", "description": "AI video generation platform.", "link": "https://www.synthesia.io/", "rating": 4.7, "pricing": ["Paid"]},
-  {"name": "Descript", "category": "Audio & Video", "description": "AI-powered audio and video editing.", "link": "https://www.descript.com/", "rating": 4.6, "pricing": ["Free", "Paid"]},
-  {"name": "Fireflies.ai", "category": "Productivity", "description": "AI assistant for your meetings.", "link": "https://fireflies.ai/", "rating": 4.5, "pricing": ["Free", "Paid"]},
-  {"name": "Otter.ai", "category": "Productivity", "description": "AI-powered transcription service.", "link": "https://otter.ai/", "rating": 4.4, "pricing": ["Free", "Paid"]},
-  {"name": "Llama 3", "category": "Chatbot", "description": "Large language model from Meta AI.", "link": "https://ai.meta.com/llama/", "rating": 4.7, "pricing": ["Free"]},
-  {"name": "Poe by Quora", "category": "Chatbot", "description": "Platform for interacting with various AI bots.", "link": "https://poe.com/", "rating": 4.5, "pricing": ["Free", "Paid"]},
-  {"name": "Writesonic", "category": "Copywriting", "description": "AI writer for creating SEO-friendly content.", "link": "https://writesonic.com/", "rating": 4.3, "pricing": ["Free", "Paid"]},
-  {"name": "Rytr", "category": "Copywriting", "description": "An AI writing assistant.", "link": "https://rytr.me/", "rating": 4.2, "pricing": ["Free", "Paid"]},
-  {"name": "DeepL", "category": "Translation", "description": "AI-powered translation tool.", "link": "https://www.deepl.com/translator", "rating": 4.8, "pricing": ["Free", "Paid"]},
-  {"name": "Grammarly", "category": "Writing Assistant", "description": "AI-powered writing assistant.", "link": "https://www.grammarly.com/", "rating": 4.7, "pricing": ["Free", "Paid"]},
-  {"name": "QuillBot", "category": "Writing Assistant", "description": "AI-powered paraphrasing tool.", "link": "https://quillbot.com/", "rating": 4.5, "pricing": ["Free", "Paid"]},
-  {"name": "Artbreeder", "category": "Image Generation", "description": "Create and explore AI-generated images.", "link": "https://www.artbreeder.com/", "rating": 4.4, "pricing": ["Free", "Paid"]},
-  {"name": "Leonardo Ai", "category": "Image Generation", "description": "Create stunning game assets with AI.", "link": "https://leonardo.ai/", "rating": 4.6, "pricing": ["Free", "Paid"]},
-  {"name": "HeyGen", "category": "Video Generation", "description": "AI video generator for business.", "link": "https://www.heygen.com/", "rating": 4.5, "pricing": ["Free", "Paid"]},
-  {"name": "Pika", "category": "Video Generation", "description": "Idea to video platform.", "link": "https://pika.art/", "rating": 4.4, "pricing": ["Free", "Paid"]},
-  {"name": "ElevenLabs", "category": "Audio", "description": "AI voice generator.", "link": "https://elevenlabs.io/", "rating": 4.7, "pricing": ["Free", "Paid"]},
-  {"name": "Murf.ai", "category": "Audio", "description": "Go from text to speech with a versatile AI voice generator.", "link": "https://murf.ai/", "rating": 4.5, "pricing": ["Free", "Paid"]},
-  {"name": "Gradio", "category": "Developer Tools", "description": "Build & share delightful machine learning apps.", "link": "https://www.gradio.app/", "rating": 4.3, "pricing": ["Free"]},
-  {"name": "Hugging Face", "category": "Developer Tools", "description": "The AI community building the future.", "link": "https://huggingface.co/", "rating": 4.8, "pricing": ["Free", "Paid"]},
-  {"name": "Replit", "category": "Developer Tools", "description": "An online IDE with AI code completion.", "link": "https://replit.com/", "rating": 4.6, "pricing": ["Free", "Paid"]},
-  {"name": "FigJam AI", "category": "Productivity", "description": "AI-powered features in Figma's whiteboard tool.", "link": "https://www.figma.com/figjam/", "rating": 4.5, "pricing": ["Free", "Paid"]},
-  {"name": "Tome", "category": "Productivity", "description": "AI-powered storytelling format.", "link": "https://tome.app/", "rating": 4.4, "pricing": ["Free", "Paid"]},
-  {"name": "Canva", "category": "Design", "description": "Online design tool with AI features.", "link": "https://www.canva.com/", "rating": 4.8, "pricing": ["Free", "Paid"]},
-  {"name": "Adobe Firefly", "category": "Image Generation", "description": "Adobe's family of creative generative AI models.", "link": "https://www.adobe.com/sensei/generative-ai/firefly.html", "rating": 4.7, "pricing": ["Free", "Paid"]},
-  {"name": "Beautiful.ai", "category": "Productivity", "description": "AI-powered presentation software.", "link": "https://www.beautiful.ai/", "rating": 4.5, "pricing": ["Paid"]},
-  {"name": "SlidesAI", "category": "Productivity", "description": "Create presentation slides with AI in seconds.", "link": "https://www.slidesai.io/", "rating": 4.3, "pricing": ["Free", "Paid"]},
-  {"name": "You.com", "category": "Search", "description": "AI-powered search engine.", "link": "https://you.com/", "rating": 4.4, "pricing": ["Free", "Paid"]},
-  {"name": "Neeva", "category": "Search", "description": "Ad-free, private search engine with AI features.", "link": "https://neeva.com/", "rating": 4.3, "pricing": ["Paid"]},
-  {"name": "Character.AI", "category": "Chatbot", "description": "Create and talk to AI characters.", "link": "https://character.ai/", "rating": 4.2, "pricing": ["Free"]},
-  {"name": "Bard", "category": "Chatbot", "description": "A large language model from Google, now part of Gemini.", "link": "https://bard.google.com/", "rating": 4.8, "pricing": ["Free"]},
-  {"name": "Kore.ai", "category": "Chatbot", "description": "Enterprise conversational AI platform.", "link": "https://kore.ai/", "rating": 4.2, "pricing": ["Paid"]},
-  {"name": "Replika", "category": "Chatbot", "description": "The AI companion who cares.", "link": "https://replika.ai/", "rating": 4.1, "pricing": ["Free", "Paid"]},
-  {"name": "Glean", "category": "Search", "description": "AI-powered work assistant for enterprises.", "link": "https://www.glean.com/", "rating": 4.3, "pricing": ["Paid"]},
-  {"name": "Andi", "category": "Search", "description": "Search for the next generation.", "link": "https://andisearch.com/", "rating": 4.2, "pricing": ["Free"]},
-  {"name": "Consensus", "category": "Search", "description": "An AI search engine for research.", "link": "https://consensus.app/", "rating": 4.4, "pricing": ["Free", "Paid"]},
-  {"name": "Codeium", "category": "Developer Tools", "description": "The modern coding superpower.", "link": "https://codeium.com/", "rating": 4.6, "pricing": ["Free", "Paid"]},
-  {"name": "Tabnine", "category": "Developer Tools", "description": "AI assistant for software developers.", "link": "https://www.tabnine.com/", "rating": 4.5, "pricing": ["Free", "Paid"]},
-  {"name": "Kuki", "category": "Chatbot", "description": "An embodied AI being to chat with.", "link": "https://www.kuki.ai/", "rating": 3.9, "pricing": ["Free"]},
-  {"name": "Playground AI", "category": "Image Generation", "description": "Online AI image creator.", "link": "https://playgroundai.com/", "rating": 4.5, "pricing": ["Free", "Paid"]},
-  {"name": "Veed.io", "category": "Video Generation", "description": "Online video suite for professionals.", "link": "https://www.veed.io/", "rating": 4.4, "pricing": ["Free", "Paid"]},
-  {"name": "Lovo.ai", "category": "Audio", "description": "AI Voice Generator & Text to Speech.", "link": "https://lovo.ai/", "rating": 4.3, "pricing": ["Free", "Paid"]},
-  {"name": "AssemblyAI", "category": "Developer Tools", "description": "AI models for speech-to-text, and more.", "link": "https://www.assemblyai.com/", "rating": 4.6, "pricing": ["Paid"]},
-  {"name": "Vidnami", "category": "Video Generation", "description": "Create stunning videos fast.", "link": "https://www.vidnami.com/", "rating": 4.2, "pricing": ["Paid"]},
-  {"name": "Designs.ai", "category": "Design", "description": "All-in-one platform for creating marketing content.", "link": "https://designs.ai/", "rating": 4.3, "pricing": ["Free", "Paid"]},
-  {"name": "Luminar AI", "category": "Image Editing", "description": "AI-powered photo editor.", "link": "https://skylum.com/luminar-ai", "rating": 4.6, "pricing": ["Paid"]},
-  {"name": "Topaz Labs", "category": "Image/Video Enhancement", "description": "AI-powered image and video enhancement software.", "link": "https://www.topazlabs.com/", "rating": 4.7, "pricing": ["Paid"]},
-  {"name": "Suno", "category": "Music Generation", "description": "Create music with AI.", "link": "https://www.suno.ai/", "rating": 4.8, "pricing": ["Free", "Paid"]},
-  {"name": "Udio", "category": "Music Generation", "description": "Create music with AI.", "link": "https://www.udio.com/", "rating": 4.7, "pricing": ["Free"]},
-  {"name": "Retouch4me", "category": "Photo Retouching", "description": "AI-powered photo retouching plugins.", "link": "https://retouch4.me/", "rating": 4.5, "pricing": ["Paid"]},
-  {"name": "Adcreative.ai", "category": "Advertising", "description": "Generate ad creatives with AI.", "link": "https://www.adcreative.ai/", "rating": 4.4, "pricing": ["Paid"]}
+  {
+    "name": "Sora (OpenAI)",
+    "category": "Video Generation",
+    "description": "An AI model that can create realistic and imaginative scenes from text instructions.",
+    "link": "https://openai.com/sora",
+    "rating": 4.9,
+    "pricing": ["Paid"],
+    "keywords": ["video", "generation", "OpenAI", "Sora"]
+  },
+  {
+    "name": "Claude 3.5",
+    "category": "Chatbot",
+    "description": "Anthropic\'s latest model, offering significant improvements in speed and performance.",
+    "link": "https://www.anthropic.com/claude",
+    "rating": 4.9,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["chatbot", "writing", "Anthropic", "Claude 3.5"]
+  },
+  {
+    "name": "Gemini 1.5 Pro",
+    "category": "Chatbot",
+    "description": "Google\'s next-generation model with a massive context window and enhanced performance.",
+    "link": "https://deepmind.google/technologies/gemini/google-gemini-1-5-pro",
+    "rating": 4.8,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["chatbot", "Google", "Gemini 1.5 Pro"]
+  },
+  {
+    "name": "Midjourney v7",
+    "category": "Image Generation",
+    "description": "The latest image generation model with enhanced realism and text rendering.",
+    "link": "https://www.midjourney.com/",
+    "rating": 5.0,
+    "pricing": ["Paid"],
+    "keywords": ["image", "generation", "art", "Midjourney v7"]
+  },
+  {
+    "name": "ChatGPT",
+    "category": "Chatbot",
+    "description": "Language model for conversation.",
+    "link": "https://openai.com/chatgpt",
+    "rating": 5.0,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["chatbot", "writing", "OpenAI", "GPT-4"]
+  },
+  {
+    "name": "Gemini",
+    "category": "Chatbot",
+    "description": "Collaborative AI partner from Google.",
+    "link": "https://gemini.google.com/",
+    "rating": 4.8,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["chatbot", "Google", "writing"]
+  },
+  {
+    "name": "Claude",
+    "category": "Chatbot",
+    "description": "A next-generation AI assistant for your tasks, no matter the scale.",
+    "link": "https://www.anthropic.com/claude",
+    "rating": 4.7,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["chatbot", "writing", "Anthropic"]
+  },
+  {
+    "name": "Perplexity AI",
+    "category": "Search",
+    "description": "An AI-powered search engine.",
+    "link": "https://www.perplexity.ai/",
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["search", "research"]
+  },
+  {
+    "name": "Midjourney",
+    "category": "Image Generation",
+    "description": "Generates images from textual descriptions.",
+    "link": "https://www.midjourney.com/",
+    "rating": 4.9,
+    "pricing": ["Paid"],
+    "keywords": ["image", "art", "design"]
+  },
+  {
+    "name": "DALL-E 3",
+    "category": "Image Generation",
+    "description": "An AI system that can create realistic images and art from a description in natural language.",
+    "link": "https://openai.com/dall-e-3",
+    "rating": 4.8,
+    "pricing": ["Paid"],
+    "keywords": ["image", "OpenAI", "art", "design"]
+  },
+  {
+    "name": "Stable Diffusion",
+    "category": "Image Generation",
+    "description": "A deep learning, text-to-image model.",
+    "link": "https://stability.ai/stable-diffusion",
+    "rating": 4.7,
+    "pricing": ["Free"],
+    "keywords": ["image", "open-source", "art"]
+  },
+  {
+    "name": "Sora",
+    "category": "Video Generation",
+    "description": "An AI model that can create realistic and imaginative scenes from text instructions.",
+    "link": "https://openai.com/sora",
+    "rating": 4.9,
+    "pricing": ["Paid"],
+    "keywords": ["video", "OpenAI", "film"]
+  },
+  {
+    "name": "Runway",
+    "category": "Video Generation",
+    "description": "Real-time video editing and generation.",
+    "link": "https://runwayml.com/",
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["video", "editing", "generation"]
+  },
+  {
+    "name": "Notion AI",
+    "category": "Productivity",
+    "description": "AI-powered assistant integrated into Notion.",
+    "link": "https://www.notion.so/product/ai",
+    "rating": 4.7,
+    "pricing": ["Paid"],
+    "keywords": ["writing", "productivity", "notes"]
+  },
+  {
+    "name": "GitHub Copilot",
+    "category": "Developer Tools",
+    "description": "AI pair programmer.",
+    "link": "https://github.com/features/copilot",
+    "rating": 4.8,
+    "pricing": ["Paid"],
+    "keywords": ["coding", "developer", "code"]
+  },
+  {
+    "name": "Jasper",
+    "category": "Copywriting",
+    "description": "AI copywriter for marketing and content.",
+    "link": "https://www.jasper.ai/",
+    "rating": 4.5,
+    "pricing": ["Paid"],
+    "keywords": ["writing", "marketing", "copy"]
+  },
+  {
+    "name": "Copy.ai",
+    "category": "Copywriting",
+    "description": "Automated creativity tools for copywriters.",
+    "link": "https://www.copy.ai/",
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["writing", "marketing", "copy"]
+  },
+  {
+    "name": "Synthesia",
+    "category": "Video Generation",
+    "description": "AI video generation platform.",
+    "link": "https://www.synthesia.io/",
+    "rating": 4.7,
+    "pricing": ["Paid"],
+    "keywords": ["video", "avatar", "presentation"]
+  },
+  {
+    "name": "Descript",
+    "category": "Audio & Video",
+    "description": "AI-powered audio and video editing.",
+    "link": "https://www.descript.com/",
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["audio", "video", "editing", "podcast"]
+  },
+  {
+    "name": "Fireflies.ai",
+    "category": "Productivity",
+    "description": "AI assistant for your meetings.",
+    "link": "https://fireflies.ai/",
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["meetings", "transcription", "productivity"]
+  },
+  {
+    "name": "Otter.ai",
+    "category": "Productivity",
+    "description": "AI-powered transcription service.",
+    "link": "https://otter.ai/",
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["transcription", "meetings", "notes"]
+  },
+  {
+    "name": "Llama 3",
+    "category": "Chatbot",
+    "description": "Large language model from Meta AI.",
+    "link": "https://ai.meta.com/llama/",
+    "rating": 4.7,
+    "pricing": ["Free"],
+    "keywords": ["chatbot", "Meta", "open-source"]
+  },
+  {
+    "name": "Poe by Quora",
+    "category": "Chatbot",
+    "description": "Platform for interacting with various AI bots.",
+    "link": "https://poe.com/",
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["chatbot", "multiple AIs", "GPT", "Claude"]
+  },
+  {
+    "name": "Writesonic",
+    "category": "Copywriting",
+    "description": "AI writer for creating SEO-friendly content.",
+    "link": "https://writesonic.com/",
+    "rating": 4.3,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["writing", "SEO", "marketing"]
+  },
+  {
+    "name": "Rytr",
+    "category": "Copywriting",
+    "description": "An AI writing assistant.",
+    "link": "https://rytr.me/",
+    "rating": 4.2,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["writing", "content", "copy"]
+  },
+  {
+    "name": "DeepL",
+    "category": "Translation",
+    "description": "AI-powered translation tool.",
+    "link": "https://www.deepl.com/translator",
+    "rating": 4.8,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["translation", "language"]
+  },
+  {
+    "name": "Grammarly",
+    "category": "Writing Assistant",
+    "description": "AI-powered writing assistant.",
+    "link": "https://www.grammarly.com/",
+    "rating": 4.7,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["writing", "grammar", "editing"]
+  },
+  {
+    "name": "QuillBot",
+    "category": "Writing Assistant",
+    "description": "AI-powered paraphrasing tool.",
+    "link": "https://quillbot.com/",
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["writing", "paraphrasing", "summarizing"]
+  },
+  {
+    "name": "Artbreeder",
+    "category": "Image Generation",
+    "description": "Create and explore AI-generated images.",
+    "link": "https://www.artbreeder.com/",
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["image", "art", "creative"]
+  },
+  {
+    "name": "Leonardo Ai",
+    "category": "Image Generation",
+    "description": "Create stunning game assets with AI.",
+    "link": "https://leonardo.ai/",
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["image", "gaming", "art", "assets"]
+  },
+  {
+    "name": "HeyGen",
+    "category": "Video Generation",
+    "description": "AI video generator for business.",
+    "link": "https://www.heygen.com/",
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["video", "avatar", "business"]
+  },
+  {
+    "name": "Pika",
+    "category": "Video Generation",
+    "description": "Idea to video platform.",
+    "link": "https://pika.art/",
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["video", "generation", "creative"]
+  },
+  {
+    "name": "ElevenLabs",
+    "category": "Audio",
+    "description": "AI voice generator.",
+    "link": "https://elevenlabs.io/",
+    "rating": 4.7,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["audio", "voice", "TTS"]
+  },
+  {
+    "name": "Murf.ai",
+    "category": "Audio",
+    "description": "Go from text to speech with a versatile AI voice generator.",
+    "link": "https://murf.ai/",
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["audio", "voiceover", "TTS"]
+  },
+  {
+    "name": "Gradio",
+    "category": "Developer Tools",
+    "description": "Build & share delightful machine learning apps.",
+    "link": "https://www.gradio.app/",
+    "rating": 4.3,
+    "pricing": ["Free"],
+    "keywords": ["developer", "machine learning", "demo"]
+  },
+  {
+    "name": "Hugging Face",
+    "category": "Developer Tools",
+    "description": "The AI community building the future.",
+    "link": "https://huggingface.co/",
+    "rating": 4.8,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["developer", "models", "community"]
+  },
+  {
+    "name": "Replit",
+    "category": "Developer Tools",
+    "description": "An online IDE with AI code completion.",
+    "link": "https://replit.com/",
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["coding", "IDE", "developer"]
+  },
+  {
+    "name": "FigJam AI",
+    "category": "Productivity",
+    "description": "AI-powered features in Figma\'s whiteboard tool.",
+    "link": "https://www.figma.com/figjam/",
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["whiteboard", "diagram", "collaboration"]
+  },
+  {
+    "name": "Tome",
+    "category": "Productivity",
+    "description": "AI-powered storytelling format.",
+    "link": "https://tome.app/",
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["presentation", "storytelling", "slides"]
+  },
+  {
+    "name": "Canva",
+    "category": "Design",
+    "description": "Online design tool with AI features.",
+    "link": "https://www.canva.com/",
+    "rating": 4.8,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["design", "graphics", "social media"]
+  },
+  {
+    "name": "Adobe Firefly",
+    "category": "Image Generation",
+    "description": "Adobe\'s family of creative generative AI models.",
+    "link": "https://www.adobe.com/sensei/generative-ai/firefly.html",
+    "rating": 4.7,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["image", "Adobe", "design", "art"]
+  },
+  {
+    "name": "Beautiful.ai",
+    "category": "Productivity",
+    "description": "AI-powered presentation software.",
+    "link": "https://www.beautiful.ai/",
+    "rating": 4.5,
+    "pricing": ["Paid"],
+    "keywords": ["presentation", "slides", "design"]
+  },
+  {
+    "name": "SlidesAI",
+    "category": "Productivity",
+    "description": "Create presentation slides with AI in seconds.",
+    "link": "https://www.slidesai.io/",
+    "rating": 4.3,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["presentation", "slides", "automation"]
+  },
+  {
+    "name": "You.com",
+    "category": "Search",
+    "description": "AI-powered search engine.",
+    "link": "https://you.com/",
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["search", "chatbot", "AI"]
+  },
+  {
+    "name": "Neeva",
+    "category": "Search",
+    "description": "Ad-free, private search engine with AI features.",
+    "link": "https://neeva.com/",
+    "rating": 4.3,
+    "pricing": ["Paid"],
+    "keywords": ["search", "privacy", "ad-free"]
+  },
+  {
+    "name": "Character.AI",
+    "category": "Chatbot",
+    "description": "Create and talk to AI characters.",
+    "link": "https://character.ai/",
+    "rating": 4.2,
+    "pricing": ["Free"],
+    "keywords": ["chatbot", "roleplay", "conversation"]
+  },
+  {
+    "name": "Bard",
+    "category": "Chatbot",
+    "description": "A large language model from Google, now part of Gemini.",
+    "link": "https://bard.google.com/",
+    "rating": 4.8,
+    "pricing": ["Free"],
+    "keywords": ["chatbot", "Google", "Gemini"]
+  },
+  {
+    "name": "Kore.ai",
+    "category": "Chatbot",
+    "description": "Enterprise conversational AI platform.",
+    "link": "https://kore.ai/",
+    "rating": 4.2,
+    "pricing": ["Paid"],
+    "keywords": ["enterprise", "chatbot", "business"]
+  },
+  {
+    "name": "Replika",
+    "category": "Chatbot",
+    "description": "The AI companion who cares.",
+    "link": "https://replika.ai/",
+    "rating": 4.1,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["chatbot", "companion", "friend"]
+  },
+  {
+    "name": "Glean",
+    "category": "Search",
+    "description": "AI-powered work assistant for enterprises.",
+    "link": "https://www.glean.com/",
+    "rating": 4.3,
+    "pricing": ["Paid"],
+    "keywords": ["enterprise", "search", "workspace"]
+  },
+  {
+    "name": "Andi",
+    "category": "Search",
+    "description": "Search for the next generation.",
+    "link": "https://andisearch.com/",
+    "rating": 4.2,
+    "pricing": ["Free"],
+    "keywords": ["search", "conversational", "AI"]
+  },
+  {
+    "name": "Consensus",
+    "category": "Search",
+    "description": "An AI search engine for research.",
+    "link": "https://consensus.app/",
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["research", "science", "papers"]
+  },
+  {
+    "name": "Codeium",
+    "category": "Developer Tools",
+    "description": "The modern coding superpower.",
+    "link": "https://codeium.com/",
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["coding", "developer", "AI"]
+  },
+  {
+    "name": "Tabnine",
+    "category": "Developer Tools",
+    "description": "AI assistant for software developers.",
+    "link": "https://www.tabnine.com/",
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["coding", "developer", "autocomplete"]
+  },
+  {
+    "name": "Kuki",
+    "category": "Chatbot",
+    "description": "An embodied AI being to chat with.",
+    "link": "https://www.kuki.ai/",
+    "rating": 3.9,
+    "pricing": ["Free"],
+    "keywords": ["chatbot", "AI", "social"]
+  },
+  {
+    "name": "Playground AI",
+    "category": "Image Generation",
+    "description": "Online AI image creator.",
+    "link": "https://playgroundai.com/",
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["image", "art", "design"]
+  },
+  {
+    "name": "Veed.io",
+    "category": "Video Generation",
+    "description": "Online video suite for professionals.",
+    "link": "https://www.veed.io/",
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["video", "editing", "subtitles"]
+  },
+  {
+    "name": "Lovo.ai",
+    "category": "Audio",
+    "description": "AI Voice Generator & Text to Speech.",
+    "link": "https://lovo.ai/",
+    "rating": 4.3,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["audio", "voiceover", "TTS"]
+  },
+  {
+    "name": "AssemblyAI",
+    "category": "Developer Tools",
+    "description": "AI models for speech-to-text, and more.",
+    "link": "https://www.assemblyai.com/",
+    "rating": 4.6,
+    "pricing": ["Paid"],
+    "keywords": ["API", "speech-to-text", "audio"]
+  },
+  {
+    "name": "Vidnami",
+    "category": "Video Generation",
+    "description": "Create stunning videos fast.",
+    "link": "https://www.vidnami.com/",
+    "rating": 4.2,
+    "pricing": ["Paid"],
+    "keywords": ["video", "marketing", "automation"]
+  },
+  {
+    "name": "Designs.ai",
+    "category": "Design",
+    "description": "All-in-one platform for creating marketing content.",
+    "link": "https://designs.ai/",
+    "rating": 4.3,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["design", "logo", "video"]
+  },
+  {
+    "name": "Luminar AI",
+    "category": "Image Editing",
+    "description": "AI-powered photo editor.",
+    "link": "https://skylum.com/luminar-ai",
+    "rating": 4.6,
+    "pricing": ["Paid"],
+    "keywords": ["photo", "editing", "AI"]
+  },
+  {
+    "name": "Topaz Labs",
+    "category": "Image/Video Enhancement",
+    "description": "AI-powered image and video enhancement software.",
+    "link": "https://www.topazlabs.com/",
+    "rating": 4.7,
+    "pricing": ["Paid"],
+    "keywords": ["photo", "video", "upscale", "enhance"]
+  },
+  {
+    "name": "Suno",
+    "category": "Music Generation",
+    "description": "Create music with AI.",
+    "link": "https://www.suno.ai/",
+    "rating": 4.8,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["music", "song", "AI"]
+  },
+  {
+    "name": "Udio",
+    "category": "Music Generation",
+    "description": "Create music with AI.",
+    "link": "https://www.udio.com/",
+    "rating": 4.7,
+    "pricing": ["Free"],
+    "keywords": ["music", "song", "AI"]
+  },
+  {
+    "name": "Retouch4me",
+    "category": "Photo Retouching",
+    "description": "AI-powered photo retouching plugins.",
+    "link": "https://retouch4.me/",
+    "rating": 4.5,
+    "pricing": ["Paid"],
+    "keywords": ["photo", "retouching", "plugin"]
+  },
+  {
+    "name": "Adcreative.ai",
+    "category": "Advertising",
+    "description": "Generate ad creatives with AI.",
+    "link": "https://www.adcreative.ai/",
+    "rating": 4.4,
+    "pricing": ["Paid"],
+    "keywords": ["advertising", "marketing", "creative"]
+  }
 ]

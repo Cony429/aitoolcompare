@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best AI Tools Comparison 2026 | Find the Right AI for You</title>
-    <meta name="description" content="Compare the best AI tools of 2026. Side-by-side analysis of AI for video, image, writing, and more. Find the perfect AI tool for your needs.">
+    <meta name="description" content="Compare the best AI tools of 2026. In-depth analysis of AI in video, image, writing, and more to help you find the perfect AI tool for your needs.">
     <meta property="og:title" content="Best AI Tools Comparison 2026 | Find the Right AI for You">
-    <meta property="og:description" content="Compare the best AI tools of 2026. Side-by-side analysis of AI for video, image, writing, and more. Find the perfect AI tool for your needs.">
+    <meta property="og:description" content="Compare the best AI tools of 2026. In-depth analysis of AI in video, image, writing, and more to help you find the perfect AI tool for your needs.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bestaitoolcompare.com/index.html">
     <link rel="canonical" href="https://bestaitoolcompare.com/index.html">
@@ -17,33 +17,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5933569238212175"
      crossorigin="anonymous"></script>
-    <meta name="naver-site-verification" content="e2abb97ae5f213581abf37d50ad09cfc3e06413a" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CZ21VR3EM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3CZ21VR3EM');
-</script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "vux1x0xa2q");
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CZ21VR3EM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3CZ21VR3EM');
+    </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "vux1x0xa2q");
+    </script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="nav-container">
     <a href="index.html" class="logo">AI Tool Compare</a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
-      <a href="compare.html">Compare</a>
-      <a href="blog.html">Blog</a>
+      <a href="blog-ko.html">Blog</a>
       <a href="news.html">News</a>
     </nav>
     <div class="lang-switch">
@@ -53,29 +49,29 @@
 </header>
 
     <div class="hero-section">
-        <h1>Find the Best AI for You</h1>
+        <h1>Find the Perfect AI for Your Needs</h1>
         <p class="subtitle">Compare various AI tools and make the best choice.</p>
         <div class="search-box">
-            <input type="text" id="search-input" placeholder="Try 'video', 'image', 'text', 'coding'...">
+            <input type="text" id="search-input" placeholder="e.g., 'video', 'image', 'writing', 'coding'..." onkeyup="if(event.keyCode===13) document.getElementById('search-btn').click()">
             <button id="search-btn">Search</button>
         </div>
     </div>
 
     <main class="container">
-        <h2 class="section-title">Top AI Tools Directory</h2>
+        <h2 class="section-title">Main AI Tools Directory</h2>
         <div id="tool-display"></div>
     </main>
 
-   <footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-    </div>
-    <p class="copyright">&copy; 2026 AI Tool Compare. All rights reserved.</p>
-  </div>
-</footer>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 AI Tool Compare. All rights reserved.</p>
+            <nav>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </nav>
+        </div>
+    </footer>
 
     <script>
         let aiTools = [];
@@ -86,60 +82,65 @@
                 aiTools = await response.json();
                 render();
             } catch (error) {
-                console.error('Error fetching AI tools:', error);
+                console.error('Error loading AI tools:', error);
                 document.getElementById('tool-display').innerHTML = "<p style='text-align:center; padding: 20px;'>Could not load AI tools.</p>";
             }
         }
 
-        function render(val = "") {
-            const div = document.getElementById('tool-display');
-            div.innerHTML = "";
-            const filtered = aiTools.filter(t => 
-                t.name.toLowerCase().includes(val.toLowerCase()) || 
-                t.category.toLowerCase().includes(val.toLowerCase()) ||
-                t.description.toLowerCase().includes(val.toLowerCase())
-            );
+        function render(query = "") {
+            const toolDisplay = document.getElementById('tool-display');
+            toolDisplay.innerHTML = "";
+            const lowerCaseQuery = query.toLowerCase();
 
-            if(filtered.length === 0) {
-                div.innerHTML = "<p style='text-align:center; padding: 20px;'>No matching AI tools found.</p>";
+            const filteredTools = aiTools.filter(tool => {
+                const toolKeywords = tool.keywords ? tool.keywords.map(k => k.toLowerCase()) : [];
+                return (
+                    tool.name.toLowerCase().includes(lowerCaseQuery) || 
+                    tool.category.toLowerCase().includes(lowerCaseQuery) ||
+                    tool.description.toLowerCase().includes(lowerCaseQuery) ||
+                    toolKeywords.some(keyword => keyword.includes(lowerCaseQuery))
+                );
+            });
+
+            if (filteredTools.length === 0) {
+                toolDisplay.innerHTML = "<p style='text-align:center; padding: 20px;'>No matching AI tools found.</p>";
                 return;
             }
 
-            filtered.forEach(t => {
-                const item = document.createElement('a');
-                item.href = t.link;
-                item.target = "_blank";
-                item.className = "tool-card";
+            filteredTools.forEach(tool => {
+                const toolItem = document.createElement('a');
+                toolItem.href = tool.link;
+                toolItem.target = "_blank";
+                toolItem.className = "tool-card";
 
                 let tagsHTML = '';
-                if (t.pricing.includes("Free")) {
+                if (tool.pricing.includes("Free")) {
                     tagsHTML += `<span class="tag free-tag">Free</span>`;
                 }
-                if (t.pricing.includes("Paid")) {
+                if (tool.pricing.includes("Paid")) {
                     tagsHTML += `<span class="tag paid-tag">Paid</span>`;
                 }
-                if (t.pricing.includes("Freemium")) {
+                if (tool.pricing.includes("Freemium")) {
                     tagsHTML += `<span class="tag freemium-tag">Freemium</span>`;
                 }
 
-                item.innerHTML = `
+
+                toolItem.innerHTML = `
                     <div class="card-left">
-                        <span class="tool-name">${t.name}</span>
-                        <p class="tool-desc">${t.description}</p>
+                        <span class="tool-name">${tool.name}</span>
+                        <p class="tool-desc">${tool.description}</p>
                     </div>
                     <div class="card-right">
-                        <div class="tool-rating">${"⭐".repeat(Math.round(t.rating))} ${t.rating.toFixed(1)}</div>
+                        <div class="tool-rating">${"⭐".repeat(Math.round(tool.rating))} ${tool.rating.toFixed(1)}</div>
                         <div class="tool-tags">${tagsHTML}</div>
                         <span class="visit-site">Visit Site</span>
                     </div>
                 `;
-                div.appendChild(item);
+                toolDisplay.appendChild(toolItem);
             });
         }
 
-        document.getElementById('search-btn').onclick = () => render(document.getElementById('search-input').value);
-        document.getElementById('search-input').onkeyup = (e) => { if(e.key === "Enter") render(e.target.value); };
-
+        document.getElementById('search-btn').addEventListener('click', () => render(document.getElementById('search-input').value));
         fetchTools();
     </script>
 </body>
