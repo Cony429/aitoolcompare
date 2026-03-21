@@ -90,11 +90,17 @@
         function render(query = "") {
             const toolDisplay = document.getElementById('tool-display');
             toolDisplay.innerHTML = "";
-            const filteredTools = aiTools.filter(tool => 
-                tool.name.toLowerCase().includes(query.toLowerCase()) || 
-                tool.category.toLowerCase().includes(query.toLowerCase()) ||
-                tool.description.toLowerCase().includes(query.toLowerCase())
-            );
+            const lowerCaseQuery = query.toLowerCase();
+
+            const filteredTools = aiTools.filter(tool => {
+                const toolKeywords = tool.keywords ? tool.keywords.map(k => k.toLowerCase()) : [];
+                return (
+                    tool.name.toLowerCase().includes(lowerCaseQuery) || 
+                    tool.category.toLowerCase().includes(lowerCaseQuery) ||
+                    tool.description.toLowerCase().includes(lowerCaseQuery) ||
+                    toolKeywords.some(keyword => keyword.includes(lowerCaseQuery))
+                );
+            });
 
             if (filteredTools.length === 0) {
                 toolDisplay.innerHTML = "<p style='text-align:center; padding: 20px;'>일치하는 AI 도구가 없습니다.</p>";
