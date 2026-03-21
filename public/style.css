@@ -195,3 +195,22 @@ footer a {
   color: #1a73e8 !important;
   font-weight: 600 !important;
 }
+
+/* --- [메인페이지 도구 목록 중앙 정렬 및 너비 제한] --- */
+#tool-display {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important; 
+  gap: 30px !important;              
+  max-width: 1200px !important;     /* 이 숫자가 박스들을 가운데로 모아줍니다 */
+  margin: 60px auto !important;     /* auto가 좌우 여백을 똑같이 나눠 가집니다 */
+  padding: 0 20px !important;       
+  width: 100% !important;
+}
+
+/* 각 도구 카드(박스)의 크기 조절 */
+.tool-item {
+  flex: 0 1 calc(33.333% - 20px) !important; 
+  min-width: 300px !important;              
+  box-sizing: border-box !important;
+}
