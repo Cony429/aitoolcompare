@@ -12,7 +12,7 @@
   {
     "name": "Claude 3.5",
     "category": "Chatbot",
-    "description": "Anthropic\'s latest model, offering significant improvements in speed and performance.",
+    "description": "Anthropic's latest model, offering significant improvements in speed and performance.",
     "link": "https://www.anthropic.com/claude",
     "rating": 4.9,
     "pricing": ["Free", "Paid"],
@@ -21,7 +21,7 @@
   {
     "name": "Gemini 1.5 Pro",
     "category": "Chatbot",
-    "description": "Google\'s next-generation model with a massive context window and enhanced performance.",
+    "description": "Google's next-generation model with a massive context window and enhanced performance.",
     "link": "https://deepmind.google/technologies/gemini/google-gemini-1-5-pro",
     "rating": 4.8,
     "pricing": ["Free", "Paid"],
@@ -336,7 +336,7 @@
   {
     "name": "FigJam AI",
     "category": "Productivity",
-    "description": "AI-powered features in Figma\'s whiteboard tool.",
+    "description": "AI-powered features in Figma's whiteboard tool.",
     "link": "https://www.figma.com/figjam/",
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
@@ -363,7 +363,7 @@
   {
     "name": "Adobe Firefly",
     "category": "Image Generation",
-    "description": "Adobe\'s family of creative generative AI models.",
+    "description": "Adobe's family of creative generative AI models.",
     "link": "https://www.adobe.com/sensei/generative-ai/firefly.html",
     "rating": 4.7,
     "pricing": ["Free", "Paid"],
@@ -445,7 +445,7 @@
     "name": "Glean",
     "category": "Search",
     "description": "AI-powered work assistant for enterprises.",
-    "link": "https://www.glean.com/",
+    "link": "https.glean.com/",
     "rating": 4.3,
     "pricing": ["Paid"],
     "keywords": ["enterprise", "search", "workspace"]
