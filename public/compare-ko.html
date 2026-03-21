@@ -126,7 +126,7 @@
 
         async function fetchTools() {
             try {
-                const response = await fetch('ai-tools-ko.json');
+                const response = await fetch('./ai-tools-ko.json');
                 aiTools = await response.json();
                 populateDropdowns();
             } catch (error) {
@@ -166,8 +166,8 @@
             tableBody.innerHTML = `
                 <tr><td class="feature-name">카테고리</td><td>${t1.category}</td><td>${t2.category}</td></tr>
                 <tr><td class="feature-name">사용자 평점</td><td>⭐ ${t1.rating}</td><td>⭐ ${t2.rating}</td></tr>
-                <tr><td class="feature-name">가격</td><td>${t1.pricing}</td><td>${t2.pricing}</td></tr>
-                <tr><td class="feature-name">주요 기능</td><td>${t1.features_ko.join(', ')}</td><td>${t2.features_ko.join(', ')}</td></tr>
+                <tr><td class="feature-name">가격</td><td>${t1.pricing.join(', ')}</td><td>${t2.pricing.join(', ')}</td></tr>
+                <tr><td class="feature-name">주요 기능</td><td>${t1.keywords.join(', ')}</td><td>${t2.keywords.join(', ')}</td></tr>
             `;
 
             document.getElementById('result-display-area').style.display = 'block';
