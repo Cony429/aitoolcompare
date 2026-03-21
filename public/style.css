@@ -196,21 +196,29 @@ footer a {
   font-weight: 600 !important;
 }
 
-/* --- [메인페이지 도구 목록 중앙 정렬 및 너비 제한] --- */
-#tool-display {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important; 
-  gap: 30px !important;              
-  max-width: 1200px !important;     /* 이 숫자가 박스들을 가운데로 모아줍니다 */
-  margin: 60px auto !important;     /* auto가 좌우 여백을 똑같이 나눠 가집니다 */
-  padding: 0 20px !important;       
-  width: 100% !important;
+/* --- [진짜 최종 본문 중앙 정렬] 모든 리스트와 컨테이너를 가운데로 --- */
+main, .container, #tool-display, #blog-posts, .blog-container {
+  max-width: 1100px !important;  /* 본문의 최대 너비를 제한 */
+  margin-left: auto !important;  /* 좌측 여백 자동 */
+  margin-right: auto !important; /* 우측 여백 자동 -> 정중앙 */
+  padding: 40px 20px !important;
+  width: 90% !important;         /* 화면이 작아도 90% 유지 */
+  display: block !important;
 }
 
-/* 각 도구 카드(박스)의 크기 조절 */
-.tool-item {
-  flex: 0 1 calc(33.333% - 20px) !important; 
-  min-width: 300px !important;              
+/* 개별 도구 및 블로그 박스들이 너무 퍼지지 않게 함 */
+.tool-item, .blog-post {
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   box-sizing: border-box !important;
+}
+
+/* 제목들도 본문 너비에 맞춰 중앙 정렬 */
+.section-title, h1, h2, .hero-section {
+  text-align: center !important;
+  max-width: 1100px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
