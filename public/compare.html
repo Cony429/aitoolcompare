@@ -90,11 +90,15 @@
 
     <div id="result-display-area">
         <table class="result-table">
-            <thead><tr><th>Feature</th><th id="name1">Tool 1</th><th id="name2">Tool 2</th></tr></thead>
-            <tbody>
-                <tr><td class="feature-name">Category</td><td>AI Model</td><td>AI Model</td></tr>
-                <tr><td class="feature-name">User Rating</td><td>⭐ 4.9</td><td>⭐ 4.8</td></tr>
-                <tr><td class="feature-name">Performance</td><td>Excellent</td><td>Very Good</td></tr>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th id="name1">Tool 1</th>
+                    <th id="name2">Tool 2</th>
+                </tr>
+            </thead>
+            <tbody id="comparison-body">
+                <!-- Dynamic content will be inserted here -->
             </tbody>
         </table>
     </div>
@@ -122,38 +126,85 @@
     </footer>
 
     <script>
-        // Full list of 50+ tools
-        const tools = ["ChatGPT", "Claude", "Midjourney", "Gemini", "Perplexity", "Sora", "Runway", "ElevenLabs", "Leonardo.ai", "Canva AI", "Jasper", "Notion AI", "Gamma", "HeyGen", "Pika", "Suno", "Udio", "Copy.ai", "QuillBot", "Grammarly", "GitHub Copilot", "Cursor", "Replit Ghostwriter", "Phind", "Adobe Firefly", "Beautiful.ai", "Otter.ai", "Descript", "Luma Dream Machine", "Kling AI", "Murf AI", "Veed.io", "Character.ai", "DeepL", "InVideo", "Pictory", "CapCut AI", "Remini", "Play.ht", "D-ID", "Clipchamp", "Writesonic", "Rytr", "Craiyon", "Looka", "Brandmark", "Mubert", "AIVA", "Tome", "Riffusion", "Synthesia", "Consensus", "Elicit", "You.com"];
+        let allToolsData = [];
 
-        const s1 = document.getElementById('tool1-select');
-        const s2 = document.getElementById('tool2-select');
+    async function initialize() {
+        try {
+            const response = await fetch('ai-tools.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            allToolsData = await response.json();
+            
+            const toolSelect1 = document.getElementById('tool1-select');
+            const toolSelect2 = document.getElementById('tool2-select');
 
-        // Populate dropdown (50+)
-        tools.sort().forEach(t => {
-            s1.add(new Option(t, t));
-            s2.add(new Option(t, t));
+            allToolsData.sort((a, b) => a.name.localeCompare(b.name)).forEach(tool => {
+                toolSelect1.add(new Option(tool.name, tool.name));
+                toolSelect2.add(new Option(tool.name, tool.name));
+            });
+        } catch (error) {
+            console.error('Failed to load or parse AI tools data:', error);
+            alert('Could not load AI tool data. Please try refreshing the page.');
+        }
+    }
+
+    document.getElementById('compare-btn').addEventListener('click', () => {
+        const toolName1 = document.getElementById('tool1-select').value;
+        const toolName2 = document.getElementById('tool2-select').value;
+
+        if (!toolName1 || !toolName2 || toolName1 === toolName2) {
+            alert("Please select two different tools to compare!");
+            return;
+        }
+
+        const tool1 = allToolsData.find(t => t.name === toolName1);
+        const tool2 = allToolsData.find(t => t.name === toolName2);
+
+        if (!tool1 || !tool2) {
+            alert("Data for one or both selected tools could not be found.");
+            return;
+        }
+
+        document.getElementById('name1').innerText = tool1.name;
+        document.getElementById('name2').innerText = tool2.name;
+
+        const tableBody = document.getElementById('comparison-body');
+        tableBody.innerHTML = ''; // Clear previous results
+
+        const featuresToCompare = ['Category', 'Description', 'Rating', 'Pricing'];
+
+        featuresToCompare.forEach(feature => {
+            let value1 = 'N/A';
+            let value2 = 'N/A';
+            const featureKey = feature.toLowerCase();
+
+            switch(featureKey) {
+                case 'rating':
+                    value1 = tool1.rating ? `${'⭐'.repeat(Math.round(tool1.rating))} ${tool1.rating.toFixed(1)}` : 'N/A';
+                    value2 = tool2.rating ? `${'⭐'.repeat(Math.round(tool2.rating))} ${tool2.rating.toFixed(1)}` : 'N/A';
+                    break;
+                case 'pricing':
+                    value1 = tool1.pricing.map(p => `<span class="tag ${p.toLowerCase()}-tag">${p}</span>`).join(' ');
+                    value2 = tool2.pricing.map(p => `<span class="tag ${p.toLowerCase()}-tag">${p}</span>`).join(' ');
+                    break;
+                default:
+                    value1 = tool1[featureKey] || 'N/A';
+                    value2 = tool2[featureKey] || 'N/A';
+            }
+            
+            const row = tableBody.insertRow();
+            row.innerHTML = `<td class="feature-name">${feature}</td><td>${value1}</td><td>${value2}</td>`;
         });
 
-        document.getElementById('compare-btn').onclick = function() {
-            const t1 = s1.value; const t2 = s2.value;
-            if(!t1 || !t2 || t1 === t2) { alert("Please select two different tools!"); return; }
-            document.getElementById('name1').innerText = t1;
-            document.getElementById('name2').innerText = t2;
-            document.getElementById('result-display-area').style.display = 'block';
-            document.getElementById('result-display-area').scrollIntoView({ behavior: 'smooth' });
-        };
+        const resultArea = document.getElementById('result-display-area');
+        resultArea.style.display = 'block';
+        resultArea.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Initialize the page
+    initialize();
     </script>
     <div id="disqus_thread"></div>
     <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
         (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
         s.src = 'https://aitoolcompare.disqus.com/embed.js';

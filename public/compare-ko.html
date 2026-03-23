@@ -90,11 +90,15 @@
 
     <div id="result-display-area">
         <table class="result-table">
-            <thead><tr><th>기능</th><th id="name1">도구 1</th><th id="name2">도구 2</th></tr></thead>
-            <tbody>
-                <tr><td class="feature-name">카테고리</td><td>AI 모델</td><td>AI 모델</td></tr>
-                <tr><td class="feature-name">사용자 평점</td><td>⭐ 4.9</td><td>⭐ 4.8</td></tr>
-                <tr><td class="feature-name">성능</td><td>최상</td><td>매우 좋음</td></tr>
+            <thead>
+                <tr>
+                    <th>기능</th>
+                    <th id="name1">도구 1</th>
+                    <th id="name2">도구 2</th>
+                </tr>
+            </thead>
+            <tbody id="comparison-body">
+                <!-- 동적 컨텐츠가 여기에 삽입됩니다 -->
             </tbody>
         </table>
     </div>
@@ -122,63 +126,90 @@
     </footer>
 
     <script>
-        let aiTools = [];
+        let allToolsData = [];
 
-        async function fetchTools() {
+        async function initialize() {
             try {
-                const response = await fetch('./ai-tools-ko.json');
-                aiTools = await response.json();
-                populateDropdowns();
+                const response = await fetch('ai-tools-ko.json');
+                if (!response.ok) throw new Error('네트워크 응답이 올바르지 않습니다');
+                allToolsData = await response.json();
+                
+                const toolSelect1 = document.getElementById('tool1-select');
+                const toolSelect2 = document.getElementById('tool2-select');
+
+                allToolsData.sort((a, b) => a.name.localeCompare(b.name, 'ko')).forEach(tool => {
+                    toolSelect1.add(new Option(tool.name, tool.name));
+                    toolSelect2.add(new Option(tool.name, tool.name));
+                });
             } catch (error) {
-                console.error('AI 도구 로딩 오류:', error);
+                console.error('AI 도구 데이터 로드 또는 파싱 실패:', error);
+                alert('AI 도구 데이터를 로드할 수 없습니다. 페이지를 새로고침 해보세요.');
             }
         }
 
-        function populateDropdowns() {
-            const s1 = document.getElementById('tool1-select');
-            const s2 = document.getElementById('tool2-select');
-            
-            const toolNames = aiTools.map(tool => tool.name);
-            toolNames.sort();
-            
-            toolNames.forEach(name => {
-                s1.add(new Option(name, name));
-                s2.add(new Option(name, name));
+        document.getElementById('compare-btn').addEventListener('click', () => {
+            const toolName1 = document.getElementById('tool1-select').value;
+            const toolName2 = document.getElementById('tool2-select').value;
+
+            if (!toolName1 || !toolName2 || toolName1 === toolName2) {
+                alert("비교할 두 개의 다른 도구를 선택해주세요!");
+                return;
+            }
+
+            const tool1 = allToolsData.find(t => t.name === toolName1);
+            const tool2 = allToolsData.find(t => t.name === toolName2);
+
+            if (!tool1 || !tool2) {
+                alert("선택한 도구 중 하나 또는 둘 모두의 데이터를 찾을 수 없습니다.");
+                return;
+            }
+
+            document.getElementById('name1').innerText = tool1.name;
+            document.getElementById('name2').innerText = tool2.name;
+
+            const tableBody = document.getElementById('comparison-body');
+            tableBody.innerHTML = ''; // 이전 결과 지우기
+
+            const featuresToCompare = ['카테고리', '설명', '평점', '가격'];
+
+            featuresToCompare.forEach(feature => {
+                let value1 = 'N/A';
+                let value2 = 'N/A';
+
+                switch(feature) {
+                    case '평점':
+                        value1 = tool1.rating ? `${'⭐'.repeat(Math.round(tool1.rating))} ${tool1.rating.toFixed(1)}` : 'N/A';
+                        value2 = tool2.rating ? `${'⭐'.repeat(Math.round(tool2.rating))} ${tool2.rating.toFixed(1)}` : 'N/A';
+                        break;
+                    case '가격':
+                        value1 = tool1.pricing.map(p => `<span class="tag ${p.toLowerCase().replace(' ', '-')}-tag">${p}</span>`).join(' ');
+                        value2 = tool2.pricing.map(p => `<span class="tag ${p.toLowerCase().replace(' ', '-')}-tag">${p}</span>`).join(' ');
+                        break;
+                    case '카테고리':
+                        value1 = tool1.category || 'N/A';
+                        value2 = tool2.category || 'N/A';
+                        break;
+                    case '설명':
+                        value1 = tool1.description || 'N/A';
+                        value2 = tool2.description || 'N/A';
+                        break;
+                }
+                
+                const row = tableBody.insertRow();
+                row.innerHTML = `<td class="feature-name">${feature}</td><td>${value1}</td><td>${value2}</td>`;
             });
-        }
 
-        document.getElementById('compare-btn').onclick = function() {
-            const t1_name = document.getElementById('tool1-select').value; 
-            const t2_name = document.getElementById('tool2-select').value;
-            
-            if(!t1_name || !t2_name || t1_name === t2_name) { 
-                alert("두 개의 다른 도구를 선택해주세요!"); 
-                return; 
-            }
+            const resultArea = document.getElementById('result-display-area');
+            resultArea.style.display = 'block';
+            resultArea.scrollIntoView({ behavior: 'smooth' });
+        });
 
-            const t1 = aiTools.find(tool => tool.name === t1_name);
-            const t2 = aiTools.find(tool => tool.name === t2_name);
-
-            document.getElementById('name1').innerText = t1.name;
-            document.getElementById('name2').innerText = t2.name;
-
-            const tableBody = document.querySelector("#result-display-area tbody");
-            tableBody.innerHTML = `
-                <tr><td class="feature-name">카테고리</td><td>${t1.category}</td><td>${t2.category}</td></tr>
-                <tr><td class="feature-name">사용자 평점</td><td>⭐ ${t1.rating}</td><td>⭐ ${t2.rating}</td></tr>
-                <tr><td class="feature-name">가격</td><td>${t1.pricing.join(', ')}</td><td>${t2.pricing.join(', ')}</td></tr>
-                <tr><td class="feature-name">주요 기능</td><td>${t1.keywords.join(', ')}</td><td>${t2.keywords.join(', ')}</td></tr>
-            `;
-
-            document.getElementById('result-display-area').style.display = 'block';
-            document.getElementById('result-display-area').scrollIntoView({ behavior: 'smooth' });
-        };
-
-        fetchTools();
+        // 페이지 초기화
+        initialize();
     </script>
     <div id="disqus_thread"></div>
     <script>
-        (function() {
+        (function() { // 아래 줄은 편집하지 마세요
         var d = document, s = d.createElement('script');
         s.src = 'https://aitoolcompare-ko.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());

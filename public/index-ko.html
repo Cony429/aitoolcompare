@@ -30,48 +30,9 @@
       "@context": "https://schema.org",
       "@type": "ItemList",
       "itemListElement": [
-        {
-          "@type": "SoftwareApplication",
-          "name": "Sora (OpenAI)",
-          "applicationCategory": "동영상 생성",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "ratingCount": "1"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "유료"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Claude 3.5",
-          "applicationCategory": "챗봇",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "ratingCount": "1"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "무료"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Gemini 1.5 Pro",
-          "applicationCategory": "챗봇",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "1"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "무료"
-          }
-        }
+        {"@type": "SoftwareApplication", "name": "Sora (OpenAI)", "applicationCategory": "동영상 생성", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "유료"}},
+        {"@type": "SoftwareApplication", "name": "Claude 3.5", "applicationCategory": "챗봇", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "무료"}},
+        {"@type": "SoftwareApplication", "name": "Gemini 1.5 Pro", "applicationCategory": "챗봇", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "무료"}}
       ]
     }
     </script>
@@ -92,100 +53,107 @@
   </div>
 </header>
 
-    <div class="hero-section">
-        <h1>당신에게 가장 적합한 AI를 찾아보세요</h1>
-        <p class="subtitle">다양한 AI 도구를 비교하고 최적의 선택을 하세요.</p>
-        <div class="search-box">
-            <input type="text" id="search-input" placeholder="'비디오', '이미지', '글쓰기', '코딩' 등..." onkeyup="if(event.keyCode===13) document.getElementById('search-btn').click()">
-            <button id="search-btn">검색</button>
-        </div>
+<div class="hero-section">
+    <h1>당신에게 가장 적합한 AI를 찾아보세요</h1>
+    <p class="subtitle">다양한 AI 도구를 비교하고 최적의 선택을 하세요.</p>
+    <div class="search-box">
+        <input type="text" id="search-input" placeholder="'비디오', '이미지', '글쓰기', '코딩' 등..." onkeyup="if(event.keyCode===13) document.getElementById('search-btn').click()">
+        <button id="search-btn">검색</button>
     </div>
+</div>
 
-    <main class="container">
-        <h2 class="section-title">주요 AI 도구 디렉토리</h2>
-        <div id="tool-display"></div>
-    </main>
+<main class="container">
+    <h2 class="section-title">주요 AI 도구 디렉토리</h2>
+    <div class="table-container">
+      <table id="tool-table">
+        <thead>
+          <tr>
+            <th>도구 이름</th>
+            <th>설명</th>
+            <th>평점</th>
+            <th>가격</th>
+            <th>링크</th>
+          </tr>
+        </thead>
+        <tbody id="tool-table-body">
+          <!-- AI 도구가 여기에 동적으로 삽입됩니다. -->
+        </tbody>
+      </table>
+    </div>
+</main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 AI 도구 비교. 모든 권리 보유.</p>
-            <nav>
-                <a href="about.html">소개</a>
-                <a href="contact.html">문의</a>
-                <a href="privacy-policy.html">개인정보처리방침</a>
-            </nav>
-        </div>
-    </footer>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 AI 도구 비교. 모든 권리 보유.</p>
+        <nav>
+            <a href="about.html">소개</a>
+            <a href="contact.html">문의</a>
+            <a href="privacy-policy.html">개인정보처리방침</a>
+        </nav>
+    </div>
+</footer>
 
-    <script>
-        let aiTools = [];
+<script>
+    let aiTools = [];
 
-        async function fetchTools() {
-            try {
-                const response = await fetch('ai-tools-ko.json');
-                aiTools = await response.json();
-                render();
-            } catch (error) {
-                console.error('AI 도구 로딩 오류:', error);
-                document.getElementById('tool-display').innerHTML = "<p style='text-align:center; padding: 20px;'>AI 도구를 불러올 수 없습니다.</p>";
-            }
+    async function fetchTools() {
+        try {
+            const response = await fetch('ai-tools-ko.json');
+            aiTools = await response.json();
+            render();
+        } catch (error) {
+            console.error('AI 도구 로딩 오류:', error);
+            document.getElementById('tool-table-body').innerHTML = "<tr><td colspan='5' style='text-align:center; padding: 20px;'>AI 도구를 불러올 수 없습니다.</td></tr>";
+        }
+    }
+
+    function render(query = "") {
+        const tableBody = document.getElementById('tool-table-body');
+        tableBody.innerHTML = "";
+        const lowerCaseQuery = query.toLowerCase();
+
+        const filteredTools = aiTools.filter(tool => {
+            const toolKeywords = tool.keywords ? tool.keywords.map(k => k.toLowerCase()) : [];
+            return (
+                tool.name.toLowerCase().includes(lowerCaseQuery) || 
+                tool.category.toLowerCase().includes(lowerCaseQuery) ||
+                tool.description.toLowerCase().includes(lowerCaseQuery) ||
+                toolKeywords.some(keyword => keyword.includes(lowerCaseQuery))
+            );
+        });
+
+        if (filteredTools.length === 0) {
+            tableBody.innerHTML = "<tr><td colspan='5' style='text-align:center; padding: 20px;'>일치하는 AI 도구가 없습니다.</td></tr>";
+            return;
         }
 
-        function render(query = "") {
-            const toolDisplay = document.getElementById('tool-display');
-            toolDisplay.innerHTML = "";
-            const lowerCaseQuery = query.toLowerCase();
+        filteredTools.forEach(tool => {
+            const row = document.createElement('tr');
 
-            const filteredTools = aiTools.filter(tool => {
-                const toolKeywords = tool.keywords ? tool.keywords.map(k => k.toLowerCase()) : [];
-                return (
-                    tool.name.toLowerCase().includes(lowerCaseQuery) || 
-                    tool.category.toLowerCase().includes(lowerCaseQuery) ||
-                    tool.description.toLowerCase().includes(lowerCaseQuery) ||
-                    toolKeywords.some(keyword => keyword.includes(lowerCaseQuery))
-                );
-            });
-
-            if (filteredTools.length === 0) {
-                toolDisplay.innerHTML = "<p style='text-align:center; padding: 20px;'>일치하는 AI 도구가 없습니다.</p>";
-                return;
+            let tagsHTML = '';
+            if (tool.pricing.includes("무료")) {
+                tagsHTML += `<span class="tag free-tag">무료</span>`;
+            }
+            if (tool.pricing.includes("유료")) {
+                tagsHTML += `<span class="tag paid-tag">유료</span>`;
+            }
+            if (tool.pricing.includes("부분 유료")) {
+                tagsHTML += `<span class="tag freemium-tag">부분 유료</span>`;
             }
 
-            filteredTools.forEach(tool => {
-                const toolItem = document.createElement('a');
-                toolItem.href = tool.link;
-                toolItem.target = "_blank";
-                toolItem.className = "tool-card";
+            row.innerHTML = `
+                <td data-label="도구 이름">${tool.name}</td>
+                <td data-label="설명">${tool.description}</td>
+                <td data-label="평점" class="tool-rating">${"⭐".repeat(Math.round(tool.rating))} ${tool.rating.toFixed(1)}</td>
+                <td data-label="가격">${tagsHTML}</td>
+                <td data-label="링크"><a href="${tool.link}" target="_blank" class="visit-site-btn">사이트 방문</a></td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
 
-                let tagsHTML = '';
-                if (tool.pricing.includes("무료")) {
-                    tagsHTML += `<span class="tag free-tag">무료</span>`;
-                }
-                if (tool.pricing.includes("유료")) {
-                    tagsHTML += `<span class="tag paid-tag">유료</span>`;
-                }
-                if (tool.pricing.includes("부분 유료")) {
-                    tagsHTML += `<span class="tag freemium-tag">부분 유료</span>`;
-                }
-
-
-                toolItem.innerHTML = `
-                    <div class="card-left">
-                        <span class="tool-name">${tool.name}</span>
-                        <p class="tool-desc">${tool.description}</p>
-                    </div>
-                    <div class="card-right">
-                        <div class="tool-rating">${"⭐".repeat(Math.round(tool.rating))} ${tool.rating.toFixed(1)}</div>
-                        <div class="tool-tags">${tagsHTML}</div>
-                        <span class="visit-site">사이트 방문</span>
-                    </div>
-                `;
-                toolDisplay.appendChild(toolItem);
-            });
-        }
-
-        document.getElementById('search-btn').addEventListener('click', () => render(document.getElementById('search-input').value));
-        fetchTools();
-    </script>
+    document.getElementById('search-btn').addEventListener('click', () => render(document.getElementById('search-input').value));
+    fetchTools();
+</script>
 </body>
 </html>
