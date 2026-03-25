@@ -1,6 +1,6 @@
 /* --- [Final Master Design] All Pages Unified --- */
 
-/* 1. Global Reset */
+/* 1. Global Reset & Container */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #f8f9fa;
@@ -8,6 +8,11 @@ body {
   padding: 0;
   color: #333;
   line-height: 1.6;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* 2. Header Navigation (Common for All Pages) */
@@ -20,20 +25,10 @@ body {
   z-index: 1000;
 }
 .header-container {
-  max-width: 1100px;
-  margin: 0 auto;
+  /* This class is now a flex container for alignment */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-}
-.nav-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
 }
 .logo {
   font-size: 1.4rem;
@@ -42,6 +37,10 @@ body {
 .logo a {
     color: #1a73e8;
     text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
 }
 nav a {
   text-decoration: none;
@@ -62,16 +61,14 @@ nav a.active {
   padding: 5px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
+  margin-left: 15px; /* Add some space from the nav links */
 }
 
 /* 3. Hero Section (Silver Background - All Pages) */
 .hero-section {
-  background-color: #f1f3f4 !important; /* 질문하신 실버 그레이 배경 */
+  background-color: #f1f3f4 !important;
   text-align: center;
   padding: 80px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border-bottom: 1px solid #e0e0e0;
 }
 .hero-section h1 {
@@ -86,15 +83,16 @@ nav a.active {
   color: #666;
   margin-bottom: 35px;
   max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 4. Search Box (Centered) */
 .search-box {
   width: 100%;
   max-width: 600px;
+  margin: 0 auto;
   position: relative;
-  display: flex;
-  align-items: center;
 }
 .search-box input {
   width: 100%;
@@ -108,6 +106,8 @@ nav a.active {
 .search-box button {
   position: absolute;
   right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   background: #1a73e8;
   color: white;
   border: none;
@@ -117,8 +117,10 @@ nav a.active {
   cursor: pointer;
 }
 
-/* 5. Tool Cards (Main Page) */
-.main-content { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+/* 5. Tool Cards & Content Sections */
+.main-content { 
+  padding: 40px 0;
+}
 .tool-card {
   background: white !important;
   border: 1px solid #e0e0e0 !important;
@@ -141,11 +143,6 @@ nav a.active {
 .paid-tag { background: #dc3545; }
 
 /* 6. Blog & Content Styling */
-.content-container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
 .news-article {
     background: white;
     padding: 40px;
@@ -173,15 +170,12 @@ nav a.active {
 
 /* 7. Footer (Centered & Silver Background) */
 .site-footer {
-  background-color: #f1f3f4 !important; /* 실버 그레이 배경 */
-  text-align: center !important;
+  background-color: #f1f3f4 !important;
   padding: 60px 0 !important;
   margin-top: 100px !important;
   border-top: 1px solid #e0e0e0 !important;
 }
 .footer-content {
-    max-width: 1100px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -199,3 +193,9 @@ nav a.active {
   font-size: 0.9rem;
 }
 .copyright { color: #888; font-size: 0.85rem; }
+
+/* Comparison Table Styles */
+.comparison-table { width: 100%; border-collapse: collapse; margin-top: 40px; }
+.comparison-table th, .comparison-table td { padding: 15px; border: 1px solid #ddd; text-align: left; }
+.comparison-table thead th { background-color: #1a73e8; color: white; font-weight: bold; }
+.comparison-table tbody tr:nth-child(even) { background-color: #f9f9f9; }

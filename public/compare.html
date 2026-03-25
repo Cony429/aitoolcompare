@@ -4,67 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compare AI Tools | AI Tool Compare</title>
+    <title>Compare AI Tools | Side-by-Side Analysis</title>
+    <meta name="description" content="A detailed, side-by-side comparison of the leading AI tools. Compare features, pricing, and performance of Claude 3.5, GPT-4o, Sora, and more to make an informed decision.">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="comparison.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header class="site-header">
-      <div class="nav-container">
-        <a href="index.html" class="logo">AI Tool Compare</a>
+
+<header class="site-header">
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html">AI Tool Compare</a>
+        </div>
         <nav class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="compare.html">Compare</a>
-          <a href="blog.html">Blog</a>
-          <a href="news.html">News</a>
+            <a href="index.html">Home</a>
+            <a href="compare.html" class="active">Compare</a>
+            <a href="blog.html">Blog</a>
+            <a href="news.html">News</a>
+            <div class="lang-switch">
+                <a href="compare.html">EN</a> | <a href="compare-ko.html">KO</a>
+            </div>
         </nav>
-        <div class="lang-switch">
-          <a href="index.html">EN</a> | <a href="index-ko.html">KO</a>
-        </div>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <main class="content-container">
-        <div class="comparison-header">
-            <h1>AI Tool Comparison</h1>
-            <p>Select tools to see a side-by-side comparison.</p>
+<main>
+    <section class="hero-section">
+        <div class="container">
+            <h1>AI Tool Deep Dive</h1>
+            <p class="subtitle">Side-by-side comparisons of the most powerful AI models. Updated weekly.</p>
         </div>
-        <div class="comparison-area">
-            <div class="tool-selection">
-                <div class="tool-selector" id="selector1">
-                    <select onchange="updateComparison(1, this.value)">
-                        <option value="">Select Tool 1</option>
-                    </select>
-                </div>
-                <div class="tool-selector" id="selector2">
-                    <select onchange="updateComparison(2, this.value)">
-                        <option value="">Select Tool 2</option>
-                    </select>
-                </div>
-            </div>
-            <div class="comparison-table-container">
-                <div class="comparison-column" id="column1">
-                    <!-- Tool 1 details -->
-                </div>
-                <div class="comparison-column" id="column2">
-                    <!-- Tool 2 details -->
-                </div>
-            </div>
-        </div>
-    </main>
+    </section>
 
-    <footer class="site-footer">
-      <div class="footer-content">
+    <div class="main-content container">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px;">Feature Comparison: Chatbots & Image Generators</h2>
+        
+        <div class="comparison-table-container">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>GPT-4o (OpenAI)</th>
+                        <th>Claude 3.5 Sonnet (Anthropic)</th>
+                        <th>Midjourney</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Primary Use</strong></td>
+                        <td>Advanced conversational AI, multi-modal input (text, image, audio), code generation</td>
+                        <td>High-level conversational AI, enterprise solutions, nuanced text analysis</td>
+                        <td>Artistic and photorealistic image generation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Context Window</strong></td>
+                        <td>~128,000 tokens, enabling long conversations and document analysis</td>
+                        <td>~200,000 tokens, excels at recalling details from extensive documents</td>
+                        <td>N/A (Image-focused)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Image Generation</strong></td>
+                        <td>Integrated (DALL-E 3). Good for general purpose and creative images.</td>
+                        <td>No, but can analyze and describe images in great detail.</td>
+                        <td>State-of-the-art. Unmatched for aesthetic quality and photorealism.</td>
+                    </tr>
+                     <tr>
+                        <td><strong>Speed & Performance</strong></td>
+                        <td>Very fast for its capability, with near-instant responses in many scenarios.</td>
+                        <td>Optimized for speed, often faster than GPT-4o for complex text-based tasks.</td>
+                        <td>Fast, generating a set of 4 images typically in under a minute.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Best For</strong></td>
+                        <td>Developers, power users needing a versatile, multi-modal tool, and creative brainstorming.</td>
+                        <td>Businesses, researchers, and writers who need to analyze large volumes of text with high accuracy.</td>
+                        <td>Artists, designers, and marketers needing high-quality, stylized images.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pricing Model</strong></td>
+                        <td>Free tier available; Paid subscription (ChatGPT Plus) for advanced features and higher limits.</td>
+                        <td>Free tier available; Paid API and subscription for higher usage and advanced models.</td>
+                        <td>Subscription-based, no free tier after initial trial period.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
         <div class="footer-links">
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
         </div>
         <p class="copyright">&copy; 2026 AI Tool Compare. All rights reserved.</p>
-      </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="comparison.js"></script>
 </body>
 </html>

@@ -26,136 +26,87 @@
       gtag('js', new Date());
       gtag('config', 'G-3CZ21VR3EM');
     </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        {"@type": "SoftwareApplication", "name": "Sora (OpenAI)", "applicationCategory": "Video Generation", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "Paid"}},
-        {"@type": "SoftwareApplication", "name": "Claude 3.5", "applicationCategory": "Chatbot", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "Free"}},
-        {"@type": "SoftwareApplication", "name": "Gemini 1.5 Pro", "applicationCategory": "Chatbot", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "Free"}}
-      ]
-    }
-    </script>
 </head>
 <body>
+
 <header class="site-header">
-  <div class="nav-container">
-    <a href="index.html" class="logo">AI Tool Compare</a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="compare.html">Compare</a>
-      <a href="blog.html">Blog</a>
-      <a href="news.html">News</a>
-    </nav>
-    <div class="lang-switch">
-      <a href="index.html">EN</a> | <a href="index-ko.html">KO</a>
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html">AI Tool Compare</a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="compare.html">Compare</a>
+            <a href="blog.html">Blog</a>
+            <a href="news.html">News</a>
+            <div class="lang-switch">
+                <a href="index.html">EN</a> | <a href="index-ko.html">KO</a>
+            </div>
+        </nav>
     </div>
-  </div>
 </header>
 
-<div class="hero-section">
-    <h1>Find the Perfect AI for Your Needs</h1>
-    <p class="subtitle">Compare various AI tools and make the best choice.</p>
-    <div class="search-box">
-        <input type="text" id="search-input" placeholder="e.g., 'video', 'image', 'writing', 'coding'..." onkeyup="if(event.keyCode===13) document.getElementById('search-btn').click()">
-        <button id="search-btn">Search</button>
-    </div>
-</div>
+<main>
+    <section class="hero-section">
+        <div class="container">
+            <h1>Find the Perfect AI for Your Needs</h1>
+            <p class="subtitle">Your ultimate guide to comparing the best AI tools, updated for 2026. Making your choice simple and informed.</p>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for tools by name, category, or keyword (e.g., 'video', 'free')...">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
 
-<main class="container">
-    <h2 class="section-title">Main AI Tools Directory</h2>
-    <div class="table-container">
-      <table id="tool-table">
-        <thead>
-          <tr>
-            <th>Tool Name</th>
-            <th>Description</th>
-            <th>Rating</th>
-            <th>Pricing</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody id="tool-table-body">
-          <!-- AI tools will be dynamically inserted here -->
-        </tbody>
-      </table>
+    <div class="main-content container">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">Featured AI Tools Directory</h2>
+        <div id="tool-list-container">
+            <!-- AI tools will be dynamically inserted here from free-ai-tools.js -->
+        </div>
     </div>
 </main>
 
-    <footer class="site-footer">
-      <div class="footer-content">
+<footer class="site-footer">
+    <div class="container footer-content">
         <div class="footer-links">
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
         </div>
         <p class="copyright">&copy; 2026 AI Tool Compare. All rights reserved.</p>
-      </div>
-    </footer>
+    </div>
+</footer>
 
+<script src="free-ai-tools.js"></script>
 <script>
-    let aiTools = [];
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initial render of all tools
+        renderTools(window.aiTools);
 
-    async function fetchTools() {
-        try {
-            const response = await fetch('ai-tools.json');
-            aiTools = await response.json();
-            render();
-        } catch (error) {
-            console.error('Error loading AI tools:', error);
-            document.getElementById('tool-table-body').innerHTML = "<tr><td colspan='5' style='text-align:center; padding: 20px;'>Could not load AI tools.</td></tr>";
-        }
-    }
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
 
-    function render(query = "") {
-        const tableBody = document.getElementById('tool-table-body');
-        tableBody.innerHTML = "";
-        const lowerCaseQuery = query.toLowerCase();
+        const performSearch = () => {
+            const query = searchInput.value.toLowerCase();
+            const filteredTools = window.aiTools.filter(tool => {
+                const name = tool.name.toLowerCase();
+                const category = tool.category.toLowerCase();
+                const description = tool.description.toLowerCase();
+                const keywords = tool.keywords ? tool.keywords.join(' ').toLowerCase() : '';
+                return name.includes(query) || category.includes(query) || description.includes(query) || keywords.includes(query);
+            });
+            renderTools(filteredTools);
+        };
 
-        const filteredTools = aiTools.filter(tool => {
-            const toolKeywords = tool.keywords ? tool.keywords.map(k => k.toLowerCase()) : [];
-            return (
-                tool.name.toLowerCase().includes(lowerCaseQuery) || 
-                tool.category.toLowerCase().includes(lowerCaseQuery) ||
-                tool.description.toLowerCase().includes(lowerCaseQuery) ||
-                toolKeywords.some(keyword => keyword.includes(lowerCaseQuery))
-            );
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keyup', (event) => {
+            if (event.key === 'Enter') {
+                performSearch();
+            }
         });
-
-        if (filteredTools.length === 0) {
-            tableBody.innerHTML = "<tr><td colspan='5' style='text-align:center; padding: 20px;'>No matching AI tools found.</td></tr>";
-            return;
-        }
-
-        filteredTools.forEach(tool => {
-            const row = document.createElement('tr');
-
-            let tagsHTML = '';
-            if (tool.pricing.includes("Free")) {
-                tagsHTML += `<span class="tag free-tag">Free</span>`;
-            }
-            if (tool.pricing.includes("Paid")) {
-                tagsHTML += `<span class="tag paid-tag">Paid</span>`;
-            }
-            if (tool.pricing.includes("Freemium")) {
-                tagsHTML += `<span class="tag freemium-tag">Freemium</span>`;
-            }
-
-            row.innerHTML = `
-                <td data-label="Tool Name">${tool.name}</td>
-                <td data-label="Description">${tool.description}</td>
-                <td data-label="Rating" class="tool-rating">${"⭐".repeat(Math.round(tool.rating))} ${tool.rating.toFixed(1)}</td>
-                <td data-label="Pricing">${tagsHTML}</td>
-                <td data-label="Link"><a href="${tool.link}" target="_blank" class="visit-site-btn">Visit Site</a></td>
-            `;
-            tableBody.appendChild(row);
-        });
-    }
-
-    document.getElementById('search-btn').addEventListener('click', () => render(document.getElementById('search-input').value));
-    fetchTools();
+    });
 </script>
+
 </body>
 </html>
