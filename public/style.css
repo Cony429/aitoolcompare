@@ -1,4 +1,4 @@
-/* --- [Final Master Design] All Pages Unified --- */
+/* --- [Master Design] All Pages Unified --- */
 
 /* 1. Global Reset & Container */
 body {
@@ -15,7 +15,7 @@ body {
   padding: 0 20px;
 }
 
-/* 2. Header Navigation (Common for All Pages) */
+/* 2. Header Navigation */
 .site-header {
   background: white;
   border-bottom: 1px solid #eee;
@@ -25,155 +25,122 @@ body {
   z-index: 1000;
 }
 .header-container {
-  /* This class is now a flex container for alignment */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo {
+.logo a {
   font-size: 1.4rem;
   font-weight: 800;
-}
-.logo a {
-    color: #1a73e8;
-    text-decoration: none;
+  color: #1a73e8;
+  text-decoration: none;
 }
 .nav-links {
   display: flex;
   align-items: center;
 }
-nav a {
+.nav-links a {
   text-decoration: none;
   color: #555;
   margin: 0 15px;
   font-weight: 600;
-  transition: 0.2s;
+  transition: color 0.2s;
 }
-nav a:hover, .nav-links a:hover { color: #1a73e8; }
-nav a.active {
-    color: #1a73e8;
+.nav-links a:hover, .nav-links a.active {
+  color: #1a73e8;
 }
 .lang-switch a {
-  text-decoration: none;
-  color: #1a73e8;
+  font-size: 0.8rem;
   font-weight: bold;
+  color: #1a73e8;
   border: 1px solid #1a73e8;
   padding: 5px 12px;
   border-radius: 20px;
-  font-size: 0.8rem;
-  margin-left: 15px; /* Add some space from the nav links */
+  text-decoration: none;
+  margin-left: 15px;
 }
 
-/* 3. Hero Section (Silver Background - All Pages) */
+/* 3. Hero Section */
 .hero-section {
-  background-color: #f1f3f4 !important;
+  background-color: #f1f3f4;
   text-align: center;
-  padding: 80px 20px;
+  padding: 70px 20px;
   border-bottom: 1px solid #e0e0e0;
 }
 .hero-section h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 850;
   margin-bottom: 15px;
-  letter-spacing: -2px;
-  color: #111;
+  letter-spacing: -1.5px;
 }
 .subtitle {
   font-size: 1.2rem;
   color: #666;
-  margin-bottom: 35px;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 30px auto;
 }
 
-/* 4. Search Box (Centered) */
-.search-box {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
-}
-.search-box input {
-  width: 100%;
-  padding: 18px 25px;
-  border-radius: 50px;
-  border: 1px solid #ddd;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  font-size: 1rem;
-  outline: none;
-}
-.search-box button {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #1a73e8;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* 5. Tool Cards & Content Sections */
-.main-content { 
+/* 4. Content & Card Styling */
+.main-content {
   padding: 40px 0;
 }
-.tool-card {
-  background: white !important;
-  border: 1px solid #e0e0e0 !important;
-  border-radius: 15px !important;
-  padding: 25px !important;
-  margin-bottom: 20px !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  text-decoration: none !important;
-  color: inherit !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
-  transition: 0.3s;
-}
-.tool-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.1) !important; }
-.tool-name { font-size: 1.3rem; font-weight: bold; color: #1a73e8; }
-.card-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
-.tag { padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; color: white; }
-.free-tag { background: #28a745; }
-.paid-tag { background: #dc3545; }
-
-/* 6. Blog & Content Styling */
-.news-article {
+.news-article, .article-content, .tool-card {
     background: white;
-    padding: 40px;
+    border: 1px solid #e0e0e0;
     border-radius: 15px;
-    border: 1px solid #eee;
+    padding: 30px;
+    margin-bottom: 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-.news-article h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+.article-image {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
 .publish-date {
     text-align: center;
     color: #777;
     margin-bottom: 40px;
 }
-.article-image {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 40px;
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-/* 7. Footer (Centered & Silver Background) */
+/* 5. Comparison Table */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+.comparison-table th, .comparison-table td {
+    padding: 18px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: top;
+}
+.comparison-table thead th {
+    background-color: #1a73e8;
+    color: white;
+    font-weight: bold;
+}
+.comparison-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.comparison-table strong {
+    font-weight: 700;
+}
+
+/* 6. Footer */
 .site-footer {
-  background-color: #f1f3f4 !important;
-  padding: 60px 0 !important;
-  margin-top: 100px !important;
-  border-top: 1px solid #e0e0e0 !important;
+  background-color: #f1f3f4;
+  padding: 50px 0;
+  margin-top: 60px;
+  border-top: 1px solid #e0e0e0;
 }
 .footer-content {
     display: flex;
@@ -183,19 +150,14 @@ nav a.active {
 }
 .footer-links {
   display: flex;
-  justify-content: center;
   gap: 25px;
 }
 .footer-links a {
   text-decoration: none;
   color: #1a73e8;
   font-weight: 600;
-  font-size: 0.9rem;
 }
-.copyright { color: #888; font-size: 0.85rem; }
-
-/* Comparison Table Styles */
-.comparison-table { width: 100%; border-collapse: collapse; margin-top: 40px; }
-.comparison-table th, .comparison-table td { padding: 15px; border: 1px solid #ddd; text-align: left; }
-.comparison-table thead th { background-color: #1a73e8; color: white; font-weight: bold; }
-.comparison-table tbody tr:nth-child(even) { background-color: #f9f9f9; }
+.copyright {
+    color: #888;
+    font-size: 0.9rem;
+}
