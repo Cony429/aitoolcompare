@@ -1,70 +1,221 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 도구 비교 | AI Tool Compare</title>
+    <title>Best AI Compare Tool 2026 | AI 도구 비교 추천</title>
+    <meta name="description" content="Sora, Claude 3.5, Gemini 등 최신 AI 도구를 한눈에 비교하세요. 가격, 평점, 성능 정보를 매일 업데이트하는 전문 AI Compare 사이트입니다.">
+    <meta property="og:title" content="Best AI Compare Tool 2026 | AI 도구 비교 추천">
+    <meta property="og:description" content="Sora, Claude 3.5, Gemini 등 최신 AI 도구를 한눈에 비교하세요. 가격, 평점, 성능 정보를 매일 업데이트하는 전문 AI Compare 사이트입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bestaitoolcompare.com/compare-ko.html">
+    <meta property="og:image" content="https://bestaitoolcompare.com/og-image-compare.jpg">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="comparison.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5933569238212175"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CZ21VR3EM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3CZ21VR3EM');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vux1x0xa2q");
+</script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; color: #333; }
+        
+        /* Comparison Builder Section */
+        .compare-hero { padding: 60px 5%; text-align: center; background: white; }
+        .builder-box { max-width: 800px; margin: 0 auto; padding: 40px; background: #fff; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+        .select-group { display: flex; gap: 20px; justify-content: center; align-items: center; margin-bottom: 30px; }
+        select { padding: 15px; border-radius: 10px; border: 1px solid #ddd; font-size: 1rem; width: 250px; outline: none; background: white; }
+        .vs-badge { background: #ff4757; color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        #compare-btn { padding: 15px 50px; background: #007bff; color: white; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1.1rem; }
+
+        /* Comparison Result Table */
+        #result-display-area { max-width: 900px; margin: 40px auto; padding: 0 20px; display: none; }
+        .result-table { width: 100%; border-collapse: collapse; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .result-table th { background: #007bff; color: white; padding: 20px; }
+        .result-table td { padding: 18px; border-bottom: 1px solid #eee; text-align: center; }
+        .feature-name { font-weight: bold; background: #f8f9fa; text-align: left !important; width: 30%; }
+
+        /* Head-to-Head Battles */
+        .battle-section { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+        .battle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+        .battle-card { background: white; border: 1px solid #eee; padding: 30px; border-radius: 15px; text-align: center; transition: 0.3s; }
+        .battle-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .vs-tag { color: #ff4757; font-weight: bold; font-size: 1.2rem; }
+        .battle-link { display: inline-block; margin-top: 15px; color: #007bff; text-decoration: none; font-weight: bold; }
+
+        @media (max-width: 768px) { .select-group { flex-direction: column; } select { width: 100%; } }
+    </style>
 </head>
 <body>
-    <header class="site-header">
-      <div class="nav-container">
-        <a href="index-ko.html" class="logo">AI Tool Compare</a>
-        <nav class="nav-links">
-          <a href="index-ko.html">홈</a>
-          <a href="compare-ko.html">도구 비교</a>
-          <a href="blog-ko.html">블로그</a>
-          <a href="news.html">뉴스</a>
-        </nav>
-        <div class="lang-switch">
-          <a href="index.html">EN</a> | <a href="index-ko.html">KO</a>
-        </div>
-      </div>
-    </header>
 
-    <main class="content-container">
-        <div class="comparison-header">
-            <h1>AI 도구 비교</h1>
-            <p>도구를 선택하여 나란히 비교해 보세요.</p>
-        </div>
-        <div class="comparison-area">
-            <div class="tool-selection">
-                <div class="tool-selector" id="selector1">
-                    <select onchange="updateComparison(1, this.value)">
-                        <option value="">도구 1 선택</option>
-                    </select>
-                </div>
-                <div class="tool-selector" id="selector2">
-                    <select onchange="updateComparison(2, this.value)">
-                        <option value="">도구 2 선택</option>
-                    </select>
-                </div>
-            </div>
-            <div class="comparison-table-container">
-                <div class="comparison-column" id="column1">
-                    <!-- Tool 1 details -->
-                </div>
-                <div class="comparison-column" id="column2">
-                    <!-- Tool 2 details -->
-                </div>
-            </div>
-        </div>
-    </main>
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index-ko.html" class="logo">AI 도구 비교</a>
+    <nav class="nav-links">
+      <a href="index-ko.html">홈</a>
+      <a href="compare-ko.html">비교</a>
+      <a href="blog-ko.html">블로그</a>
+      <a href="news.html">뉴스</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="compare.html">EN</a> | <a href="compare-ko.html">KO</a>
+    </div>
+  </div>
+</header>
 
-    <footer class="site-footer">
-      <div class="footer-content">
-        <div class="footer-links">
-          <a href="about-ko.html">소개</a>
-          <a href="contact-ko.html">문의하기</a>
-          <a href="privacy-ko.html">개인정보처리방침</a>
-          <a href="terms-ko.html">이용약관</a>
+    <section class="compare-hero">
+        <h1>AI 상호 비교</h1>
+        <div class="builder-box">
+            <div class="select-group">
+                <select id="tool1-select"><option value="">도구 1 선택</option></select>
+                <div class="vs-badge">VS</div>
+                <select id="tool2-select"><option value="">도구 2 선택</option></select>
+            </div>
+            <button id="compare-btn">지금 비교하기</button>
         </div>
-        <p class="copyright">&copy; 2026 AI Tool Compare. All rights reserved.</p>
-      </div>
+    </section>
+
+    <div id="result-display-area">
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th>기능</th>
+                    <th id="name1">도구 1</th>
+                    <th id="name2">도구 2</th>
+                </tr>
+            </thead>
+            <tbody id="comparison-body">
+                <!-- 동적 컨텐츠가 여기에 삽입됩니다 -->
+            </tbody>
+        </table>
+    </div>
+
+    <section class="battle-section">
+        <h2 class="section-title">주요 일대일 대결</h2>
+        <div class="battle-grid">
+            <div class="battle-card"><h3>ChatGPT <span class="vs-tag">VS</span> 클로드</h3><p>자연스러운 글쓰기 & 코딩</p><a href="chatgpt-vs-claude.html" class="battle-link">대결 보기 →</a></div>
+            <div class="battle-card"><h3>미드저니 <span class="vs-tag">VS</span> DALL-E</h3><p>예술적 표현 vs 창의적 정밀성</p><a href="midjourney-vs-dalle.html" class="battle-link">대결 보기 →</a></div>
+            <div class="battle-card"><h3>Jasper <span class="vs-tag">VS</span> Copy.ai</h3><p>마케팅 & 비즈니스 글쓰기</p><a href="#" class="battle-link">대결 보기 →</a></div>
+            <div class="battle-card"><h3>Perplexity <span class="vs-tag">VS</span> 구글</h3><p>검색 vs AI 답변</p><a href="#" class="battle-link">대결 보기 →</a></div>
+            <div class="battle-card"><h3>Sora <span class="vs-tag">VS</span> Runway</h3><p>차세대 AI 영상 생성</p><a href="#" class="battle-link">대결 보기 →</a></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 AI 도구 비교. 모든 권리 보유.</p>
+            <nav>
+                <a href="about.html">소개</a>
+                <a href="contact.html">문의</a>
+                <a href="privacy-policy.html">개인정보처리방침</a>
+            </nav>
+        </div>
     </footer>
 
-    <script src="comparison-ko.js"></script>
+    <script>
+        let allToolsData = [];
+
+        async function initialize() {
+            try {
+                const response = await fetch('ai-tools-ko.json');
+                if (!response.ok) throw new Error('네트워크 응답이 올바르지 않습니다');
+                allToolsData = await response.json();
+                
+                const toolSelect1 = document.getElementById('tool1-select');
+                const toolSelect2 = document.getElementById('tool2-select');
+
+                allToolsData.sort((a, b) => a.name.localeCompare(b.name, 'ko')).forEach(tool => {
+                    toolSelect1.add(new Option(tool.name, tool.name));
+                    toolSelect2.add(new Option(tool.name, tool.name));
+                });
+            } catch (error) {
+                console.error('AI 도구 데이터 로드 또는 파싱 실패:', error);
+                alert('AI 도구 데이터를 로드할 수 없습니다. 페이지를 새로고침 해보세요.');
+            }
+        }
+
+        document.getElementById('compare-btn').addEventListener('click', () => {
+            const toolName1 = document.getElementById('tool1-select').value;
+            const toolName2 = document.getElementById('tool2-select').value;
+
+            if (!toolName1 || !toolName2 || toolName1 === toolName2) {
+                alert("비교할 두 개의 다른 도구를 선택해주세요!");
+                return;
+            }
+
+            const tool1 = allToolsData.find(t => t.name === toolName1);
+            const tool2 = allToolsData.find(t => t.name === toolName2);
+
+            if (!tool1 || !tool2) {
+                alert("선택한 도구 중 하나 또는 둘 모두의 데이터를 찾을 수 없습니다.");
+                return;
+            }
+
+            document.getElementById('name1').innerText = tool1.name;
+            document.getElementById('name2').innerText = tool2.name;
+
+            const tableBody = document.getElementById('comparison-body');
+            tableBody.innerHTML = ''; // 이전 결과 지우기
+
+            const featuresToCompare = ['카테고리', '설명', '평점', '가격'];
+
+            featuresToCompare.forEach(feature => {
+                let value1 = 'N/A';
+                let value2 = 'N/A';
+
+                switch(feature) {
+                    case '평점':
+                        value1 = tool1.rating ? `${'⭐'.repeat(Math.round(tool1.rating))} ${tool1.rating.toFixed(1)}` : 'N/A';
+                        value2 = tool2.rating ? `${'⭐'.repeat(Math.round(tool2.rating))} ${tool2.rating.toFixed(1)}` : 'N/A';
+                        break;
+                    case '가격':
+                        value1 = tool1.pricing.map(p => `<span class="tag ${p.toLowerCase().replace(' ', '-')}-tag">${p}</span>`).join(' ');
+                        value2 = tool2.pricing.map(p => `<span class="tag ${p.toLowerCase().replace(' ', '-')}-tag">${p}</span>`).join(' ');
+                        break;
+                    case '카테고리':
+                        value1 = tool1.category || 'N/A';
+                        value2 = tool2.category || 'N/A';
+                        break;
+                    case '설명':
+                        value1 = tool1.description || 'N/A';
+                        value2 = tool2.description || 'N/A';
+                        break;
+                }
+                
+                const row = tableBody.insertRow();
+                row.innerHTML = `<td class="feature-name">${feature}</td><td>${value1}</td><td>${value2}</td>`;
+            });
+
+            const resultArea = document.getElementById('result-display-area');
+            resultArea.style.display = 'block';
+            resultArea.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // 페이지 초기화
+        initialize();
+    </script>
+    <div id="disqus_thread"></div>
+    <script>
+        (function() { // 아래 줄은 편집하지 마세요
+        var d = document, s = d.createElement('script');
+        s.src = 'https://aitoolcompare-ko.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>

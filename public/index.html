@@ -6,102 +6,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best AI Tool Compare 2026 | Compare Sora, Claude, Gemini & More</title>
     <meta name="description" content="Find and compare the best AI tools in 2026. Real-time comparison of Sora, Claude 3.5, Gemini 1.5 Pro, and Midjourney with ratings and pricing.">
+    <meta name="keywords" content="ai compare, ai tool comparison, best ai tools 2026, Sora vs Runway, AI 도구 비교, 인공지능 추천">
+    <meta property="og:title" content="Best AI Tool Compare 2026 | Compare Sora, Claude, Gemini & More">
+    <meta property="og:description" content="Find and compare the best AI tools in 2026. Real-time comparison of Sora, Claude 3.5, Gemini 1.5 Pro, and Midjourney with ratings and pricing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bestaitoolcompare.com/index.html">
+    <link rel="canonical" href="https://bestaitoolcompare.com/index.html">
+    <meta property="og:image" content="https://bestaitoolcompare.com/og-image.jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5933569238212175"
+     crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CZ21VR3EM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3CZ21VR3EM');
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type": "SoftwareApplication", "name": "Sora (OpenAI)", "applicationCategory": "Video Generation", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "Paid"}},
+        {"@type": "SoftwareApplication", "name": "Claude 3.5", "applicationCategory": "Chatbot", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "Free"}},
+        {"@type": "SoftwareApplication", "name": "Gemini 1.5 Pro", "applicationCategory": "Chatbot", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "Free"}}
+      ]
+    }
+    </script>
 </head>
 <body>
-
 <header class="site-header">
-    <div class="container header-container">
-        <div class="logo">
-            <a href="index.html">AI Tool Compare</a>
-        </div>
-        <nav class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="compare.html">Compare</a>
-            <a href="blog.html">Blog</a>
-            <a href="news.html">News</a>
-            <div class="lang-switch">
-                <a href="index.html">EN</a> | <a href="index-ko.html">KO</a>
-            </div>
-        </nav>
+  <div class="nav-container">
+    <a href="index.html" class="logo">AI Tool Compare</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="compare.html">Compare</a>
+      <a href="blog.html">Blog</a>
+      <a href="news.html">News</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="index.html">EN</a> | <a href="index-ko.html">KO</a>
     </div>
+  </div>
 </header>
 
-<main>
-    <section class="hero-section">
-        <div class="container">
-            <h1>Find the Perfect AI for Your Needs</h1>
-            <p class="subtitle">Your ultimate guide to comparing the best AI tools, updated for 2026. Making your choice simple and informed.</p>
-        </div>
-    </section>
+<div class="hero-section">
+    <h1>Find the Perfect AI for Your Needs</h1>
+    <p class="subtitle">Compare various AI tools and make the best choice.</p>
+    <div class="search-box">
+        <input type="text" id="search-input" placeholder="e.g., 'video', 'image', 'writing', 'coding'..." onkeyup="if(event.keyCode===13) document.getElementById('search-btn').click()">
+        <button id="search-btn">Search</button>
+    </div>
+</div>
 
-    <div class="main-content container">
-        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">Featured AI Tools Directory</h2>
-        <div id="tool-list-container">
-            <!-- AI tools will be dynamically inserted here from free-ai-tools.js -->
-        </div>
+<main class="container">
+    <h2 class="section-title">Main AI Tools Directory</h2>
+    <div class="table-container">
+      <table id="tool-table">
+        <thead>
+          <tr>
+            <th>Tool Name</th>
+            <th>Description</th>
+            <th>Rating</th>
+            <th>Pricing</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody id="tool-table-body">
+          <!-- AI tools will be dynamically inserted here -->
+        </tbody>
+      </table>
     </div>
 </main>
 
-<footer class="site-footer">
-    <div class="container footer-content">
-        <div class="footer-links">
-            <a href="about.html">About Us</a>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 AI Tool Compare. All rights reserved.</p>
+        <nav>
+            <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-        </div>
-        <p class="copyright">&copy; 2026 AI Tool Compare. All rights reserved.</p>
+        </nav>
     </div>
 </footer>
 
-<script src="free-ai-tools.js"></script>
 <script>
-    function renderTools(tools) {
-        const container = document.getElementById('tool-list-container');
-        container.innerHTML = '';
-        tools.forEach(tool => {
-            const toolCard = document.createElement('a');
-            toolCard.href = tool.link;
-            toolCard.className = 'tool-card';
-            toolCard.target = '_blank';
+    let aiTools = [];
 
-            const toolName = document.createElement('div');
-            toolName.className = 'tool-name';
-            toolName.textContent = tool.name;
+    async function fetchTools() {
+        try {
+            const response = await fetch('ai-tools.json');
+            aiTools = await response.json();
+            render();
+        } catch (error) {
+            console.error('Error loading AI tools:', error);
+            document.getElementById('tool-table-body').innerHTML = "<tr><td colspan='5' style='text-align:center; padding: 20px;'>Could not load AI tools.</td></tr>";
+        }
+    }
 
-            const toolDescription = document.createElement('p');
-            toolDescription.textContent = tool.description;
+    function render(query = "") {
+        const tableBody = document.getElementById('tool-table-body');
+        tableBody.innerHTML = "";
+        const lowerCaseQuery = query.toLowerCase();
 
-            const cardRight = document.createElement('div');
-            cardRight.className = 'card-right';
+        const filteredTools = aiTools.filter(tool => {
+            const toolKeywords = tool.keywords ? tool.keywords.map(k => k.toLowerCase()) : [];
+            return (
+                tool.name.toLowerCase().includes(lowerCaseQuery) || 
+                tool.category.toLowerCase().includes(lowerCaseQuery) ||
+                tool.description.toLowerCase().includes(lowerCaseQuery) ||
+                toolKeywords.some(keyword => keyword.includes(lowerCaseQuery))
+            );
+        });
 
-            const rating = document.createElement('div');
-            rating.className = 'rating';
-            rating.textContent = `Rating: ${tool.rating} / 5`;
+        if (filteredTools.length === 0) {
+            tableBody.innerHTML = "<tr><td colspan='5' style='text-align:center; padding: 20px;'>No matching AI tools found.</td></tr>";
+            return;
+        }
 
-            const price = document.createElement('div');
-            price.className = 'price-tag';
-            price.textContent = tool.pricing;
+        filteredTools.forEach(tool => {
+            const row = document.createElement('tr');
 
-            cardRight.appendChild(rating);
-            cardRight.appendChild(price);
-            
-            toolCard.appendChild(toolName);
-            toolCard.appendChild(toolDescription);
-            toolCard.appendChild(cardRight);
+            let tagsHTML = '';
+            if (tool.pricing.includes("Free")) {
+                tagsHTML += `<span class="tag free-tag">Free</span>`;
+            }
+            if (tool.pricing.includes("Paid")) {
+                tagsHTML += `<span class="tag paid-tag">Paid</span>`;
+            }
+            if (tool.pricing.includes("Freemium")) {
+                tagsHTML += `<span class="tag freemium-tag">Freemium</span>`;
+            }
 
-            container.appendChild(toolCard);
+            row.innerHTML = `
+                <td data-label="Tool Name">${tool.name}</td>
+                <td data-label="Description">${tool.description}</td>
+                <td data-label="Rating" class="tool-rating">${"⭐".repeat(Math.round(tool.rating))} ${tool.rating.toFixed(1)}</td>
+                <td data-label="Pricing">${tagsHTML}</td>
+                <td data-label="Link"><a href="${tool.link}" target="_blank" class="visit-site-btn">Visit Site</a></td>
+            `;
+            tableBody.appendChild(row);
         });
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        if (window.aiTools) {
-            renderTools(window.aiTools);
-        }
-    });
+    document.getElementById('search-btn').addEventListener('click', () => render(document.getElementById('search-input').value));
+    fetchTools();
 </script>
-
 </body>
 </html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 - 최신 업데이트 | AI 도구 비교</title>
+    <meta name="description" content="AI 세계의 주요 뉴스 및 최신 업데이트. 새로운 모델 출시, 기업 발표 및 산업 동향에 대한 정보를 제공합니다.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html">AI 도구 비교</a>
+        </div>
+        <nav class="nav-links">
+            <a href="index-ko.html">홈</a>
+            <a href="compare-ko.html">비교</a>
+            <a href="blog-ko.html">블로그</a>
+            <a href="news-ko.html" class="active">뉴스</a>
+            <div class="lang-switch">
+                <a href="news.html">EN</a> | <a href="news-ko.html">KO</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero-section">
+        <div class="container">
+            <h1>최신 AI 뉴스</h1>
+            <p class="subtitle">AI 산업의 중요한 발전에 대한 실시간 정보 소스.</p>
+        </div>
+    </section>
+
+    <div class="main-content container" id="news-articles-container">
+        
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div class="footer-links">
+            <a href="about-ko.html">회사 소개</a>
+            <a href="contact-ko.html">문의하기</a>
+            <a href="privacy-policy-ko.html">개인정보처리방침</a>
+            <a href="terms-ko.html">이용약관</a>
+        </div>
+        <p class="copyright">&copy; 2026 AI Tool Compare. 모든 권리 보유.</p>
+    </div>
+</footer>
+
+<script>
+    const newsArticles = [
+        {
+            title: "Google, 1백만 토큰 컨텍스트 창을 갖춘 Gemini 1.5 Pro 출시",
+            date: "2026년 2월 15일",
+            summary: "Google AI가 전례 없는 1백만 토큰 컨텍스트 창을 자랑하는 새로운 모델인 Gemini 1.5 Pro의 출시를 발표했습니다. 이를 통해 방대한 코드베이스, 책 전체, 몇 시간 분량의 비디오를 단일 프롬프트로 분석할 수 있습니다. 초기 벤치마크에서는 긴 컨텍스트 검색 및 복잡한 추론 작업에서 강력한 성능을 보여줍니다.",
+            link: "#"
+        },
+        {
+            title: "Anthropic, 기술 대기업들이 주도하는 새로운 펀딩 라운드에서 50억 달러 유치",
+            date: "2026년 2월 10일",
+            summary: "AI 안전 및 연구 회사인 Anthropic이 새로운 펀딩 라운드에서 50억 달러를 확보했습니다. 이 투자는 차세대 모델 개발을 확장하고 기업용 서비스를 확대하는 데 사용될 것입니다. 이 움직임은 기본 모델 분야에서의 치열한 경쟁을 예고합니다.",
+            link: "#"
+        },
+        {
+            title: "OpenAI, 새로운 텍스트-투-비디오 모델 Sora 사전 공개",
+            date: "2026년 2월 5일",
+            summary: "OpenAI가 단일 텍스트 프롬프트에서 고화질의 1분 길이 비디오를 생성할 수 있는 새로운 텍스트-투-비디오 모델인 Sora의 미리보기를 공개했습니다. 생성된 비디오의 품질은 창작 커뮤니티를 놀라게 했으며, 비디오 제작의 미래에 대한 기대와 우려를 동시에 불러일으켰습니다.",
+            link: "#"
+        },
+        {
+            title: "Midjourney V7 업데이트, 캐릭터 일관성 및 향상된 사실감 도입",
+            date: "2026년 1월 28일",
+            summary: "인기 있는 AI 이미지 생성기 Midjourney가 V7 업데이트를 출시했습니다. 이 업데이트에는 여러 이미지에 걸친 캐릭터 일관성과 같은 오랫동안 기다려온 기능과 사실감의 상당한 향상이 포함됩니다. 이 업데이트는 크리에이터에게 시각적 스토리텔링에서 더 많은 제어력과 정밀성을 제공하는 것을 목표로 합니다.",
+            link: "#"
+        }
+    ];
+
+    function renderNews() {
+        const container = document.getElementById('news-articles-container');
+        let articlesHtml = '';
+        newsArticles.forEach(article => {
+            articlesHtml += `
+                <article class="news-article">
+                    <h3><a href="${article.link}" style="text-decoration:none; color:inherit;">${article.title}</a></h3>
+                    <p class="publish-date">${article.date}</p>
+                    <p>${article.summary}</p>
+                </article>
+            `;
+        });
+        container.innerHTML = articlesHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', renderNews);
+</script>
+
+</body>
+</html>
