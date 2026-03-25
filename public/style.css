@@ -19,6 +19,14 @@ body {
   top: 0;
   z-index: 1000;
 }
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
 .nav-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -30,17 +38,22 @@ body {
 .logo {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #1a73e8;
-  text-decoration: none;
 }
-.nav-links a {
+.logo a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+nav a {
   text-decoration: none;
   color: #555;
   margin: 0 15px;
   font-weight: 600;
   transition: 0.2s;
 }
-.nav-links a:hover { color: #1a73e8; }
+nav a:hover, .nav-links a:hover { color: #1a73e8; }
+nav a.active {
+    color: #1a73e8;
+}
 .lang-switch a {
   text-decoration: none;
   color: #1a73e8;
@@ -127,29 +140,57 @@ body {
 .free-tag { background: #28a745; }
 .paid-tag { background: #dc3545; }
 
-/* 6. Blog Post Styling */
-.blog-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.blog-post { 
-  background: white; padding: 30px; border-radius: 15px; 
-  margin-bottom: 30px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
+/* 6. Blog & Content Styling */
+.content-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.news-article {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.news-article h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.publish-date {
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+}
+.article-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 /* 7. Footer (Centered & Silver Background) */
-footer {
-  background-color: #f1f3f4 !important; /* 푸터도 실버 그레이 적용 */
+.site-footer {
+  background-color: #f1f3f4 !important; /* 실버 그레이 배경 */
   text-align: center !important;
-  padding: 60px 20px;
-  margin-top: 100px;
-  border-top: 1px solid #e0e0e0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 60px 0 !important;
+  margin-top: 100px !important;
+  border-top: 1px solid #e0e0e0 !important;
+}
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 .footer-links {
   display: flex;
   justify-content: center;
   gap: 25px;
-  margin-bottom: 20px;
 }
 .footer-links a {
   text-decoration: none;
@@ -158,67 +199,3 @@ footer {
   font-size: 0.9rem;
 }
 .copyright { color: #888; font-size: 0.85rem; }
-/* --- [진짜 최종] 푸터 강제 중앙 정렬 --- */
-footer, .site-footer {
-  background-color: #f1f3f4 !important; /* 실버 그레이 배경 */
-  text-align: center !important;
-  padding: 60px 0 !important;
-  margin-top: 100px !important;
-  border-top: 1px solid #e0e0e0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-}
-
-.footer-content, .footer-links, footer div, footer nav {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 20px !important;
-  width: 100% !important;
-  margin: 10px 0 !important;
-  flex-wrap: wrap !important;
-}
-
-.copyright, footer p {
-  margin-top: 15px !important;
-  color: #666 !important;
-  font-size: 0.9rem !important;
-  text-align: center !important;
-  width: 100% !important;
-}
-
-footer a {
-  text-decoration: none !important;
-  color: #1a73e8 !important;
-  font-weight: 600 !important;
-}
-
-/* --- [진짜 최종 본문 중앙 정렬] 모든 리스트와 컨테이너를 가운데로 --- */
-main, .container, #tool-display, #blog-posts, .blog-container {
-  max-width: 1100px !important;  /* 본문의 최대 너비를 제한 */
-  margin-left: auto !important;  /* 좌측 여백 자동 */
-  margin-right: auto !important; /* 우측 여백 자동 -> 정중앙 */
-  padding: 40px 20px !important;
-  width: 90% !important;         /* 화면이 작아도 90% 유지 */
-  display: block !important;
-}
-
-/* 개별 도구 및 블로그 박스들이 너무 퍼지지 않게 함 */
-.tool-item, .blog-post {
-  width: 100% !important;
-  max-width: 1000px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  box-sizing: border-box !important;
-}
-
-/* 제목들도 본문 너비에 맞춰 중앙 정렬 */
-.section-title, h1, h2, .hero-section {
-  text-align: center !important;
-  max-width: 1100px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
