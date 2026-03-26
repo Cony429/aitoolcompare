@@ -1,0 +1,49 @@
+
+[
+  {
+    "name": "Sora (OpenAI)",
+    "description": "An AI model that can create realistic and imaginative scenes from text instructions.",
+    "rating": 4.9,
+    "pricing": [
+      "Paid"
+    ],
+    "link": "https://openai.com/sora",
+    "category": "Video",
+    "keywords": [
+      "text-to-video",
+      "video generation",
+      "AI video"
+    ]
+  },
+  {
+    "name": "Claude 3.5",
+    "description": "A new model that is faster and more affordable than the previous flagship model, with the same high-level intelligence.",
+    "rating": 4.9,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://www.anthropic.com/claude",
+    "category": "Chatbot",
+    "keywords": [
+      "chatbot",
+      "AI assistant",
+      "large language model"
+    ]
+  },
+  {
+    "name": "Gemini 1.5 Pro",
+    "description": "A lightweight and efficient model that offers a good balance of performance and resource usage.",
+    "rating": 4.8,
+    "pricing": [
+      "Free"
+    ],
+    "link": "https://deepmind.google/technologies/gemini/",
+    "category": "Chatbot",
+    "keywords": [
+      "chatbot",
+      "multimodal AI",
+      "Google AI"
+    ]
+  }
+]

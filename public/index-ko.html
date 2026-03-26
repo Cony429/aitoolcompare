@@ -63,12 +63,12 @@
     </div>
     <div class="filter-buttons">
         <button class="filter-btn active" onclick="filterByCategory('All', event)">All</button>
-        <button class="filter-btn" onclick="filterByCategory('Chatbot', event)">Chatbot</button>
-        <button class="filter-btn" onclick="filterByCategory('Video', event)">Video</button>
-        <button class="filter-btn" onclick="filterByCategory('Image', event)">Image</button>
-        <button class="filter-btn" onclick="filterByCategory('Writing', event)">Writing</button>
-        <button class="filter-btn" onclick="filterByCategory('Coding', event)">Coding</button>
-        <button class="filter-btn" onclick="filterByCategory('Audio', event)">Audio</button>
+        <button class="filter-btn" onclick="filterByCategory('채팅봇', event)">채팅봇</button>
+        <button class="filter-btn" onclick="filterByCategory('영상', event)">영상</button>
+        <button class="filter-btn" onclick="filterByCategory('이미지', event)">이미지</button>
+        <button class="filter-btn" onclick="filterByCategory('글쓰기', event)">글쓰기</button>
+        <button class="filter-btn" onclick="filterByCategory('코딩', event)">코딩</button>
+        <button class="filter-btn" onclick="filterByCategory('오디오', event)">오디오</button>
     </div>
 </div>
 
@@ -109,7 +109,7 @@
 
     async function fetchTools() {
         try {
-            const response = await fetch('ai-tools-ko.json');
+            const response = await fetch('ai-tools.json');
             allTools = await response.json();
             render();
         } catch (error) {
@@ -131,13 +131,15 @@
             const row = document.createElement('tr');
 
             let tagsHTML = '';
-            if (tool.pricing.includes("무료")) {
+            const lowerCasePricing = tool.pricing.map(p => p.toLowerCase());
+
+            if (lowerCasePricing.includes("free")) {
                 tagsHTML += `<span class="tag free-tag">무료</span>`;
             }
-            if (tool.pricing.includes("유료")) {
+            if (lowerCasePricing.includes("paid")) {
                 tagsHTML += `<span class="tag paid-tag">유료</span>`;
             }
-            if (tool.pricing.includes("부분 유료")) {
+            if (lowerCasePricing.includes("freemium")) {
                 tagsHTML += `<span class="tag freemium-tag">부분 유료</span>`;
             }
 
@@ -179,7 +181,17 @@
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         event.target.classList.add('active');
 
-        currentCategory = category;
+        const categoryMap = {
+            'All': 'All',
+            '채팅봇': 'Chatbot',
+            '영상': 'Video',
+            '이미지': 'Image',
+            '글쓰기': 'Writing',
+            '코딩': 'Coding',
+            '오디오': 'Audio'
+        };
+
+        currentCategory = categoryMap[category] || category;
         const query = document.getElementById('search-input').value;
         render(query);
     }

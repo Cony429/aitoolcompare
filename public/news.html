@@ -45,7 +45,7 @@
 </section>
 
 <main class="news-container">
-    <div class="news-grid" id="news-grid">
+    <div class="news-grid" id="news-articles">
         <!-- News items will be dynamically inserted here -->
     </div>
 </main>
@@ -61,52 +61,7 @@
   </div>
 </footer>
 
-<script>
-    const newsItems = [
-        {
-            "title": "Claude 3.5 Sonnet Released",
-            "date": "2024-06-20",
-            "source": "Anthropic",
-            "summary": "Anthropic has launched Claude 3.5 Sonnet, a new model that offers improved performance, a 2x speed increase, and a new feature called 'Artifacts' for a more interactive experience.",
-            "link": "https://www.anthropic.com/news/claude-3-5-sonnet"
-        },
-        {
-            "title": "Apple Intelligence Announced",
-            "date": "2024-06-10",
-            "source": "Apple",
-            "summary": "Apple announced 'Apple Intelligence,' a suite of new AI features integrated into iOS, iPadOS, and macOS. It includes a smarter Siri and system-wide writing tools.",
-            "link": "https://www.apple.com/apple-intelligence/"
-        },
-        {
-            "title": "Microsoft and LinkedIn's 2024 AI Trend Report",
-            "date": "2024-05-08",
-            "source": "Microsoft",
-            "summary": "The latest Work Trend Index from Microsoft and LinkedIn shows a significant rise in employees using AI in the workplace, with many keeping it a secret from their employers.",
-            "link": "https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here"
-        }
-    ];
-
-    function renderNews() {
-        const newsGrid = document.getElementById('news-grid');
-        newsGrid.innerHTML = '';
-
-        newsItems.forEach(item => {
-            const article = document.createElement('article');
-            article.className = 'news-item';
-            article.innerHTML = `
-                <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
-                <div class="news-meta">
-                    <span>${item.date}</span> | <span>Source: ${item.source}</span>
-                </div>
-                <p>${item.summary}</p>
-                <a href="${item.link}" target="_blank" class="read-more">Read Full Story &rarr;</a>
-            `;
-            newsGrid.appendChild(article);
-        });
-    }
-
-    document.addEventListener('DOMContentLoaded', renderNews);
-</script>
+<script src="news.js"></script>
 
 </body>
 </html>
