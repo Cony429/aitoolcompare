@@ -7,6 +7,7 @@ body {
     color: #333;
 }
 
+/* 헤더와 메인 레이아웃 유지 */
 header {
     display: flex;
     justify-content: space-between;
@@ -16,50 +17,21 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-nav {
-    display: flex;
-    gap: 3rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    margin: 0 1.5rem;
-}
-
-.subscribe-btn {
-    background-color: #ffc107;
-    color: #333;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
 main {
     padding: 3rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2rem;
-    color: #222;
-}
-
-#news-container {
+/* 1. 뉴스 그리드 컨테이너 (ID 수정됨) */
+#news-articles {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 3rem;
 }
 
-.news-article {
+/* 2. 뉴스 카드 (클래스명 수정됨) */
+.news-card {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -69,80 +41,53 @@ h1 {
     flex-direction: column;
 }
 
-.news-article:hover {
+.news-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.news-article img {
+.news-card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
 
 .news-content {
-    padding: 2.25rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 .news-content h2 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
+    margin: 0 0 1rem;
     line-height: 1.4;
-    margin: 0 0 1.5rem;
-    color: #222;
 }
 
 .news-content p {
-    margin: 0 0 2.25rem;
+    font-size: 0.95rem;
     color: #666;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
-    flex-grow: 1;
 }
 
-.news-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-}
-
-.news-country {
-    background-color: #e9ecef;
-    color: #495057;
-    padding: 0.45rem 0.9rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.news-content a {
+/* 3. Read More 버튼 (클래스명 수정됨) */
+.read-more {
     text-decoration: none;
     color: #007bff;
     font-weight: bold;
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     border: 1px solid #007bff;
     border-radius: 6px;
     transition: background-color 0.2s, color 0.2s;
+    display: inline-block;
+    text-align: center;
+    align-self: flex-start;
+    margin-top: auto;
 }
 
-.news-content a:hover {
+.read-more:hover {
     background-color: #007bff;
     color: #fff;
-}
-
-.loader {
-    border: 8px solid #f3f3f3; 
-    border-top: 8px solid #3498db;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1.5s linear infinite;
-    margin: 7.5rem auto;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }

@@ -1,58 +1,49 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const apiKey = '2586f116541e4356a27e36c2f9541a10';
+    const articlesContainer = document.getElementById('news-articles');
 
-async function getNews() {
-    const apiKey = 'YOUR_API_KEY'; // Replace with your actual News API key
-    const newsContainer = document.getElementById('news-articles');
-    if (!newsContainer) return;
+    async function fetchNews() {
+        const query = 'AI';
+        const url = `https://newsapi.org/v2/everything?q=${query}&sortBy=publishedAt&language=en&apiKey=${apiKey}`;
 
-    const lang = document.documentElement.lang || 'en';
-    const query = lang === 'ko' ? '인공지능' : 'AI';
-    const apiUrl = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=${lang}&sortBy=publishedAt&apiKey=${apiKey}`;
-
-    newsContainer.innerHTML = '<p>Loading news...</p>';
-
-    try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            displayNews(data.articles);
+        } catch (error) {
+            console.error("Error fetching news:", error);
+            articlesContainer.innerHTML = '<p class="error-message">뉴스를 불러오지 못했습니다. 잠시 후 다시 시도해주세요.</p>';
         }
-        const data = await response.json();
+    }
 
-        if (data.status === 'error') {
-            throw new Error(data.message);
-        }
-
-        newsContainer.innerHTML = ''; 
-
-        if (data.articles.length === 0) {
-            newsContainer.innerHTML = '<p>No news articles found.</p>';
+    function displayNews(articles) {
+        articlesContainer.innerHTML = '';
+        if (!articles || articles.length === 0) {
+            articlesContainer.innerHTML = '<p>관련 뉴스가 없습니다.</p>';
             return;
         }
 
-        data.articles.slice(0, 10).forEach(article => {
-            const articleElement = document.createElement('article');
-            articleElement.classList.add('news-article');
+        const articlesToShow = articles.slice(0, 9); // 최대 9개 기사만 표시
 
-            const title = article.title;
-            const url = article.url;
-            const date = new Date(article.publishedAt).toLocaleDateString(lang === 'ko' ? 'ko-KR' : 'en-US');
-            const summary = article.description || 'No summary available.';
+        articlesToShow.forEach(article => {
+            if (!article.urlToImage || !article.title || !article.description) return; // 필수 정보 없는 기사 건너뛰기
 
-            articleElement.innerHTML = `
-                <h2><a href="${url}" target="_blank">${title}</a></h2>
-                <p class="article-meta">Published on ${date}</p>
-                <p>${summary}</p>
-                <a href="${url}" target="_blank" class="read-more">Read More &rarr;</a>
+            const newsCard = `
+                <div class="news-card">
+                    <img src="${article.urlToImage}" alt="News image">
+                    <div class="news-content">
+                        <h2>${article.title}</h2>
+                        <p>${article.description}</p>
+                        <a href="${article.url}" target="_blank" class="read-more">Read More</a>
+                    </div>
+                </div>
             `;
-            newsContainer.appendChild(articleElement);
+            articlesContainer.innerHTML += newsCard;
         });
-    } catch (error) {
-        console.error('Error fetching news:', error);
-        if (error.message.includes('apiKey')) {
-            newsContainer.innerHTML = '<p><strong>Error:</strong> Invalid API key. Please check your API key in news.js.</p>';
-        } else {
-            newsContainer.innerHTML = '<p>Could not load news articles. Please try again later.</p>';
-        }
     }
-}
 
-document.addEventListener('DOMContentLoaded', getNews);
+    fetchNews();
+});
