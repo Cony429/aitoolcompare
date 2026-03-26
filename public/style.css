@@ -209,3 +209,38 @@ footer {
 .blog-post {
     margin: 0 auto 30px auto;
 }
+
+.filter-buttons {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #f0f0f0;
+}
+
+.filter-btn.active {
+    background-color: #1a73e8;
+    color: white;
+    border-color: #1a73e8;
+}
+
+.blog-post h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}

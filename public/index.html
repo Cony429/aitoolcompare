@@ -61,6 +61,15 @@
         <input type="text" id="search-input" placeholder="e.g., 'video', 'image', 'writing', 'coding'..." onkeyup="if(event.keyCode===13) document.getElementById('search-btn').click()">
         <button id="search-btn">Search</button>
     </div>
+    <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterByCategory('All')">All</button>
+        <button class="filter-btn" onclick="filterByCategory('Chatbot')">Chatbot</button>
+        <button class="filter-btn" onclick="filterByCategory('Video')">Video</button>
+        <button class="filter-btn" onclick="filterByCategory('Image')">Image</button>
+        <button class="filter-btn" onclick="filterByCategory('Writing')">Writing</button>
+        <button class="filter-btn" onclick="filterByCategory('Coding')">Coding</button>
+        <button class="filter-btn" onclick="filterByCategory('Audio')">Audio</button>
+    </div>
 </div>
 
 <main class="container">
@@ -96,11 +105,13 @@
 
 <script>
     let aiTools = [];
+    let allTools = [];
 
     async function fetchTools() {
         try {
             const response = await fetch('ai-tools.json');
-            aiTools = await response.json();
+            allTools = await response.json();
+            aiTools = [...allTools];
             render();
         } catch (error) {
             console.error('Error loading AI tools:', error);
@@ -153,7 +164,34 @@
         });
     }
 
-    document.getElementById('search-btn').addEventListener('click', () => render(document.getElementById('search-input').value));
+    function filterByCategory(category) {
+        document.getElementById('search-input').value = '';
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(button => {
+            if (button.textContent === category) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+
+        if (category === 'All') {
+            aiTools = [...allTools];
+        } else {
+            aiTools = allTools.filter(tool => tool.category && tool.category.toLowerCase() === category.toLowerCase());
+        }
+        render();
+    }
+
+    document.getElementById('search-btn').addEventListener('click', () => {
+        const query = document.getElementById('search-input').value;
+        aiTools = [...allTools]; 
+        render(query);
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(button => button.classList.remove('active'));
+        buttons[0].classList.add('active');
+    });
+
     fetchTools();
 </script>
 </body>
