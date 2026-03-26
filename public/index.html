@@ -58,17 +58,17 @@
     <h1>Find the Perfect AI for Your Needs</h1>
     <p class="subtitle">Compare various AI tools and make the best choice.</p>
     <div class="search-box">
-        <input type="text" id="search-input" placeholder="e.g., 'video', 'image', 'writing', 'coding'..." onkeyup="if(event.keyCode===13) document.getElementById('search-btn').click()">
+        <input type="text" id="search-input" placeholder="e.g., 'video', 'image', 'writing', 'coding'...">
         <button id="search-btn">Search</button>
     </div>
     <div class="filter-buttons">
-        <button class="filter-btn active" onclick="filterByCategory('All')">All</button>
-        <button class="filter-btn" onclick="filterByCategory('Chatbot')">Chatbot</button>
-        <button class="filter-btn" onclick="filterByCategory('Video')">Video</button>
-        <button class="filter-btn" onclick="filterByCategory('Image')">Image</button>
-        <button class="filter-btn" onclick="filterByCategory('Writing')">Writing</button>
-        <button class="filter-btn" onclick="filterByCategory('Coding')">Coding</button>
-        <button class="filter-btn" onclick="filterByCategory('Audio')">Audio</button>
+        <button class="filter-btn active" onclick="filterByCategory('All', event)">All</button>
+        <button class="filter-btn" onclick="filterByCategory('Chatbot', event)">Chatbot</button>
+        <button class="filter-btn" onclick="filterByCategory('Video', event)">Video</button>
+        <button class="filter-btn" onclick="filterByCategory('Image', event)">Image</button>
+        <button class="filter-btn" onclick="filterByCategory('Writing', event)">Writing</button>
+        <button class="filter-btn" onclick="filterByCategory('Coding', event)">Coding</button>
+        <button class="filter-btn" onclick="filterByCategory('Audio', event)">Audio</button>
     </div>
 </div>
 
@@ -104,14 +104,13 @@
 </footer>
 
 <script>
-    let aiTools = [];
     let allTools = [];
+    let currentCategory = 'All';
 
     async function fetchTools() {
         try {
             const response = await fetch('ai-tools.json');
             allTools = await response.json();
-            aiTools = [...allTools];
             render();
         } catch (error) {
             console.error('Error loading AI tools:', error);
@@ -119,20 +118,9 @@
         }
     }
 
-    function render(query = "") {
+    function displayFilteredTools(filteredTools) {
         const tableBody = document.getElementById('tool-table-body');
         tableBody.innerHTML = "";
-        const lowerCaseQuery = query.toLowerCase();
-
-        const filteredTools = aiTools.filter(tool => {
-            const toolKeywords = tool.keywords ? tool.keywords.map(k => k.toLowerCase()) : [];
-            return (
-                tool.name.toLowerCase().includes(lowerCaseQuery) || 
-                tool.category.toLowerCase().includes(lowerCaseQuery) ||
-                tool.description.toLowerCase().includes(lowerCaseQuery) ||
-                toolKeywords.some(keyword => keyword.includes(lowerCaseQuery))
-            );
-        });
 
         if (filteredTools.length === 0) {
             tableBody.innerHTML = "<tr><td colspan='5' style='text-align:center; padding: 20px;'>No matching AI tools found.</td></tr>";
@@ -164,32 +152,48 @@
         });
     }
 
-    function filterByCategory(category) {
-        document.getElementById('search-input').value = '';
-        const buttons = document.querySelectorAll('.filter-btn');
-        buttons.forEach(button => {
-            if (button.textContent === category) {
-                button.classList.add('active');
-            } else {
-                button.classList.remove('active');
-            }
-        });
+    function render(query = "") {
+        const lowerCaseQuery = query.toLowerCase();
 
-        if (category === 'All') {
-            aiTools = [...allTools];
-        } else {
-            aiTools = allTools.filter(tool => tool.category && tool.category.toLowerCase() === category.toLowerCase());
+        let filteredTools = allTools;
+
+        if (currentCategory !== 'All') {
+            filteredTools = filteredTools.filter(tool => tool.category && tool.category.toLowerCase() === currentCategory.toLowerCase());
         }
-        render();
+
+        if (lowerCaseQuery) {
+            filteredTools = filteredTools.filter(tool => {
+                const toolKeywords = tool.keywords ? tool.keywords.map(k => k.toLowerCase()) : [];
+                return (
+                    tool.name.toLowerCase().includes(lowerCaseQuery) || 
+                    tool.description.toLowerCase().includes(lowerCaseQuery) ||
+                    toolKeywords.some(keyword => keyword.includes(lowerCaseQuery))
+                );
+            });
+        }
+        
+        displayFilteredTools(filteredTools);
+    }
+
+    function filterByCategory(category, event) {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        currentCategory = category;
+        const query = document.getElementById('search-input').value;
+        render(query);
     }
 
     document.getElementById('search-btn').addEventListener('click', () => {
         const query = document.getElementById('search-input').value;
-        aiTools = [...allTools]; 
         render(query);
-        const buttons = document.querySelectorAll('.filter-btn');
-        buttons.forEach(button => button.classList.remove('active'));
-        buttons[0].classList.add('active');
+    });
+
+    document.getElementById('search-input').addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+            const query = document.getElementById('search-input').value;
+            render(query);
+        }
     });
 
     fetchTools();

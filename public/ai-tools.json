@@ -2,7 +2,7 @@
 [
   {
     "name": "Sora (OpenAI)",
-    "category": "Video Generation",
+    "category": "Video",
     "description": "An AI model that can create realistic and imaginative scenes from text instructions.",
     "link": "https://openai.com/sora",
     "rating": 4.9,
@@ -29,7 +29,7 @@
   },
   {
     "name": "Midjourney v7",
-    "category": "Image Generation",
+    "category": "Image",
     "description": "The latest image generation model with enhanced realism and text rendering.",
     "link": "https://www.midjourney.com/",
     "rating": 5.0,
@@ -65,7 +65,7 @@
   },
   {
     "name": "Perplexity AI",
-    "category": "Search",
+    "category": "Chatbot",
     "description": "An AI-powered search engine.",
     "link": "https://www.perplexity.ai/",
     "rating": 4.6,
@@ -74,7 +74,7 @@
   },
   {
     "name": "Midjourney",
-    "category": "Image Generation",
+    "category": "Image",
     "description": "Generates images from textual descriptions.",
     "link": "https://www.midjourney.com/",
     "rating": 4.9,
@@ -83,7 +83,7 @@
   },
   {
     "name": "DALL-E 3",
-    "category": "Image Generation",
+    "category": "Image",
     "description": "An AI system that can create realistic images and art from a description in natural language.",
     "link": "https://openai.com/dall-e-3",
     "rating": 4.8,
@@ -92,7 +92,7 @@
   },
   {
     "name": "Stable Diffusion",
-    "category": "Image Generation",
+    "category": "Image",
     "description": "A deep learning, text-to-image model.",
     "link": "https://stability.ai/stable-diffusion",
     "rating": 4.7,
@@ -101,7 +101,7 @@
   },
   {
     "name": "Sora",
-    "category": "Video Generation",
+    "category": "Video",
     "description": "An AI model that can create realistic and imaginative scenes from text instructions.",
     "link": "https://openai.com/sora",
     "rating": 4.9,
@@ -110,7 +110,7 @@
   },
   {
     "name": "Runway",
-    "category": "Video Generation",
+    "category": "Video",
     "description": "Real-time video editing and generation.",
     "link": "https://runwayml.com/",
     "rating": 4.6,
@@ -119,7 +119,7 @@
   },
   {
     "name": "Notion AI",
-    "category": "Productivity",
+    "category": "Writing",
     "description": "AI-powered assistant integrated into Notion.",
     "link": "https://www.notion.so/product/ai",
     "rating": 4.7,
@@ -128,7 +128,7 @@
   },
   {
     "name": "GitHub Copilot",
-    "category": "Developer Tools",
+    "category": "Coding",
     "description": "AI pair programmer.",
     "link": "https://github.com/features/copilot",
     "rating": 4.8,
@@ -137,7 +137,7 @@
   },
   {
     "name": "Jasper",
-    "category": "Copywriting",
+    "category": "Writing",
     "description": "AI copywriter for marketing and content.",
     "link": "https://www.jasper.ai/",
     "rating": 4.5,
@@ -146,7 +146,7 @@
   },
   {
     "name": "Copy.ai",
-    "category": "Copywriting",
+    "category": "Writing",
     "description": "Automated creativity tools for copywriters.",
     "link": "https://www.copy.ai/",
     "rating": 4.4,
@@ -155,7 +155,7 @@
   },
   {
     "name": "Synthesia",
-    "category": "Video Generation",
+    "category": "Video",
     "description": "AI video generation platform.",
     "link": "https://www.synthesia.io/",
     "rating": 4.7,
@@ -164,7 +164,7 @@
   },
   {
     "name": "Descript",
-    "category": "Audio & Video",
+    "category": "Video",
     "description": "AI-powered audio and video editing.",
     "link": "https://www.descript.com/",
     "rating": 4.6,
@@ -173,7 +173,7 @@
   },
   {
     "name": "Fireflies.ai",
-    "category": "Productivity",
+    "category": "Audio",
     "description": "AI assistant for your meetings.",
     "link": "https://fireflies.ai/",
     "rating": 4.5,
@@ -182,7 +182,7 @@
   },
   {
     "name": "Otter.ai",
-    "category": "Productivity",
+    "category": "Audio",
     "description": "AI-powered transcription service.",
     "link": "https://otter.ai/",
     "rating": 4.4,
@@ -209,7 +209,7 @@
   },
   {
     "name": "Writesonic",
-    "category": "Copywriting",
+    "category": "Writing",
     "description": "AI writer for creating SEO-friendly content.",
     "link": "https://writesonic.com/",
     "rating": 4.3,
@@ -218,7 +218,7 @@
   },
   {
     "name": "Rytr",
-    "category": "Copywriting",
+    "category": "Writing",
     "description": "An AI writing assistant.",
     "link": "https://rytr.me/",
     "rating": 4.2,
@@ -227,7 +227,7 @@
   },
   {
     "name": "DeepL",
-    "category": "Translation",
+    "category": "Writing",
     "description": "AI-powered translation tool.",
     "link": "https://www.deepl.com/translator",
     "rating": 4.8,
@@ -236,7 +236,7 @@
   },
   {
     "name": "Grammarly",
-    "category": "Writing Assistant",
+    "category": "Writing",
     "description": "AI-powered writing assistant.",
     "link": "https://www.grammarly.com/",
     "rating": 4.7,
@@ -245,7 +245,7 @@
   },
   {
     "name": "QuillBot",
-    "category": "Writing Assistant",
+    "category": "Writing",
     "description": "AI-powered paraphrasing tool.",
     "link": "https://quillbot.com/",
     "rating": 4.5,
@@ -254,7 +254,7 @@
   },
   {
     "name": "Artbreeder",
-    "category": "Image Generation",
+    "category": "Image",
     "description": "Create and explore AI-generated images.",
     "link": "https://www.artbreeder.com/",
     "rating": 4.4,
@@ -263,7 +263,7 @@
   },
   {
     "name": "Leonardo Ai",
-    "category": "Image Generation",
+    "category": "Image",
     "description": "Create stunning game assets with AI.",
     "link": "https://leonardo.ai/",
     "rating": 4.6,
@@ -272,7 +272,7 @@
   },
   {
     "name": "HeyGen",
-    "category": "Video Generation",
+    "category": "Video",
     "description": "AI video generator for business.",
     "link": "https://www.heygen.com/",
     "rating": 4.5,
@@ -281,7 +281,7 @@
   },
   {
     "name": "Pika",
-    "category": "Video Generation",
+    "category": "Video",
     "description": "Idea to video platform.",
     "link": "https://pika.art/",
     "rating": 4.4,
@@ -308,7 +308,7 @@
   },
   {
     "name": "Gradio",
-    "category": "Developer Tools",
+    "category": "Coding",
     "description": "Build & share delightful machine learning apps.",
     "link": "https://www.gradio.app/",
     "rating": 4.3,
@@ -317,7 +317,7 @@
   },
   {
     "name": "Hugging Face",
-    "category": "Developer Tools",
+    "category": "Coding",
     "description": "The AI community building the future.",
     "link": "https://huggingface.co/",
     "rating": 4.8,
@@ -326,7 +326,7 @@
   },
   {
     "name": "Replit",
-    "category": "Developer Tools",
+    "category": "Coding",
     "description": "An online IDE with AI code completion.",
     "link": "https://replit.com/",
     "rating": 4.6,
@@ -335,7 +335,7 @@
   },
   {
     "name": "FigJam AI",
-    "category": "Productivity",
+    "category": "Writing",
     "description": "AI-powered features in Figma's whiteboard tool.",
     "link": "https://www.figma.com/figjam/",
     "rating": 4.5,
@@ -344,7 +344,7 @@
   },
   {
     "name": "Tome",
-    "category": "Productivity",
+    "category": "Writing",
     "description": "AI-powered storytelling format.",
     "link": "https://tome.app/",
     "rating": 4.4,
@@ -353,7 +353,7 @@
   },
   {
     "name": "Canva",
-    "category": "Design",
+    "category": "Image",
     "description": "Online design tool with AI features.",
     "link": "https://www.canva.com/",
     "rating": 4.8,
@@ -362,7 +362,7 @@
   },
   {
     "name": "Adobe Firefly",
-    "category": "Image Generation",
+    "category": "Image",
     "description": "Adobe's family of creative generative AI models.",
     "link": "https://www.adobe.com/sensei/generative-ai/firefly.html",
     "rating": 4.7,
@@ -371,7 +371,7 @@
   },
   {
     "name": "Beautiful.ai",
-    "category": "Productivity",
+    "category": "Writing",
     "description": "AI-powered presentation software.",
     "link": "https://www.beautiful.ai/",
     "rating": 4.5,
@@ -380,7 +380,7 @@
   },
   {
     "name": "SlidesAI",
-    "category": "Productivity",
+    "category": "Writing",
     "description": "Create presentation slides with AI in seconds.",
     "link": "https://www.slidesai.io/",
     "rating": 4.3,
@@ -389,7 +389,7 @@
   },
   {
     "name": "You.com",
-    "category": "Search",
+    "category": "Chatbot",
     "description": "AI-powered search engine.",
     "link": "https://you.com/",
     "rating": 4.4,
@@ -398,7 +398,7 @@
   },
   {
     "name": "Neeva",
-    "category": "Search",
+    "category": "Chatbot",
     "description": "Ad-free, private search engine with AI features.",
     "link": "https://neeva.com/",
     "rating": 4.3,
@@ -443,7 +443,7 @@
   },
   {
     "name": "Glean",
-    "category": "Search",
+    "category": "Coding",
     "description": "AI-powered work assistant for enterprises.",
     "link": "https.glean.com/",
     "rating": 4.3,
@@ -452,7 +452,7 @@
   },
   {
     "name": "Andi",
-    "category": "Search",
+    "category": "Chatbot",
     "description": "Search for the next generation.",
     "link": "https://andisearch.com/",
     "rating": 4.2,
@@ -461,7 +461,7 @@
   },
   {
     "name": "Consensus",
-    "category": "Search",
+    "category": "Writing",
     "description": "An AI search engine for research.",
     "link": "https://consensus.app/",
     "rating": 4.4,
@@ -470,7 +470,7 @@
   },
   {
     "name": "Codeium",
-    "category": "Developer Tools",
+    "category": "Coding",
     "description": "The modern coding superpower.",
     "link": "https://codeium.com/",
     "rating": 4.6,
@@ -479,7 +479,7 @@
   },
   {
     "name": "Tabnine",
-    "category": "Developer Tools",
+    "category": "Coding",
     "description": "AI assistant for software developers.",
     "link": "https://www.tabnine.com/",
     "rating": 4.5,
@@ -497,7 +497,7 @@
   },
   {
     "name": "Playground AI",
-    "category": "Image Generation",
+    "category": "Image",
     "description": "Online AI image creator.",
     "link": "https://playgroundai.com/",
     "rating": 4.5,
@@ -506,7 +506,7 @@
   },
   {
     "name": "Veed.io",
-    "category": "Video Generation",
+    "category": "Video",
     "description": "Online video suite for professionals.",
     "link": "https://www.veed.io/",
     "rating": 4.4,
@@ -524,7 +524,7 @@
   },
   {
     "name": "AssemblyAI",
-    "category": "Developer Tools",
+    "category": "Audio",
     "description": "AI models for speech-to-text, and more.",
     "link": "https://www.assemblyai.com/",
     "rating": 4.6,
@@ -533,7 +533,7 @@
   },
   {
     "name": "Vidnami",
-    "category": "Video Generation",
+    "category": "Video",
     "description": "Create stunning videos fast.",
     "link": "https://www.vidnami.com/",
     "rating": 4.2,
@@ -542,7 +542,7 @@
   },
   {
     "name": "Designs.ai",
-    "category": "Design",
+    "category": "Image",
     "description": "All-in-one platform for creating marketing content.",
     "link": "https://designs.ai/",
     "rating": 4.3,
@@ -551,7 +551,7 @@
   },
   {
     "name": "Luminar AI",
-    "category": "Image Editing",
+    "category": "Image",
     "description": "AI-powered photo editor.",
     "link": "https://skylum.com/luminar-ai",
     "rating": 4.6,
@@ -560,7 +560,7 @@
   },
   {
     "name": "Topaz Labs",
-    "category": "Image/Video Enhancement",
+    "category": "Image",
     "description": "AI-powered image and video enhancement software.",
     "link": "https://www.topazlabs.com/",
     "rating": 4.7,
@@ -569,7 +569,7 @@
   },
   {
     "name": "Suno",
-    "category": "Music Generation",
+    "category": "Audio",
     "description": "Create music with AI.",
     "link": "https://www.suno.ai/",
     "rating": 4.8,
@@ -578,7 +578,7 @@
   },
   {
     "name": "Udio",
-    "category": "Music Generation",
+    "category": "Audio",
     "description": "Create music with AI.",
     "link": "https://www.udio.com/",
     "rating": 4.7,
@@ -587,7 +587,7 @@
   },
   {
     "name": "Retouch4me",
-    "category": "Photo Retouching",
+    "category": "Image",
     "description": "AI-powered photo retouching plugins.",
     "link": "https://retouch4.me/",
     "rating": 4.5,
@@ -596,7 +596,7 @@
   },
   {
     "name": "Adcreative.ai",
-    "category": "Advertising",
+    "category": "Writing",
     "description": "Generate ad creatives with AI.",
     "link": "https://www.adcreative.ai/",
     "rating": 4.4,
