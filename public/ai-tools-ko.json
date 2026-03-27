@@ -2,7 +2,7 @@
 [
   {
     "name": "GPT-4o",
-    "category": ["chatbot", "writing", "coding"],
+    "category": ["coding", "chatbot", "writing"],
     "description": "OpenAI의 최신 플래그십 모델로, 텍스트, 음성, 이미지를 통합적으로 이해하고 생성하는 멀티모달 AI입니다.",
     "link": "https://openai.com/chatgpt",
     "rating": 5.0,
@@ -11,7 +11,7 @@
   },
   {
     "name": "Claude 3.5 Sonnet",
-    "category": ["chatbot", "writing", "coding"],
+    "category": ["coding", "chatbot", "writing"],
     "description": "Anthropic의 최신 모델로, 코딩, 글쓰기 등 다방면에서 속도와 성능이 크게 향상되었습니다.",
     "link": "https://www.anthropic.com/claude",
     "rating": 4.9,
@@ -20,12 +20,12 @@
   },
   {
     "name": "Sora",
-    "category": ["video"],
+    "category": ["video", "image"],
     "description": "텍스트 설명으로 현실적이고 상상력 풍부한 동영상 장면을 생성하는 OpenAI의 AI 모델입니다.",
     "link": "https://openai.com/sora",
     "rating": 4.9,
     "pricing": ["Paid"],
-    "keywords": ["video", "generation", "OpenAI", "Sora"]
+    "keywords": ["video", "generation", "OpenAI", "Sora", "image"]
   },
   {
     "name": "Midjourney",
@@ -65,12 +65,12 @@
   },
   {
     "name": "Runway",
-    "category": ["video"],
+    "category": ["video", "image"],
     "description": "텍스트나 이미지로 비디오를 생성하고, 기존 비디오를 편집하는 등 다양한 기능을 갖춘 AI 영상 도구입니다.",
     "link": "https://runwayml.com/",
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
-    "keywords": ["video", "editing", "generation", "Gen-2"]
+    "keywords": ["video", "editing", "generation", "Gen-2", "image"]
   },
   {
     "name": "Perplexity AI",
@@ -128,7 +128,7 @@
   },
   {
     "name": "Descript",
-    "category": ["video", "writing"],
+    "category": ["video", "writing", "audio"],
     "description": "AI 기반 오디오 및 비디오 편집 도구로, 텍스트 편집처럼 미디어를 수정할 수 있습니다.",
     "link": "https://www.descript.com/",
     "rating": 4.6,
@@ -137,21 +137,21 @@
   },
   {
     "name": "Fireflies.ai",
-    "category": ["writing"],
+    "category": ["writing", "audio"],
     "description": "회의 내용을 자동으로 녹음하고, 텍스트로 전환하며, 요약해주는 AI 어시스턴트입니다.",
     "link": "https://fireflies.ai/",
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
-    "keywords": ["meetings", "transcription", "productivity"]
+    "keywords": ["meetings", "transcription", "productivity", "audio"]
   },
   {
     "name": "Otter.ai",
-    "category": ["writing"],
+    "category": ["writing", "audio"],
     "description": "실시간으로 대화를 텍스트로 전환하고 노트를 생성하는 AI 기반 서비스입니다.",
     "link": "https://otter.ai/",
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
-    "keywords": ["transcription", "meetings", "notes"]
+    "keywords": ["transcription", "meetings", "notes", "audio"]
   },
   {
     "name": "Llama 3",
@@ -254,7 +254,7 @@
   },
   {
     "name": "ElevenLabs",
-    "category": ["writing"],
+    "category": ["audio", "writing"],
     "description": "매우 사실적인 목소리를 생성하는 AI 음성 합성 및 텍스트 음성 변환(TTS) 서비스입니다.",
     "link": "https://elevenlabs.io/",
     "rating": 4.7,
@@ -263,7 +263,7 @@
   },
   {
     "name": "Murf.ai",
-    "category": ["writing"],
+    "category": ["audio", "writing"],
     "description": "다양한 목소리로 텍스트를 음성으로 변환하는 다재다능한 AI 음성 생성기입니다.",
     "link": "https://murf.ai/",
     "rating": 4.5,
@@ -452,7 +452,7 @@
   },
   {
     "name": "Lovo.ai",
-    "category": ["writing"],
+    "category": ["audio", "writing"],
     "description": "감성적인 AI 음성 생성 및 텍스트 음성 변환(TTS) 플랫폼입니다.",
     "link": "https://lovo.ai/",
     "rating": 4.3,
@@ -461,7 +461,7 @@
   },
   {
     "name": "AssemblyAI",
-    "category": ["writing", "coding"],
+    "category": ["audio", "writing", "coding"],
     "description": "음성-텍스트 변환, 요약, 감정 분석 등을 위한 AI 모델 API입니다.",
     "link": "https://www.assemblyai.com/",
     "rating": 4.6,
@@ -497,7 +497,7 @@
   },
   {
     "name": "Suno",
-    "category": ["writing"],
+    "category": ["audio", "writing"],
     "description": "간단한 텍스트 프롬프트로 노래, 악기 연주 등 원하는 음악을 만드는 AI입니다.",
     "link": "https://www.suno.ai/",
     "rating": 4.8,
@@ -506,7 +506,7 @@
   },
   {
     "name": "Udio",
-    "category": ["writing"],
+    "category": ["audio", "writing"],
     "description": "간단한 텍스트 프롬프트로 원하는 장르와 스타일의 음악을 생성하는 AI 도구입니다.",
     "link": "https://www.udio.com/",
     "rating": 4.7,

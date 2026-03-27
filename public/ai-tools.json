@@ -2,7 +2,7 @@
 [
   {
     "name": "GPT-4o",
-    "category": ["chatbot", "writing", "coding"],
+    "category": ["coding", "chatbot", "writing"],
     "description": "OpenAI's latest flagship model, a multimodal AI that holistically understands and generates text, voice, and images.",
     "link": "https://openai.com/chatgpt",
     "rating": 5.0,
@@ -11,7 +11,7 @@
   },
   {
     "name": "Claude 3.5 Sonnet",
-    "category": ["chatbot", "writing", "coding"],
+    "category": ["coding", "chatbot", "writing"],
     "description": "Anthropic's latest model, offering significant improvements in speed and performance for coding, writing, and more.",
     "link": "https://www.anthropic.com/claude",
     "rating": 4.9,
@@ -20,12 +20,12 @@
   },
   {
     "name": "Sora",
-    "category": ["video"],
+    "category": ["video", "image"],
     "description": "An AI model from OpenAI that can create realistic and imaginative video scenes from text instructions.",
     "link": "https://openai.com/sora",
     "rating": 4.9,
     "pricing": ["Paid"],
-    "keywords": ["video", "generation", "OpenAI", "Sora"]
+    "keywords": ["video", "generation", "OpenAI", "Sora", "image"]
   },
   {
     "name": "Midjourney",
@@ -65,12 +65,12 @@
   },
   {
     "name": "Runway",
-    "category": ["video"],
+    "category": ["video", "image"],
     "description": "An AI video tool with various features, including generating videos from text or images and editing existing videos.",
     "link": "https://runwayml.com/",
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
-    "keywords": ["video", "editing", "generation", "Gen-2"]
+    "keywords": ["video", "editing", "generation", "Gen-2", "image"]
   },
   {
     "name": "Perplexity AI",
@@ -128,7 +128,7 @@
   },
   {
     "name": "Descript",
-    "category": ["video", "writing"],
+    "category": ["video", "writing", "audio"],
     "description": "An AI-powered audio and video editing tool that lets you edit media like a text document.",
     "link": "https://www.descript.com/",
     "rating": 4.6,
@@ -137,21 +137,21 @@
   },
   {
     "name": "Fireflies.ai",
-    "category": ["writing"],
+    "category": ["writing", "audio"],
     "description": "An AI assistant that automatically records, transcribes, and summarizes your meetings.",
     "link": "https://fireflies.ai/",
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
-    "keywords": ["meetings", "transcription", "productivity"]
+    "keywords": ["meetings", "transcription", "productivity", "audio"]
   },
   {
     "name": "Otter.ai",
-    "category": ["writing"],
+    "category": ["writing", "audio"],
     "description": "An AI-powered service that transcribes conversations and generates notes in real-time.",
     "link": "https://otter.ai/",
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
-    "keywords": ["transcription", "meetings", "notes"]
+    "keywords": ["transcription", "meetings", "notes", "audio"]
   },
   {
     "name": "Llama 3",
@@ -254,7 +254,7 @@
   },
   {
     "name": "ElevenLabs",
-    "category": ["writing"],
+    "category": ["audio", "writing"],
     "description": "An AI voice synthesis and text-to-speech (TTS) service that generates highly realistic voices.",
     "link": "https://elevenlabs.io/",
     "rating": 4.7,
@@ -263,7 +263,7 @@
   },
   {
     "name": "Murf.ai",
-    "category": ["writing"],
+    "category": ["audio", "writing"],
     "description": "A versatile AI voice generator that converts text to speech in various voices.",
     "link": "https://murf.ai/",
     "rating": 4.5,
@@ -451,8 +451,8 @@
     "keywords": ["video", "editing", "subtitles", "writing"]
   },
   {
-    "name": "Lovo.ai",
-    "category": ["writing"],
+    `name`: "Lovo.ai",
+    "category": ["audio", "writing"],
     "description": "An AI voice generation and text-to-speech (TTS) platform with emotional voices.",
     "link": "https://lovo.ai/",
     "rating": 4.3,
@@ -461,7 +461,7 @@
   },
   {
     "name": "AssemblyAI",
-    "category": ["writing", "coding"],
+    "category": ["audio", "writing", "coding"],
     "description": "An AI model API for speech-to-text, summarization, sentiment analysis, and more.",
     "link": "https://www.assemblyai.com/",
     "rating": 4.6,
@@ -497,7 +497,7 @@
   },
   {
     "name": "Suno",
-    "category": ["writing"],
+    "category": ["audio", "writing"],
     "description": "An AI that creates your desired music, including songs and instrumental pieces, from simple text prompts.",
     "link": "https://www.suno.ai/",
     "rating": 4.8,
@@ -506,7 +506,7 @@
   },
   {
     "name": "Udio",
-    "category": ["writing"],
+    "category": ["audio", "writing"],
     "description": "An AI tool that generates music in your desired genre and style from simple text prompts.",
     "link": "https://www.udio.com/",
     "rating": 4.7,
