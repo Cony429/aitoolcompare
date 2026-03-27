@@ -7,21 +7,72 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="comparison.css">
     <style>
+        /* White Background & Center Alignment */
+        body {
+            background-color: #ffffff !important;
+            color: #333 !important;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* Blog List Item: Centered with Image */
         .blog-post {
-            display: flex; gap: 20px; align-items: center; margin-bottom: 40px; 
-            border-bottom: 1px solid #eee; padding-bottom: 25px;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center;
+            margin-bottom: 50px; 
+            border-bottom: 1px solid #f0f0f0; 
+            padding-bottom: 35px;
         }
+
         .blog-post img {
-            width: 150px !important; height: 100px !important; 
-            object-fit: cover; border-radius: 10px; flex-shrink: 0;
+            width: 150px !important; 
+            height: 100px !important; 
+            object-fit: cover; 
+            border-radius: 10px; 
+            margin-bottom: 20px;
         }
-        .blog-info { text-align: left; }
-        .blog-info h2 { margin: 0 0 10px 0; font-size: 1.4rem; }
-        .blog-info h2 a { text-decoration: none; color: #333; }
-        .blog-info p { margin: 0 0 10px 0; color: #666; font-size: 0.95rem; line-height: 1.6; }
-        @media (max-width: 600px) {
-            .blog-post { flex-direction: column; align-items: flex-start; }
-            .blog-post img { width: 100% !important; height: 180px !important; }
+
+        /* Title Style */
+        .blog-info h2 { 
+            margin: 0 0 12px 0; 
+            font-size: 1.4rem !important; 
+            line-height: 1.4;
+        }
+
+        .blog-info h2 a { 
+            text-decoration: none; 
+            color: #1a1a1a; 
+            font-weight: 700;
+        }
+
+        /* Summary Text Style */
+        .blog-info p { 
+            margin: 0 auto 15px auto; 
+            color: #666; 
+            font-size: 0.95rem !important; 
+            line-height: 1.6; 
+            max-width: 600px;
+        }
+
+        .read-more {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .hero-section {
+            background: #ffffff !important;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
     </style>
 </head>
@@ -42,46 +93,54 @@
   </div>
 </header>
 
-<section class="hero-section" style="padding: 60px 20px; text-align: center; background: #f8f9fa;">
-  <h1>AI Insights & News</h1>
-  <p class="subtitle">Latest trends and expert tips for 2026.</p>
+<section class="hero-section">
+  <h1 style="font-size: 2.2rem; color: #111;">AI Insights & Latest News</h1>
+  <p style="font-size: 1.1rem; color: #666; margin-top: 10px;">Stay updated with 2026 AI trends and expert tips.</p>
 </section>
 
-<main class="content-container" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+<main class="content-container">
     
     <article class="blog-post">
-        <a href="blog-top5-tools-2026.html"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="AI Tools"></a>
+        <a href="blog-top5-tools-2026.html">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="AI Tools">
+        </a>
         <div class="blog-info">
             <h2><a href="blog-top5-tools-2026.html">Top 5 Essential AI Tools for Beginners in 2026</a></h2>
             <p>Overwhelmed by AI? We've selected 5 must-have tools for every beginner to master this year.</p>
-            <a href="blog-top5-tools-2026.html" class="read-more" style="color: #007bff; font-weight: bold; text-decoration: none;">Read More →</a>
+            <a href="blog-top5-tools-2026.html" class="read-more">Read More →</a>
         </div>
     </article>
 
     <article class="blog-post">
-        <a href="gpt4o-vs-claude35-sonnet.html"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="Comparison"></a>
+        <a href="gpt4o-vs-claude35-sonnet.html">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="AI comparison">
+        </a>
         <div class="blog-info">
             <h2><a href="gpt4o-vs-claude35-sonnet.html">GPT-4o vs Claude 3.5 Sonnet: Real-world Comparison</a></h2>
-            <p>Deep dive into 2026 benchmarks for coding, summarizing, and creative writing.</p>
-            <a href="gpt4o-vs-claude35-sonnet.html" class="read-more" style="color: #007bff; font-weight: bold; text-decoration: none;">Read More →</a>
+            <p>A deep dive into 2026 performance benchmarks for coding, summarizing, and creative writing.</p>
+            <a href="gpt4o-vs-claude35-sonnet.html" class="read-more">Read More →</a>
         </div>
     </article>
 
     <article class="blog-post">
-        <a href="best-free-ai-images-2026.html"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="AI Images"></a>
+        <a href="best-free-ai-images-2026.html">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="AI Images">
+        </a>
         <div class="blog-info">
-            <h2><a href="best-free-ai-images-2026.html">Best Free AI Image Generators in 2026</a></h2>
-            <p>Compare Midjourney, DALL-E 3, and Stable Diffusion to find the perfect tool.</p>
-            <a href="best-free-ai-images-2026.html" class="read-more" style="color: #007bff; font-weight: bold; text-decoration: none;">Read More →</a>
+            <h2><a href="best-free-ai-images-2026.html">Best Free AI Image Generators in 2026: TOP 3</a></h2>
+            <p>Compare Midjourney, DALL-E 3, and Stable Diffusion to find the perfect tool for your needs.</p>
+            <a href="best-free-ai-images-2026.html" class="read-more">Read More →</a>
         </div>
     </article>
 
     <article class="blog-post">
-        <a href="sora-vs-runway.html"><img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=800&q=80" alt="Video AI"></a>
+        <a href="sora-vs-runway.html">
+            <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=800&q=80" alt="Video AI">
+        </a>
         <div class="blog-info">
-            <h2><a href="sora-vs-runway.html">Sora vs Runway Gen-3: Video AI Comparison</a></h2>
-            <p>Analyzing quality and pricing to determine 2026's best AI video generator.</p>
-            <a href="sora-vs-runway.html" class="read-more" style="color: #007bff; font-weight: bold; text-decoration: none;">Read More →</a>
+            <h2><a href="sora-vs-runway.html">Sora vs Runway Gen-3: Ultimate Video AI Comparison</a></h2>
+            <p>Analyzing quality and pricing to determine the best AI video generator in 2026.</p>
+            <a href="sora-vs-runway.html" class="read-more">Read More →</a>
         </div>
     </article>
 
@@ -89,7 +148,7 @@
         <div class="blog-info">
             <h2><a href="ai-job-replacement-2026.html">Will AI Replace Your Job in 2026?</a></h2>
             <p>An in-depth analysis of high-risk professions and how to adapt to the future.</p>
-            <a href="ai-job-replacement-2026.html" class="read-more" style="color: #007bff; font-weight: bold; text-decoration: none;">Read More →</a>
+            <a href="ai-job-replacement-2026.html" class="read-more">Read More →</a>
         </div>
     </article>
 
@@ -97,7 +156,7 @@
         <div class="blog-info">
             <h2><a href="blog-claude-vs-gpt-2026.html">Claude 4 vs. GPT-5.4: The Ultimate Showdown</a></h2>
             <p>Head-to-head comparison testing creativity, reasoning, and coding abilities.</p>
-            <a href="blog-claude-vs-gpt-2026.html" class="read-more" style="color: #007bff; font-weight: bold; text-decoration: none;">Read More →</a>
+            <a href="blog-claude-vs-gpt-2026.html" class="read-more">Read More →</a>
         </div>
     </article>
 
@@ -105,7 +164,7 @@
         <div class="blog-info">
             <h2><a href="ai-video-sora-beyond.html">The Rise of AI Video: Sora and Beyond</a></h2>
             <p>Exploring the future of cinematic AI and its impact on the media industry.</p>
-            <a href="ai-video-sora-beyond.html" class="read-more" style="color: #007bff; font-weight: bold; text-decoration: none;">Read More →</a>
+            <a href="ai-video-sora-beyond.html" class="read-more">Read More →</a>
         </div>
     </article>
 
@@ -113,13 +172,13 @@
         <div class="blog-info">
             <h2><a href="ai-for-productivity.html">How to Maximize Productivity with AI</a></h2>
             <p>Practical tips and workflows for integrating AI assistants into your daily routine.</p>
-            <a href="ai-for-productivity.html" class="read-more" style="color: #007bff; font-weight: bold; text-decoration: none;">Read More →</a>
+            <a href="ai-for-productivity.html" class="read-more">Read More →</a>
         </div>
     </article>
 </main>
 
 <footer class="site-footer">
-    <p>&copy; 2026 AI Tool Compare. All rights reserved.</p>
+    <p class="copyright">&copy; 2026 AI Tool Compare. All rights reserved.</p>
 </footer>
 
 </body>
