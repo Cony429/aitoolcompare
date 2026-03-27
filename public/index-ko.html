@@ -130,7 +130,14 @@
         let filteredTools = allTools;
 
         if (currentCategory !== 'all') {
-            filteredTools = filteredTools.filter(tool => tool.category && tool.category.toLowerCase() === currentCategory.toLowerCase());
+            filteredTools = filteredTools.filter(tool => {
+                if (!tool.category) return false;
+                if (Array.isArray(tool.category)) {
+                    return tool.category.map(c => c.toLowerCase()).includes(currentCategory.toLowerCase());
+                } else {
+                    return tool.category.toLowerCase() === currentCategory.toLowerCase();
+                }
+            });
         }
 
         if (lowerCaseQuery) {
@@ -151,7 +158,7 @@
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         event.target.classList.add('active');
 
-        const map = {'전체': 'all', '채팅봇':'Chatbot', '영상':'Video', '이미지':'Image', '글쓰기':'Writing', '코딩':'Coding', '오디오':'Audio'};
+        const map = {'전체': 'all', '채팅봇':'chatbot', '영상':'video', '이미지':'image', '글쓰기':'writing', '코딩':'coding', '오디오':'audio'};
         currentCategory = map[category] || 'all';
         
         const query = document.getElementById('search-input').value;

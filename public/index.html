@@ -4,39 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best AI Tool Compare 2026 | Compare Sora, Claude, Gemini & More</title>
-    <meta name="description" content="Find and compare the best AI tools in 2026. Real-time comparison of Sora, Claude 3.5, Gemini 1.5 Pro, and Midjourney with ratings and pricing.">
-    <meta name="keywords" content="ai compare, ai tool comparison, best ai tools 2026, Sora vs Runway, AI 도구 비교, 인공지능 추천">
-    <meta property="og:title" content="Best AI Tool Compare 2026 | Compare Sora, Claude, Gemini & More">
-    <meta property="og:description" content="Find and compare the best AI tools in 2026. Real-time comparison of Sora, Claude 3.5, Gemini 1.5 Pro, and Midjourney with ratings and pricing.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bestaitoolcompare.com/index.html">
-    <link rel="canonical" href="https://bestaitoolcompare.com/index.html">
-    <meta property="og:image" content="https://bestaitoolcompare.com/og-image.jpg">
+    <title>AI Tool Compare 2026 | Sora, Claude 3.5, Gemini Performance & Pricing</title>
+    <meta name="description" content="Compare the latest AI tools of 2026 at a glance. A professional AI comparison site with daily updates on the performance, ratings, and pricing of Sora, Claude 3.5, and Gemini 1.5 Pro.">
+    <meta name="keywords" content="ai compare, ai tool comparison, best ai tools 2026, Sora vs Runway, AI tool comparison, AI recommendations">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5933569238212175"
-     crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CZ21VR3EM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3CZ21VR3EM');
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        {"@type": "SoftwareApplication", "name": "Sora (OpenAI)", "applicationCategory": "Video Generation", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "Paid"}},
-        {"@type": "SoftwareApplication", "name": "Claude 3.5", "applicationCategory": "Chatbot", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "Free"}},
-        {"@type": "SoftwareApplication", "name": "Gemini 1.5 Pro", "applicationCategory": "Chatbot", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1"}, "offers": {"@type": "Offer", "price": "Free"}}
-      ]
-    }
-    </script>
 </head>
 <body>
 <header class="site-header">
@@ -55,10 +27,10 @@
 </header>
 
 <div class="hero-section">
-    <h1>Find the Perfect AI for Your Needs</h1>
+    <h1>Find the Perfect AI for You</h1>
     <p class="subtitle">Compare various AI tools and make the best choice.</p>
     <div class="search-box">
-        <input type="text" id="search-input" placeholder="e.g., 'video', 'image', 'writing', 'coding'...">
+        <input type="text" id="search-input" placeholder="e.g., video, image, writing, coding...">
         <button id="search-btn">Search</button>
     </div>
     <div class="filter-buttons">
@@ -73,7 +45,7 @@
 </div>
 
 <main class="container">
-    <h2 class="section-title">Main AI Tools Directory</h2>
+    <h2 class="section-title">Featured AI Tools Directory</h2>
     <div class="table-container">
       <table id="tool-table">
         <thead>
@@ -98,7 +70,7 @@
         <nav>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="privacy.html">Privacy Policy</a>
         </nav>
     </div>
 </footer>
@@ -129,15 +101,16 @@
 
         filteredTools.forEach(tool => {
             const row = document.createElement('tr');
-
             let tagsHTML = '';
-            if (tool.pricing.includes("Free")) {
+            const lowerCasePricing = tool.pricing.map(p => p.toLowerCase());
+
+            if (lowerCasePricing.includes("free")) {
                 tagsHTML += `<span class="tag free-tag">Free</span>`;
             }
-            if (tool.pricing.includes("Paid")) {
+            if (lowerCasePricing.includes("paid")) {
                 tagsHTML += `<span class="tag paid-tag">Paid</span>`;
             }
-            if (tool.pricing.includes("Freemium")) {
+            if (lowerCasePricing.includes("freemium")) {
                 tagsHTML += `<span class="tag freemium-tag">Freemium</span>`;
             }
 
@@ -154,11 +127,18 @@
 
     function render(query = "") {
         const lowerCaseQuery = query.toLowerCase();
-
         let filteredTools = allTools;
 
         if (currentCategory !== 'All') {
-            filteredTools = filteredTools.filter(tool => tool.category && tool.category.toLowerCase() === currentCategory.toLowerCase());
+            filteredTools = filteredTools.filter(tool => {
+                if (!tool.category) return false;
+                // Handle both array and string categories
+                if (Array.isArray(tool.category)) {
+                    return tool.category.map(c => c.toLowerCase()).includes(currentCategory.toLowerCase());
+                } else {
+                    return tool.category.toLowerCase() === currentCategory.toLowerCase();
+                }
+            });
         }
 
         if (lowerCaseQuery) {
@@ -178,8 +158,9 @@
     function filterByCategory(category, event) {
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         event.target.classList.add('active');
-
+        
         currentCategory = category;
+        
         const query = document.getElementById('search-input').value;
         render(query);
     }
