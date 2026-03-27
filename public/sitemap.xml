@@ -31,6 +31,16 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://bestaitoolcompare.com/news.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://bestaitoolcompare.com/news-ko.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://bestaitoolcompare.com/gpt4o-vs-claude35-sonnet.html</loc>
     <lastmod>2026-03-25</lastmod>
     <priority>0.80</priority>
