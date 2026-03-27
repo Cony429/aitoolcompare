@@ -110,4 +110,19 @@
     <lastmod>2026-03-25</lastmod>
     <priority>0.50</priority>
   </url>
+  <url>
+    <loc>https://bestaitoolcompare.com/index-ko.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://bestaitoolcompare.com/news-ko.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-ko.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.90</priority>
+  </url>
 </urlset>
