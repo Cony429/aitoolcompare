@@ -6,23 +6,37 @@
     <title>2026 필수 AI 도구 TOP 5 | AI Tool Compare</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="comparison.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700;900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
     <style>
         :root {
-            --accent1: #4fffb0; --accent2: #ff6b6b; --accent3: #ffd166; --accent4: #4ecdc4; --accent5: #a78bfa;
-            --font-serif: 'Noto Serif KR', serif; --font-mono: 'IBM Plex Mono', monospace;
+            --bg: #0d0f14; --surface: #13161e; --surface2: #1a1e2a; --border: rgba(255,255,255,0.07);
+            --text: #e8eaf0; --text-muted: #7a8099; --accent1: #4fffb0; --accent2: #ff6b6b;
+            --accent3: #ffd166; --accent4: #4ecdc4; --accent5: #a78bfa;
+            --font-serif: 'Noto Serif KR', serif; --font-body: 'Noto Sans KR', sans-serif; --font-mono: 'IBM Plex Mono', monospace;
         }
-        /* 본문 다크 섹션 스타일 */
-        .article-intro { margin-bottom: 40px; font-size: 1.1rem; line-height: 1.8; color: #444; }
-        .dark-content-area { background: #0d0f14; color: #e8eaf0; border-radius: 20px; padding: 40px 30px; margin-top: 30px; position: relative; overflow: hidden; }
-        .hero-label { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent1); letter-spacing: 0.12em; margin-bottom: 15px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+        .blog-post-body { background: var(--bg); color: var(--text); font-family: var(--font-body); padding: 40px 20px; border-radius: 20px; margin-top: 20px; text-align: left; }
+        .article-image { width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto 40px; border-radius: 15px; border: 1px solid var(--border); }
+        .hero-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent1); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
         .hero-label::before { content: ''; width: 24px; height: 1px; background: var(--accent1); }
-        .tool-card { background: #13161e; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 25px; margin-bottom: 20px; position: relative; }
+        .tool-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 24px; position: relative; overflow: hidden; }
         .tool-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--card-color, var(--accent1)); }
-        .card-title { font-family: var(--font-serif); font-size: 1.4rem; color: #fff; margin-bottom: 10px; display: block; }
-        .card-desc { color: #b0b8cc; font-size: 0.95rem; line-height: 1.6; }
-        .summary-box { background: rgba(79, 255, 176, 0.05); border: 1px dashed var(--accent1); border-radius: 12px; padding: 20px; margin-top: 30px; }
-        .summary-box h3 { color: var(--accent1); margin-bottom: 10px; font-size: 1.2rem; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 15px; }
+        .card-title { font-family: var(--font-serif); font-size: 1.5rem; color: #fff; margin: 0; }
+        .badge { padding: 3px 10px; border-radius: 100px; font-size: 0.72rem; border: 1px solid; font-family: var(--font-mono); }
+        .badge-free { color: var(--accent1); border-color: rgba(78,255,176,0.3); }
+        .card-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+        .pros, .cons { background: var(--surface2); border-radius: 10px; padding: 16px; font-size: 0.9rem; }
+        .pros-title { color: var(--accent1); font-family: var(--font-mono); font-size: 0.75rem; margin-bottom: 8px; }
+        .cons-title { color: var(--accent2); font-family: var(--font-mono); font-size: 0.75rem; margin-bottom: 8px; }
+        .pros ul, .cons ul { list-style: none; padding: 0; }
+        .pros li::before { content: '+ '; color: var(--accent1); font-weight: bold; }
+        .cons li::before { content: '- '; color: var(--accent2); font-weight: bold; }
+        .compare-table-wrap { overflow-x: auto; margin-top: 40px; border: 1px solid var(--border); border-radius: 12px; }
+        table { width: 100%; border-collapse: collapse; background: var(--surface); font-size: 0.85rem; }
+        th { background: var(--surface2); padding: 12px; color: var(--text-muted); text-align: left; border-bottom: 1px solid var(--border); }
+        td { padding: 12px; border-bottom: 1px solid var(--border); color: #c0c5d8; }
+        .stars { color: var(--accent3); }
+        @media (max-width: 600px) { .card-columns { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -46,4 +60,78 @@
         <article class="news-article">
             <h1>2026년 초보자를 위한 필수 AI 도구 TOP 5</h1>
             <p class="publish-date">게시일: 2026년 3월 27일</p>
-            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="AI Tools
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="AI Tools 2026" class="article-image">
+
+            <div class="blog-post-body">
+                <div class="hero-label">AI Tool Compare · 2026</div>
+                <p>AI 도구는 이제 선택이 아닌 필수입니다. 수백 가지 도구 중 실제 업무와 일상에서 즉시 활용할 수 있는 핵심 5가지를 심층 분석합니다.</p>
+
+                <article class="tool-card" style="--card-color: var(--accent1);">
+                    <div class="card-header">
+                        <h2 class="card-title">01. ChatGPT — 전천후 개인 비서</h2>
+                        <span class="badge badge-free">Freemium</span>
+                    </div>
+                    <p class="card-desc">OpenAI의 최신 모델은 복잡한 추론·코드 작성·문서 초안 작성을 단 몇 초 만에 처리합니다. 플러그인과 GPT Store를 통해 기능을 무한히 확장할 수 있습니다.</p>
+                    <div class="card-columns">
+                        <div class="pros"><div class="pros-title">👍 장점</div><ul><li>GPT Store 확장성</li><li>실시간 웹 검색 내장</li><li>한국어 품질 우수</li></ul></div>
+                        <div class="cons"><div class="cons-title">👎 단점</div><ul><li>무료 버전 기능 제한</li><li>특유의 기계적 문체</li></ul></div>
+                    </div>
+                </article>
+
+                <article class="tool-card" style="--card-color: var(--accent5);">
+                    <div class="card-header">
+                        <h2 class="card-title">02. Claude — 인간적인 글쓰기 파트너</h2>
+                        <span class="badge badge-free" style="color:var(--accent4); border-color:var(--accent4);">Pro Available</span>
+                    </div>
+                    <p class="card-desc">자연스러운 문체와 긴 문맥 유지 능력이 탁월합니다. 책 한 권 분량의 문서도 한 번에 분석할 수 있어 전문가들 사이에서 인기가 높습니다.</p>
+                    <div class="card-columns">
+                        <div class="pros"><div class="pros-title">👍 장점</div><ul><li>인간적인 글쓰기 스타일</li><li>대용량 문서 분석 최강</li></ul></div>
+                        <div class="cons"><div class="cons-title">👎 단점</div><ul><li>이미지 생성 기능 없음</li><li>메시지 제한 엄격</li></ul></div>
+                    </div>
+                </article>
+
+                <article class="tool-card" style="--card-color: var(--accent2);">
+                    <div class="card-header"><h2 class="card-title">03. Sora — 텍스트로 영상 완성</h2></div>
+                    <p class="card-desc">문장 하나로 60초 분량의 고해상도 영상을 생성합니다. 제작 경험이 없는 마케터나 크리에이터에게 혁신적인 도구입니다.</p>
+                </article>
+
+                <article class="tool-card" style="--card-color: var(--accent3);">
+                    <div class="card-header"><h2 class="card-title">04. Canva AI — 디자인 민주화</h2></div>
+                    <p class="card-desc">포토샵 없이도 브랜드에 맞는 디자인을 자동 생성합니다. 비전문가·소상공인에게 최고의 디자인 솔루션입니다.</p>
+                </article>
+
+                <article class="tool-card" style="--card-color: var(--accent4);">
+                    <div class="card-header"><h2 class="card-title">05. Perplexity — 검색의 재발명</h2></div>
+                    <p class="card-desc">수십 개의 웹페이지를 실시간 분석하여 출처가 명시된 요약 답변을 제공합니다. 정확도가 중요한 작업에서 구글보다 효율적입니다.</p>
+                </article>
+
+                <div class="compare-table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>도구</th><th>무료 플랜</th><th>추천 난이도</th><th>추천 대상</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>ChatGPT</td><td>✅ 있음</td><td><span class="stars">★★★</span> 입문</td><td>전체 사용자</td></tr>
+                            <tr><td>Claude</td><td>✅ 있음</td><td><span class="stars">★★★</span> 입문</td><td>글쓰기·분석</td></tr>
+                            <tr><td>Sora</td><td>❌ 없음</td><td><span class="stars">★★★★</span> 중급</td><td>크리에이터</td></tr>
+                            <tr><td>Canva AI</td><td>✅ 있음</td><td><span class="stars">★★</span> 입문</td><td>비디자이너</td></tr>
+                            <tr><td>Perplexity</td><td>✅ 있음</td><td><span class="stars">★★</span> 입문</td><td>학생·직장인</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="about.html">소개</a>
+          <a href="contact.html">문의</a>
+          <a href="privacy-policy.html">개인정보 처리방침</a>
+        </div>
+        <p class="copyright">&copy; 2026 AI Tool Compare. All rights reserved.</p>
+      </div>
+    </footer>
+</body>
+</html>
