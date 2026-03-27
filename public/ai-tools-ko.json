@@ -1,153 +1,117 @@
 
 [
   {
-    "name": "Sora (OpenAI)",
-    "category": "Video",
-    "description": "텍스트 설명으로 현실적이고 상상력 풍부한 장면을 생성하는 AI 모델입니다.",
+    "name": "GPT-4o",
+    "category": ["chatbot", "writing", "coding"],
+    "description": "OpenAI의 최신 플래그십 모델로, 텍스트, 음성, 이미지를 통합적으로 이해하고 생성하는 멀티모달 AI입니다.",
+    "link": "https://openai.com/chatgpt",
+    "rating": 5.0,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["chatbot", "writing", "coding", "OpenAI", "GPT-4o"]
+  },
+  {
+    "name": "Claude 3.5 Sonnet",
+    "category": ["chatbot", "writing", "coding"],
+    "description": "Anthropic의 최신 모델로, 코딩, 글쓰기 등 다방면에서 속도와 성능이 크게 향상되었습니다.",
+    "link": "https://www.anthropic.com/claude",
+    "rating": 4.9,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["chatbot", "writing", "coding", "Anthropic", "Claude 3.5"]
+  },
+  {
+    "name": "Sora",
+    "category": ["video"],
+    "description": "텍스트 설명으로 현실적이고 상상력 풍부한 동영상 장면을 생성하는 OpenAI의 AI 모델입니다.",
     "link": "https://openai.com/sora",
     "rating": 4.9,
     "pricing": ["Paid"],
     "keywords": ["video", "generation", "OpenAI", "Sora"]
   },
   {
-    "name": "Claude 3.5",
-    "category": "Chatbot",
-    "description": "앤스로픽의 최신 모델로, 속도와 성능이 크게 향상되었습니다.",
-    "link": "https://www.anthropic.com/claude",
+    "name": "Midjourney",
+    "category": ["image"],
+    "description": "텍스트 설명으로 고품질의 예술적인 이미지를 생성하는 AI 모델입니다.",
+    "link": "https://www.midjourney.com/",
     "rating": 4.9,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["chatbot", "writing", "Anthropic", "Claude 3.5"]
+    "pricing": ["Paid"],
+    "keywords": ["image", "art", "design", "Midjourney"]
   },
   {
     "name": "Gemini 1.5 Pro",
-    "category": "Chatbot",
-    "description": "구글의 차세대 모델로, 방대한 컨텍스트 창과 향상된 성능을 제공합니다.",
+    "category": ["chatbot", "writing", "coding"],
+    "description": "구글의 차세대 모델로, 방대한 컨텍스트 창과 멀티모달 성능을 제공합니다.",
     "link": "https://deepmind.google/technologies/gemini/google-gemini-1-5-pro",
     "rating": 4.8,
     "pricing": ["Free", "Paid"],
-    "keywords": ["chatbot", "Google", "Gemini 1.5 Pro"]
-  },
-  {
-    "name": "Midjourney v7",
-    "category": "Image",
-    "description": "사실성과 텍스트 렌더링이 향상된 최신 이미지 생성 모델입니다.",
-    "link": "https://www.midjourney.com/",
-    "rating": 5.0,
-    "pricing": ["Paid"],
-    "keywords": ["image", "generation", "art", "Midjourney v7"]
-  },
-  {
-    "name": "ChatGPT",
-    "category": "Chatbot",
-    "description": "대화용 언어 모델입니다.",
-    "link": "https://openai.com/chatgpt",
-    "rating": 5.0,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["chatbot", "writing", "OpenAI", "GPT-4"]
-  },
-  {
-    "name": "Gemini",
-    "category": "Chatbot",
-    "description": "구글의 협업 AI 파트너입니다.",
-    "link": "https://gemini.google.com/",
-    "rating": 4.8,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["chatbot", "Google", "writing"]
-  },
-  {
-    "name": "Claude",
-    "category": "Chatbot",
-    "description": "규모에 상관없이 모든 작업을 위한 차세대 AI 어시스턴트입니다.",
-    "link": "https://www.anthropic.com/claude",
-    "rating": 4.7,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["chatbot", "writing", "Anthropic"]
-  },
-  {
-    "name": "Perplexity AI",
-    "category": "Chatbot",
-    "description": "AI 기반 검색 엔진입니다.",
-    "link": "https://www.perplexity.ai/",
-    "rating": 4.6,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["search", "research"]
-  },
-  {
-    "name": "Midjourney",
-    "category": "Image",
-    "description": "텍스트 설명으로 이미지를 생성합니다.",
-    "link": "https://www.midjourney.com/",
-    "rating": 4.9,
-    "pricing": ["Paid"],
-    "keywords": ["image", "art", "design"]
+    "keywords": ["chatbot", "writing", "coding", "Google", "Gemini 1.5 Pro"]
   },
   {
     "name": "DALL-E 3",
-    "category": "Image",
-    "description": "자연어 설명으로 사실적인 이미지와 예술을 창조하는 AI 시스템입니다.",
+    "category": ["image"],
+    "description": "자연어 설명으로 매우 상세하고 사실적인 이미지와 예술을 창조하는 AI 시스템입니다.",
     "link": "https://openai.com/dall-e-3",
     "rating": 4.8,
     "pricing": ["Paid"],
     "keywords": ["image", "OpenAI", "art", "design"]
   },
   {
+    "name": "GitHub Copilot",
+    "category": ["coding"],
+    "description": "AI 페어 프로그래머로, 코드 작성을 도와 개발자의 생산성을 향상시킵니다.",
+    "link": "https://github.com/features/copilot",
+    "rating": 4.8,
+    "pricing": ["Paid"],
+    "keywords": ["coding", "developer", "code", "GitHub"]
+  },
+  {
+    "name": "Runway",
+    "category": ["video"],
+    "description": "텍스트나 이미지로 비디오를 생성하고, 기존 비디오를 편집하는 등 다양한 기능을 갖춘 AI 영상 도구입니다.",
+    "link": "https://runwayml.com/",
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["video", "editing", "generation", "Gen-2"]
+  },
+  {
+    "name": "Perplexity AI",
+    "category": ["chatbot", "writing"],
+    "description": "실시간 정보 검색과 인용을 제공하는 대화형 AI 검색 엔진입니다.",
+    "link": "https://www.perplexity.ai/",
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "keywords": ["search", "research", "chatbot"]
+  },
+  {
     "name": "Stable Diffusion",
-    "category": "Image",
-    "description": "딥러닝 기반의 텍스트-이미지 변환 모델입니다.",
+    "category": ["image"],
+    "description": "오픈 소스 딥러닝 기반의 텍스트-이미지 변환 모델입니다.",
     "link": "https://stability.ai/stable-diffusion",
     "rating": 4.7,
     "pricing": ["Free"],
     "keywords": ["image", "open-source", "art"]
   },
   {
-    "name": "Sora",
-    "category": "Video",
-    "description": "텍스트 설명으로 현실적이고 상상력 풍부한 장면을 생성하는 AI 모델입니다.",
-    "link": "https://openai.com/sora",
-    "rating": 4.9,
-    "pricing": ["Paid"],
-    "keywords": ["video", "OpenAI", "film"]
-  },
-  {
-    "name": "Runway",
-    "category": "Video",
-    "description": "실시간 비디오 편집 및 생성 도구입니다.",
-    "link": "https://runwayml.com/",
-    "rating": 4.6,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["video", "editing", "generation"]
-  },
-  {
     "name": "Notion AI",
-    "category": "Writing",
-    "description": "노션(Notion)에 통합된 AI 기반 어시스턴트입니다.",
+    "category": ["writing"],
+    "description": "노션(Notion)에 통합되어 글쓰기, 요약, 브레인스토밍을 돕는 AI 어시스턴트입니다.",
     "link": "https://www.notion.so/product/ai",
     "rating": 4.7,
     "pricing": ["Paid"],
     "keywords": ["writing", "productivity", "notes"]
   },
   {
-    "name": "GitHub Copilot",
-    "category": "Coding",
-    "description": "AI 페어 프로그래머입니다.",
-    "link": "https://github.com/features/copilot",
-    "rating": 4.8,
-    "pricing": ["Paid"],
-    "keywords": ["coding", "developer", "code"]
-  },
-  {
     "name": "Jasper",
-    "category": "Writing",
-    "description": "마케팅 및 콘텐츠 제작을 위한 AI 카피라이터입니다.",
+    "category": ["writing", "image"],
+    "description": "마케팅 및 콘텐츠 제작을 위한 AI 카피라이터 및 이미지 생성기입니다.",
     "link": "https://www.jasper.ai/",
     "rating": 4.5,
     "pricing": ["Paid"],
-    "keywords": ["writing", "marketing", "copy"]
+    "keywords": ["writing", "marketing", "copy", "image"]
   },
   {
     "name": "Copy.ai",
-    "category": "Writing",
-    "description": "카피라이터를 위한 자동화된 창작 도구입니다.",
+    "category": ["writing"],
+    "description": "카피라이터를 위한 자동화된 창작 도구로, 다양한 템플릿을 제공합니다.",
     "link": "https://www.copy.ai/",
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
@@ -155,8 +119,8 @@
   },
   {
     "name": "Synthesia",
-    "category": "Video",
-    "description": "AI 비디오 생성 플랫폼입니다.",
+    "category": ["video"],
+    "description": "텍스트를 입력하여 AI 아바타가 말하는 비디오를 제작하는 플랫폼입니다.",
     "link": "https://www.synthesia.io/",
     "rating": 4.7,
     "pricing": ["Paid"],
@@ -164,17 +128,17 @@
   },
   {
     "name": "Descript",
-    "category": "Video",
-    "description": "AI 기반 오디오 및 비디오 편집 도구입니다.",
+    "category": ["video", "writing"],
+    "description": "AI 기반 오디오 및 비디오 편집 도구로, 텍스트 편집처럼 미디어를 수정할 수 있습니다.",
     "link": "https://www.descript.com/",
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
-    "keywords": ["audio", "video", "editing", "podcast"]
+    "keywords": ["audio", "video", "editing", "podcast", "transcription"]
   },
   {
     "name": "Fireflies.ai",
-    "category": "Audio",
-    "description": "회의를 위한 AI 어시스턴트입니다.",
+    "category": ["writing"],
+    "description": "회의 내용을 자동으로 녹음하고, 텍스트로 전환하며, 요약해주는 AI 어시스턴트입니다.",
     "link": "https://fireflies.ai/",
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
@@ -182,8 +146,8 @@
   },
   {
     "name": "Otter.ai",
-    "category": "Audio",
-    "description": "AI 기반 음성-텍스트 변환 서비스입니다.",
+    "category": ["writing"],
+    "description": "실시간으로 대화를 텍스트로 전환하고 노트를 생성하는 AI 기반 서비스입니다.",
     "link": "https://otter.ai/",
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
@@ -191,17 +155,17 @@
   },
   {
     "name": "Llama 3",
-    "category": "Chatbot",
-    "description": "메타 AI의 대규모 언어 모델입니다.",
+    "category": ["chatbot", "coding"],
+    "description": "메타 AI가 개발한 오픈 소스 대규모 언어 모델입니다.",
     "link": "https://ai.meta.com/llama/",
     "rating": 4.7,
     "pricing": ["Free"],
-    "keywords": ["chatbot", "Meta", "open-source"]
+    "keywords": ["chatbot", "Meta", "open-source", "coding"]
   },
   {
     "name": "Poe by Quora",
-    "category": "Chatbot",
-    "description": "다양한 AI 봇과 상호작용할 수 있는 플랫폼입니다.",
+    "category": ["chatbot"],
+    "description": "GPT, Claude 등 다양한 AI 봇과 한 곳에서 대화할 수 있는 플랫폼입니다.",
     "link": "https://poe.com/",
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
@@ -209,17 +173,17 @@
   },
   {
     "name": "Writesonic",
-    "category": "Writing",
-    "description": "SEO 친화적인 콘텐츠를 만드는 AI 작가입니다.",
+    "category": ["writing", "image"],
+    "description": "SEO 친화적인 블로그 글, 광고 문구, 이미지를 생성하는 AI 작가입니다.",
     "link": "https://writesonic.com/",
     "rating": 4.3,
     "pricing": ["Free", "Paid"],
-    "keywords": ["writing", "SEO", "marketing"]
+    "keywords": ["writing", "SEO", "marketing", "image"]
   },
   {
     "name": "Rytr",
-    "category": "Writing",
-    "description": "AI 글쓰기 어시스턴트입니다.",
+    "category": ["writing"],
+    "description": "다양한 톤과 스타일로 콘텐츠를 생성하는 AI 글쓰기 어시스턴트입니다.",
     "link": "https://rytr.me/",
     "rating": 4.2,
     "pricing": ["Free", "Paid"],
@@ -227,17 +191,17 @@
   },
   {
     "name": "DeepL",
-    "category": "Writing",
-    "description": "AI 기반 번역 도구입니다.",
+    "category": ["writing"],
+    "description": "매우 정확하고 자연스러운 번역을 제공하는 AI 기반 번역 도구입니다.",
     "link": "https://www.deepl.com/translator",
     "rating": 4.8,
     "pricing": ["Free", "Paid"],
-    "keywords": ["translation", "language"]
+    "keywords": ["translation", "language", "writing"]
   },
   {
     "name": "Grammarly",
-    "category": "Writing",
-    "description": "AI 기반 글쓰기 어시스턴트입니다.",
+    "category": ["writing"],
+    "description": "문법, 철자, 스타일을 교정해주는 AI 기반 글쓰기 어시스턴트입니다.",
     "link": "https://www.grammarly.com/",
     "rating": 4.7,
     "pricing": ["Free", "Paid"],
@@ -245,8 +209,8 @@
   },
   {
     "name": "QuillBot",
-    "category": "Writing",
-    "description": "AI 기반 문장 재구성 도구입니다.",
+    "category": ["writing"],
+    "description": "문장을 재구성하고, 요약하며, 문법을 검사하는 AI 기반 글쓰기 도구입니다.",
     "link": "https://quillbot.com/",
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
@@ -254,17 +218,17 @@
   },
   {
     "name": "Artbreeder",
-    "category": "Image",
-    "description": "AI로 생성된 이미지를 만들고 탐색합니다.",
+    "category": ["image"],
+    "description": "이미지를 조합하고 변형하여 새로운 창작물을 만드는 AI 이미지 생성 도구입니다.",
     "link": "https://www.artbreeder.com/",
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
-    "keywords": ["image", "art", "creative"]
+    "keywords": ["image", "art", "creative", "design"]
   },
   {
     "name": "Leonardo Ai",
-    "category": "Image",
-    "description": "AI로 멋진 게임 애셋을 만듭니다.",
+    "category": ["image"],
+    "description": "게임 애셋, 캐릭터 등 고품질의 예술적 이미지를 생성하는 AI 플랫폼입니다.",
     "link": "https://leonardo.ai/",
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
@@ -272,8 +236,8 @@
   },
   {
     "name": "HeyGen",
-    "category": "Video",
-    "description": "비즈니스를 위한 AI 비디오 생성기입니다.",
+    "category": ["video"],
+    "description": "비즈니스용으로 아바타를 활용하여 전문적인 비디오를 생성하는 AI 플랫폼입니다.",
     "link": "https://www.heygen.com/",
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
@@ -281,8 +245,8 @@
   },
   {
     "name": "Pika",
-    "category": "Video",
-    "description": "아이디어를 비디오로 만들어주는 플랫폼입니다.",
+    "category": ["video"],
+    "description": "아이디어를 실제 비디오로 변환해주는 AI 비디오 생성 및 편집 플랫폼입니다.",
     "link": "https://pika.art/",
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
@@ -290,44 +254,44 @@
   },
   {
     "name": "ElevenLabs",
-    "category": "Audio",
-    "description": "AI 음성 생성기입니다.",
+    "category": ["writing"],
+    "description": "매우 사실적인 목소리를 생성하는 AI 음성 합성 및 텍스트 음성 변환(TTS) 서비스입니다.",
     "link": "https://elevenlabs.io/",
     "rating": 4.7,
     "pricing": ["Free", "Paid"],
-    "keywords": ["audio", "voice", "TTS"]
+    "keywords": ["audio", "voice", "TTS", "writing"]
   },
   {
     "name": "Murf.ai",
-    "category": "Audio",
-    "description": "다재다능한 AI 음성 생성기로 텍스트를 음성으로 변환합니다.",
+    "category": ["writing"],
+    "description": "다양한 목소리로 텍스트를 음성으로 변환하는 다재다능한 AI 음성 생성기입니다.",
     "link": "https://murf.ai/",
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
-    "keywords": ["audio", "voiceover", "TTS"]
+    "keywords": ["audio", "voiceover", "TTS", "writing"]
   },
   {
     "name": "Gradio",
-    "category": "Coding",
-    "description": "매력적인 머신러닝 앱을 만들고 공유합니다.",
+    "category": ["coding"],
+    "description": "머신러닝 모델을 위한 웹 UI를 쉽게 만들고 공유할 수 있는 라이브러리입니다.",
     "link": "https://www.gradio.app/",
     "rating": 4.3,
     "pricing": ["Free"],
-    "keywords": ["developer", "machine learning", "demo"]
+    "keywords": ["developer", "machine learning", "demo", "coding"]
   },
   {
     "name": "Hugging Face",
-    "category": "Coding",
-    "description": "미래를 만드는 AI 커뮤니티입니다.",
+    "category": ["coding"],
+    "description": "AI 모델, 데이터셋, 데모를 공유하고 협업하는 커뮤니티 및 플랫폼입니다.",
     "link": "https://huggingface.co/",
     "rating": 4.8,
     "pricing": ["Free", "Paid"],
-    "keywords": ["developer", "models", "community"]
+    "keywords": ["developer", "models", "community", "coding"]
   },
   {
     "name": "Replit",
-    "category": "Coding",
-    "description": "AI 코드 완성을 지원하는 온라인 IDE입니다.",
+    "category": ["coding"],
+    "description": "AI 코드 완성을 지원하는 온라인 통합 개발 환경(IDE)입니다.",
     "link": "https://replit.com/",
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
@@ -335,107 +299,89 @@
   },
   {
     "name": "FigJam AI",
-    "category": "Writing",
-    "description": "Figma의 화이트보드 도구에 내장된 AI 기능입니다.",
+    "category": ["writing"],
+    "description": "Figma의 온라인 화이트보드 도구에서 아이디어 구상, 요약 등을 돕는 AI 기능입니다.",
     "link": "https://www.figma.com/figjam/",
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
-    "keywords": ["whiteboard", "diagram", "collaboration"]
+    "keywords": ["whiteboard", "diagram", "collaboration", "writing"]
   },
   {
     "name": "Tome",
-    "category": "Writing",
-    "description": "AI 기반 스토리텔링 형식입니다.",
+    "category": ["writing", "video"],
+    "description": "AI를 활용하여 스토리텔링 형식의 프레젠테이션과 문서를 만드는 도구입니다.",
     "link": "https://tome.app/",
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
-    "keywords": ["presentation", "storytelling", "slides"]
+    "keywords": ["presentation", "storytelling", "slides", "writing"]
   },
   {
     "name": "Canva",
-    "category": "Image",
-    "description": "AI 기능을 갖춘 온라인 디자인 도구입니다.",
+    "category": ["image", "video", "writing"],
+    "description": "AI 기능을 활용하여 디자인, 동영상 편집, 문서 작성을 할 수 있는 온라인 디자인 도구입니다.",
     "link": "https://www.canva.com/",
     "rating": 4.8,
     "pricing": ["Free", "Paid"],
-    "keywords": ["design", "graphics", "social media"]
+    "keywords": ["design", "graphics", "video", "social media", "writing"]
   },
   {
     "name": "Adobe Firefly",
-    "category": "Image",
-    "description": "어도비의 창의적인 생성형 AI 모델 제품군입니다.",
+    "category": ["image", "writing"],
+    "description": "상업적으로 안전하게 사용할 수 있도록 설계된 Adobe의 생성형 AI 모델 제품군입니다.",
     "link": "https://www.adobe.com/sensei/generative-ai/firefly.html",
     "rating": 4.7,
     "pricing": ["Free", "Paid"],
-    "keywords": ["image", "Adobe", "design", "art"]
+    "keywords": ["image", "Adobe", "design", "art", "writing"]
   },
   {
     "name": "Beautiful.ai",
-    "category": "Writing",
-    "description": "AI 기반 프레젠테이션 소프트웨어입니다.",
+    "category": ["writing"],
+    "description": "AI가 디자인을 자동화하여 아름다운 프레젠테이션을 쉽게 만들 수 있는 소프트웨어입니다.",
     "link": "https://www.beautiful.ai/",
     "rating": 4.5,
     "pricing": ["Paid"],
-    "keywords": ["presentation", "slides", "design"]
+    "keywords": ["presentation", "slides", "design", "writing"]
   },
   {
     "name": "SlidesAI",
-    "category": "Writing",
-    "description": "AI로 몇 초 만에 프레젠테이션 슬라이드를 만듭니다.",
+    "category": ["writing"],
+    "description": "텍스트를 입력하면 AI가 몇 초 만에 자동으로 프레젠테이션 슬라이드를 만들어줍니다.",
     "link": "https://www.slidesai.io/",
     "rating": 4.3,
     "pricing": ["Free", "Paid"],
-    "keywords": ["presentation", "slides", "automation"]
+    "keywords": ["presentation", "slides", "automation", "writing"]
   },
   {
     "name": "You.com",
-    "category": "Chatbot",
-    "description": "AI 기반 검색 엔진입니다.",
+    "category": ["chatbot", "writing"],
+    "description": "개인화된 경험을 제공하는 AI 기반 검색 엔진 및 챗봇입니다.",
     "link": "https://you.com/",
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
-    "keywords": ["search", "chatbot", "AI"]
-  },
-  {
-    "name": "Neeva",
-    "category": "Chatbot",
-    "description": "AI 기능을 갖춘 광고 없는 비공개 검색 엔진입니다.",
-    "link": "https://neeva.com/",
-    "rating": 4.3,
-    "pricing": ["Paid"],
-    "keywords": ["search", "privacy", "ad-free"]
+    "keywords": ["search", "chatbot", "AI", "writing"]
   },
   {
     "name": "Character.AI",
-    "category": "Chatbot",
-    "description": "AI 캐릭터를 만들고 대화합니다.",
+    "category": ["chatbot"],
+    "description": "유명인, 역사적 인물 등 다양한 AI 캐릭터를 만들고 대화할 수 있는 플랫폼입니다.",
     "link": "https://character.ai/",
     "rating": 4.2,
     "pricing": ["Free"],
     "keywords": ["chatbot", "roleplay", "conversation"]
   },
   {
-    "name": "Bard",
-    "category": "Chatbot",
-    "description": "현재 Gemini의 일부가 된 구글의 대규모 언어 모델입니다.",
-    "link": "https://bard.google.com/",
-    "rating": 4.8,
-    "pricing": ["Free"],
-    "keywords": ["chatbot", "Google", "Gemini"]
-  },
-  {
     "name": "Kore.ai",
-    "category": "Chatbot",
-    "description": "기업용 대화형 AI 플랫폼입니다.",
+    "category": ["chatbot", "coding"],
+    "description": "고객 및 직원 경험을 자동화하는 기업용 대화형 AI 플랫폼입니다.",
     "link": "https://kore.ai/",
     "rating": 4.2,
     "pricing": ["Paid"],
-    "keywords": ["enterprise", "chatbot", "business"]
+    "keywords": ["enterprise", "chatbot", "business", "coding"]
   },
   {
     "name": "Replika",
-    "category": "Chatbot",
-    "description": "당신을 아껴주는 AI 동반자입니다.",
+    "category": ["chatbot"],
+    "description": "사용자와 깊은 대화를 나누며 관계를 형성하는 AI 동반자입니다.",
     "link": "https://replika.ai/",
     "rating": 4.1,
     "pricing": ["Free", "Paid"],
@@ -443,62 +389,53 @@
   },
   {
     "name": "Glean",
-    "category": "Coding",
-    "description": "기업을 위한 AI 기반 업무 어시스턴트입니다.",
+    "category": ["writing", "coding"],
+    "description": "기업 내 모든 앱의 정보를 검색하고 분석해주는 AI 기반 업무 어시스턴트입니다.",
     "link": "https.glean.com/",
     "rating": 4.3,
     "pricing": ["Paid"],
-    "keywords": ["enterprise", "search", "workspace"]
+    "keywords": ["enterprise", "search", "workspace", "writing", "coding"]
   },
   {
     "name": "Andi",
-    "category": "Chatbot",
-    "description": "차세대를 위한 검색 엔진입니다.",
+    "category": ["chatbot", "writing"],
+    "description": "질문에 대한 직접적인 답변을 제공하는 차세대 대화형 검색 엔진입니다.",
     "link": "https://andisearch.com/",
     "rating": 4.2,
     "pricing": ["Free"],
-    "keywords": ["search", "conversational", "AI"]
+    "keywords": ["search", "conversational", "AI", "writing"]
   },
   {
     "name": "Consensus",
-    "category": "Writing",
-    "description": "연구를 위한 AI 검색 엔진입니다.",
+    "category": ["writing"],
+    "description": "과학적 연구 논문에서 직접 답변을 찾아주는 연구용 AI 검색 엔진입니다.",
     "link": "https://consensus.app/",
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
-    "keywords": ["research", "science", "papers"]
+    "keywords": ["research", "science", "papers", "writing"]
   },
   {
     "name": "Codeium",
-    "category": "Coding",
-    "description": "현대적인 코딩 슈퍼파워입니다.",
+    "category": ["coding"],
+    "description": "다양한 IDE를 지원하며 코드 자동 완성과 챗 기능을 제공하는 코딩 어시스턴트입니다.",
     "link": "https://codeium.com/",
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
-    "keywords": ["coding", "developer", "AI"]
+    "keywords": ["coding", "developer", "AI", "autocomplete"]
   },
   {
     "name": "Tabnine",
-    "category": "Coding",
-    "description": "소프트웨어 개발자를 위한 AI 어시스턴트입니다.",
+    "category": ["coding"],
+    "description": "소프트웨어 개발자의 생산성을 높여주는 AI 코드 자동 완성 어시스턴트입니다.",
     "link": "https://www.tabnine.com/",
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
     "keywords": ["coding", "developer", "autocomplete"]
   },
   {
-    "name": "Kuki",
-    "category": "Chatbot",
-    "description": "채팅할 수 있는 의인화된 AI입니다.",
-    "link": "https://www.kuki.ai/",
-    "rating": 3.9,
-    "pricing": ["Free"],
-    "keywords": ["chatbot", "AI", "social"]
-  },
-  {
     "name": "Playground AI",
-    "category": "Image",
-    "description": "온라인 AI 이미지 생성기입니다.",
+    "category": ["image"],
+    "description": "사실적인 이미지와 예술적인 이미지를 모두 만들 수 있는 온라인 AI 이미지 생성기입니다.",
     "link": "https://playgroundai.com/",
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
@@ -506,101 +443,92 @@
   },
   {
     "name": "Veed.io",
-    "category": "Video",
-    "description": "전문가를 위한 온라인 비디오 스위트입니다.",
+    "category": ["video", "writing"],
+    "description": "자막 추가, 배경 제거 등 AI 기능을 갖춘 전문가용 온라인 비디오 편집 스위트입니다.",
     "link": "https://www.veed.io/",
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
-    "keywords": ["video", "editing", "subtitles"]
+    "keywords": ["video", "editing", "subtitles", "writing"]
   },
   {
     "name": "Lovo.ai",
-    "category": "Audio",
-    "description": "AI 음성 생성기 및 텍스트 음성 변환 서비스입니다.",
+    "category": ["writing"],
+    "description": "감성적인 AI 음성 생성 및 텍스트 음성 변환(TTS) 플랫폼입니다.",
     "link": "https://lovo.ai/",
     "rating": 4.3,
     "pricing": ["Free", "Paid"],
-    "keywords": ["audio", "voiceover", "TTS"]
+    "keywords": ["audio", "voiceover", "TTS", "writing"]
   },
   {
     "name": "AssemblyAI",
-    "category": "Audio",
-    "description": "음성-텍스트 변환 등을 위한 AI 모델입니다.",
+    "category": ["writing", "coding"],
+    "description": "음성-텍스트 변환, 요약, 감정 분석 등을 위한 AI 모델 API입니다.",
     "link": "https://www.assemblyai.com/",
     "rating": 4.6,
     "pricing": ["Paid"],
-    "keywords": ["API", "speech-to-text", "audio"]
-  },
-  {
-    "name": "Vidnami",
-    "category": "Video",
-    "description": "멋진 비디오를 빠르게 만듭니다.",
-    "link": "https://www.vidnami.com/",
-    "rating": 4.2,
-    "pricing": ["Paid"],
-    "keywords": ["video", "marketing", "automation"]
+    "keywords": ["API", "speech-to-text", "audio", "writing", "coding"]
   },
   {
     "name": "Designs.ai",
-    "category": "Image",
-    "description": "마케팅 콘텐츠 제작을 위한 올인원 플랫폼입니다.",
+    "category": ["image", "video", "writing"],
+    "description": "로고, 비디오, 배너 등 마케팅 콘텐츠 제작을 위한 올인원 AI 플랫폼입니다.",
     "link": "https://designs.ai/",
     "rating": 4.3,
     "pricing": ["Free", "Paid"],
-    "keywords": ["design", "logo", "video"]
+    "keywords": ["design", "logo", "video", "writing"]
   },
   {
-    "name": "Luminar AI",
-    "category": "Image",
-    "description": "AI 기반 사진 편집기입니다.",
-    "link": "https://skylum.com/luminar-ai",
+    "name": "Luminar Neo",
+    "category": ["image"],
+    "description": "AI 기반의 혁신적인 사진 편집 기능들을 제공하는 소프트웨어입니다.",
+    "link": "https://skylum.com/luminar",
     "rating": 4.6,
     "pricing": ["Paid"],
-    "keywords": ["photo", "editing", "AI"]
+    "keywords": ["photo", "editing", "AI", "image"]
   },
   {
     "name": "Topaz Labs",
-    "category": "Image",
-    "description": "AI 기반 이미지 및 비디오 향상 소프트웨어입니다.",
+    "category": ["image", "video"],
+    "description": "AI를 사용하여 사진과 비디오의 노이즈를 제거하고 선명도와 해상도를 향상시키는 소프트웨어입니다.",
     "link": "https://www.topazlabs.com/",
     "rating": 4.7,
     "pricing": ["Paid"],
-    "keywords": ["photo", "video", "upscale", "enhance"]
+    "keywords": ["photo", "video", "upscale", "enhance", "image"]
   },
   {
     "name": "Suno",
-    "category": "Audio",
-    "description": "AI로 음악을 만듭니다.",
+    "category": ["writing"],
+    "description": "간단한 텍스트 프롬프트로 노래, 악기 연주 등 원하는 음악을 만드는 AI입니다.",
     "link": "https://www.suno.ai/",
     "rating": 4.8,
     "pricing": ["Free", "Paid"],
-    "keywords": ["music", "song", "AI"]
+    "keywords": ["music", "song", "AI", "writing"]
   },
   {
     "name": "Udio",
-    "category": "Audio",
-    "description": "AI로 음악을 만듭니다.",
+    "category": ["writing"],
+    "description": "간단한 텍스트 프롬프트로 원하는 장르와 스타일의 음악을 생성하는 AI 도구입니다.",
     "link": "https://www.udio.com/",
     "rating": 4.7,
     "pricing": ["Free"],
-    "keywords": ["music", "song", "AI"]
+    "keywords": ["music", "song", "AI", "writing"]
   },
   {
     "name": "Retouch4me",
-    "category": "Image",
-    "description": "AI 기반 사진 리터칭 플러그인입니다.",
+    "category": ["image"],
+    "description": "AI를 사용하여 인물 사진의 피부 보정, 배경 정리 등을 자동으로 처리하는 플러그인입니다.",
     "link": "https://retouch4.me/",
     "rating": 4.5,
     "pricing": ["Paid"],
-    "keywords": ["photo", "retouching", "plugin"]
+    "keywords": ["photo", "retouching", "plugin", "image"]
   },
   {
     "name": "Adcreative.ai",
-    "category": "Writing",
-    "description": "AI로 광고 크리에이티브를 생성합니다.",
+    "category": ["writing", "image"],
+    "description": "AI를 활용하여 광고 및 소셜 미디어용 크리에이티브와 배너를 생성합니다.",
     "link": "https://www.adcreative.ai/",
     "rating": 4.4,
     "pricing": ["Paid"],
-    "keywords": ["advertising", "marketing", "creative"]
+    "keywords": ["advertising", "marketing", "creative", "writing", "image"]
   }
 ]
