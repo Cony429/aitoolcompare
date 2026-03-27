@@ -451,7 +451,7 @@
     "keywords": ["video", "editing", "subtitles", "writing"]
   },
   {
-    `name`: "Lovo.ai",
+    "name": "Lovo.ai",
     "category": ["audio", "writing"],
     "description": "An AI voice generation and text-to-speech (TTS) platform with emotional voices.",
     "link": "https://lovo.ai/",
