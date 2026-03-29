@@ -1,534 +1,218 @@
-
 [
   {
-    "name": "GPT-4o",
-    "category": ["coding", "chatbot", "writing"],
-    "description": "OpenAI's latest flagship model, a multimodal AI that holistically understands and generates text, voice, and images.",
-    "link": "https://openai.com/chatgpt",
+    "name": "ChatGPT",
+    "description": "OpenAI's versatile AI chatbot for conversation, coding, data analysis, and more. The most widely used AI assistant in the world.",
+    "category": ["Chatbot", "Writing", "Coding"],
     "rating": 5.0,
     "pricing": ["Free", "Paid"],
-    "keywords": ["chatbot", "writing", "coding", "OpenAI", "GPT-4o"]
+    "link": "https://chat.openai.com",
+    "keywords": ["openai", "gpt", "chatbot", "conversation", "coding", "writing"]
   },
   {
-    "name": "Claude 3.5 Sonnet",
-    "category": ["coding", "chatbot", "writing"],
-    "description": "Anthropic's latest model, offering significant improvements in speed and performance for coding, writing, and more.",
-    "link": "https://www.anthropic.com/claude",
+    "name": "Claude",
+    "description": "Advanced AI assistant from Anthropic, focused on safety and helpfulness. Excels at long-document analysis, nuanced writing, and coding.",
+    "category": ["Chatbot", "Writing", "Coding"],
     "rating": 4.9,
     "pricing": ["Free", "Paid"],
-    "keywords": ["chatbot", "writing", "coding", "Anthropic", "Claude 3.5"]
+    "link": "https://claude.ai",
+    "keywords": ["anthropic", "claude", "chatbot", "writing", "safety", "long document"]
   },
   {
-    "name": "Sora",
-    "category": ["video", "image"],
-    "description": "An AI model from OpenAI that can create realistic and imaginative video scenes from text instructions.",
-    "link": "https://openai.com/sora",
-    "rating": 4.9,
-    "pricing": ["Paid"],
-    "keywords": ["video", "generation", "OpenAI", "Sora", "image"]
+    "name": "Gemini",
+    "description": "Google's most capable multimodal AI model, integrated across the Google ecosystem. Features a 1M token context window.",
+    "category": ["Chatbot", "Writing", "Coding"],
+    "rating": 4.8,
+    "pricing": ["Free", "Paid"],
+    "link": "https://gemini.google.com",
+    "keywords": ["google", "gemini", "multimodal", "chatbot", "search"]
+  },
+  {
+    "name": "Perplexity",
+    "description": "An AI-powered search engine that provides direct, cited answers by analyzing multiple web sources in real time.",
+    "category": ["Chatbot"],
+    "rating": 4.7,
+    "pricing": ["Free", "Paid"],
+    "link": "https://perplexity.ai",
+    "keywords": ["search", "research", "citations", "real-time", "fact-check"]
   },
   {
     "name": "Midjourney",
-    "category": ["image"],
-    "description": "An AI model that generates high-quality, artistic images from textual descriptions.",
-    "link": "https://www.midjourney.com/",
+    "description": "Top-tier AI image generator that turns text prompts into stunning, artistic visuals. The go-to tool for designers and illustrators.",
+    "category": ["Image"],
+    "rating": 4.8,
+    "pricing": ["Paid"],
+    "link": "https://midjourney.com",
+    "keywords": ["image", "art", "design", "illustration", "creative", "text-to-image"]
+  },
+  {
+    "name": "Leonardo.ai",
+    "description": "Powerful image generation platform optimized for creative assets, concept art, and game development workflows.",
+    "category": ["Image"],
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "link": "https://leonardo.ai",
+    "keywords": ["image", "game", "concept art", "creative", "assets"]
+  },
+  {
+    "name": "Canva AI",
+    "description": "Easy-to-use AI design tools for creating social media posts, presentations, and graphics — no design experience needed.",
+    "category": ["Image", "Writing"],
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "link": "https://canva.com",
+    "keywords": ["design", "social media", "presentation", "graphic", "template", "poster"]
+  },
+  {
+    "name": "Sora",
+    "description": "OpenAI's text-to-video model that creates realistic and imaginative video scenes from simple text instructions.",
+    "category": ["Video"],
     "rating": 4.9,
     "pricing": ["Paid"],
-    "keywords": ["image", "art", "design", "Midjourney"]
-  },
-  {
-    "name": "Gemini 1.5 Pro",
-    "category": ["chatbot", "writing", "coding"],
-    "description": "Google's next-generation model with a massive context window and multimodal performance.",
-    "link": "https://deepmind.google/technologies/gemini/google-gemini-1-5-pro",
-    "rating": 4.8,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["chatbot", "writing", "coding", "Google", "Gemini 1.5 Pro"]
-  },
-  {
-    "name": "DALL-E 3",
-    "category": ["image"],
-    "description": "An AI system that can create highly detailed and realistic images and art from a description in natural language.",
-    "link": "https://openai.com/dall-e-3",
-    "rating": 4.8,
-    "pricing": ["Paid"],
-    "keywords": ["image", "OpenAI", "art", "design"]
-  },
-  {
-    "name": "GitHub Copilot",
-    "category": ["coding"],
-    "description": "An AI pair programmer that helps you write code, improving developer productivity.",
-    "link": "https://github.com/features/copilot",
-    "rating": 4.8,
-    "pricing": ["Paid"],
-    "keywords": ["coding", "developer", "code", "GitHub"]
+    "link": "https://sora.com",
+    "keywords": ["video", "text-to-video", "openai", "cinematic", "generate"]
   },
   {
     "name": "Runway",
-    "category": ["video", "image"],
-    "description": "An AI video tool with various features, including generating videos from text or images and editing existing videos.",
-    "link": "https://runwayml.com/",
+    "description": "Professional AI video generation and editing platform used by filmmakers and content creators. Supports real-time video editing.",
+    "category": ["Video"],
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
-    "keywords": ["video", "editing", "generation", "Gen-2", "image"]
-  },
-  {
-    "name": "Perplexity AI",
-    "category": ["chatbot", "writing"],
-    "description": "A conversational AI search engine that provides real-time information and citations.",
-    "link": "https://www.perplexity.ai/",
-    "rating": 4.6,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["search", "research", "chatbot"]
-  },
-  {
-    "name": "Stable Diffusion",
-    "category": ["image"],
-    "description": "An open-source deep learning, text-to-image model.",
-    "link": "https://stability.ai/stable-diffusion",
-    "rating": 4.7,
-    "pricing": ["Free"],
-    "keywords": ["image", "open-source", "art"]
-  },
-  {
-    "name": "Notion AI",
-    "category": ["writing"],
-    "description": "An AI assistant integrated into Notion that helps with writing, summarizing, and brainstorming.",
-    "link": "https://www.notion.so/product/ai",
-    "rating": 4.7,
-    "pricing": ["Paid"],
-    "keywords": ["writing", "productivity", "notes"]
-  },
-  {
-    "name": "Jasper",
-    "category": ["writing", "image"],
-    "description": "An AI copywriter and image generator for marketing and content creation.",
-    "link": "https://www.jasper.ai/",
-    "rating": 4.5,
-    "pricing": ["Paid"],
-    "keywords": ["writing", "marketing", "copy", "image"]
-  },
-  {
-    "name": "Copy.ai",
-    "category": ["writing"],
-    "description": "An automated creativity tool for copywriters that offers various templates.",
-    "link": "https://www.copy.ai/",
-    "rating": 4.4,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["writing", "marketing", "copy"]
-  },
-  {
-    "name": "Synthesia",
-    "category": ["video"],
-    "description": "A platform for creating videos with AI avatars that speak from your text input.",
-    "link": "https://www.synthesia.io/",
-    "rating": 4.7,
-    "pricing": ["Paid"],
-    "keywords": ["video", "avatar", "presentation"]
-  },
-  {
-    "name": "Descript",
-    "category": ["video", "writing", "audio"],
-    "description": "An AI-powered audio and video editing tool that lets you edit media like a text document.",
-    "link": "https://www.descript.com/",
-    "rating": 4.6,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["audio", "video", "editing", "podcast", "transcription"]
-  },
-  {
-    "name": "Fireflies.ai",
-    "category": ["writing", "audio"],
-    "description": "An AI assistant that automatically records, transcribes, and summarizes your meetings.",
-    "link": "https://fireflies.ai/",
-    "rating": 4.5,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["meetings", "transcription", "productivity", "audio"]
-  },
-  {
-    "name": "Otter.ai",
-    "category": ["writing", "audio"],
-    "description": "An AI-powered service that transcribes conversations and generates notes in real-time.",
-    "link": "https://otter.ai/",
-    "rating": 4.4,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["transcription", "meetings", "notes", "audio"]
-  },
-  {
-    "name": "Llama 3",
-    "category": ["chatbot", "coding"],
-    "description": "An open-source large language model developed by Meta AI.",
-    "link": "https://ai.meta.com/llama/",
-    "rating": 4.7,
-    "pricing": ["Free"],
-    "keywords": ["chatbot", "Meta", "open-source", "coding"]
-  },
-  {
-    "name": "Poe by Quora",
-    "category": ["chatbot"],
-    "description": "A platform where you can chat with various AI bots like GPT and Claude in one place.",
-    "link": "https://poe.com/",
-    "rating": 4.5,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["chatbot", "multiple AIs", "GPT", "Claude"]
-  },
-  {
-    "name": "Writesonic",
-    "category": ["writing", "image"],
-    "description": "An AI writer that generates SEO-friendly blog posts, ad copy, and images.",
-    "link": "https://writesonic.com/",
-    "rating": 4.3,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["writing", "SEO", "marketing", "image"]
-  },
-  {
-    "name": "Rytr",
-    "category": ["writing"],
-    "description": "An AI writing assistant that generates content in various tones and styles.",
-    "link": "https://rytr.me/",
-    "rating": 4.2,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["writing", "content", "copy"]
-  },
-  {
-    "name": "DeepL",
-    "category": ["writing"],
-    "description": "An AI-powered translation tool that provides highly accurate and natural translations.",
-    "link": "https://www.deepl.com/translator",
-    "rating": 4.8,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["translation", "language", "writing"]
-  },
-  {
-    "name": "Grammarly",
-    "category": ["writing"],
-    "description": "An AI-powered writing assistant that corrects grammar, spelling, and style.",
-    "link": "https://www.grammarly.com/",
-    "rating": 4.7,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["writing", "grammar", "editing"]
-  },
-  {
-    "name": "QuillBot",
-    "category": ["writing"],
-    "description": "An AI-powered writing tool that paraphrases, summarizes, and checks grammar.",
-    "link": "https://quillbot.com/",
-    "rating": 4.5,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["writing", "paraphrasing", "summarizing"]
-  },
-  {
-    "name": "Artbreeder",
-    "category": ["image"],
-    "description": "An AI image generation tool that combines and transforms images to create new ones.",
-    "link": "https://www.artbreeder.com/",
-    "rating": 4.4,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["image", "art", "creative", "design"]
-  },
-  {
-    "name": "Leonardo Ai",
-    "category": ["image"],
-    "description": "An AI platform for generating high-quality, artistic images like game assets and characters.",
-    "link": "https://leonardo.ai/",
-    "rating": 4.6,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["image", "gaming", "art", "assets"]
+    "link": "https://runwayml.com",
+    "keywords": ["video", "editing", "generation", "film", "creative", "gen-3"]
   },
   {
     "name": "HeyGen",
-    "category": ["video"],
-    "description": "An AI platform for generating professional videos with avatars for business use.",
-    "link": "https://www.heygen.com/",
+    "description": "AI video generator for business. Create professional spokesperson videos with realistic AI avatars in minutes.",
+    "category": ["Video"],
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
-    "keywords": ["video", "avatar", "business"]
+    "link": "https://www.heygen.com",
+    "keywords": ["video", "avatar", "business", "spokesperson", "marketing"]
   },
   {
     "name": "Pika",
-    "category": ["video"],
-    "description": "An AI video generation and editing platform that turns ideas into actual videos.",
-    "link": "https://pika.art/",
+    "description": "Idea-to-video platform that lets anyone create and edit cinematic videos from text, images, or existing footage.",
+    "category": ["Video"],
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
-    "keywords": ["video", "generation", "creative"]
+    "link": "https://pika.art",
+    "keywords": ["video", "text-to-video", "creative", "short video", "animate"]
+  },
+  {
+    "name": "Luma AI",
+    "description": "Cutting-edge AI for creating realistic 3D objects and cinematic-quality videos from text or image prompts.",
+    "category": ["Video", "Image"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://lumalabs.ai",
+    "keywords": ["3d", "video", "cinematic", "nerf", "realistic"]
+  },
+  {
+    "name": "Descript",
+    "description": "An all-in-one video and podcast editor that works like a word document. Edit video by editing the transcript.",
+    "category": ["Video", "Audio"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://descript.com",
+    "keywords": ["video", "podcast", "editing", "transcript", "audio"]
   },
   {
     "name": "ElevenLabs",
-    "category": ["audio", "writing"],
-    "description": "An AI voice synthesis and text-to-speech (TTS) service that generates highly realistic voices.",
-    "link": "https://elevenlabs.io/",
+    "description": "State-of-the-art AI voice synthesis platform that generates hyper-realistic speech and clones voices in 30+ languages.",
+    "category": ["Audio"],
     "rating": 4.7,
     "pricing": ["Free", "Paid"],
-    "keywords": ["audio", "voice", "TTS", "writing"]
-  },
-  {
-    "name": "Murf.ai",
-    "category": ["audio", "writing"],
-    "description": "A versatile AI voice generator that converts text to speech in various voices.",
-    "link": "https://murf.ai/",
-    "rating": 4.5,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["audio", "voiceover", "TTS", "writing"]
-  },
-  {
-    "name": "Gradio",
-    "category": ["coding"],
-    "description": "A library for easily creating and sharing web UIs for your machine learning models.",
-    "link": "https://www.gradio.app/",
-    "rating": 4.3,
-    "pricing": ["Free"],
-    "keywords": ["developer", "machine learning", "demo", "coding"]
-  },
-  {
-    "name": "Hugging Face",
-    "category": ["coding"],
-    "description": "A community and platform for sharing and collaborating on AI models, datasets, and demos.",
-    "link": "https://huggingface.co/",
-    "rating": 4.8,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["developer", "models", "community", "coding"]
-  },
-  {
-    "name": "Replit",
-    "category": ["coding"],
-    "description": "An online integrated development environment (IDE) with AI code completion.",
-    "link": "https://replit.com/",
-    "rating": 4.6,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["coding", "IDE", "developer"]
-  },
-  {
-    "name": "FigJam AI",
-    "category": ["writing"],
-    "description": "AI features in Figma's online whiteboard tool that help with brainstorming, summarizing, and more.",
-    "link": "https://www.figma.com/figjam/",
-    "rating": 4.5,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["whiteboard", "diagram", "collaboration", "writing"]
-  },
-  {
-    "name": "Tome",
-    "category": ["writing", "video"],
-    "description": "A tool for creating storytelling-style presentations and documents using AI.",
-    "link": "https://tome.app/",
-    "rating": 4.4,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["presentation", "storytelling", "slides", "writing"]
-  },
-  {
-    "name": "Canva",
-    "category": ["image", "video", "writing"],
-    "description": "An online design tool with AI features for design, video editing, and document creation.",
-    "link": "https://www.canva.com/",
-    "rating": 4.8,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["design", "graphics", "video", "social media", "writing"]
-  },
-  {
-    "name": "Adobe Firefly",
-    "category": ["image", "writing"],
-    "description": "Adobe's family of generative AI models designed to be commercially safe.",
-    "link": "https://www.adobe.com/sensei/generative-ai/firefly.html",
-    "rating": 4.7,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["image", "Adobe", "design", "art", "writing"]
-  },
-  {
-    "name": "Beautiful.ai",
-    "category": ["writing"],
-    "description": "Software that makes it easy to create beautiful presentations with AI-automated design.",
-    "link": "https://www.beautiful.ai/",
-    "rating": 4.5,
-    "pricing": ["Paid"],
-    "keywords": ["presentation", "slides", "design", "writing"]
-  },
-  {
-    "name": "SlidesAI",
-    "category": ["writing"],
-    "description": "AI automatically creates presentation slides in seconds when you input text.",
-    "link": "https://www.slidesai.io/",
-    "rating": 4.3,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["presentation", "slides", "automation", "writing"]
-  },
-  {
-    "name": "You.com",
-    "category": ["chatbot", "writing"],
-    "description": "An AI-powered search engine and chatbot that provides a personalized experience.",
-    "link": "https://you.com/",
-    "rating": 4.4,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["search", "chatbot", "AI", "writing"]
-  },
-  {
-    "name": "Character.AI",
-    "category": ["chatbot"],
-    "description": "A platform for creating and conversing with various AI characters, including celebrities and historical figures.",
-    "link": "https://character.ai/",
-    "rating": 4.2,
-    "pricing": ["Free"],
-    "keywords": ["chatbot", "roleplay", "conversation"]
-  },
-  {
-    "name": "Kore.ai",
-    "category": ["chatbot", "coding"],
-    "description": "An enterprise conversational AI platform that automates customer and employee experiences.",
-    "link": "https://kore.ai/",
-    "rating": 4.2,
-    "pricing": ["Paid"],
-    "keywords": ["enterprise", "chatbot", "business", "coding"]
-  },
-  {
-    "name": "Replika",
-    "category": ["chatbot"],
-    "description": "An AI companion that forms a relationship with you through deep conversations.",
-    "link": "https://replika.ai/",
-    "rating": 4.1,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["chatbot", "companion", "friend"]
-  },
-  {
-    "name": "Glean",
-    "category": ["writing", "coding"],
-    "description": "An AI-powered work assistant that searches and analyzes information from all your company's apps.",
-    "link": "https.glean.com/",
-    "rating": 4.3,
-    "pricing": ["Paid"],
-    "keywords": ["enterprise", "search", "workspace", "writing", "coding"]
-  },
-  {
-    "name": "Andi",
-    "category": ["chatbot", "writing"],
-    "description": "A next-generation conversational search engine that provides direct answers to your questions.",
-    "link": "https://andisearch.com/",
-    "rating": 4.2,
-    "pricing": ["Free"],
-    "keywords": ["search", "conversational", "AI", "writing"]
-  },
-  {
-    "name": "Consensus",
-    "category": ["writing"],
-    "description": "An AI search engine for research that finds answers directly from scientific research papers.",
-    "link": "https://consensus.app/",
-    "rating": 4.4,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["research", "science", "papers", "writing"]
-  },
-  {
-    "name": "Codeium",
-    "category": ["coding"],
-    "description": "A coding assistant that supports various IDEs and provides code autocompletion and chat functionality.",
-    "link": "https://codeium.com/",
-    "rating": 4.6,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["coding", "developer", "AI", "autocomplete"]
-  },
-  {
-    "name": "Tabnine",
-    "category": ["coding"],
-    "description": "An AI code autocompletion assistant that boosts productivity for software developers.",
-    "link": "https://www.tabnine.com/",
-    "rating": 4.5,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["coding", "developer", "autocomplete"]
-  },
-  {
-    "name": "Playground AI",
-    "category": ["image"],
-    "description": "An online AI image creator that can produce both realistic and artistic images.",
-    "link": "https://playgroundai.com/",
-    "rating": 4.5,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["image", "art", "design"]
-  },
-  {
-    "name": "Veed.io",
-    "category": ["video", "writing"],
-    "description": "An online video editing suite for professionals with AI features like subtitle generation and background removal.",
-    "link": "https://www.veed.io/",
-    "rating": 4.4,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["video", "editing", "subtitles", "writing"]
-  },
-  {
-    "name": "Lovo.ai",
-    "category": ["audio", "writing"],
-    "description": "An AI voice generation and text-to-speech (TTS) platform with emotional voices.",
-    "link": "https://lovo.ai/",
-    "rating": 4.3,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["audio", "voiceover", "TTS", "writing"]
-  },
-  {
-    "name": "AssemblyAI",
-    "category": ["audio", "writing", "coding"],
-    "description": "An AI model API for speech-to-text, summarization, sentiment analysis, and more.",
-    "link": "https://www.assemblyai.com/",
-    "rating": 4.6,
-    "pricing": ["Paid"],
-    "keywords": ["API", "speech-to-text", "audio", "writing", "coding"]
-  },
-  {
-    "name": "Designs.ai",
-    "category": ["image", "video", "writing"],
-    "description": "An all-in-one AI platform for creating marketing content like logos, videos, and banners.",
-    "link": "https://designs.ai/",
-    "rating": 4.3,
-    "pricing": ["Free", "Paid"],
-    "keywords": ["design", "logo", "video", "writing"]
-  },
-  {
-    "name": "Luminar Neo",
-    "category": ["image"],
-    "description": "Software that offers innovative AI-powered photo editing features.",
-    "link": "https://skylum.com/luminar",
-    "rating": 4.6,
-    "pricing": ["Paid"],
-    "keywords": ["photo", "editing", "AI", "image"]
-  },
-  {
-    "name": "Topaz Labs",
-    "category": ["image", "video"],
-    "description": "Software that uses AI to remove noise and improve sharpness and resolution in photos and videos.",
-    "link": "https://www.topazlabs.com/",
-    "rating": 4.7,
-    "pricing": ["Paid"],
-    "keywords": ["photo", "video", "upscale", "enhance", "image"]
+    "link": "https://elevenlabs.io",
+    "keywords": ["voice", "audio", "text-to-speech", "voice clone", "narration", "podcast"]
   },
   {
     "name": "Suno",
-    "category": ["audio", "writing"],
-    "description": "An AI that creates your desired music, including songs and instrumental pieces, from simple text prompts.",
-    "link": "https://www.suno.ai/",
-    "rating": 4.8,
+    "description": "Create full songs with vocals, instruments, and lyrics in seconds using AI. The leading AI music generation platform.",
+    "category": ["Audio"],
+    "rating": 4.6,
     "pricing": ["Free", "Paid"],
-    "keywords": ["music", "song", "AI", "writing"]
+    "link": "https://www.suno.ai",
+    "keywords": ["music", "audio", "song", "vocals", "generate", "lyrics"]
   },
   {
     "name": "Udio",
-    "category": ["audio", "writing"],
-    "description": "An AI tool that generates music in your desired genre and style from simple text prompts.",
-    "link": "https://www.udio.com/",
-    "rating": 4.7,
-    "pricing": ["Free"],
-    "keywords": ["music", "song", "AI", "writing"]
+    "description": "Create studio-quality music with AI. Generate original songs in any genre with professional-grade production.",
+    "category": ["Audio"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://www.udio.com",
+    "keywords": ["music", "audio", "song", "generate", "genre", "production"]
   },
   {
-    "name": "Retouch4me",
-    "category": ["image"],
-    "description": "A plugin that uses AI to automatically handle tasks like skin retouching and background cleanup in portraits.",
-    "link": "https://retouch4.me/",
+    "name": "Jasper",
+    "description": "Professional AI content platform designed for marketing teams. Generates blog posts, ad copy, and social media content at scale.",
+    "category": ["Writing"],
     "rating": 4.5,
     "pricing": ["Paid"],
-    "keywords": ["photo", "retouching", "plugin", "image"]
+    "link": "https://jasper.ai",
+    "keywords": ["writing", "marketing", "blog", "copy", "content", "SEO"]
   },
   {
-    "name": "Adcreative.ai",
-    "category": ["writing", "image"],
-    "description": "Generates creatives and banners for advertising and social media using AI.",
-    "link": "https://www.adcreative.ai/",
+    "name": "Copy.ai",
+    "description": "Automated creativity tools for copywriters and marketing teams. Quickly generate ad copy, emails, and product descriptions.",
+    "category": ["Writing"],
     "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "link": "https://www.copy.ai",
+    "keywords": ["writing", "copywriting", "marketing", "email", "ad copy"]
+  },
+  {
+    "name": "Writesonic",
+    "description": "AI writer for creating SEO-friendly blog posts, landing pages, and marketing copy. Includes Chatsonic AI chatbot.",
+    "category": ["Writing"],
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "link": "https://writesonic.com",
+    "keywords": ["writing", "SEO", "blog", "landing page", "marketing", "chatbot"]
+  },
+  {
+    "name": "QuillBot",
+    "description": "AI-powered paraphrasing and grammar tool. Rewrite, summarize, and refine any text with multiple writing modes.",
+    "category": ["Writing"],
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "link": "https://quillbot.com",
+    "keywords": ["writing", "paraphrase", "grammar", "summarize", "rewrite"]
+  },
+  {
+    "name": "Grammarly",
+    "description": "AI-powered writing assistant that checks grammar, tone, clarity, and style. Works across email, docs, and the web.",
+    "category": ["Writing"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://www.grammarly.com",
+    "keywords": ["writing", "grammar", "spelling", "tone", "editing", "proofreading"]
+  },
+  {
+    "name": "Notion AI",
+    "description": "Enhance your workflow with AI-powered writing, summarization, and organization built directly into Notion.",
+    "category": ["Writing"],
+    "rating": 4.5,
     "pricing": ["Paid"],
-    "keywords": ["advertising", "marketing", "creative", "writing", "image"]
+    "link": "https://notion.so",
+    "keywords": ["writing", "productivity", "notes", "organization", "summarize"]
+  },
+  {
+    "name": "Gamma",
+    "description": "Create beautiful presentations, memos, and briefs in seconds with AI. No design skills required.",
+    "category": ["Writing", "Image"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://gamma.app",
+    "keywords": ["presentation", "slides", "deck", "design", "memo", "brief"]
+  },
+  {
+    "name": "GitHub Copilot",
+    "description": "AI pair programmer by GitHub and OpenAI. Suggests code completions and entire functions directly inside your IDE in real time.",
+    "category": ["Coding"],
+    "rating": 4.7,
+    "pricing": ["Free", "Paid"],
+    "link": "https://github.com/features/copilot",
+    "keywords": ["coding", "programming", "IDE", "autocomplete", "developer", "github"]
   }
 ]
