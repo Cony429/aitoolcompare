@@ -167,6 +167,8 @@ main, .container {
   font-size: 0.85rem;
   font-weight: bold;
   transition: 0.2s;
+  white-space: nowrap;   /* 텍스트 줄바꿈 방지 */
+    display: inline-block; /* 버튼 형태 유지 */
 }
 .visit-site-btn:hover { background: #1557b0; }
 
@@ -198,18 +200,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Blog Alignment Fix */
-.blog-post h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-.blog-post {
-    margin: 0 auto 30px auto;
-}
-
 .filter-buttons {
     margin-top: 25px;
     display: flex;
@@ -237,10 +227,20 @@ footer {
     color: white;
     border-color: #1a73e8;
 }
+.blog-post {
+  display: flex;          /* 👈 추가: 가로로 나란히 배치 */
+  flex-direction: row;    /* 👈 추가: 가로 방향 */
+  align-items: flex-start;/* 위쪽 정렬 */
+  gap: 20px;              /* 이미지와 글 사이 간격 */
+  padding: 20px;          
+  margin-bottom: 25px !important; 
+  border-bottom: 1px solid #f0f0f0;
+}
 
+/* 제목 부분은 이제 flex일 필요가 없으니 간단하게 바꿉니다 */
 .blog-post h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+  margin-top: 0;          
+  margin-bottom: 10px;    
+  line-height: 1.2;
+  font-size: 1.3rem;
 }
