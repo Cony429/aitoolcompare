@@ -3,88 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Insights & News | AI Tool Compare</title>
+    <title>AI Blog 2026: Guides, Comparisons & Reviews | AI Tool Compare</title>
+    <meta name="description" content="Expert AI guides, tool comparisons, and productivity tips for 2026. Learn which AI tools are worth using and how to get the most from them.">
+    <meta name="keywords" content="AI blog 2026, AI tool reviews, ChatGPT guide, Claude review, best AI tools, AI comparison 2026">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="comparison.css">
     <link rel="icon" type="image/png" href="favicon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "AI Tool Compare Blog",
+      "url": "https://bestaitoolcompare.com/blog.html",
+      "description": "Expert AI tool guides, comparisons, and productivity tips for 2026.",
+      "blogPost": [
+        {"@type":"BlogPosting","headline":"ChatGPT vs Claude in 2026: Which AI Is Better for You?","url":"https://bestaitoolcompare.com/chatgpt-vs-claude-2026.html","datePublished":"2026-03-20"},
+        {"@type":"BlogPosting","headline":"Best Free AI Tools in 2026: Top 10 You Can Use Right Now","url":"https://bestaitoolcompare.com/best-free-ai-tools-2026.html","datePublished":"2026-03-18"},
+        {"@type":"BlogPosting","headline":"Best AI Tools for Writing in 2026","url":"https://bestaitoolcompare.com/best-ai-for-writing-2026.html","datePublished":"2026-03-15"},
+        {"@type":"BlogPosting","headline":"Best AI Coding Tools in 2026","url":"https://bestaitoolcompare.com/best-ai-for-coding-2026.html","datePublished":"2026-03-12"},
+        {"@type":"BlogPosting","headline":"How to Use AI to 10x Your Productivity in 2026","url":"https://bestaitoolcompare.com/how-to-use-ai-for-productivity.html","datePublished":"2026-03-10"},
+        {"@type":"BlogPosting","headline":"Best AI Image Generators in 2026","url":"https://bestaitoolcompare.com/best-ai-image-generators-2026.html","datePublished":"2026-03-08"},
+        {"@type":"BlogPosting","headline":"Best AI Video Generators in 2026","url":"https://bestaitoolcompare.com/best-ai-video-generators-2026.html","datePublished":"2026-03-05"},
+        {"@type":"BlogPosting","headline":"Best AI Tools for Students in 2026","url":"https://bestaitoolcompare.com/best-ai-tools-for-students-2026.html","datePublished":"2026-03-03"},
+        {"@type":"BlogPosting","headline":"How to Write Better AI Prompts in 2026","url":"https://bestaitoolcompare.com/how-to-write-better-ai-prompts.html","datePublished":"2026-02-28"},
+        {"@type":"BlogPosting","headline":"Best AI Tools for Small Business in 2026","url":"https://bestaitoolcompare.com/best-ai-tools-for-small-business-2026.html","datePublished":"2026-02-25"}
+      ]
+    }
+    </script>
+
     <style>
-        /* White Background & Center Alignment */
-    body {
-        background-color: #ffffff !important;
-        color: #333 !important;
-        font-family: 'Inter', sans-serif;
-    }
+        body { background-color: #ffffff; color: #333; font-family: 'Inter', sans-serif; }
 
-    /* 1. 컨테이너: 블로그 리스트 전체를 화면 중앙으로 모음 */
-    .content-container {
-        max-width: 800px; /* 너무 넓지 않게 잡아 중앙 집중 */
-        margin: 40px auto !important;
-        padding: 0 20px;
-    }
+        /* ── 히어로 ── */
+        .hero-section {
+            background: #ffffff;
+            padding: 60px 20px 40px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .hero-section h1 { font-size: 2.2rem; color: #111; margin: 0 0 10px; }
+        .hero-section p { font-size: 1.1rem; color: #666; margin: 0; }
 
-    /* 2. 블로그 포스트: 내부에서 가로 배치 */
-    .blog-post {
-        display: flex !important;
-        flex-direction: row !important; /* 가로 나열 */
-        align-items: center !important; /* 이미지와 글자 세로 중앙 맞춤 */
-        justify-content: center !important; /* 포스트 내용 전체를 가로 중앙 정렬 */
-        margin-bottom: 35px !important; /* 글 사이 간격 촘촘하게 */
-        padding-bottom: 35px;
-        border-bottom: 1px solid #f0f0f0;
-        gap: 25px; /* 이미지와 글자 사이 간격 */
-    }
+        /* ── 카테고리 필터 ── */
+        .category-filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 28px 20px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .cat-btn {
+            padding: 6px 16px;
+            border-radius: 100px;
+            border: 1px solid #e5e7eb;
+            background: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .cat-btn:hover, .cat-btn.active { background: #007bff; color: #fff; border-color: #007bff; }
 
-    /* 3. 이미지: 왼쪽 위치 */
-    .blog-post img {
-        width: 140px !important;
-        height: 95px !important;
-        object-fit: cover;
-        border-radius: 12px;
-        flex-shrink: 0; /* 이미지 크기 유지 */
-        margin-bottom: 0 !important; /* 기존 아래 여백 제거 */
-    }
+        /* ── 콘텐츠 그리드 ── */
+        .content-container {
+            max-width: 900px;
+            margin: 36px auto;
+            padding: 0 20px 60px;
+        }
 
-    /* 4. 텍스트 영역: 왼쪽 정렬 (이미지 옆에 붙어야 하므로) */
-    .blog-info {
-        text-align: left !important;
-        max-width: 500px; /* 글자 영역 폭 제한 */
-    }
+        /* ── 피처드 포스트 (첫 번째, 크게) ── */
+        .featured-post {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: center;
+            background: #f8faff;
+            border: 1px solid #e0e7ff;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 36px;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.2s;
+        }
+        .featured-post:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+        .featured-post img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
+        .featured-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #007bff; margin-bottom: 10px; }
+        .featured-post h2 { font-size: 1.5rem; font-weight: 800; color: #0d0d0d; margin: 0 0 10px; line-height: 1.3; }
+        .featured-post p { color: #555; font-size: 0.97rem; line-height: 1.65; margin: 0 0 16px; }
+        .featured-post .meta { font-size: 0.8rem; color: #999; }
+        .read-more { font-size: 0.88rem; color: #007bff; font-weight: 700; text-decoration: none; }
+        .read-more:hover { text-decoration: underline; }
 
-    .blog-info h2 { 
-        margin: 0 0 8px 0 !important; 
-        font-size: 1.3rem !important;
-        line-height: 1.3;
-    }
+        /* ── 블로그 그리드 ── */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .blog-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .blog-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+        .blog-card img { width: 100%; height: 150px; object-fit: cover; display: block; }
+        .blog-card .card-body { padding: 18px; }
+        .blog-card .card-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #007bff; margin-bottom: 8px; display: block; }
+        .blog-card h3 { font-size: 1rem; font-weight: 700; color: #0d0d0d; margin: 0 0 8px; line-height: 1.4; }
+        .blog-card p { font-size: 0.88rem; color: #666; margin: 0 0 12px; line-height: 1.55; }
+        .blog-card .card-meta { font-size: 0.78rem; color: #aaa; }
 
-    .blog-info h2 a { 
-        text-decoration: none; 
-        color: #1a1a1a; 
-        font-weight: 700;
-    }
+        /* ── 섹션 구분선 ── */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 40px 0 24px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #999;
+        }
+        .section-divider::after { content: ''; flex: 1; height: 1px; background: #f0f0f0; }
 
-    .blog-info p { 
-        margin: 0 !important; 
-        color: #666; 
-        font-size: 0.95rem !important;
-        line-height: 1.5;
-    }
+        /* ── 리스트형 포스트 (이미지 없는 기존 글) ── */
+        .blog-list-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            padding: 20px 0;
+            border-bottom: 1px solid #f5f5f5;
+            text-decoration: none;
+            color: inherit;
+        }
+        .blog-list-item:last-child { border-bottom: none; }
+        .blog-list-item img { width: 110px; height: 75px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+        .blog-list-item .list-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #007bff; margin-bottom: 5px; display: block; }
+        .blog-list-item h3 { font-size: 1rem; font-weight: 700; color: #0d0d0d; margin: 0 0 4px; line-height: 1.4; }
+        .blog-list-item p { font-size: 0.88rem; color: #666; margin: 0; line-height: 1.55; }
 
-    /* 상단 히어로 섹션 (중앙 정렬 유지) */
-    .hero-section {
-        background: #ffffff !important;
-        padding: 60px 20px;
-        text-align: center;
-        border-bottom: 1px solid #f0f0f0;
-    }
-</style>
+        @media (max-width: 620px) {
+            .featured-post { grid-template-columns: 1fr; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .featured-post img { height: 160px; }
+        }
+    </style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="nav-container">
-    <a href="index-ko.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-        <img src="favicon.png" alt="로고" style="width: 32px; height: 32px; border-radius: 6px; object-fit: contain;">
-        <span style="font-size: 1.4rem; font-weight: 800; color: #1a1a2e;">AI Tool Compare</span>
+    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <img src="favicon.png" alt="Logo" style="width:32px;height:32px;border-radius:6px;object-fit:contain;">
+        <span style="font-size:1.4rem;font-weight:800;color:#1a1a2e;">AI Tool Compare</span>
     </a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
@@ -99,92 +180,230 @@
 </header>
 
 <section class="hero-section">
-  <h1 style="font-size: 2.2rem; color: #111;">AI Insights & Latest News</h1>
-  <p style="font-size: 1.1rem; color: #666; margin-top: 10px;">Stay updated with 2026 AI trends and expert tips.</p>
+  <h1>AI Insights &amp; Latest News</h1>
+  <p>Stay updated with 2026 AI trends, expert comparisons, and practical guides.</p>
 </section>
 
+<!-- 카테고리 필터 -->
+<div class="category-filters">
+  <button class="cat-btn active" onclick="filterPosts('all', this)">All</button>
+  <button class="cat-btn" onclick="filterPosts('comparison', this)">Comparisons</button>
+  <button class="cat-btn" onclick="filterPosts('guide', this)">Guides</button>
+  <button class="cat-btn" onclick="filterPosts('tutorial', this)">Tutorials</button>
+  <button class="cat-btn" onclick="filterPosts('coding', this)">Coding</button>
+  <button class="cat-btn" onclick="filterPosts('image', this)">Image</button>
+  <button class="cat-btn" onclick="filterPosts('video', this)">Video</button>
+</div>
+
 <main class="content-container">
-    
-    <article class="blog-post">
-        <a href="blog-top5-tools-2026.html">
-            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="AI Tools">
-        </a>
-        <div class="blog-info">
-            <h2><a href="blog-top5-tools-2026.html">Top 5 Essential AI Tools for Beginners in 2026</a></h2>
-            <p>Overwhelmed by AI? We've selected 5 must-have tools for every beginner to master this year.</p>
-            <a href="blog-top5-tools-2026.html" class="read-more">Read More →</a>
-        </div>
-    </article>
 
-    <article class="blog-post">
-        <a href="gpt4o-vs-claude35-sonnet.html">
-            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="AI comparison">
-        </a>
-        <div class="blog-info">
-            <h2><a href="gpt4o-vs-claude35-sonnet.html">GPT-4o vs Claude 3.5 Sonnet: Real-world Comparison</a></h2>
-            <p>A deep dive into 2026 performance benchmarks for coding, summarizing, and creative writing.</p>
-            <a href="gpt4o-vs-claude35-sonnet.html" class="read-more">Read More →</a>
-        </div>
-    </article>
+  <!-- ── 피처드 포스트 ── -->
+  <a href="chatgpt-vs-claude-2026.html" class="featured-post" data-tags="comparison">
+    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="ChatGPT vs Claude 2026">
+    <div>
+      <div class="featured-label">⭐ Featured · Comparison</div>
+      <h2>ChatGPT vs Claude in 2026: Which AI Is Better for You?</h2>
+      <p>A full head-to-head comparison of the two most popular AI assistants. We test writing, coding, reasoning, and pricing to find out which one wins for your specific needs.</p>
+      <div class="meta">March 20, 2026 &nbsp;·&nbsp; 8 min read</div>
+      <br><span class="read-more">Read More →</span>
+    </div>
+  </a>
 
-    <article class="blog-post">
-        <a href="best-free-ai-images-2026.html">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="AI Images">
-        </a>
-        <div class="blog-info">
-            <h2><a href="best-free-ai-images-2026.html">Best Free AI Image Generators in 2026: TOP 3</a></h2>
-            <p>Compare Midjourney, DALL-E 3, and Stable Diffusion to find the perfect tool for your needs.</p>
-            <a href="best-free-ai-images-2026.html" class="read-more">Read More →</a>
-        </div>
-    </article>
+  <!-- ── 새 글 그리드 ── -->
+  <div class="section-divider">New Articles</div>
+  <div class="blog-grid" id="blog-grid">
 
-    <article class="blog-post">
-        <a href="sora-vs-runway.html">
-            <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=800&q=80" alt="Video AI">
-        </a>
-        <div class="blog-info">
-            <h2><a href="sora-vs-runway.html">Sora vs Runway Gen-3: Ultimate Video AI Comparison</a></h2>
-            <p>Analyzing quality and pricing to determine the best AI video generator in 2026.</p>
-            <a href="sora-vs-runway.html" class="read-more">Read More →</a>
-        </div>
-    </article>
+    <a href="best-free-ai-tools-2026.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="Free AI Tools 2026">
+      <div class="card-body">
+        <span class="card-tag">Guide</span>
+        <h3>Best Free AI Tools in 2026: Top 10 You Can Use Right Now</h3>
+        <p>No credit card needed — top free tools for writing, image, coding, video, and more.</p>
+        <div class="card-meta">March 18, 2026 · 7 min</div>
+      </div>
+    </a>
 
-    <article class="blog-post">
-        <div class="blog-info">
-            <h2><a href="ai-job-replacement-2026.html">Will AI Replace Your Job in 2026?</a></h2>
-            <p>An in-depth analysis of high-risk professions and how to adapt to the future.</p>
-            <a href="ai-job-replacement-2026.html" class="read-more">Read More →</a>
-        </div>
-    </article>
+    <a href="best-ai-for-writing-2026.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="AI Writing Tools 2026">
+      <div class="card-body">
+        <span class="card-tag">Guide</span>
+        <h3>Best AI Tools for Writing in 2026: Ranked &amp; Reviewed</h3>
+        <p>Claude, Jasper, Grammarly, and more — ranked by writing use case.</p>
+        <div class="card-meta">March 15, 2026 · 8 min</div>
+      </div>
+    </a>
 
-    <article class="blog-post">
-        <div class="blog-info">
-            <h2><a href="blog-claude-vs-gpt-2026.html">Claude 4 vs. GPT-5.4: The Ultimate Showdown</a></h2>
-            <p>Head-to-head comparison testing creativity, reasoning, and coding abilities.</p>
-            <a href="blog-claude-vs-gpt-2026.html" class="read-more">Read More →</a>
-        </div>
-    </article>
+    <a href="best-ai-for-coding-2026.html" class="blog-card" data-tags="coding guide">
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="AI Coding Tools 2026">
+      <div class="card-body">
+        <span class="card-tag">Coding</span>
+        <h3>Best AI Coding Tools in 2026: GitHub Copilot vs Cursor vs Claude</h3>
+        <p>Tested for code completion, debugging, and large codebase review.</p>
+        <div class="card-meta">March 12, 2026 · 9 min</div>
+      </div>
+    </a>
 
-    <article class="blog-post">
-        <div class="blog-info">
-            <h2><a href="ai-video-sora-beyond.html">The Rise of AI Video: Sora and Beyond</a></h2>
-            <p>Exploring the future of cinematic AI and its impact on the media industry.</p>
-            <a href="ai-video-sora-beyond.html" class="read-more">Read More →</a>
-        </div>
-    </article>
+    <a href="how-to-use-ai-for-productivity.html" class="blog-card" data-tags="tutorial guide">
+      <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80" alt="AI Productivity 2026">
+      <div class="card-body">
+        <span class="card-tag">Tutorial</span>
+        <h3>How to Use AI to 10x Your Productivity in 2026</h3>
+        <p>Daily workflows, prompt strategies, and tool combos that save hours every week.</p>
+        <div class="card-meta">March 10, 2026 · 9 min</div>
+      </div>
+    </a>
 
-    <article class="blog-post">
-        <div class="blog-info">
-            <h2><a href="ai-for-productivity.html">How to Maximize Productivity with AI</a></h2>
-            <p>Practical tips and workflows for integrating AI assistants into your daily routine.</p>
-            <a href="ai-for-productivity.html" class="read-more">Read More →</a>
-        </div>
-    </article>
+    <a href="best-ai-image-generators-2026.html" class="blog-card" data-tags="image guide comparison">
+      <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="AI Image Generators 2026">
+      <div class="card-body">
+        <span class="card-tag">Image</span>
+        <h3>Best AI Image Generators in 2026: Midjourney vs DALL-E vs Stable Diffusion</h3>
+        <p>Quality, pricing, and use-case rankings for every major image AI.</p>
+        <div class="card-meta">March 8, 2026 · 8 min</div>
+      </div>
+    </a>
+
+    <a href="best-ai-video-generators-2026.html" class="blog-card" data-tags="video guide comparison">
+      <img src="https://images.unsplash.com/photo-1536240478700-b869ad10e2eb?auto=format&fit=crop&w=800&q=80" alt="AI Video Generators 2026">
+      <div class="card-body">
+        <span class="card-tag">Video</span>
+        <h3>Best AI Video Generators in 2026: Sora vs Runway vs Pika</h3>
+        <p>Tested for cinematic quality, ease of use, and pricing across all major tools.</p>
+        <div class="card-meta">March 5, 2026 · 8 min</div>
+      </div>
+    </a>
+
+    <a href="best-ai-tools-for-students-2026.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="AI Tools for Students">
+      <div class="card-body">
+        <span class="card-tag">Students</span>
+        <h3>Best AI Tools for Students in 2026: Study Smarter, Not Harder</h3>
+        <p>Free tools for research, essay writing, note-taking, and exam prep.</p>
+        <div class="card-meta">March 3, 2026 · 7 min</div>
+      </div>
+    </a>
+
+    <a href="how-to-write-better-ai-prompts.html" class="blog-card" data-tags="tutorial">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="AI Prompt Guide 2026">
+      <div class="card-body">
+        <span class="card-tag">Tutorial</span>
+        <h3>How to Write Better AI Prompts: The Complete Beginner's Guide</h3>
+        <p>6 techniques that get dramatically better results from any AI tool.</p>
+        <div class="card-meta">Feb 28, 2026 · 10 min</div>
+      </div>
+    </a>
+
+    <a href="best-ai-tools-for-small-business-2026.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="AI Tools Small Business">
+      <div class="card-body">
+        <span class="card-tag">Business</span>
+        <h3>Best AI Tools for Small Business in 2026: Save Time and Cut Costs</h3>
+        <p>The exact AI stack that saves small business owners 10–15 hours per week.</p>
+        <div class="card-meta">Feb 25, 2026 · 9 min</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ── 기존 글 (리스트형) ── -->
+  <div class="section-divider">Earlier Articles</div>
+
+  <a href="blog-top5-tools-2026.html" class="blog-list-item" data-tags="guide">
+    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=400&q=80" alt="Top 5 AI Tools 2026">
+    <div>
+      <span class="list-tag">Guide</span>
+      <h3>Top 5 Essential AI Tools for Beginners in 2026</h3>
+      <p>Overwhelmed by AI? We've selected 5 must-have tools for every beginner to master this year.</p>
+    </div>
+  </a>
+
+  <a href="gpt4o-vs-claude35-sonnet.html" class="blog-list-item" data-tags="comparison">
+    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=400&q=80" alt="GPT-4o vs Claude">
+    <div>
+      <span class="list-tag">Comparison</span>
+      <h3>GPT-4o vs Claude 3.5 Sonnet: Real-world Comparison</h3>
+      <p>A deep dive into 2026 performance benchmarks for coding, summarizing, and creative writing.</p>
+    </div>
+  </a>
+
+  <a href="best-free-ai-images-2026.html" class="blog-list-item" data-tags="image guide">
+    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Free AI Images">
+    <div>
+      <span class="list-tag">Image</span>
+      <h3>Best Free AI Image Generators in 2026: TOP 3</h3>
+      <p>Compare Midjourney, DALL-E 3, and Stable Diffusion to find the perfect tool for your needs.</p>
+    </div>
+  </a>
+
+  <a href="sora-vs-runway.html" class="blog-list-item" data-tags="video comparison">
+    <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=400&q=80" alt="Sora vs Runway">
+    <div>
+      <span class="list-tag">Video</span>
+      <h3>Sora vs Runway Gen-3: Ultimate Video AI Comparison</h3>
+      <p>Analyzing quality and pricing to determine the best AI video generator in 2026.</p>
+    </div>
+  </a>
+
+  <a href="ai-job-replacement-2026.html" class="blog-list-item" data-tags="guide">
+    <div>
+      <span class="list-tag">Insight</span>
+      <h3>Will AI Replace Your Job in 2026?</h3>
+      <p>An in-depth analysis of high-risk professions and how to adapt to the future.</p>
+    </div>
+  </a>
+
+  <a href="blog-claude-vs-gpt-2026.html" class="blog-list-item" data-tags="comparison">
+    <div>
+      <span class="list-tag">Comparison</span>
+      <h3>Claude 4 vs. GPT-5.4: The Ultimate Showdown</h3>
+      <p>Head-to-head comparison testing creativity, reasoning, and coding abilities.</p>
+    </div>
+  </a>
+
+  <a href="ai-video-sora-beyond.html" class="blog-list-item" data-tags="video">
+    <div>
+      <span class="list-tag">Video</span>
+      <h3>The Rise of AI Video: Sora and Beyond</h3>
+      <p>Exploring the future of cinematic AI and its impact on the media industry.</p>
+    </div>
+  </a>
+
+  <a href="ai-for-productivity.html" class="blog-list-item" data-tags="tutorial">
+    <div>
+      <span class="list-tag">Tutorial</span>
+      <h3>How to Maximize Productivity with AI</h3>
+      <p>Practical tips and workflows for integrating AI assistants into your daily routine.</p>
+    </div>
+  </a>
+
 </main>
 
 <footer class="site-footer">
     <p class="copyright">&copy; 2026 AI Tool Compare. All rights reserved.</p>
 </footer>
 
+<script>
+function filterPosts(tag, btn) {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const allPosts = document.querySelectorAll('[data-tags]');
+    allPosts.forEach(post => {
+        if (tag === 'all') {
+            post.style.display = '';
+        } else {
+            const tags = post.dataset.tags || '';
+            post.style.display = tags.includes(tag) ? '' : 'none';
+        }
+    });
+
+    // 피처드 포스트 처리
+    const featured = document.querySelector('.featured-post');
+    if (featured) {
+        const featTags = featured.dataset.tags || '';
+        featured.style.display = (tag === 'all' || featTags.includes(tag)) ? '' : 'none';
+    }
+}
+</script>
 </body>
 </html>
