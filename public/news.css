@@ -37,11 +37,33 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
+/* 1. 뉴스 아이템 스타일 (이미지가 밖으로 안 나가게 막기) */
+.news-item {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden; /* 👈 중요: 이미지가 카드 밖으로 튀어나오는 걸 잘라버림 */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* 카드 높이 통일 */
+}
+
+/* 2. 이미지 스타일 (크기 고정 및 비율 정리) */
 .news-item img {
     width: 100% !important;
-    height: 200px !important;    /* 👈 190px에서 200px로 살짝 키우고 고정! */
-    object-fit: cover !important; /* 👈 이미지가 찌그러지지 않게 꽉 채우는 마법의 코드 */
+    height: 200px !important;    /* 👈 모든 이미지를 200px 높이로 통일 */
+    min-height: 200px !important; 
+    max-height: 200px !important;
+    object-fit: contain !important; /* 👈 로고 형태가 많다면 contain, 꽉 채우려면 cover */
+    background-color: #f8f9fa;   /* 이미지 여백이 남을 경우 대비한 배경색 */
     display: block !important;
+}
+
+/* 3. 텍스트 영역 (이미지 아래에 확실히 배치) */
+.news-text {
+    padding: 1.5rem;
+    background: #fff;
+    z-index: 2; /* 텍스트가 이미지 위로 올라오지 않게 방어 */
 }
 
 .news-text {
