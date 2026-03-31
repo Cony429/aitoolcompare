@@ -26,15 +26,16 @@
 
 <header class="site-header">
   <div class="nav-container">
-    <a href="index-ko.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-      <img src="favicon.png" alt="로고" style="width: 32px; height: 32px; border-radius: 6px; object-fit: contain;">
+    <!-- ✅ 수정: EN 페이지이므로 index.html로 연결 -->
+    <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+      <img src="favicon.png" alt="Logo" style="width: 32px; height: 32px; border-radius: 6px; object-fit: contain;">
       <span style="font-size: 1.4rem; font-weight: 800; color: #1a1a2e;">AI Tool Compare</span>
-  </a>
+    </a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="compare.html">Compare</a>
       <a href="blog.html">Blog</a>
-      <a href="news.html">News</a>
+      <a href="news.html" class="active">News</a>
     </nav>
     <div class="lang-switch">
       <a href="news.html">EN</a> | <a href="news-ko.html">KO</a>
@@ -43,14 +44,13 @@
 </header>
 
 <section class="hero-section">
-  <h1>AI News & Updates</h1>
+  <h1>AI News &amp; Updates</h1>
   <p class="subtitle">The latest developments in the fast-paced world of AI.</p>
 </section>
 
 <main class="news-container">
-    <div class="news-grid" id="news-container">
-        <!-- News items will be dynamically inserted here -->
-    </div>
+    <!-- ✅ news.js가 .news-item 카드를 이 안에 생성 -->
+    <div class="news-grid" id="news-container"></div>
 </main>
 
 <footer class="site-footer">
