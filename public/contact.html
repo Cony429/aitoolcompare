@@ -48,7 +48,31 @@
             cursor: pointer; transition: background 0.2s, transform 0.15s;
         }
         .submit-btn:hover { background: #0056cc; transform: translateY(-1px); }
-        .success-msg { display: none; background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 16px; text-align: center; color: #166534; font-weight: 600; margin-top: 16px; }
+        .submit-btn:disabled { background: #93c5fd; cursor: not-allowed; transform: none; }
+
+        /* Formspree 성공/에러 메시지 */
+        [data-fs-success] {
+            display: none;
+            background: #f0fdf4; border: 1px solid #86efac; border-radius: 12px;
+            padding: 24px; text-align: center; color: #166534;
+            font-size: 1rem; line-height: 1.7; margin-top: 16px;
+        }
+        [data-fs-success] .success-icon { font-size: 2rem; margin-bottom: 8px; display: block; }
+        [data-fs-error] {
+            display: none;
+            background: #fef2f2; border: 1px solid #fca5a5; border-radius: 8px;
+            padding: 12px 16px; color: #dc2626; font-size: 0.88rem;
+            margin-top: 8px;
+        }
+        /* field-level 에러 */
+        span[data-fs-error] {
+            display: none; background: none; border: none;
+            padding: 4px 0 0; color: #dc2626; font-size: 0.82rem; border-radius: 0;
+        }
+        input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] {
+            border-color: #dc2626 !important;
+            box-shadow: 0 0 0 3px rgba(220,38,38,0.1) !important;
+        }
         @media(max-width:680px){ .contact-wrap{grid-template-columns:1fr} .form-row{grid-template-columns:1fr} }
     </style>
 </head>
@@ -87,7 +111,7 @@
             <div class="info-icon">✉️</div>
             <div>
                 <h3>Email</h3>
-                <p><a href="mailto:hello@bestaitoolcompare.com">hello@bestaitoolcompare.com</a></p>
+                <p><a href="/cdn-cgi/l/email-protection#4028252c2c2f00222533342129342f2f2c232f2d302132256e232f2d"><span class="__cf_email__" data-cfemail="6109040d0d0e21030412150008150e0e0d020e0c110013044f020e0c">[email&#160;protected]</span></a></p>
                 <p style="font-size:0.85rem;color:#888;margin-top:2px;">General inquiries & feedback</p>
             </div>
         </div>
@@ -121,27 +145,46 @@
         </div>
     </div>
 
-    <!-- 오른쪽: 문의 폼 -->
+    <!-- 오른쪽: 문의 폼 (Formspree Vanilla JS Ajax 연동) -->
     <div class="contact-form-box">
         <h2>Send a Message</h2>
-        <form id="contact-form" onsubmit="handleSubmit(event)">
+
+        <!-- 전송 성공 시 표시 -->
+        <div data-fs-success>
+            <span class="success-icon">✅</span>
+            <strong>Message sent successfully!</strong><br>
+            We'll get back to you within 2 business days.
+        </div>
+
+        <!-- 폼 전체 에러 시 표시 -->
+        <div data-fs-error></div>
+
+        <form id="contact-form">
             <div class="form-row">
                 <div class="form-group">
                     <label for="fname">First Name *</label>
-                    <input type="text" id="fname" name="fname" placeholder="John" required>
+                    <input type="text" id="fname" name="fname"
+                           placeholder="John" required
+                           data-fs-field>
+                    <span data-fs-error="fname"></span>
                 </div>
                 <div class="form-group">
                     <label for="lname">Last Name</label>
                     <input type="text" id="lname" name="lname" placeholder="Doe">
                 </div>
             </div>
+
             <div class="form-group">
                 <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <input type="email" id="email" name="email"
+                       placeholder="you@example.com" required
+                       data-fs-field>
+                <span data-fs-error="email"></span>
             </div>
+
             <div class="form-group">
                 <label for="subject">Subject *</label>
-                <select id="subject" name="subject" required>
+                <select id="subject" name="subject" required data-fs-field>
                     <option value="">Select a topic...</option>
                     <option value="correction">Review Correction / Inaccuracy</option>
                     <option value="suggestion">Tool Suggestion</option>
@@ -149,15 +192,21 @@
                     <option value="feedback">General Feedback</option>
                     <option value="other">Other</option>
                 </select>
+                <span data-fs-error="subject"></span>
             </div>
+
             <div class="form-group">
                 <label for="message">Message *</label>
-                <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+                <textarea id="message" name="message"
+                          placeholder="Tell us what's on your mind..." required
+                          data-fs-field></textarea>
+                <span data-fs-error="message"></span>
             </div>
-            <button type="submit" class="submit-btn">Send Message →</button>
-            <div class="success-msg" id="success-msg">
-                ✅ Message sent! We'll get back to you within 2 business days.
-            </div>
+
+            <!-- data-fs-submit-btn: 전송 중 자동 비활성화 -->
+            <button type="submit" class="submit-btn" data-fs-submit-btn>
+                Send Message →
+            </button>
         </form>
     </div>
 
@@ -175,17 +224,16 @@
     </div>
 </footer>
 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+<!-- Formspree Vanilla JS Ajax SDK -->
 <script>
-function handleSubmit(e) {
-    e.preventDefault();
-    // 실제 폼 제출 처리 (Formspree, Netlify Forms 등 연동 시 action URL 추가)
-    // 현재는 성공 메시지만 표시
-    document.getElementById('contact-form').style.opacity = '0.5';
-    document.getElementById('contact-form').style.pointerEvents = 'none';
-    document.getElementById('success-msg').style.display = 'block';
-    // 실제 이메일 전송을 원하면 아래 Formspree 연동 코드를 사용하세요:
-    // form.action = "https://formspree.io/f/YOUR_FORM_ID"
-}
+  window.formspree = window.formspree || function () {
+    (formspree.q = formspree.q || []).push(arguments);
+  };
+  formspree('initForm', {
+    formElement: '#contact-form',
+    formId: 'mgopzrwb'
+  });
 </script>
-</body>
-</html>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
