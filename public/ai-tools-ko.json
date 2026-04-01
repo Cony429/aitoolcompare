@@ -1,218 +1,1092 @@
 [
   {
     "name": "ChatGPT",
-    "description": "대화, 코딩, 데이터 분석 등 다목적으로 활용 가능한 OpenAI의 AI 챗봇. 세계에서 가장 많이 사용되는 AI 어시스턴트.",
-    "category": ["Chatbot", "Writing", "Coding"],
+    "description": "GPT-4o 기반 OpenAI의 대표 AI 어시스턴트. 대화, 코딩, 데이터 분석, 이미지 생성, 실시간 웹 검색까지 — 전 세계에서 가장 많이 사용되는 AI 도구.",
+    "category": [
+      "Chatbot",
+      "Writing",
+      "Coding"
+    ],
     "rating": 5.0,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://chat.openai.com",
-    "keywords": ["openai", "gpt", "챗봇", "대화", "코딩", "글쓰기", "chatgpt"]
+    "keywords": [
+      "openai",
+      "gpt",
+      "챗봇",
+      "코딩",
+      "글쓰기",
+      "gpt-4o"
+    ]
   },
   {
     "name": "Claude",
-    "description": "안전성과 유용성에 집중한 Anthropic의 AI 어시스턴트. 장문 문서 분석, 섬세한 글쓰기, 코딩에 탁월.",
-    "category": ["Chatbot", "Writing", "Coding"],
+    "description": "200K 토큰 컨텍스트 창을 가진 Anthropic의 고급 AI. 장문 문서 분석, 섬세한 글쓰기, 코딩에서 최고의 성능. 가장 낮은 환각 비율.",
+    "category": [
+      "Chatbot",
+      "Writing",
+      "Coding"
+    ],
     "rating": 4.9,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://claude.ai",
-    "keywords": ["anthropic", "claude", "챗봇", "글쓰기", "안전", "장문 분석"]
+    "keywords": [
+      "anthropic",
+      "claude",
+      "챗봇",
+      "글쓰기",
+      "장문 분석",
+      "코딩",
+      "소네트",
+      "오퍼스"
+    ]
   },
   {
     "name": "Gemini",
-    "description": "Google 생태계에 통합된 최고 성능의 멀티모달 AI 모델. 100만 토큰 컨텍스트 창 지원.",
-    "category": ["Chatbot", "Writing", "Coding"],
+    "description": "100만 토큰 컨텍스트 창의 구글 멀티모달 AI. Gmail, Docs, Drive와 통합. 구글 워크스페이스 사용자와 초장문 문서 처리에 최적.",
+    "category": [
+      "Chatbot",
+      "Writing",
+      "Coding"
+    ],
     "rating": 4.8,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://gemini.google.com",
-    "keywords": ["google", "gemini", "멀티모달", "챗봇", "검색"]
+    "keywords": [
+      "google",
+      "gemini",
+      "멀티모달",
+      "챗봇",
+      "구글 워크스페이스",
+      "100만 토큰"
+    ]
   },
   {
-    "name": "Perplexity",
-    "description": "여러 웹 소스를 실시간으로 분석해 출처가 명시된 직접적인 답변을 제공하는 AI 검색엔진.",
-    "category": ["Chatbot"],
+    "name": "Perplexity AI",
+    "description": "여러 웹 소스를 실시간 분석해 출처가 명시된 답변을 제공하는 AI 검색엔진. 리서치, 팩트체크, 최신 정보 검색에 최고.",
+    "category": [
+      "Chatbot"
+    ],
     "rating": 4.7,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://perplexity.ai",
-    "keywords": ["검색", "리서치", "출처", "실시간", "팩트체크"]
+    "keywords": [
+      "검색",
+      "리서치",
+      "인용",
+      "실시간",
+      "팩트체크",
+      "퍼플렉시티"
+    ]
+  },
+  {
+    "name": "Grok",
+    "description": "X(트위터) 실시간 데이터에 접근하는 xAI의 AI 어시스턴트. 최신 뉴스, 직접적인 답변, Grok 3 모델의 강력한 추론 능력.",
+    "category": [
+      "Chatbot"
+    ],
+    "rating": 4.5,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://grok.x.ai",
+    "keywords": [
+      "xai",
+      "grok",
+      "트위터",
+      "X",
+      "실시간 뉴스",
+      "일론 머스크",
+      "grok 3"
+    ]
+  },
+  {
+    "name": "Microsoft Copilot",
+    "description": "Microsoft 365에 깊이 통합된 AI — Excel, Word, PowerPoint, Teams, Outlook. 워크플로우 자동화, 회의 요약, 브랜드 콘텐츠 생성.",
+    "category": [
+      "Chatbot",
+      "Writing",
+      "Coding"
+    ],
+    "rating": 4.6,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://copilot.microsoft.com",
+    "keywords": [
+      "마이크로소프트",
+      "코파일럿",
+      "오피스 365",
+      "팀즈",
+      "워드",
+      "엑셀",
+      "파워포인트",
+      "기업"
+    ]
+  },
+  {
+    "name": "DeepSeek",
+    "description": "프론티어 수준의 추론 능력을 훨씬 저렴한 비용에 제공하는 중국산 오픈소스 AI. 수학, 코딩, 기술 분석에서 탁월. API 무료 사용 가능.",
+    "category": [
+      "Chatbot",
+      "Coding"
+    ],
+    "rating": 4.5,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://deepseek.com",
+    "keywords": [
+      "딥시크",
+      "오픈소스",
+      "추론",
+      "코딩",
+      "수학",
+      "저렴한",
+      "api"
+    ]
+  },
+  {
+    "name": "NotebookLM",
+    "description": "업로드한 문서만을 기반으로 작동하는 구글의 AI 리서치 도구. PDF를 팟캐스트 스타일 대화로 변환하는 오디오 오버뷰 기능 제공.",
+    "category": [
+      "Chatbot"
+    ],
+    "rating": 4.6,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://notebooklm.google.com",
+    "keywords": [
+      "google",
+      "노트북LM",
+      "리서치",
+      "문서",
+      "pdf",
+      "팟캐스트",
+      "오디오 오버뷰",
+      "공부"
+    ]
   },
   {
     "name": "Midjourney",
-    "description": "텍스트 프롬프트로 놀라운 예술적 이미지를 생성하는 최고의 AI 이미지 생성기. 디자이너와 일러스트레이터의 필수 도구.",
-    "category": ["Image"],
+    "description": "AI 이미지 생성의 황금 기준. 비교할 수 없는 질감과 조명으로 영화적인 비주얼 생성. 버전 7에서 프롬프트 정확도 크게 향상.",
+    "category": [
+      "Image"
+    ],
     "rating": 4.8,
-    "pricing": ["Paid"],
+    "pricing": [
+      "Paid"
+    ],
     "link": "https://midjourney.com",
-    "keywords": ["이미지", "아트", "디자인", "일러스트", "크리에이티브", "텍스트-투-이미지"]
+    "keywords": [
+      "이미지",
+      "아트",
+      "디자인",
+      "일러스트",
+      "크리에이티브",
+      "텍스트-투-이미지",
+      "미드저니 v7"
+    ]
+  },
+  {
+    "name": "DALL-E 3",
+    "description": "ChatGPT Plus에 내장된 OpenAI의 이미지 모델. 이미지 내 텍스트 렌더링과 사실적인 인물 사진에서 최고. 별도 구독 불필요.",
+    "category": [
+      "Image"
+    ],
+    "rating": 4.7,
+    "pricing": [
+      "Paid"
+    ],
+    "link": "https://openai.com/dall-e-3",
+    "keywords": [
+      "이미지",
+      "openai",
+      "달리",
+      "텍스트 렌더링",
+      "사실적",
+      "인물 사진"
+    ]
   },
   {
     "name": "Leonardo.ai",
-    "description": "크리에이티브 에셋, 콘셉트 아트, 게임 개발 워크플로우에 최적화된 강력한 이미지 생성 플랫폼.",
-    "category": ["Image"],
+    "description": "게임 에셋, 콘셉트 아트에 최적화된 이미지 생성 플랫폼. 워터마크 없이 하루 150 무료 토큰 제공 — 최고의 무료 온라인 이미지 생성기.",
+    "category": [
+      "Image"
+    ],
     "rating": 4.6,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://leonardo.ai",
-    "keywords": ["이미지", "게임", "콘셉트 아트", "크리에이티브", "에셋"]
+    "keywords": [
+      "이미지",
+      "게임",
+      "콘셉트 아트",
+      "크리에이티브",
+      "에셋",
+      "무료",
+      "레오나르도"
+    ]
   },
   {
     "name": "Canva AI",
-    "description": "디자인 경험 없이도 SNS 게시물, 프레젠테이션, 그래픽을 만들 수 있는 쉬운 AI 디자인 도구.",
-    "category": ["Image", "Writing"],
+    "description": "1억 7천만 명이 사용하는 AI 디자인 플랫폼. Magic Design으로 브랜드 그래픽 자동 생성, 배경 제거와 Magic Eraser로 쉬운 이미지 편집.",
+    "category": [
+      "Image",
+      "Writing"
+    ],
     "rating": 4.6,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://canva.com",
-    "keywords": ["디자인", "SNS", "프레젠테이션", "그래픽", "템플릿", "포스터"]
+    "keywords": [
+      "디자인",
+      "SNS",
+      "프레젠테이션",
+      "그래픽",
+      "템플릿",
+      "매직 디자인",
+      "캔바"
+    ]
+  },
+  {
+    "name": "Adobe Firefly",
+    "description": "Photoshop과 Illustrator에 통합된 Adobe의 AI 이미지 생성기. 저작권 문제 없는 상업적으로 안전한 출력물 — 전문 디자이너의 표준.",
+    "category": [
+      "Image"
+    ],
+    "rating": 4.5,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://firefly.adobe.com",
+    "keywords": [
+      "어도비",
+      "파이어플라이",
+      "포토샵",
+      "일러스트레이터",
+      "상업 안전",
+      "디자인",
+      "크리에이티브 클라우드"
+    ]
+  },
+  {
+    "name": "Stable Diffusion",
+    "description": "대표적인 오픈소스 이미지 모델. 로컬에서 무료로 무제한 생성. LoRA 모델과 ComfyUI로 최대한의 커스터마이즈. GPU와 기술 설정 필요.",
+    "category": [
+      "Image"
+    ],
+    "rating": 4.4,
+    "pricing": [
+      "Free"
+    ],
+    "link": "https://stability.ai",
+    "keywords": [
+      "이미지",
+      "오픈소스",
+      "로컬",
+      "무료",
+      "무제한",
+      "스테이블 디퓨전",
+      "comfyui",
+      "lora"
+    ]
+  },
+  {
+    "name": "Ideogram",
+    "description": "이미지 내 텍스트 렌더링 전문 AI 이미지 생성기. 로고, 포스터, 그래픽에서 텍스트가 정확하게 표시되어야 할 때 가장 신뢰할 수 있는 도구.",
+    "category": [
+      "Image"
+    ],
+    "rating": 4.4,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://ideogram.ai",
+    "keywords": [
+      "이미지",
+      "텍스트 렌더링",
+      "로고",
+      "포스터",
+      "이데오그램",
+      "타이포그래피",
+      "그래픽 디자인"
+    ]
   },
   {
     "name": "Sora",
-    "description": "간단한 텍스트 한 줄로 실감나고 상상력 넘치는 영상을 만드는 OpenAI의 텍스트-투-비디오 모델.",
-    "category": ["Video"],
+    "description": "OpenAI의 텍스트-투-비디오 모델. 최대 60초의 영화적이고 물리적으로 사실적인 영상 생성. ChatGPT Plus 포함. 2026년 최고 품질의 AI 영상.",
+    "category": [
+      "Video"
+    ],
     "rating": 4.9,
-    "pricing": ["Paid"],
+    "pricing": [
+      "Paid"
+    ],
     "link": "https://sora.com",
-    "keywords": ["영상", "텍스트-투-비디오", "openai", "영화", "생성"]
+    "keywords": [
+      "영상",
+      "텍스트-투-비디오",
+      "openai",
+      "영화",
+      "소라"
+    ]
   },
   {
-    "name": "Runway",
-    "description": "영화 제작자와 크리에이터가 사용하는 전문 AI 영상 생성·편집 플랫폼. 실시간 영상 편집 지원.",
-    "category": ["Video"],
+    "name": "Runway Gen-3",
+    "description": "모션 브러시, 프레임별 편집, 스타일 컨트롤을 갖춘 전문 AI 영상 플랫폼. 프로덕션 워크플로우에 AI를 통합하는 영화 제작자들의 선택.",
+    "category": [
+      "Video"
+    ],
     "rating": 4.6,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://runwayml.com",
-    "keywords": ["영상", "편집", "생성", "영화", "크리에이티브"]
+    "keywords": [
+      "영상",
+      "편집",
+      "생성",
+      "영화",
+      "gen-3",
+      "런웨이",
+      "모션 브러시"
+    ]
   },
   {
     "name": "HeyGen",
-    "description": "비즈니스용 AI 영상 생성기. 사실적인 AI 아바타로 전문적인 대변인 영상을 몇 분 만에 제작.",
-    "category": ["Video"],
+    "description": "비즈니스용 AI 영상 생성기. 40개 이상 언어로 정확한 립싱크를 갖춘 AI 아바타 대변인 영상 제작. 수천 개 기업이 교육과 마케팅에 사용.",
+    "category": [
+      "Video"
+    ],
     "rating": 4.5,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://www.heygen.com",
-    "keywords": ["영상", "아바타", "비즈니스", "대변인", "마케팅"]
+    "keywords": [
+      "영상",
+      "아바타",
+      "비즈니스",
+      "대변인",
+      "마케팅",
+      "헤이젠",
+      "립싱크"
+    ]
   },
   {
-    "name": "Pika",
-    "description": "텍스트, 이미지, 기존 영상으로 영화 같은 단편 영상을 만들고 편집할 수 있는 아이디어-투-비디오 플랫폼.",
-    "category": ["Video"],
-    "rating": 4.4,
-    "pricing": ["Free", "Paid"],
-    "link": "https://pika.art",
-    "keywords": ["영상", "텍스트-투-비디오", "크리에이티브", "단편 영상", "애니메이션"]
+    "name": "Kling AI",
+    "description": "쾌수(Kuaishou)의 AI 영상 모델. 최대 2분 영화급 영상 생성. Sora의 강력한 경쟁자로 인상적인 모션 사실성과 무료 플랜 제공.",
+    "category": [
+      "Video"
+    ],
+    "rating": 4.5,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://klingai.com",
+    "keywords": [
+      "영상",
+      "클링",
+      "쾌수",
+      "영화",
+      "텍스트-투-비디오",
+      "무료",
+      "모션"
+    ]
   },
   {
     "name": "Luma AI",
-    "description": "텍스트 또는 이미지 프롬프트로 사실적인 3D 오브젝트와 영화 수준의 영상을 만드는 AI.",
-    "category": ["Video", "Image"],
+    "description": "사실적인 3D 오브젝트와 영화적 영상을 위한 AI 플랫폼. Dream Machine 비디오 모델의 매우 부드러운 모션과 카메라 움직임으로 유명.",
+    "category": [
+      "Video",
+      "Image"
+    ],
     "rating": 4.5,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://lumalabs.ai",
-    "keywords": ["3d", "영상", "영화", "사실적"]
+    "keywords": [
+      "3d",
+      "영상",
+      "영화",
+      "사실적",
+      "루마",
+      "드림 머신"
+    ]
+  },
+  {
+    "name": "Pika",
+    "description": "월 250 크레딧의 넉넉한 무료 플랜을 가진 아이디어-투-비디오 플랫폼. SNS 짧은 영상, 애니메이션, 빠른 크리에이티브 실험에 최적.",
+    "category": [
+      "Video"
+    ],
+    "rating": 4.4,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://pika.art",
+    "keywords": [
+      "영상",
+      "텍스트-투-비디오",
+      "크리에이티브",
+      "단편 영상",
+      "애니메이션",
+      "피카",
+      "무료"
+    ]
+  },
+  {
+    "name": "Synthesia",
+    "description": "교육과 설명 영상을 위한 기업용 AI 영상 플랫폼. Google, Nike 등 5만 개 이상 기업이 사용해 촬영 없이 다국어 영상 제작.",
+    "category": [
+      "Video"
+    ],
+    "rating": 4.5,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://synthesia.io",
+    "keywords": [
+      "영상",
+      "아바타",
+      "기업",
+      "교육",
+      "신시시아",
+      "설명 영상",
+      "법인",
+      "다국어"
+    ]
   },
   {
     "name": "Descript",
-    "description": "워드 문서처럼 스크립트를 편집하는 방식으로 영상과 팟캐스트를 제작하는 올인원 편집 도구.",
-    "category": ["Video", "Audio"],
+    "description": "스크립트를 편집하듯 영상과 팟캐스트를 편집하는 올인원 에디터. AI 음성 복제, 필러 워드 자동 제거, 화면 녹화 기능 포함.",
+    "category": [
+      "Video",
+      "Audio"
+    ],
     "rating": 4.5,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://descript.com",
-    "keywords": ["영상", "팟캐스트", "편집", "스크립트", "오디오"]
+    "keywords": [
+      "영상",
+      "팟캐스트",
+      "편집",
+      "스크립트",
+      "오디오",
+      "음성 복제",
+      "디스크립트"
+    ]
+  },
+  {
+    "name": "Wan 2.1",
+    "description": "알리바바의 오픈소스 텍스트-투-비디오 모델. 1080p 지원. GPU 또는 Hugging Face로 로컬에서 무료 무제한 사용. 최고의 무료 영상 생성기.",
+    "category": [
+      "Video"
+    ],
+    "rating": 4.3,
+    "pricing": [
+      "Free"
+    ],
+    "link": "https://huggingface.co/Wan-AI",
+    "keywords": [
+      "영상",
+      "오픈소스",
+      "알리바바",
+      "wan",
+      "무료",
+      "로컬",
+      "1080p",
+      "comfyui"
+    ]
   },
   {
     "name": "ElevenLabs",
-    "description": "30개 이상의 언어로 초현실적인 음성을 생성하고 목소리를 복제하는 최첨단 AI 음성 합성 플랫폼.",
-    "category": ["Audio"],
+    "description": "30개 이상 언어의 초현실적인 AI 음성 합성. 음성 복제, 실시간 TTS, 감성 표현 음성 API. 오디오 콘텐츠 제작의 업계 표준.",
+    "category": [
+      "Audio"
+    ],
     "rating": 4.7,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://elevenlabs.io",
-    "keywords": ["음성", "오디오", "텍스트-투-스피치", "목소리 복제", "나레이션", "팟캐스트"]
+    "keywords": [
+      "음성",
+      "오디오",
+      "텍스트-투-스피치",
+      "음성 복제",
+      "나레이션",
+      "팟캐스트",
+      "일레븐랩스"
+    ]
   },
   {
     "name": "Suno",
-    "description": "몇 초 만에 보컬, 악기, 가사가 포함된 완성된 노래를 만드는 AI 음악 생성 플랫폼.",
-    "category": ["Audio"],
+    "description": "선도적인 AI 음악 생성 플랫폼. 텍스트 프롬프트로 보컬, 악기, 가사가 포함된 완전한 노래 생성. 무료 플랜에서 하루 50곡 제공.",
+    "category": [
+      "Audio"
+    ],
     "rating": 4.6,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://www.suno.ai",
-    "keywords": ["음악", "오디오", "노래", "보컬", "생성", "가사"]
+    "keywords": [
+      "음악",
+      "오디오",
+      "노래",
+      "보컬",
+      "생성",
+      "가사",
+      "수노"
+    ]
   },
   {
     "name": "Udio",
-    "description": "AI로 스튜디오 수준의 음악을 만드세요. 어떤 장르든 전문가급 프로덕션의 오리지널 곡 생성 가능.",
-    "category": ["Audio"],
+    "description": "스튜디오 수준의 AI 음악 생성기. 재즈부터 힙합까지 어떤 장르든 현실감 있는 악기 연주로 오리지널 곡 생성.",
+    "category": [
+      "Audio"
+    ],
     "rating": 4.5,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://www.udio.com",
-    "keywords": ["음악", "오디오", "노래", "생성", "장르", "프로덕션"]
+    "keywords": [
+      "음악",
+      "오디오",
+      "노래",
+      "생성",
+      "장르",
+      "프로덕션",
+      "유디오"
+    ]
+  },
+  {
+    "name": "Murf AI",
+    "description": "20개 이상 언어의 200가지 이상 목소리를 갖춘 전문 AI 보이스오버 도구. 내장 영상 싱크 기능. e-러닝, 오디오북, 기업 교육에 사용.",
+    "category": [
+      "Audio"
+    ],
+    "rating": 4.4,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://murf.ai",
+    "keywords": [
+      "음성",
+      "오디오",
+      "텍스트-투-스피치",
+      "이러닝",
+      "오디오북",
+      "머프",
+      "보이스오버"
+    ]
   },
   {
     "name": "Jasper",
-    "description": "마케팅 팀을 위한 전문 AI 콘텐츠 플랫폼. 블로그 포스트, 광고 카피, SNS 콘텐츠를 대규모로 생성.",
-    "category": ["Writing"],
+    "description": "마케팅 팀을 위한 전문 AI 콘텐츠 플랫폼. SEO 최적화 블로그 포스트, 광고 카피, SNS 콘텐츠를 브랜드 보이스로 대규모 생성. Surfer SEO 통합.",
+    "category": [
+      "Writing"
+    ],
     "rating": 4.5,
-    "pricing": ["Paid"],
+    "pricing": [
+      "Paid"
+    ],
     "link": "https://jasper.ai",
-    "keywords": ["글쓰기", "마케팅", "블로그", "카피", "콘텐츠", "SEO"]
+    "keywords": [
+      "글쓰기",
+      "마케팅",
+      "블로그",
+      "카피",
+      "콘텐츠",
+      "SEO",
+      "재스퍼",
+      "브랜드 보이스"
+    ]
   },
   {
     "name": "Copy.ai",
-    "description": "카피라이터와 마케팅 팀을 위한 자동화 크리에이티브 도구. 광고 카피, 이메일, 상품 설명 즉시 생성.",
-    "category": ["Writing"],
+    "description": "광고, 이메일, 상품 설명, SNS를 위한 90가지 이상 템플릿의 AI 카피라이팅 도구. 프리랜서와 소규모 사업체에 이상적인 넉넉한 무료 플랜.",
+    "category": [
+      "Writing"
+    ],
     "rating": 4.4,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://www.copy.ai",
-    "keywords": ["글쓰기", "카피라이팅", "마케팅", "이메일", "광고 카피"]
+    "keywords": [
+      "글쓰기",
+      "카피라이팅",
+      "마케팅",
+      "이메일",
+      "광고 카피",
+      "copy.ai",
+      "무료"
+    ]
   },
   {
     "name": "Writesonic",
-    "description": "SEO 친화적인 블로그 포스트, 랜딩 페이지, 마케팅 카피를 생성하는 AI 작가. Chatsonic 챗봇 포함.",
-    "category": ["Writing"],
+    "description": "SEO 친화적인 블로그 포스트, 랜딩 페이지, 마케팅 카피를 위한 AI 작가. 실시간 웹 접근 기능의 Chatsonic과 팩트체킹 AI 아티클 라이터 포함.",
+    "category": [
+      "Writing"
+    ],
     "rating": 4.4,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://writesonic.com",
-    "keywords": ["글쓰기", "SEO", "블로그", "랜딩 페이지", "마케팅"]
+    "keywords": [
+      "글쓰기",
+      "SEO",
+      "블로그",
+      "랜딩 페이지",
+      "마케팅",
+      "라이트소닉"
+    ]
   },
   {
     "name": "QuillBot",
-    "description": "다양한 글쓰기 모드로 텍스트를 재작성, 요약, 다듬어주는 AI 패러프레이징·문법 교정 도구.",
-    "category": ["Writing"],
+    "description": "여러 글쓰기 모드의 AI 패러프레이징·문법 교정 도구. 기존 텍스트 재작성, 요약, 명확성 향상에 광범위하게 사용. 학생과 학자에게 인기.",
+    "category": [
+      "Writing"
+    ],
     "rating": 4.4,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://quillbot.com",
-    "keywords": ["글쓰기", "패러프레이징", "문법", "요약", "재작성"]
+    "keywords": [
+      "글쓰기",
+      "패러프레이징",
+      "문법",
+      "요약",
+      "재작성",
+      "퀼봇",
+      "학생"
+    ]
   },
   {
     "name": "Grammarly",
-    "description": "문법, 어조, 명확성, 문체를 검사하는 AI 글쓰기 어시스턴트. 이메일, 문서, 웹 전반에서 작동.",
-    "category": ["Writing"],
+    "description": "실시간으로 문법, 어조, 명확성, 문체를 검사하는 AI 글쓰기 어시스턴트. 브라우저, Google Docs, 이메일에 통합. 전문가 교정의 표준 도구.",
+    "category": [
+      "Writing"
+    ],
     "rating": 4.5,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://www.grammarly.com",
-    "keywords": ["글쓰기", "문법", "맞춤법", "어조", "편집", "교정"]
+    "keywords": [
+      "글쓰기",
+      "문법",
+      "맞춤법",
+      "어조",
+      "편집",
+      "교정",
+      "그래머리"
+    ]
   },
   {
     "name": "Notion AI",
-    "description": "Notion에 내장된 AI 글쓰기, 요약, 정리 기능으로 업무 워크플로우를 강화하세요.",
-    "category": ["Writing"],
+    "description": "Notion 워크스페이스에 내장된 AI. 노트 요약, 콘텐츠 초안, 기업 검색, 반복 작업 자동화 — 워크스페이스를 벗어나지 않고.",
+    "category": [
+      "Writing"
+    ],
     "rating": 4.5,
-    "pricing": ["Paid"],
+    "pricing": [
+      "Paid"
+    ],
     "link": "https://notion.so",
-    "keywords": ["글쓰기", "생산성", "노트", "정리", "요약"]
+    "keywords": [
+      "글쓰기",
+      "생산성",
+      "노트",
+      "정리",
+      "요약",
+      "노션",
+      "워크스페이스"
+    ]
   },
   {
     "name": "Gamma",
-    "description": "디자인 실력 없이도 몇 초 만에 아름다운 프레젠테이션, 메모, 브리프를 만드는 AI 도구.",
-    "category": ["Writing", "Image"],
+    "description": "AI 기반 프레젠테이션 빌더. 주제를 설명하면 구조, 비주얼, 레이아웃이 갖춰진 완성된 덱을 몇 초 만에 생성. 디자인 실력 불필요.",
+    "category": [
+      "Writing",
+      "Image"
+    ],
     "rating": 4.5,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://gamma.app",
-    "keywords": ["프레젠테이션", "슬라이드", "덱", "디자인", "메모"]
+    "keywords": [
+      "프레젠테이션",
+      "슬라이드",
+      "덱",
+      "디자인",
+      "메모",
+      "감마"
+    ]
   },
   {
     "name": "GitHub Copilot",
-    "description": "GitHub과 OpenAI의 AI 페어 프로그래머. IDE 내에서 실시간으로 코드 완성과 전체 함수를 제안.",
-    "category": ["Coding"],
+    "description": "실시간 코드 완성과 내장 채팅 어시스턴트를 갖춘 AI 페어 프로그래머. VS Code, JetBrains 등에 통합. 무료 티어에서 월 2,000회 완성 제공.",
+    "category": [
+      "Coding"
+    ],
     "rating": 4.7,
-    "pricing": ["Free", "Paid"],
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
     "link": "https://github.com/features/copilot",
-    "keywords": ["코딩", "프로그래밍", "IDE", "자동완성", "개발자", "github"]
+    "keywords": [
+      "코딩",
+      "프로그래밍",
+      "IDE",
+      "자동완성",
+      "개발자",
+      "깃허브",
+      "코파일럿",
+      "vscode"
+    ]
+  },
+  {
+    "name": "Cursor",
+    "description": "2026년 가장 빠르게 성장하는 개발자 도구인 AI 네이티브 코드 에디터. Cmd+K로 자연어로 코드 편집; Composer로 여러 파일에 걸쳐 전체 기능 생성.",
+    "category": [
+      "Coding"
+    ],
+    "rating": 4.8,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://cursor.sh",
+    "keywords": [
+      "코딩",
+      "IDE",
+      "커서",
+      "AI 에디터",
+      "vscode",
+      "개발자",
+      "컴포저"
+    ]
+  },
+  {
+    "name": "Windsurf",
+    "description": "Codeium의 Cascade 에이전트 모드를 갖춘 AI 코드 에디터. 전체 코드베이스를 자율적으로 이해하고 편집. 넉넉한 무료 티어의 Cursor 강력한 대안.",
+    "category": [
+      "Coding"
+    ],
+    "rating": 4.6,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://codeium.com/windsurf",
+    "keywords": [
+      "코딩",
+      "IDE",
+      "윈드서프",
+      "codeium",
+      "cascade",
+      "에이전트",
+      "개발자",
+      "무료"
+    ]
+  },
+  {
+    "name": "v0 by Vercel",
+    "description": "AI UI 컴포넌트 생성기. 원하는 인터페이스를 설명하면 즉시 프로덕션 준비된 React/Tailwind 코드 생성. 프론트엔드 개발자의 필수 도구.",
+    "category": [
+      "Coding"
+    ],
+    "rating": 4.6,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://v0.dev",
+    "keywords": [
+      "코딩",
+      "UI",
+      "프론트엔드",
+      "리액트",
+      "테일윈드",
+      "버셀",
+      "v0",
+      "컴포넌트"
+    ]
+  },
+  {
+    "name": "Lovable",
+    "description": "자연어 설명을 풀스택 웹 앱으로 변환하는 AI 앱 빌더. 2개월 만에 $20M ARR 달성 — 2026년 가장 빠르게 성장하는 AI 앱 빌더. 창업자와 비개발자에게 최적.",
+    "category": [
+      "Coding"
+    ],
+    "rating": 4.5,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://lovable.dev",
+    "keywords": [
+      "코딩",
+      "앱 빌더",
+      "풀스택",
+      "러버블",
+      "노코드",
+      "웹 앱",
+      "창업자"
+    ]
+  },
+  {
+    "name": "Bolt.new",
+    "description": "StackBlitz의 브라우저 기반 AI 앱 빌더. 단일 프롬프트로 작동하는 풀스택 앱을 생성하고 브라우저를 벗어나지 않고 배포. 빠른 프로토타이핑에 탁월.",
+    "category": [
+      "Coding"
+    ],
+    "rating": 4.4,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://bolt.new",
+    "keywords": [
+      "코딩",
+      "앱 빌더",
+      "볼트",
+      "스택블리츠",
+      "풀스택",
+      "브라우저",
+      "프로토타입"
+    ]
+  },
+  {
+    "name": "Replit AI",
+    "description": "AI가 통합된 클라우드 IDE. 로컬 설정 없이 브라우저에서 앱 빌드, 실행, 배포. 입문자, 학생, 빠른 프로토타이핑에 최고.",
+    "category": [
+      "Coding"
+    ],
+    "rating": 4.4,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://replit.com",
+    "keywords": [
+      "코딩",
+      "클라우드 IDE",
+      "리플릿",
+      "입문자",
+      "프로토타입",
+      "브라우저",
+      "배포"
+    ]
+  },
+  {
+    "name": "Make.com",
+    "description": "2,000개 이상 앱을 AI 기반 워크플로우 단계로 연결하는 시각적 노코드 자동화 플랫폼. CRM 파이프라인, AI 콘텐츠 워크플로우 등을 코딩 없이 구축.",
+    "category": [
+      "Productivity"
+    ],
+    "rating": 4.6,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://make.com",
+    "keywords": [
+      "자동화",
+      "워크플로우",
+      "메이크",
+      "노코드",
+      "자피어 대안",
+      "AI 자동화",
+      "통합"
+    ]
+  },
+  {
+    "name": "Zapier",
+    "description": "8,000개 이상 통합과 내장 AI의 가장 인기 있는 자동화 플랫폼. Copilot이 자연어로 워크플로우 구축; Agents가 기술 스택 전반에서 자율적으로 멀티스텝 작업 처리.",
+    "category": [
+      "Productivity"
+    ],
+    "rating": 4.6,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://zapier.com",
+    "keywords": [
+      "자동화",
+      "워크플로우",
+      "자피어",
+      "통합",
+      "노코드",
+      "AI 에이전트",
+      "생산성"
+    ]
+  },
+  {
+    "name": "Manus",
+    "description": "멀티스텝 작업을 자율적으로 실행하는 에이전트 AI — 웹사이트 구축, 슬라이드 제작, 에셋 디자인, 웹 탐색을 대신 수행. 2026년 가장 유능한 AI 에이전트 중 하나.",
+    "category": [
+      "Productivity",
+      "Chatbot"
+    ],
+    "rating": 4.5,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://manus.im",
+    "keywords": [
+      "에이전트",
+      "에이전트 AI",
+      "마누스",
+      "자율",
+      "워크플로우",
+      "브라우저",
+      "멀티스텝"
+    ]
+  },
+  {
+    "name": "Granola",
+    "description": "회의를 듣고 정리된 요약, 액션 아이템, 타임스탬프를 자동으로 생성하는 AI 회의 노트 도구 — 메모 대신 회의에 집중할 수 있게.",
+    "category": [
+      "Productivity"
+    ],
+    "rating": 4.5,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://granola.so",
+    "keywords": [
+      "회의",
+      "노트",
+      "요약",
+      "그래놀라",
+      "생산성",
+      "액션 아이템",
+      "전사"
+    ]
+  },
+  {
+    "name": "Otter.ai",
+    "description": "실시간으로 회의를 녹음, 전사, 요약하는 AI 회의 어시스턴트. Zoom, Google Meet, Teams와 통합. 발언자 자동 식별과 주요 결정 사항 하이라이트.",
+    "category": [
+      "Productivity",
+      "Audio"
+    ],
+    "rating": 4.4,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://otter.ai",
+    "keywords": [
+      "회의",
+      "전사",
+      "오터",
+      "줌",
+      "요약",
+      "발언자",
+      "노트"
+    ]
+  },
+  {
+    "name": "Napkin AI",
+    "description": "텍스트를 세련된 시각적 다이어그램으로 변환하는 AI — 플로우차트, 프레임워크, 타임라인, 마인드맵. 텍스트를 붙여넣으면 몇 초 만에 공유 가능한 비주얼 생성.",
+    "category": [
+      "Productivity",
+      "Image"
+    ],
+    "rating": 4.4,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://napkin.ai",
+    "keywords": [
+      "다이어그램",
+      "플로우차트",
+      "비주얼",
+      "냅킨",
+      "마인드맵",
+      "프레임워크",
+      "인포그래픽"
+    ]
+  },
+  {
+    "name": "Consensus",
+    "description": "동료 심사 연구를 요약하는 AI 기반 학술 검색엔진. 과학적 증거 기반의 답변이 필요한 연구자와 학생에게 필수.",
+    "category": [
+      "Productivity",
+      "Chatbot"
+    ],
+    "rating": 4.4,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://consensus.app",
+    "keywords": [
+      "리서치",
+      "학술",
+      "논문",
+      "과학",
+      "컨센서스",
+      "증거",
+      "학생",
+      "동료 심사"
+    ]
   }
 ]

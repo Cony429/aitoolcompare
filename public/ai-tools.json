@@ -1,218 +1,443 @@
 [
   {
     "name": "ChatGPT",
-    "description": "OpenAI's versatile AI chatbot for conversation, coding, data analysis, and more. The most widely used AI assistant in the world.",
+    "description": "OpenAI's flagship AI assistant powered by GPT-4o. Handles conversation, coding, data analysis, image generation, and real-time web search. The most widely used AI tool in the world.",
     "category": ["Chatbot", "Writing", "Coding"],
     "rating": 5.0,
     "pricing": ["Free", "Paid"],
     "link": "https://chat.openai.com",
-    "keywords": ["openai", "gpt", "chatbot", "conversation", "coding", "writing"]
+    "keywords": ["openai", "gpt", "chatbot", "conversation", "coding", "writing", "gpt-4o"]
   },
   {
     "name": "Claude",
-    "description": "Advanced AI assistant from Anthropic, focused on safety and helpfulness. Excels at long-document analysis, nuanced writing, and coding.",
+    "description": "Anthropic's advanced AI assistant with a 200K token context window. Top choice for long-document analysis, nuanced writing, and coding with the lowest hallucination rate.",
     "category": ["Chatbot", "Writing", "Coding"],
     "rating": 4.9,
     "pricing": ["Free", "Paid"],
     "link": "https://claude.ai",
-    "keywords": ["anthropic", "claude", "chatbot", "writing", "safety", "long document"]
+    "keywords": ["anthropic", "claude", "chatbot", "writing", "long document", "coding", "sonnet", "opus"]
   },
   {
     "name": "Gemini",
-    "description": "Google's most capable multimodal AI model, integrated across the Google ecosystem. Features a 1M token context window.",
+    "description": "Google's multimodal AI with a 1M token context window, integrated across Gmail, Docs, and Drive. Best for Google Workspace users and processing extremely long documents.",
     "category": ["Chatbot", "Writing", "Coding"],
     "rating": 4.8,
     "pricing": ["Free", "Paid"],
     "link": "https://gemini.google.com",
-    "keywords": ["google", "gemini", "multimodal", "chatbot", "search"]
+    "keywords": ["google", "gemini", "multimodal", "chatbot", "google workspace", "1m context"]
   },
   {
-    "name": "Perplexity",
-    "description": "An AI-powered search engine that provides direct, cited answers by analyzing multiple web sources in real time.",
+    "name": "Perplexity AI",
+    "description": "AI-powered search engine delivering real-time, cited answers from multiple web sources. Best for research, fact-checking, and getting current information without sifting through ads.",
     "category": ["Chatbot"],
     "rating": 4.7,
     "pricing": ["Free", "Paid"],
     "link": "https://perplexity.ai",
-    "keywords": ["search", "research", "citations", "real-time", "fact-check"]
+    "keywords": ["search", "research", "citations", "real-time", "fact-check", "perplexity"]
+  },
+  {
+    "name": "Grok",
+    "description": "xAI's AI assistant with real-time X (Twitter) data access. Known for up-to-the-minute news, unfiltered answers, and strong reasoning capabilities via the Grok 3 model.",
+    "category": ["Chatbot"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://grok.x.ai",
+    "keywords": ["xai", "grok", "twitter", "x", "real-time news", "elon musk", "grok 3"]
+  },
+  {
+    "name": "Microsoft Copilot",
+    "description": "AI assistant integrated into Microsoft 365 — Excel, Word, PowerPoint, Teams, and Outlook. Automates workflows, summarizes meetings, and generates on-brand content within your Microsoft stack.",
+    "category": ["Chatbot", "Writing", "Coding"],
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "link": "https://copilot.microsoft.com",
+    "keywords": ["microsoft", "copilot", "office 365", "teams", "word", "excel", "powerpoint", "enterprise"]
+  },
+  {
+    "name": "DeepSeek",
+    "description": "High-performance open-source AI from China with frontier-level reasoning at a fraction of the cost. Exceptional for math, coding, and technical analysis. Available free via API.",
+    "category": ["Chatbot", "Coding"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://deepseek.com",
+    "keywords": ["deepseek", "open source", "reasoning", "coding", "math", "cheap", "api"]
+  },
+  {
+    "name": "NotebookLM",
+    "description": "Google's AI research assistant that creates a grounded AI expert from your uploaded documents. Features Audio Overviews — turning PDFs into podcast-style conversations.",
+    "category": ["Chatbot"],
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "link": "https://notebooklm.google.com",
+    "keywords": ["google", "notebooklm", "research", "documents", "pdf", "podcast", "audio overview", "study"]
   },
   {
     "name": "Midjourney",
-    "description": "Top-tier AI image generator that turns text prompts into stunning, artistic visuals. The go-to tool for designers and illustrators.",
+    "description": "The gold standard for AI image generation. Produces cinematic, artistic visuals with unmatched texture and lighting coherence. Version 7 dramatically improved prompt accuracy.",
     "category": ["Image"],
     "rating": 4.8,
     "pricing": ["Paid"],
     "link": "https://midjourney.com",
-    "keywords": ["image", "art", "design", "illustration", "creative", "text-to-image"]
+    "keywords": ["image", "art", "design", "illustration", "creative", "text-to-image", "midjourney v7"]
+  },
+  {
+    "name": "DALL-E 3",
+    "description": "OpenAI's image model built into ChatGPT Plus. Best-in-class for accurate text rendering within images and photorealistic portraits. No separate subscription needed with ChatGPT Plus.",
+    "category": ["Image"],
+    "rating": 4.7,
+    "pricing": ["Paid"],
+    "link": "https://openai.com/dall-e-3",
+    "keywords": ["image", "openai", "dall-e", "text rendering", "photorealistic", "portrait"]
   },
   {
     "name": "Leonardo.ai",
-    "description": "Powerful image generation platform optimized for creative assets, concept art, and game development workflows.",
+    "description": "Image generation platform optimized for creative assets, concept art, and game development. Provides 150 free daily tokens with no watermarks — the best free online image generator.",
     "category": ["Image"],
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
     "link": "https://leonardo.ai",
-    "keywords": ["image", "game", "concept art", "creative", "assets"]
+    "keywords": ["image", "game", "concept art", "creative", "assets", "free", "leonardo"]
   },
   {
     "name": "Canva AI",
-    "description": "Easy-to-use AI design tools for creating social media posts, presentations, and graphics — no design experience needed.",
+    "description": "AI design platform used by 170M+ people. Magic Design auto-generates branded graphics; background removal and Magic Eraser make image editing effortless. No design experience needed.",
     "category": ["Image", "Writing"],
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
     "link": "https://canva.com",
-    "keywords": ["design", "social media", "presentation", "graphic", "template", "poster"]
+    "keywords": ["design", "social media", "presentation", "graphic", "template", "magic design", "canva"]
+  },
+  {
+    "name": "Adobe Firefly",
+    "description": "Adobe's AI image generator integrated into Photoshop and Illustrator. Commercially safe outputs with zero copyright risk — the professional standard for designers needing safe AI imagery.",
+    "category": ["Image"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://firefly.adobe.com",
+    "keywords": ["adobe", "firefly", "photoshop", "illustrator", "commercial safe", "design", "creative cloud"]
+  },
+  {
+    "name": "Stable Diffusion",
+    "description": "The leading open-source image model. Run locally for free, unlimited generation. Maximum customization via LoRA models and ComfyUI. Requires GPU and technical setup.",
+    "category": ["Image"],
+    "rating": 4.4,
+    "pricing": ["Free"],
+    "link": "https://stability.ai",
+    "keywords": ["image", "open source", "local", "free", "unlimited", "stable diffusion", "comfyui", "lora"]
+  },
+  {
+    "name": "Ideogram",
+    "description": "AI image generator specializing in legible text within images. The most reliable tool for logos, posters, and graphics where text must appear correctly inside the generated output.",
+    "category": ["Image"],
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "link": "https://ideogram.ai",
+    "keywords": ["image", "text rendering", "logo", "poster", "ideogram", "typography", "graphic design"]
   },
   {
     "name": "Sora",
-    "description": "OpenAI's text-to-video model that creates realistic and imaginative video scenes from simple text instructions.",
+    "description": "OpenAI's text-to-video model producing cinematic, physically realistic video up to 60 seconds. The highest-quality AI video available in 2026. Included with ChatGPT Plus.",
     "category": ["Video"],
     "rating": 4.9,
     "pricing": ["Paid"],
     "link": "https://sora.com",
-    "keywords": ["video", "text-to-video", "openai", "cinematic", "generate"]
+    "keywords": ["video", "text-to-video", "openai", "cinematic", "generate", "sora"]
   },
   {
-    "name": "Runway",
-    "description": "Professional AI video generation and editing platform used by filmmakers and content creators. Supports real-time video editing.",
+    "name": "Runway Gen-3",
+    "description": "Professional AI video platform with motion brushes, frame-level editing, and style controls. Preferred by filmmakers integrating AI into production workflows.",
     "category": ["Video"],
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
     "link": "https://runwayml.com",
-    "keywords": ["video", "editing", "generation", "film", "creative", "gen-3"]
+    "keywords": ["video", "editing", "generation", "film", "gen-3", "runway", "motion brush"]
   },
   {
     "name": "HeyGen",
-    "description": "AI video generator for business. Create professional spokesperson videos with realistic AI avatars in minutes.",
+    "description": "AI video generator for business. Create realistic AI avatar spokesperson videos in 40+ languages with accurate lip-sync. Used by thousands of companies for training and marketing.",
     "category": ["Video"],
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
     "link": "https://www.heygen.com",
-    "keywords": ["video", "avatar", "business", "spokesperson", "marketing"]
+    "keywords": ["video", "avatar", "business", "spokesperson", "marketing", "heygen", "lip sync"]
   },
   {
-    "name": "Pika",
-    "description": "Idea-to-video platform that lets anyone create and edit cinematic videos from text, images, or existing footage.",
+    "name": "Kling AI",
+    "description": "Kuaishou's AI video model producing high-quality cinematic videos up to 2 minutes. Strong Sora competitor with impressive motion realism, a free tier, and rapidly improving quality.",
     "category": ["Video"],
-    "rating": 4.4,
+    "rating": 4.5,
     "pricing": ["Free", "Paid"],
-    "link": "https://pika.art",
-    "keywords": ["video", "text-to-video", "creative", "short video", "animate"]
+    "link": "https://klingai.com",
+    "keywords": ["video", "kling", "kuaishou", "cinematic", "text-to-video", "free", "motion"]
   },
   {
     "name": "Luma AI",
-    "description": "Cutting-edge AI for creating realistic 3D objects and cinematic-quality videos from text or image prompts.",
+    "description": "AI platform for realistic 3D objects and cinematic video. Known for exceptionally smooth motion and camera movement quality in its Dream Machine video model.",
     "category": ["Video", "Image"],
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
     "link": "https://lumalabs.ai",
-    "keywords": ["3d", "video", "cinematic", "nerf", "realistic"]
+    "keywords": ["3d", "video", "cinematic", "realistic", "luma", "dream machine"]
+  },
+  {
+    "name": "Pika",
+    "description": "Idea-to-video platform with one of the most generous free tiers — 250 credits per month. Best for quick social media clips, short animations, and creative video experiments.",
+    "category": ["Video"],
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "link": "https://pika.art",
+    "keywords": ["video", "text-to-video", "creative", "short video", "animate", "pika", "free"]
+  },
+  {
+    "name": "Synthesia",
+    "description": "Enterprise AI video platform for training and explainer videos. Used by 50,000+ companies including Google and Nike to create multilingual videos without filming.",
+    "category": ["Video"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://synthesia.io",
+    "keywords": ["video", "avatar", "enterprise", "training", "synthesia", "explainer", "corporate", "multilingual"]
   },
   {
     "name": "Descript",
-    "description": "An all-in-one video and podcast editor that works like a word document. Edit video by editing the transcript.",
+    "description": "All-in-one video and podcast editor where you edit by editing the transcript text. Includes AI voice cloning, filler-word removal, and screen recording.",
     "category": ["Video", "Audio"],
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
     "link": "https://descript.com",
-    "keywords": ["video", "podcast", "editing", "transcript", "audio"]
+    "keywords": ["video", "podcast", "editing", "transcript", "audio", "voice clone", "descript"]
+  },
+  {
+    "name": "Wan 2.1",
+    "description": "Alibaba's open-source text-to-video model supporting 1080p. Completely free when run locally via GPU or Hugging Face. The best open-source alternative to paid video generators.",
+    "category": ["Video"],
+    "rating": 4.3,
+    "pricing": ["Free"],
+    "link": "https://huggingface.co/Wan-AI",
+    "keywords": ["video", "open source", "alibaba", "wan", "free", "local", "1080p", "comfyui"]
   },
   {
     "name": "ElevenLabs",
-    "description": "State-of-the-art AI voice synthesis platform that generates hyper-realistic speech and clones voices in 30+ languages.",
+    "description": "Industry-leading AI voice synthesis in 30+ languages. Features voice cloning, real-time TTS, and a conversational AI voice API. The professional standard for audio content creation.",
     "category": ["Audio"],
     "rating": 4.7,
     "pricing": ["Free", "Paid"],
     "link": "https://elevenlabs.io",
-    "keywords": ["voice", "audio", "text-to-speech", "voice clone", "narration", "podcast"]
+    "keywords": ["voice", "audio", "text-to-speech", "voice clone", "narration", "podcast", "elevenlabs"]
   },
   {
     "name": "Suno",
-    "description": "Create full songs with vocals, instruments, and lyrics in seconds using AI. The leading AI music generation platform.",
+    "description": "Leading AI music platform. Generate complete songs with vocals, instruments, and lyrics from a text prompt. Free plan includes 50 song credits per day.",
     "category": ["Audio"],
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
     "link": "https://www.suno.ai",
-    "keywords": ["music", "audio", "song", "vocals", "generate", "lyrics"]
+    "keywords": ["music", "audio", "song", "vocals", "generate", "lyrics", "suno"]
   },
   {
     "name": "Udio",
-    "description": "Create studio-quality music with AI. Generate original songs in any genre with professional-grade production.",
+    "description": "AI music generator with exceptional studio-quality production. Create original songs in any genre — from jazz to hip-hop — with realistic instrumentation.",
     "category": ["Audio"],
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
     "link": "https://www.udio.com",
-    "keywords": ["music", "audio", "song", "generate", "genre", "production"]
+    "keywords": ["music", "audio", "song", "generate", "genre", "production", "udio"]
+  },
+  {
+    "name": "Murf AI",
+    "description": "Professional AI voiceover tool with 200+ voices across 20+ languages. Built-in video sync. Used for e-learning, audiobooks, ads, and corporate training at scale.",
+    "category": ["Audio"],
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "link": "https://murf.ai",
+    "keywords": ["voice", "audio", "text-to-speech", "elearning", "audiobook", "murf", "voiceover"]
   },
   {
     "name": "Jasper",
-    "description": "Professional AI content platform designed for marketing teams. Generates blog posts, ad copy, and social media content at scale.",
+    "description": "Professional AI content platform for marketing teams. Generates SEO-optimized blog posts, ad copy, and social content at scale with advanced brand voice and Surfer SEO integration.",
     "category": ["Writing"],
     "rating": 4.5,
     "pricing": ["Paid"],
     "link": "https://jasper.ai",
-    "keywords": ["writing", "marketing", "blog", "copy", "content", "SEO"]
+    "keywords": ["writing", "marketing", "blog", "copy", "content", "SEO", "jasper", "brand voice"]
   },
   {
     "name": "Copy.ai",
-    "description": "Automated creativity tools for copywriters and marketing teams. Quickly generate ad copy, emails, and product descriptions.",
+    "description": "AI copywriting tool with 90+ templates for ads, emails, product descriptions, and social media. Generous free plan ideal for freelancers, solopreneurs, and small businesses.",
     "category": ["Writing"],
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
     "link": "https://www.copy.ai",
-    "keywords": ["writing", "copywriting", "marketing", "email", "ad copy"]
+    "keywords": ["writing", "copywriting", "marketing", "email", "ad copy", "copy.ai", "free"]
   },
   {
     "name": "Writesonic",
-    "description": "AI writer for creating SEO-friendly blog posts, landing pages, and marketing copy. Includes Chatsonic AI chatbot.",
+    "description": "AI writer for SEO-friendly blog posts, landing pages, and marketing copy. Includes Chatsonic with real-time web access and an AI article writer with fact-checking.",
     "category": ["Writing"],
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
     "link": "https://writesonic.com",
-    "keywords": ["writing", "SEO", "blog", "landing page", "marketing", "chatbot"]
+    "keywords": ["writing", "SEO", "blog", "landing page", "marketing", "writesonic"]
   },
   {
     "name": "QuillBot",
-    "description": "AI-powered paraphrasing and grammar tool. Rewrite, summarize, and refine any text with multiple writing modes.",
+    "description": "AI paraphrasing and grammar tool with multiple writing modes. Widely used by students and academics for rewriting, summarizing, and improving the clarity of existing text.",
     "category": ["Writing"],
     "rating": 4.4,
     "pricing": ["Free", "Paid"],
     "link": "https://quillbot.com",
-    "keywords": ["writing", "paraphrase", "grammar", "summarize", "rewrite"]
+    "keywords": ["writing", "paraphrase", "grammar", "summarize", "rewrite", "quillbot", "student"]
   },
   {
     "name": "Grammarly",
-    "description": "AI-powered writing assistant that checks grammar, tone, clarity, and style. Works across email, docs, and the web.",
+    "description": "AI writing assistant checking grammar, tone, clarity, and style in real time. Integrates into browsers, Google Docs, and email. The standard proofreading tool for professionals.",
     "category": ["Writing"],
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
     "link": "https://www.grammarly.com",
-    "keywords": ["writing", "grammar", "spelling", "tone", "editing", "proofreading"]
+    "keywords": ["writing", "grammar", "spelling", "tone", "editing", "proofreading", "grammarly"]
   },
   {
     "name": "Notion AI",
-    "description": "Enhance your workflow with AI-powered writing, summarization, and organization built directly into Notion.",
+    "description": "AI built into Notion workspaces. Summarizes notes, drafts content, runs enterprise search, and automates recurring tasks — without ever leaving your workspace.",
     "category": ["Writing"],
     "rating": 4.5,
     "pricing": ["Paid"],
     "link": "https://notion.so",
-    "keywords": ["writing", "productivity", "notes", "organization", "summarize"]
+    "keywords": ["writing", "productivity", "notes", "organization", "summarize", "notion", "workspace"]
   },
   {
     "name": "Gamma",
-    "description": "Create beautiful presentations, memos, and briefs in seconds with AI. No design skills required.",
+    "description": "AI-powered presentation builder. Describe your topic and Gamma creates a fully designed, ready-to-present deck in seconds — including structure, visuals, and layout.",
     "category": ["Writing", "Image"],
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
     "link": "https://gamma.app",
-    "keywords": ["presentation", "slides", "deck", "design", "memo", "brief"]
+    "keywords": ["presentation", "slides", "deck", "design", "memo", "gamma"]
   },
   {
     "name": "GitHub Copilot",
-    "description": "AI pair programmer by GitHub and OpenAI. Suggests code completions and entire functions directly inside your IDE in real time.",
+    "description": "AI pair programmer with real-time code completions and a built-in chat assistant. Integrates into VS Code, JetBrains, and more. Free tier now includes 2,000 monthly completions.",
     "category": ["Coding"],
     "rating": 4.7,
     "pricing": ["Free", "Paid"],
     "link": "https://github.com/features/copilot",
-    "keywords": ["coding", "programming", "IDE", "autocomplete", "developer", "github"]
+    "keywords": ["coding", "programming", "IDE", "autocomplete", "developer", "github", "copilot", "vscode"]
+  },
+  {
+    "name": "Cursor",
+    "description": "AI-native code editor and the fastest-growing developer tool in 2026. Cmd+K edits code from natural language; Composer generates entire features across multiple files simultaneously.",
+    "category": ["Coding"],
+    "rating": 4.8,
+    "pricing": ["Free", "Paid"],
+    "link": "https://cursor.sh",
+    "keywords": ["coding", "IDE", "cursor", "AI editor", "vscode", "developer", "composer"]
+  },
+  {
+    "name": "Windsurf",
+    "description": "AI code editor from Codeium with Cascade agentic mode. Understands and autonomously edits across your entire codebase. A strong Cursor alternative with a generous free tier.",
+    "category": ["Coding"],
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "link": "https://codeium.com/windsurf",
+    "keywords": ["coding", "IDE", "windsurf", "codeium", "cascade", "agentic", "developer", "free"]
+  },
+  {
+    "name": "v0 by Vercel",
+    "description": "AI UI component generator. Describe any interface and v0 produces production-ready React/Tailwind code instantly. The go-to tool for frontend developers building at speed.",
+    "category": ["Coding"],
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "link": "https://v0.dev",
+    "keywords": ["coding", "UI", "frontend", "react", "tailwind", "vercel", "v0", "component"]
+  },
+  {
+    "name": "Lovable",
+    "description": "AI app builder turning natural language into full-stack web apps. Reached $20M ARR in 2 months — the fastest-growing AI app builder in 2026. Ideal for founders and non-developers.",
+    "category": ["Coding"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://lovable.dev",
+    "keywords": ["coding", "app builder", "full stack", "lovable", "no code", "web app", "founder"]
+  },
+  {
+    "name": "Bolt.new",
+    "description": "StackBlitz's browser-based AI app builder. Generate working full-stack apps from a single prompt and deploy without leaving your browser. Great for rapid prototyping.",
+    "category": ["Coding"],
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "link": "https://bolt.new",
+    "keywords": ["coding", "app builder", "bolt", "stackblitz", "full stack", "browser", "prototype"]
+  },
+  {
+    "name": "Replit AI",
+    "description": "Cloud IDE with integrated AI assistance. Build, run, and deploy apps from your browser with zero local setup. Best for beginners, students, and quick prototyping.",
+    "category": ["Coding"],
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "link": "https://replit.com",
+    "keywords": ["coding", "cloud IDE", "replit", "beginner", "prototype", "browser", "deploy"]
+  },
+  {
+    "name": "Make.com",
+    "description": "Visual no-code automation platform connecting 2,000+ apps with AI-powered workflow steps. Build complex automations — CRM pipelines, AI content workflows, and more — without writing code.",
+    "category": ["Productivity"],
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "link": "https://make.com",
+    "keywords": ["automation", "workflow", "make", "no code", "zapier alternative", "AI automation", "integrations"]
+  },
+  {
+    "name": "Zapier",
+    "description": "Most popular automation platform with 8,000+ integrations and built-in AI. Copilot builds workflows from natural language; Agents handle multi-step tasks across your tech stack autonomously.",
+    "category": ["Productivity"],
+    "rating": 4.6,
+    "pricing": ["Free", "Paid"],
+    "link": "https://zapier.com",
+    "keywords": ["automation", "workflow", "zapier", "integration", "no code", "AI agent", "productivity"]
+  },
+  {
+    "name": "Manus",
+    "description": "Agentic AI that executes multi-step tasks autonomously — building websites, creating slides, designing assets, and navigating the web on your behalf. One of 2026's most capable AI agents.",
+    "category": ["Productivity", "Chatbot"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://manus.im",
+    "keywords": ["agent", "agentic AI", "manus", "autonomous", "workflow", "browser", "multistep"]
+  },
+  {
+    "name": "Granola",
+    "description": "AI meeting notes tool that listens to conversations and produces organized summaries, action items, and timestamps — so you can focus on the meeting instead of taking notes.",
+    "category": ["Productivity"],
+    "rating": 4.5,
+    "pricing": ["Free", "Paid"],
+    "link": "https://granola.so",
+    "keywords": ["meeting", "notes", "summary", "granola", "productivity", "action items", "transcript"]
+  },
+  {
+    "name": "Otter.ai",
+    "description": "AI meeting assistant recording, transcribing, and summarizing meetings in real time. Integrates with Zoom, Google Meet, and Teams. Automatically identifies speakers and highlights decisions.",
+    "category": ["Productivity", "Audio"],
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "link": "https://otter.ai",
+    "keywords": ["meeting", "transcription", "otter", "zoom", "summary", "speaker", "notes"]
+  },
+  {
+    "name": "Napkin AI",
+    "description": "AI that converts text into polished visual diagrams — flowcharts, frameworks, timelines, and mind maps. Paste any text and get a shareable visual in seconds, no design skills needed.",
+    "category": ["Productivity", "Image"],
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "link": "https://napkin.ai",
+    "keywords": ["diagram", "flowchart", "visual", "napkin", "mind map", "framework", "infographic"]
+  },
+  {
+    "name": "Consensus",
+    "description": "AI-powered academic search engine summarizing peer-reviewed research. Essential for researchers and students who need evidence-based answers with proper scientific citations.",
+    "category": ["Productivity", "Chatbot"],
+    "rating": 4.4,
+    "pricing": ["Free", "Paid"],
+    "link": "https://consensus.app",
+    "keywords": ["research", "academic", "papers", "science", "consensus", "evidence", "student", "peer reviewed"]
   }
 ]
