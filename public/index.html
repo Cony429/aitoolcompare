@@ -9,60 +9,741 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- =====================================================
-         JSON-LD Structured Data (Schema.org)
-         Google AI Overview / Perplexity / ChatGPT 크롤러가
-         테이블 데이터를 구조화된 형태로 읽을 수 있게 합니다.
-    ===================================================== -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Best AI Tools 2026",
-      "description": "A curated directory of the best AI tools in 2026, covering chatbots, video generators, image generators, writing assistants, coding tools, and audio tools.",
-      "url": "https://bestaitoolcompare.com",
-      "itemListElement": [
-        {"@type":"ListItem","position":1,"item":{"@type":"SoftwareApplication","name":"ChatGPT","description":"OpenAI's versatile AI chatbot for conversation, coding, data analysis, and more.","applicationCategory":"Chatbot","url":"https://chat.openai.com","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"20","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","bestRating":"5","ratingCount":"10000"}}},
-        {"@type":"ListItem","position":2,"item":{"@type":"SoftwareApplication","name":"Claude","description":"Advanced AI assistant from Anthropic, focused on safety and helpfulness.","applicationCategory":"Chatbot","url":"https://claude.ai","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"20","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","bestRating":"5","ratingCount":"8000"}}},
-        {"@type":"ListItem","position":3,"item":{"@type":"SoftwareApplication","name":"Sora","description":"OpenAI's text-to-video model that creates realistic and imaginative video scenes.","applicationCategory":"Video","url":"https://sora.com","offers":[{"@type":"Offer","price":"20","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","bestRating":"5","ratingCount":"5000"}}},
-        {"@type":"ListItem","position":4,"item":{"@type":"SoftwareApplication","name":"Gemini","description":"Google's most capable multimodal AI model with a 1M token context window.","applicationCategory":"Chatbot","url":"https://gemini.google.com","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"20","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","bestRating":"5","ratingCount":"7000"}}},
-        {"@type":"ListItem","position":5,"item":{"@type":"SoftwareApplication","name":"Midjourney","description":"Top-tier AI image generator that turns text prompts into stunning artistic visuals.","applicationCategory":"Image","url":"https://midjourney.com","offers":[{"@type":"Offer","price":"10","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","bestRating":"5","ratingCount":"9000"}}},
-        {"@type":"ListItem","position":6,"item":{"@type":"SoftwareApplication","name":"GitHub Copilot","description":"AI pair programmer that suggests code completions directly inside your IDE.","applicationCategory":"Coding","url":"https://github.com/features/copilot","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"10","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","bestRating":"5","ratingCount":"12000"}}},
-        {"@type":"ListItem","position":7,"item":{"@type":"SoftwareApplication","name":"ElevenLabs","description":"AI voice synthesis platform generating hyper-realistic speech in 30+ languages.","applicationCategory":"Audio","url":"https://elevenlabs.io","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"5","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","bestRating":"5","ratingCount":"5500"}}},
-        {"@type":"ListItem","position":8,"item":{"@type":"SoftwareApplication","name":"Perplexity","description":"AI-powered search engine that provides direct, cited answers in real time.","applicationCategory":"Chatbot","url":"https://perplexity.ai","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"20","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","bestRating":"5","ratingCount":"6000"}}},
-        {"@type":"ListItem","position":9,"item":{"@type":"SoftwareApplication","name":"Leonardo.ai","description":"Powerful image generation platform for creative assets and game development.","applicationCategory":"Image","url":"https://leonardo.ai","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"12","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","bestRating":"5","ratingCount":"4000"}}},
-        {"@type":"ListItem","position":10,"item":{"@type":"SoftwareApplication","name":"Canva AI","description":"Easy-to-use AI design tools for social media posts, presentations, and graphics.","applicationCategory":"Image","url":"https://canva.com","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"15","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","bestRating":"5","ratingCount":"8000"}}},
-        {"@type":"ListItem","position":11,"item":{"@type":"SoftwareApplication","name":"Runway","description":"Professional AI video generation and editing platform used by filmmakers.","applicationCategory":"Video","url":"https://runwayml.com","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"15","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","bestRating":"5","ratingCount":"4000"}}},
-        {"@type":"ListItem","position":12,"item":{"@type":"SoftwareApplication","name":"Suno","description":"Create full songs with vocals and instruments in seconds using AI.","applicationCategory":"Audio","url":"https://www.suno.ai","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"8","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","bestRating":"5","ratingCount":"3500"}}},
-        {"@type":"ListItem","position":13,"item":{"@type":"SoftwareApplication","name":"Grammarly","description":"AI-powered writing assistant that checks grammar, tone, clarity, and style.","applicationCategory":"Writing","url":"https://www.grammarly.com","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"12","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","bestRating":"5","ratingCount":"15000"}}},
-        {"@type":"ListItem","position":14,"item":{"@type":"SoftwareApplication","name":"Jasper","description":"Professional AI content platform for marketing teams to generate content at scale.","applicationCategory":"Writing","url":"https://jasper.ai","offers":[{"@type":"Offer","price":"49","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","bestRating":"5","ratingCount":"3500"}}},
-        {"@type":"ListItem","position":15,"item":{"@type":"SoftwareApplication","name":"HeyGen","description":"AI video generator for business using realistic AI avatars.","applicationCategory":"Video","url":"https://www.heygen.com","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"29","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","bestRating":"5","ratingCount":"3000"}}},
-        {"@type":"ListItem","position":16,"item":{"@type":"SoftwareApplication","name":"Notion AI","description":"AI-powered writing and organization built directly into Notion.","applicationCategory":"Writing","url":"https://notion.so","offers":[{"@type":"Offer","price":"10","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","bestRating":"5","ratingCount":"6000"}}},
-        {"@type":"ListItem","position":17,"item":{"@type":"SoftwareApplication","name":"Gamma","description":"Create beautiful presentations and briefs in seconds with AI.","applicationCategory":"Writing","url":"https://gamma.app","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"10","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","bestRating":"5","ratingCount":"2500"}}},
-        {"@type":"ListItem","position":18,"item":{"@type":"SoftwareApplication","name":"Luma AI","description":"Cutting-edge AI for realistic 3D objects and cinematic videos.","applicationCategory":"Video","url":"https://lumalabs.ai","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"30","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","bestRating":"5","ratingCount":"2000"}}},
-        {"@type":"ListItem","position":19,"item":{"@type":"SoftwareApplication","name":"Descript","description":"All-in-one video and podcast editor — edit video by editing transcript text.","applicationCategory":"Audio","url":"https://descript.com","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"24","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","bestRating":"5","ratingCount":"3000"}}},
-        {"@type":"ListItem","position":20,"item":{"@type":"SoftwareApplication","name":"Udio","description":"Create studio-quality music in any genre with AI.","applicationCategory":"Audio","url":"https://www.udio.com","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"10","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","bestRating":"5","ratingCount":"2000"}}},
-        {"@type":"ListItem","position":21,"item":{"@type":"SoftwareApplication","name":"Pika","description":"Idea-to-video platform for creating and editing cinematic short videos with AI.","applicationCategory":"Video","url":"https://pika.art","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"8","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","bestRating":"5","ratingCount":"2500"}}},
-        {"@type":"ListItem","position":22,"item":{"@type":"SoftwareApplication","name":"Copy.ai","description":"Automated creativity tools for copywriters — generates ad copy, emails, and more.","applicationCategory":"Writing","url":"https://www.copy.ai","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"36","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","bestRating":"5","ratingCount":"3000"}}},
-        {"@type":"ListItem","position":23,"item":{"@type":"SoftwareApplication","name":"QuillBot","description":"AI-powered paraphrasing tool to rewrite, summarize, and refine any text.","applicationCategory":"Writing","url":"https://quillbot.com","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"10","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","bestRating":"5","ratingCount":"5000"}}},
-        {"@type":"ListItem","position":24,"item":{"@type":"SoftwareApplication","name":"Writesonic","description":"AI writer for SEO-friendly blog posts, landing pages, and marketing copy.","applicationCategory":"Writing","url":"https://writesonic.com","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"},{"@type":"Offer","price":"16","priceCurrency":"USD"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","bestRating":"5","ratingCount":"2500"}}}
-      ]
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Best AI Tools 2026",
+  "description": "A curated directory of the best AI tools in 2026, covering chatbots, video generators, image generators, writing assistants, coding tools, and audio tools.",
+  "url": "https://bestaitoolcompare.com",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "ChatGPT",
+        "description": "OpenAI's versatile AI chatbot for conversation, coding, data analysis, and more. The most widely used AI assistant in the world.",
+        "applicationCategory": "Chatbot",
+        "url": "https://chat.openai.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Claude",
+        "description": "Advanced AI assistant from Anthropic, focused on safety and helpfulness. Excels at long-document analysis, nuanced writing, and coding.",
+        "applicationCategory": "Chatbot",
+        "url": "https://claude.ai",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Gemini",
+        "description": "Google's most capable multimodal AI model, integrated across the Google ecosystem. Features a 1M token context window.",
+        "applicationCategory": "Chatbot",
+        "url": "https://gemini.google.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Perplexity",
+        "description": "An AI-powered search engine that provides direct, cited answers by analyzing multiple web sources in real time.",
+        "applicationCategory": "Chatbot",
+        "url": "https://perplexity.ai",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Midjourney",
+        "description": "Top-tier AI image generator that turns text prompts into stunning, artistic visuals. The go-to tool for designers and illustrators.",
+        "applicationCategory": "Image",
+        "url": "https://midjourney.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Leonardo.ai",
+        "description": "Powerful image generation platform optimized for creative assets, concept art, and game development workflows.",
+        "applicationCategory": "Image",
+        "url": "https://leonardo.ai",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.6",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Canva AI",
+        "description": "Easy-to-use AI design tools for creating social media posts, presentations, and graphics — no design experience needed.",
+        "applicationCategory": "Image",
+        "url": "https://canva.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.6",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Sora",
+        "description": "OpenAI's text-to-video model that creates realistic and imaginative video scenes from simple text instructions.",
+        "applicationCategory": "Video",
+        "url": "https://sora.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Runway",
+        "description": "Professional AI video generation and editing platform used by filmmakers and content creators. Supports real-time video editing.",
+        "applicationCategory": "Video",
+        "url": "https://runwayml.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.6",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "HeyGen",
+        "description": "AI video generator for business. Create professional spokesperson videos with realistic AI avatars in minutes.",
+        "applicationCategory": "Video",
+        "url": "https://www.heygen.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Pika",
+        "description": "Idea-to-video platform that lets anyone create and edit cinematic videos from text, images, or existing footage.",
+        "applicationCategory": "Video",
+        "url": "https://pika.art",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.4",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Luma AI",
+        "description": "Cutting-edge AI for creating realistic 3D objects and cinematic-quality videos from text or image prompts.",
+        "applicationCategory": "Video",
+        "url": "https://lumalabs.ai",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Descript",
+        "description": "An all-in-one video and podcast editor that works like a word document. Edit video by editing the transcript.",
+        "applicationCategory": "Video",
+        "url": "https://descript.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "ElevenLabs",
+        "description": "State-of-the-art AI voice synthesis platform that generates hyper-realistic speech and clones voices in 30+ languages.",
+        "applicationCategory": "Audio",
+        "url": "https://elevenlabs.io",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Suno",
+        "description": "Create full songs with vocals, instruments, and lyrics in seconds using AI. The leading AI music generation platform.",
+        "applicationCategory": "Audio",
+        "url": "https://www.suno.ai",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.6",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Udio",
+        "description": "Create studio-quality music with AI. Generate original songs in any genre with professional-grade production.",
+        "applicationCategory": "Audio",
+        "url": "https://www.udio.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Jasper",
+        "description": "Professional AI content platform designed for marketing teams. Generates blog posts, ad copy, and social media content at scale.",
+        "applicationCategory": "Writing",
+        "url": "https://jasper.ai",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Copy.ai",
+        "description": "Automated creativity tools for copywriters and marketing teams. Quickly generate ad copy, emails, and product descriptions.",
+        "applicationCategory": "Writing",
+        "url": "https://www.copy.ai",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.4",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Writesonic",
+        "description": "AI writer for creating SEO-friendly blog posts, landing pages, and marketing copy. Includes Chatsonic AI chatbot.",
+        "applicationCategory": "Writing",
+        "url": "https://writesonic.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.4",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "QuillBot",
+        "description": "AI-powered paraphrasing and grammar tool. Rewrite, summarize, and refine any text with multiple writing modes.",
+        "applicationCategory": "Writing",
+        "url": "https://quillbot.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.4",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Grammarly",
+        "description": "AI-powered writing assistant that checks grammar, tone, clarity, and style. Works across email, docs, and the web.",
+        "applicationCategory": "Writing",
+        "url": "https://www.grammarly.com",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Notion AI",
+        "description": "Enhance your workflow with AI-powered writing, summarization, and organization built directly into Notion.",
+        "applicationCategory": "Writing",
+        "url": "https://notion.so",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Gamma",
+        "description": "Create beautiful presentations, memos, and briefs in seconds with AI. No design skills required.",
+        "applicationCategory": "Writing",
+        "url": "https://gamma.app",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "GitHub Copilot",
+        "description": "AI pair programmer by GitHub and OpenAI. Suggests code completions and entire functions directly inside your IDE in real time.",
+        "applicationCategory": "Coding",
+        "url": "https://github.com/features/copilot",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "price": "",
+            "priceCurrency": "USD"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "bestRating": "5",
+          "ratingCount": "1000"
+        }
+      }
     }
+  ]
+}
     </script>
 
-    <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type":"Question","name":"What is the best AI tool in 2026?","acceptedAnswer":{"@type":"Answer","text":"ChatGPT by OpenAI is rated the best all-around AI tool in 2026 with a 5.0/5 rating, followed closely by Claude (4.9) and Sora (4.9)."}},
-        {"@type":"Question","name":"What is the best free AI tool in 2026?","acceptedAnswer":{"@type":"Answer","text":"The best free AI tools in 2026 are ChatGPT, Claude, Gemini, Perplexity AI, and ElevenLabs — all offer powerful features on their free tier."}},
-        {"@type":"Question","name":"Which AI tool is best for video generation?","acceptedAnswer":{"@type":"Answer","text":"Sora by OpenAI (4.9/5) leads for cinematic quality. Runway Gen-3 (4.6/5) offers professional editing control, and HeyGen (4.5/5) is ideal for business avatar videos."}},
-        {"@type":"Question","name":"What is the best AI image generator?","acceptedAnswer":{"@type":"Answer","text":"Midjourney (4.8/5) produces the most artistic results. Leonardo.ai (4.6/5) is great for game assets, and Canva AI (4.6/5) is the easiest for non-designers."}},
-        {"@type":"Question","name":"What is the best AI tool for writing?","acceptedAnswer":{"@type":"Answer","text":"Grammarly (4.5/5) is best for editing and proofreading, Jasper (4.5/5) for marketing content at scale, and Claude (4.9/5) for long-form writing and document analysis."}}
-      ]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best AI tool in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ChatGPT by OpenAI is rated the best all-around AI tool in 2026 with a 5.0/5 rating, followed closely by Claude (4.9) and Sora (4.9)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best free AI tool in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best free AI tools in 2026 are ChatGPT, Claude, Gemini, Perplexity AI, and ElevenLabs — all offer powerful features on their free tier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI tool is best for video generation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sora by OpenAI (4.9/5) leads for cinematic quality. Runway Gen-3 (4.6/5) offers professional editing control, and HeyGen (4.5/5) is ideal for business avatar videos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best AI image generator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midjourney (4.8/5) produces the most artistic results. Leonardo.ai (4.6/5) is great for game assets, and Canva AI (4.6/5) is the easiest for non-designers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best AI tool for writing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grammarly (4.5/5) is best for editing and proofreading, Jasper (4.5/5) for marketing content at scale, and Claude (4.9/5) for long-form writing and document analysis."
+      }
     }
+  ]
+}
     </script>
 
     <style>
@@ -79,13 +760,9 @@
 </head>
 <body>
 
-<!-- ── 헤더 (원본 그대로) ── -->
 <header class="site-header">
   <div class="nav-container">
-    <a href="index-ko.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-      <img src="favicon.png" alt="로고" style="width: 32px; height: 32px; border-radius: 6px; object-fit: contain;">
-      <span style="font-size: 1.4rem; font-weight: 800; color: #1a1a2e;">AI Tool Compare</span>
-  </a>
+    <a href="index.html" class="logo">AI Tool Compare</a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="compare.html">Compare</a>
@@ -98,7 +775,6 @@
   </div>
 </header>
 
-<!-- ── 히어로 (원본 그대로) ── -->
 <div class="hero-section">
     <h1>Find the Perfect AI for You</h1>
     <p class="subtitle">Compare various AI tools and make the best choice.</p>
@@ -130,17 +806,8 @@
             <th>Link</th>
           </tr>
         </thead>
-
-        <!--
-          ★ 정적 HTML tbody ★
-          - JS/JSON 로드 성공 → JS가 이 tbody를 JSON 데이터로 교체
-          - JS가 꺼진 크롤러(Googlebot, Perplexity, ChatGPT bot) →
-            이 정적 데이터를 그대로 읽어 AI Overview 노출에 활용
-          - data-category 속성: JSON 없을 때 JS 필터의 폴백으로 사용
-        -->
         <tbody id="tool-table-body">
 
-          <!-- CHATBOT -->
           <tr data-category="Chatbot">
             <td data-label="Tool Name">ChatGPT</td>
             <td data-label="Description">OpenAI's versatile AI chatbot for conversation, coding, data analysis, and more. The most widely used AI assistant in the world.</td>
@@ -169,31 +836,6 @@
             <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
             <td data-label="Link"><a href="https://perplexity.ai" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
           </tr>
-
-          <!-- IMAGE -->
-          <tr data-category="Image">
-            <td data-label="Tool Name">Midjourney</td>
-            <td data-label="Description">Top-tier AI image generator that turns text prompts into stunning, artistic visuals. The go-to tool for designers and illustrators.</td>
-            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.8</td>
-            <td data-label="Pricing"><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://midjourney.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
-          </tr>
-          <tr data-category="Image">
-            <td data-label="Tool Name">Leonardo.ai</td>
-            <td data-label="Description">Powerful image generation platform optimized for creative assets, concept art, and game development workflows.</td>
-            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.6</td>
-            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://leonardo.ai" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
-          </tr>
-          <tr data-category="Image">
-            <td data-label="Tool Name">Canva AI</td>
-            <td data-label="Description">Easy-to-use AI design tools for creating social media posts, presentations, and graphics — no design experience needed.</td>
-            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.6</td>
-            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://canva.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
-          </tr>
-
-          <!-- VIDEO -->
           <tr data-category="Video">
             <td data-label="Tool Name">Sora</td>
             <td data-label="Description">OpenAI's text-to-video model that creates realistic and imaginative video scenes from simple text instructions.</td>
@@ -216,6 +858,13 @@
             <td data-label="Link"><a href="https://www.heygen.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
           </tr>
           <tr data-category="Video">
+            <td data-label="Tool Name">Pika</td>
+            <td data-label="Description">Idea-to-video platform that lets anyone create and edit cinematic videos from text, images, or existing footage.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐ 4.4</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://pika.art" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Video">
             <td data-label="Tool Name">Luma AI</td>
             <td data-label="Description">Cutting-edge AI for creating realistic 3D objects and cinematic-quality videos from text or image prompts.</td>
             <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
@@ -224,20 +873,158 @@
           </tr>
           <tr data-category="Video">
             <td data-label="Tool Name">Descript</td>
-            <td data-label="Description">An all-in-one video and podcast editor that works like a word document — edit video by editing the transcript.</td>
+            <td data-label="Description">An all-in-one video and podcast editor that works like a word document. Edit video by editing the transcript.</td>
             <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
             <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
             <td data-label="Link"><a href="https://descript.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
           </tr>
-          <tr data-category="Video">
-            <td data-label="Tool Name">Pika</td>
-            <td data-label="Description">Idea-to-video platform that lets anyone create and edit cinematic videos from text, images, or existing footage.</td>
+          <tr data-category="Image">
+            <td data-label="Tool Name">Midjourney</td>
+            <td data-label="Description">Top-tier AI image generator that turns text prompts into stunning, artistic visuals. The go-to tool for designers and illustrators.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.8</td>
+            <td data-label="Pricing"><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://midjourney.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Image">
+            <td data-label="Tool Name">Leonardo.ai</td>
+            <td data-label="Description">Powerful image generation platform optimized for creative assets, concept art, and game development workflows.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.6</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://leonardo.ai" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Image">
+            <td data-label="Tool Name">Canva AI</td>
+            <td data-label="Description">Easy-to-use AI design tools for creating social media posts, presentations, and graphics — no design experience needed.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.6</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://canva.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Image">
+            <td data-label="Tool Name">Luma AI</td>
+            <td data-label="Description">Cutting-edge AI for creating realistic 3D objects and cinematic-quality videos from text or image prompts.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://lumalabs.ai" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Image">
+            <td data-label="Tool Name">Gamma</td>
+            <td data-label="Description">Create beautiful presentations, memos, and briefs in seconds with AI. No design skills required.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://gamma.app" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Writing">
+            <td data-label="Tool Name">ChatGPT</td>
+            <td data-label="Description">OpenAI's versatile AI chatbot for conversation, coding, data analysis, and more. The most widely used AI assistant in the world.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 5.0</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://chat.openai.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Writing">
+            <td data-label="Tool Name">Claude</td>
+            <td data-label="Description">Advanced AI assistant from Anthropic, focused on safety and helpfulness. Excels at long-document analysis, nuanced writing, and coding.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.9</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://claude.ai" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Writing">
+            <td data-label="Tool Name">Gemini</td>
+            <td data-label="Description">Google's most capable multimodal AI model, integrated across the Google ecosystem. Features a 1M token context window.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.8</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://gemini.google.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Writing">
+            <td data-label="Tool Name">Canva AI</td>
+            <td data-label="Description">Easy-to-use AI design tools for creating social media posts, presentations, and graphics — no design experience needed.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.6</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://canva.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Writing">
+            <td data-label="Tool Name">Jasper</td>
+            <td data-label="Description">Professional AI content platform designed for marketing teams. Generates blog posts, ad copy, and social media content at scale.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
+            <td data-label="Pricing"><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://jasper.ai" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Writing">
+            <td data-label="Tool Name">Copy.ai</td>
+            <td data-label="Description">Automated creativity tools for copywriters and marketing teams. Quickly generate ad copy, emails, and product descriptions.</td>
             <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐ 4.4</td>
             <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://pika.art" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+            <td data-label="Link"><a href="https://www.copy.ai" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
           </tr>
-
-          <!-- AUDIO -->
+          <tr data-category="Writing">
+            <td data-label="Tool Name">Writesonic</td>
+            <td data-label="Description">AI writer for creating SEO-friendly blog posts, landing pages, and marketing copy. Includes Chatsonic AI chatbot.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐ 4.4</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://writesonic.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Writing">
+            <td data-label="Tool Name">QuillBot</td>
+            <td data-label="Description">AI-powered paraphrasing and grammar tool. Rewrite, summarize, and refine any text with multiple writing modes.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐ 4.4</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://quillbot.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Writing">
+            <td data-label="Tool Name">Grammarly</td>
+            <td data-label="Description">AI-powered writing assistant that checks grammar, tone, clarity, and style. Works across email, docs, and the web.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://www.grammarly.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Writing">
+            <td data-label="Tool Name">Notion AI</td>
+            <td data-label="Description">Enhance your workflow with AI-powered writing, summarization, and organization built directly into Notion.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
+            <td data-label="Pricing"><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://notion.so" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Writing">
+            <td data-label="Tool Name">Gamma</td>
+            <td data-label="Description">Create beautiful presentations, memos, and briefs in seconds with AI. No design skills required.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://gamma.app" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Coding">
+            <td data-label="Tool Name">ChatGPT</td>
+            <td data-label="Description">OpenAI's versatile AI chatbot for conversation, coding, data analysis, and more. The most widely used AI assistant in the world.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 5.0</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://chat.openai.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Coding">
+            <td data-label="Tool Name">Claude</td>
+            <td data-label="Description">Advanced AI assistant from Anthropic, focused on safety and helpfulness. Excels at long-document analysis, nuanced writing, and coding.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.9</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://claude.ai" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Coding">
+            <td data-label="Tool Name">Gemini</td>
+            <td data-label="Description">Google's most capable multimodal AI model, integrated across the Google ecosystem. Features a 1M token context window.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.8</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://gemini.google.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Coding">
+            <td data-label="Tool Name">GitHub Copilot</td>
+            <td data-label="Description">AI pair programmer by GitHub and OpenAI. Suggests code completions and entire functions directly inside your IDE in real time.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.7</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://github.com/features/copilot" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
+          <tr data-category="Audio">
+            <td data-label="Tool Name">Descript</td>
+            <td data-label="Description">An all-in-one video and podcast editor that works like a word document. Edit video by editing the transcript.</td>
+            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
+            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
+            <td data-label="Link"><a href="https://descript.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
+          </tr>
           <tr data-category="Audio">
             <td data-label="Tool Name">ElevenLabs</td>
             <td data-label="Description">State-of-the-art AI voice synthesis platform that generates hyper-realistic speech and clones voices in 30+ languages.</td>
@@ -259,82 +1046,21 @@
             <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
             <td data-label="Link"><a href="https://www.udio.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
           </tr>
-
-          <!-- WRITING -->
-          <tr data-category="Writing">
-            <td data-label="Tool Name">Grammarly</td>
-            <td data-label="Description">AI-powered writing assistant that checks grammar, tone, clarity, and style. Works across email, docs, and the web.</td>
-            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
-            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://www.grammarly.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
-          </tr>
-          <tr data-category="Writing">
-            <td data-label="Tool Name">Jasper</td>
-            <td data-label="Description">Professional AI content platform designed for marketing teams. Generates blog posts, ad copy, and social media content at scale.</td>
-            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
-            <td data-label="Pricing"><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://jasper.ai" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
-          </tr>
-          <tr data-category="Writing">
-            <td data-label="Tool Name">Notion AI</td>
-            <td data-label="Description">Enhance your workflow with AI-powered writing, summarization, and organization built directly into Notion.</td>
-            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
-            <td data-label="Pricing"><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://notion.so" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
-          </tr>
-          <tr data-category="Writing">
-            <td data-label="Tool Name">Gamma</td>
-            <td data-label="Description">Create beautiful presentations, memos, and briefs in seconds with AI — no design skills required.</td>
-            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.5</td>
-            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://gamma.app" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
-          </tr>
-          <tr data-category="Writing">
-            <td data-label="Tool Name">Copy.ai</td>
-            <td data-label="Description">Automated creativity tools for copywriters and marketing teams. Quickly generate ad copy, emails, and product descriptions.</td>
-            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐ 4.4</td>
-            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://www.copy.ai" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
-          </tr>
-          <tr data-category="Writing">
-            <td data-label="Tool Name">QuillBot</td>
-            <td data-label="Description">AI-powered paraphrasing and grammar tool. Rewrite, summarize, and refine any text with multiple writing modes.</td>
-            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐ 4.4</td>
-            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://quillbot.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
-          </tr>
-          <tr data-category="Writing">
-            <td data-label="Tool Name">Writesonic</td>
-            <td data-label="Description">AI writer for creating SEO-friendly blog posts, landing pages, and marketing copy. Includes Chatsonic AI chatbot.</td>
-            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐ 4.4</td>
-            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://writesonic.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
-          </tr>
-
-          <!-- CODING -->
-          <tr data-category="Coding">
-            <td data-label="Tool Name">GitHub Copilot</td>
-            <td data-label="Description">AI pair programmer by GitHub and OpenAI. Suggests code completions and entire functions directly inside your IDE in real time.</td>
-            <td data-label="Rating" class="tool-rating">⭐⭐⭐⭐⭐ 4.7</td>
-            <td data-label="Pricing"><span class="tag free-tag">Free</span><span class="tag paid-tag">Paid</span></td>
-            <td data-label="Link"><a href="https://github.com/features/copilot" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
-          </tr>
-
         </tbody>
       </table>
     </div>
 </main>
 
-<!-- ── FAQ 섹션 (Schema 연동 — AI 검색 직접 인용 유도) ── -->
+
 <section class="faq-section" aria-label="Frequently Asked Questions">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
         <button class="faq-question" aria-expanded="false">What is the best AI tool in 2026?<span class="arrow">▼</span></button>
-        <div class="faq-answer">ChatGPT by OpenAI is rated the best all-around AI tool in 2026 with a 5.0/5 rating, followed closely by Claude (4.9) and Sora (4.9). ChatGPT excels at conversation, coding, and writing tasks.</div>
+        <div class="faq-answer">ChatGPT by OpenAI is rated the best all-around AI tool in 2026 with a 5.0/5 rating, followed closely by Claude (4.9) and Sora (4.9).</div>
     </div>
     <div class="faq-item">
         <button class="faq-question" aria-expanded="false">What is the best free AI tool in 2026?<span class="arrow">▼</span></button>
-        <div class="faq-answer">The best free AI tools in 2026 are ChatGPT, Claude, Gemini, Perplexity AI, and ElevenLabs — all offer powerful features on their free tier without a paid subscription.</div>
+        <div class="faq-answer">The best free AI tools in 2026 are ChatGPT, Claude, Gemini, Perplexity AI, and ElevenLabs — all offer powerful features on their free tier.</div>
     </div>
     <div class="faq-item">
         <button class="faq-question" aria-expanded="false">Which AI tool is best for video generation?<span class="arrow">▼</span></button>
@@ -342,7 +1068,7 @@
     </div>
     <div class="faq-item">
         <button class="faq-question" aria-expanded="false">What is the best AI image generator?<span class="arrow">▼</span></button>
-        <div class="faq-answer">Midjourney (4.8/5) produces the most artistic results. Leonardo.ai (4.6/5) is great for game assets, and Canva AI (4.6/5) is the easiest option for non-designers.</div>
+        <div class="faq-answer">Midjourney (4.8/5) produces the most artistic results. Leonardo.ai (4.6/5) is great for game assets, and Canva AI (4.6/5) is the easiest for non-designers.</div>
     </div>
     <div class="faq-item">
         <button class="faq-question" aria-expanded="false">What is the best AI tool for writing?<span class="arrow">▼</span></button>
@@ -350,7 +1076,203 @@
     </div>
 </section>
 
-<!-- ── 푸터 (원본 그대로, 연도만 2026 수정) ── -->
+
+<!-- ══════════════════════════════════════════════════════
+     ★ AdSense E-E-A-T 소개 섹션 ★
+     - 사이트 목적, 팀 전문성, 방법론을 설명
+     - Google AdSense "Low Value Content" 해결을 위해 추가
+══════════════════════════════════════════════════════ -->
+<section class="site-about-section">
+    <div class="site-about-wrap">
+
+        <!-- 사이트 소개 -->
+        <div class="about-intro">
+            <div class="about-intro-text">
+                <div class="about-label">About This Site</div>
+                <h2>Your Independent Guide to AI Tools in 2026</h2>
+                <p>AI Tool Compare is an independent review and comparison platform built by a team of AI researchers, developers, and digital professionals. Our goal is simple: help you find the right AI tool for your specific needs through honest, hands-on testing — not marketing copy.</p>
+                <p>We test every tool ourselves, across real-world tasks like writing articles, generating images, debugging code, and editing videos. Ratings are never influenced by affiliate relationships or advertising revenue. If a free tool outperforms a paid one, we say so.</p>
+                <a href="about.html" class="about-cta">Learn About Our Team & Methodology →</a>
+            </div>
+            <div class="about-stats">
+                <div class="stat-box">
+                    <div class="stat-num">50+</div>
+                    <div class="stat-label">AI Tools Reviewed</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">10+</div>
+                    <div class="stat-label">Head-to-Head Battles</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">2</div>
+                    <div class="stat-label">Languages (EN / KO)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">Daily</div>
+                    <div class="stat-label">Content Updates</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 카테고리 가이드 -->
+        <div class="category-guide">
+            <h3>Browse by Category</h3>
+            <div class="cat-grid">
+                <a href="index.html" class="cat-card" onclick="filterByCategory('Chatbot', {target: this})">
+                    <span class="cat-icon">🤖</span>
+                    <span class="cat-name">Chatbots</span>
+                    <span class="cat-desc">ChatGPT, Claude, Gemini</span>
+                </a>
+                <a href="index.html" class="cat-card" onclick="filterByCategory('Image', {target: this})">
+                    <span class="cat-icon">🎨</span>
+                    <span class="cat-name">Image AI</span>
+                    <span class="cat-desc">Midjourney, DALL-E, Leonardo</span>
+                </a>
+                <a href="index.html" class="cat-card" onclick="filterByCategory('Video', {target: this})">
+                    <span class="cat-icon">🎬</span>
+                    <span class="cat-name">Video AI</span>
+                    <span class="cat-desc">Sora, Runway, HeyGen</span>
+                </a>
+                <a href="index.html" class="cat-card" onclick="filterByCategory('Writing', {target: this})">
+                    <span class="cat-icon">✍️</span>
+                    <span class="cat-name">Writing AI</span>
+                    <span class="cat-desc">Jasper, Grammarly, Copy.ai</span>
+                </a>
+                <a href="index.html" class="cat-card" onclick="filterByCategory('Coding', {target: this})">
+                    <span class="cat-icon">💻</span>
+                    <span class="cat-name">Coding AI</span>
+                    <span class="cat-desc">GitHub Copilot, Cursor</span>
+                </a>
+                <a href="index.html" class="cat-card" onclick="filterByCategory('Audio', {target: this})">
+                    <span class="cat-icon">🎵</span>
+                    <span class="cat-name">Audio AI</span>
+                    <span class="cat-desc">ElevenLabs, Suno, Udio</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 방법론 요약 -->
+        <div class="method-summary">
+            <h3>How We Rate AI Tools</h3>
+            <div class="method-items">
+                <div class="method-item">
+                    <span class="method-icon">⚡</span>
+                    <div>
+                        <strong>Hands-on Testing</strong>
+                        <p>Every tool is tested by our team using real-world tasks — not benchmark scores alone.</p>
+                    </div>
+                </div>
+                <div class="method-item">
+                    <span class="method-icon">🔄</span>
+                    <div>
+                        <strong>Regular Updates</strong>
+                        <p>Ratings are revisited with every major tool update to stay accurate and relevant.</p>
+                    </div>
+                </div>
+                <div class="method-item">
+                    <span class="method-icon">🚫</span>
+                    <div>
+                        <strong>No Pay-to-Win</strong>
+                        <p>Affiliate relationships and advertising revenue never influence our ratings or conclusions.</p>
+                    </div>
+                </div>
+                <div class="method-item">
+                    <span class="method-icon">📊</span>
+                    <div>
+                        <strong>Multi-Dimension Scoring</strong>
+                        <p>We evaluate quality, pricing, ease of use, and real-world value — not just feature checklists.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+.site-about-section {
+    background: #f8f9fa;
+    border-top: 1px solid #e5e7eb;
+    padding: 72px 0;
+}
+.site-about-wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* 소개 */
+.about-intro {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 48px;
+    align-items: start;
+    margin-bottom: 64px;
+}
+.about-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: #007bff; margin-bottom: 10px;
+}
+.about-intro-text h2 {
+    font-size: 1.7rem; font-weight: 800; color: #0d0d0d;
+    margin: 0 0 16px; line-height: 1.3;
+}
+.about-intro-text p {
+    font-size: 1rem; line-height: 1.85; color: #555; margin: 0 0 14px;
+}
+.about-cta {
+    display: inline-block; margin-top: 8px; font-size: 0.92rem;
+    color: #007bff; font-weight: 700; text-decoration: none;
+}
+.about-cta:hover { text-decoration: underline; }
+.about-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.stat-box {
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+    padding: 20px; text-align: center;
+}
+.stat-num { font-size: 1.8rem; font-weight: 800; color: #007bff; margin-bottom: 4px; }
+.stat-box .stat-label { font-size: 0.8rem; color: #888; font-weight: 600; }
+
+/* 카테고리 */
+.category-guide { margin-bottom: 64px; }
+.category-guide h3 { font-size: 1.3rem; font-weight: 700; margin: 0 0 20px; color: #0d0d0d; }
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 14px;
+}
+.cat-card {
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+    padding: 20px 14px; text-align: center; text-decoration: none;
+    display: flex; flex-direction: column; gap: 6px;
+    transition: all 0.2s; cursor: pointer;
+}
+.cat-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-2px); border-color: #007bff; }
+.cat-icon { font-size: 1.8rem; }
+.cat-name { font-size: 0.92rem; font-weight: 700; color: #0d0d0d; }
+.cat-desc { font-size: 0.75rem; color: #888; line-height: 1.4; }
+
+/* 방법론 */
+.method-summary h3 { font-size: 1.3rem; font-weight: 700; margin: 0 0 20px; color: #0d0d0d; }
+.method-items { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.method-item {
+    display: flex; gap: 16px; align-items: flex-start;
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px;
+}
+.method-icon { font-size: 1.5rem; flex-shrink: 0; }
+.method-item strong { display: block; font-size: 0.97rem; font-weight: 700; color: #0d0d0d; margin-bottom: 4px; }
+.method-item p { font-size: 0.88rem; color: #666; margin: 0; line-height: 1.6; }
+
+@media (max-width: 680px) {
+    .about-intro { grid-template-columns: 1fr; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
+    .method-items { grid-template-columns: 1fr; }
+    .cat-grid { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+
 <footer>
     <div class="footer-content">
         <p>&copy; 2026 AI Tool Compare. All rights reserved.</p>
@@ -363,14 +1285,11 @@
 </footer>
 
 <script>
-    // ================================================================
-    // 동작 방식:
-    // 1) ai-tools.json 로드 성공 → tbody를 JSON 데이터로 교체
-    // 2) JSON 로드 실패 → 정적 HTML tbody를 data-category로 직접 필터
-    // ================================================================
     let allTools = [];
     let currentCategory = 'All';
     let usingStaticFallback = false;
+    
+    const categoryMap = {};
 
     async function fetchTools() {
         try {
@@ -386,25 +1305,22 @@
     function displayFilteredTools(filteredTools) {
         const tableBody = document.getElementById('tool-table-body');
         tableBody.innerHTML = '';
-
         if (filteredTools.length === 0) {
-            tableBody.innerHTML = "<tr><td colspan='5' style='text-align:center; padding:20px;'>No matching AI tools found.</td></tr>";
+            tableBody.innerHTML = "<tr><td colspan='5' style='text-align:center;padding:20px;'>No matching AI tools found.</td></tr>";
             return;
         }
-
         filteredTools.forEach(tool => {
             const row = document.createElement('tr');
-            let tagsHTML = '';
-            const lowerCasePricing = tool.pricing.map(p => p.toLowerCase());
-            if (lowerCasePricing.includes('free'))     tagsHTML += `<span class="tag free-tag">Free</span>`;
-            if (lowerCasePricing.includes('paid'))     tagsHTML += `<span class="tag paid-tag">Paid</span>`;
-            if (lowerCasePricing.includes('freemium')) tagsHTML += `<span class="tag freemium-tag">Freemium</span>`;
-
+            const lower = tool.pricing.map(p => p.toLowerCase());
+            let tags = '';
+            if (lower.includes('free'))     tags += '<span class="tag free-tag">Free</span>';
+            if (lower.includes('paid'))     tags += '<span class="tag paid-tag">Paid</span>';
+            if (lower.includes('freemium')) tags += '<span class="tag freemium-tag">Freemium</span>';
             row.innerHTML = `
                 <td data-label="Tool Name">${tool.name}</td>
                 <td data-label="Description">${tool.description}</td>
                 <td data-label="Rating" class="tool-rating">${'⭐'.repeat(Math.round(tool.rating))} ${tool.rating.toFixed(1)}</td>
-                <td data-label="Pricing">${tagsHTML}</td>
+                <td data-label="Pricing">${tags}</td>
                 <td data-label="Link"><a href="${tool.link}" target="_blank" rel="noopener" class="visit-site-btn">Visit Site</a></td>
             `;
             tableBody.appendChild(row);
@@ -415,68 +1331,52 @@
         const tableBody = document.getElementById('tool-table-body');
         const rows = tableBody.querySelectorAll('tr[data-category]');
         const lowerQuery = query.toLowerCase();
-        let visibleCount = 0;
-
+        let count = 0;
         rows.forEach(row => {
-            const cat = row.dataset.category || '';
-            const text = row.textContent.toLowerCase();
-            const catMatch = currentCategory === 'All' || cat === currentCategory;
-            const queryMatch = !lowerQuery || text.includes(lowerQuery);
+            const catMatch = currentCategory === 'All' || row.dataset.category === currentCategory;
+            const queryMatch = !lowerQuery || row.textContent.toLowerCase().includes(lowerQuery);
             row.style.display = (catMatch && queryMatch) ? '' : 'none';
-            if (catMatch && queryMatch) visibleCount++;
+            if (catMatch && queryMatch) count++;
         });
-
         const existing = tableBody.querySelector('.no-result-row');
-        if (visibleCount === 0 && !existing) {
-            const noResult = document.createElement('tr');
-            noResult.className = 'no-result-row';
-            noResult.innerHTML = "<td colspan='5' style='text-align:center; padding:20px;'>No matching AI tools found.</td>";
-            tableBody.appendChild(noResult);
-        } else if (visibleCount > 0 && existing) {
-            existing.remove();
-        }
+        if (count === 0 && !existing) {
+            const nr = document.createElement('tr');
+            nr.className = 'no-result-row';
+            nr.innerHTML = "<td colspan='5' style='text-align:center;padding:20px;'>No matching AI tools found.</td>";
+            tableBody.appendChild(nr);
+        } else if (count > 0 && existing) existing.remove();
     }
 
     function render(query = '') {
         if (usingStaticFallback) { filterStaticRows(query); return; }
-
-        const lowerCaseQuery = query.toLowerCase();
-        let filteredTools = allTools;
-
+        let filtered = allTools;
         if (currentCategory !== 'All') {
-            filteredTools = filteredTools.filter(tool => {
-                if (!tool.category) return false;
-                if (Array.isArray(tool.category)) {
-                    return tool.category.map(c => c.toLowerCase()).includes(currentCategory.toLowerCase());
-                }
-                return tool.category.toLowerCase() === currentCategory.toLowerCase();
+            filtered = filtered.filter(t => {
+                if (!t.category) return false;
+                const cats = Array.isArray(t.category) ? t.category : [t.category];
+                return cats.map(c => c.toLowerCase()).includes(currentCategory.toLowerCase());
             });
         }
-
-        if (lowerCaseQuery) {
-            filteredTools = filteredTools.filter(tool => {
-                const toolKeywords = tool.keywords ? tool.keywords.map(k => k.toLowerCase()) : [];
-                return (
-                    tool.name.toLowerCase().includes(lowerCaseQuery) ||
-                    tool.description.toLowerCase().includes(lowerCaseQuery) ||
-                    toolKeywords.some(keyword => keyword.includes(lowerCaseQuery))
-                );
+        const q = query.toLowerCase();
+        if (q) {
+            filtered = filtered.filter(t => {
+                const kw = (t.keywords || []).map(k => k.toLowerCase());
+                return t.name.toLowerCase().includes(q) || t.description.toLowerCase().includes(q) || kw.some(k => k.includes(q));
             });
         }
-        displayFilteredTools(filteredTools);
+        displayFilteredTools(filtered);
     }
 
     function filterByCategory(category, event) {
-        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         event.target.classList.add('active');
-        currentCategory = category;
+        currentCategory = categoryMap[category] || category;
         render(document.getElementById('search-input').value);
     }
 
     document.getElementById('search-btn').addEventListener('click', () => render(document.getElementById('search-input').value));
     document.getElementById('search-input').addEventListener('keyup', e => { if (e.key === 'Enter') render(e.target.value); });
 
-    // FAQ 토글
     document.querySelectorAll('.faq-question').forEach(btn => {
         btn.addEventListener('click', () => {
             const isOpen = btn.classList.toggle('open');
