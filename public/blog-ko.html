@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Blog 2026: Guides, Comparisons & Reviews | AI Tool Compare</title>
-    <meta name="description" content="Expert AI guides, tool comparisons, and productivity tips for 2026. Stay updated with the latest AI trends.">
+    <title>AI 블로그 2026: 가이드, 비교 & 리뷰 | AI Tool Compare</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="comparison.css">
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
-        body { background-color: #ffffff; color: #333; font-family: 'Inter', sans-serif; }
+        /* 기존 스타일 유지 */
+        body { background-color: #ffffff; color: #333; font-family: 'Pretendard', sans-serif; word-break: keep-all; }
         .hero-section { background: #ffffff; padding: 60px 20px 40px; text-align: center; border-bottom: 1px solid #f0f0f0; }
         .hero-section h1 { font-size: 2.2rem; color: #111; margin: 0 0 10px; }
         .hero-section p { font-size: 1.1rem; color: #666; margin: 0; }
@@ -19,7 +19,7 @@
         .cat-btn { padding: 6px 16px; border-radius: 100px; border: 1px solid #e5e7eb; background: #fff; font-size: 0.85rem; font-weight: 600; color: #555; cursor: pointer; transition: all 0.15s; }
         .cat-btn:hover, .cat-btn.active { background: #007bff; color: #fff; border-color: #007bff; }
 
-        /* 5열 그리드 설정 */
+        /* [수정] 5열 그리드 설정 (컨테이너 폭 확장) */
         .content-container { max-width: 1600px; margin: 36px auto; padding: 0 20px 60px; }
         .blog-grid { 
             display: grid; 
@@ -34,7 +34,6 @@
         .blog-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-3px); }
         .blog-card img { width: 100%; height: 140px; object-fit: cover; display: block; }
         .blog-card .card-body { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; }
-        .blog-card .card-tag { font-size: 0.72rem; font-weight: 700; color: #007bff; margin-bottom: 8px; text-transform: uppercase; }
         .blog-card h3 { font-size: 0.95rem; font-weight: 700; color: #0d0d0d; margin-bottom: 8px; line-height: 1.4; }
         .blog-card p { font-size: 0.85rem; color: #666; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
         
@@ -42,6 +41,7 @@
         .section-divider { display: flex; align-items: center; gap: 12px; margin: 40px 0 24px; font-size: 0.78rem; font-weight: 700; color: #999; text-transform: uppercase; }
         .section-divider::after { content: ''; flex: 1; height: 1px; background: #f0f0f0; }
 
+        /* 화면이 넓을 때 5열 강제 고정 */
         @media (min-width: 1400px) { .blog-grid { grid-template-columns: repeat(5, 1fr); } }
         @media (max-width: 620px) { .blog-grid { grid-template-columns: 1fr; } }
     </style>
@@ -50,15 +50,15 @@
 
 <header class="site-header">
   <div class="nav-container">
-    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-      <img src="favicon.png" alt="Logo" style="width:32px;height:32px;border-radius:6px;object-fit:contain;">
+    <a href="index-ko.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+      <img src="favicon.png" alt="로고" style="width:32px;height:32px;border-radius:6px;object-fit:contain;">
       <span style="font-size:1.4rem;font-weight:800;color:#1a1a2e;">AI Tool Compare</span>
     </a>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="compare.html">Compare</a>
-      <a href="blog.html" class="active">Blog</a>
-      <a href="news.html">News</a>
+      <a href="index-ko.html">홈</a>
+      <a href="compare-ko.html">비교</a>
+      <a href="blog-ko.html" class="active">블로그</a>
+      <a href="news-ko.html">뉴스</a>
     </nav>
     <div class="lang-switch">
       <a href="blog.html">EN</a> | <a href="blog-ko.html">KO</a>
@@ -67,229 +67,115 @@
 </header>
 
 <section class="hero-section">
-  <h1>AI Insights & Latest News</h1>
-  <p>23 Expert Guides & Trends for 2026</p>
+  <h1>AI 인사이트 &amp; 최신 뉴스</h1>
+  <p>2026년 AI 트렌드와 전문가의 도구 활용 팁 (총 23개의 아티클)</p>
 </section>
 
 <div class="category-filters">
-  <button class="cat-btn active" onclick="filterPosts('all', this)">All</button>
-  <button class="cat-btn" onclick="filterPosts('comparison', this)">Comparison</button>
-  <button class="cat-btn" onclick="filterPosts('guide', this)">Guides</button>
-  <button class="cat-btn" onclick="filterPosts('tutorial', this)">Tutorials</button>
-  <button class="cat-btn" onclick="filterPosts('coding', this)">Coding</button>
+  <button class="cat-btn active" onclick="filterPosts('all', this)">전체</button>
+  <button class="cat-btn" onclick="filterPosts('comparison', this)">비교</button>
+  <button class="cat-btn" onclick="filterPosts('guide', this)">가이드</button>
+  <button class="cat-btn" onclick="filterPosts('tutorial', this)">튜토리얼</button>
+  <button class="cat-btn" onclick="filterPosts('coding', this)">코딩</button>
 </div>
 
 <main class="content-container">
-  <div class="section-divider">All 23 Articles</div>
+  <div class="section-divider">23개의 모든 아티클</div>
   <div class="blog-grid" id="blog-grid">
 
-    <a href="blog-ai-agents-2026.html" class="blog-card" data-tags="guide">
-      <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=600" alt="Agents">
-      <div class="card-body">
-        <span class="card-tag">Agents <span class="new-badge">NEW</span></span>
-        <h3>AI Agents: Autonomous Workflows</h3>
-        <p>Production workflows with autonomous AI agents in 2026.</p>
-      </div>
+    <a href="blog-ai-agents-2026-ko.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=600" alt="에이전트">
+      <div class="card-body"><h3>AI 에이전트: 자율 워크플로우 <span class="new-badge">NEW</span></h3><p>2026년 업무 자동화의 핵심인 AI 에이전트 분석.</p></div>
+    </a>
+    <a href="blog-multimodal-ai-2026-ko.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600" alt="멀티모달">
+      <div class="card-body"><h3>멀티모달 AI: 시각과 청각의 결합 <span class="new-badge">NEW</span></h3><p>보고 듣는 AI가 바꾸는 새로운 사용자 경험.</p></div>
+    </a>
+    <a href="blog-ai-coding-tools-2026-ko.html" class="blog-card" data-tags="coding guide">
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600" alt="코딩">
+      <div class="card-body"><h3>2026 최고의 코딩 도구 비교 <span class="new-badge">NEW</span></h3><p>Cursor와 Copilot 중 어떤 것이 더 강력할까?</p></div>
+    </a>
+    <a href="blog-ai-healthcare-2026-ko.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600" alt="의료">
+      <div class="card-body"><h3>의료 AI 혁명: 진단과 치료 <span class="new-badge">NEW</span></h3><p>AI가 설계한 신약이 임상에 미치는 영향.</p></div>
+    </a>
+    <a href="blog-open-source-ai-2026-ko.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600" alt="오픈소스">
+      <div class="card-body"><h3>오픈소스 AI의 역습: Llama 4 <span class="new-badge">NEW</span></h3><p>폐쇄형 모델을 압도하는 오픈소스의 힘.</p></div>
     </a>
 
-    <a href="blog-multimodal-ai-2026.html" class="blog-card" data-tags="guide">
-      <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600" alt="Multimodal">
-      <div class="card-body">
-        <span class="card-tag">Multimodal <span class="new-badge">NEW</span></span>
-        <h3>Multimodal AI: See, Hear, and Act</h3>
-        <p>Processing images, audio, and video simultaneously.</p>
-      </div>
+    <a href="chatgpt-vs-claude-2026-ko.html" class="blog-card" data-tags="comparison">
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600" alt="비교">
+      <div class="card-body"><h3>ChatGPT vs Claude 2026 비교</h3><p>작문, 코딩, 추론 성능의 헤드투헤드 비교 분석.</p></div>
     </a>
-
-    <a href="blog-ai-coding-tools-2026.html" class="blog-card" data-tags="coding guide">
-      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600" alt="Coding">
-      <div class="card-body">
-        <span class="card-tag">Coding <span class="new-badge">NEW</span></span>
-        <h3>Best AI Coding: Cursor vs Copilot</h3>
-        <p>The evolution from autocomplete to full agentic dev.</p>
-      </div>
+    <a href="best-free-ai-tools-2026-ko.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600" alt="무료">
+      <div class="card-body"><h3>최고의 무료 AI 도구 TOP 10</h3><p>비용 부담 없이 바로 사용 가능한 강력한 AI 도구들.</p></div>
     </a>
-
-    <a href="blog-ai-healthcare-2026.html" class="blog-card" data-tags="guide">
-      <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600" alt="Healthcare">
-      <div class="card-body">
-        <span class="card-tag">Healthcare <span class="new-badge">NEW</span></span>
-        <h3>AI in Healthcare: Drug Discovery</h3>
-        <p>From early diagnosis to AI-designed drugs in 2026.</p>
-      </div>
+    <a href="best-ai-for-writing-2026-ko.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600" alt="글쓰기">
+      <div class="card-body"><h3>2026 AI 글쓰기 도구 순위</h3><p>용도별 최적화된 작문 AI 도구 전격 리뷰.</p></div>
     </a>
-
-    <a href="blog-open-source-ai-2026.html" class="blog-card" data-tags="guide">
-      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600" alt="Open Source">
-      <div class="card-body">
-        <span class="card-tag">Open Source <span class="new-badge">NEW</span></span>
-        <h3>Open-Source AI: Llama & DeepSeek</h3>
-        <p>Why open models are now beating proprietary APIs.</p>
-      </div>
+    <a href="best-ai-for-coding-2026-ko.html" class="blog-card" data-tags="coding guide">
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600" alt="코딩">
+      <div class="card-body"><h3>코딩 AI 도구 3종 비교</h3><p>Copilot, Cursor, Claude의 코딩 실전 테스트.</p></div>
     </a>
-
-    <a href="chatgpt-vs-claude-2026.html" class="blog-card" data-tags="comparison">
-      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600" alt="Comparison">
-      <div class="card-body">
-        <span class="card-tag">Comparison</span>
-        <h3>ChatGPT vs Claude in 2026</h3>
-        <p>Full comparison of writing, coding, and reasoning.</p>
-      </div>
+    <a href="how-to-use-ai-for-productivity-ko.html" class="blog-card" data-tags="tutorial">
+      <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=600" alt="생산성">
+      <div class="card-body"><h3>AI 생산성 10배 높이는 법</h3><p>시간을 벌어다 주는 실전 AI 워크플로우 전략.</p></div>
     </a>
-
-    <a href="best-free-ai-tools-2026.html" class="blog-card" data-tags="guide">
-      <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600" alt="Free AI">
-      <div class="card-body">
-        <span class="card-tag">Guide</span>
-        <h3>Best Free AI Tools: Top 10</h3>
-        <p>Top free tools for image, coding, and video.</p>
-      </div>
+    <a href="best-ai-image-generators-2026-ko.html" class="blog-card" data-tags="image">
+      <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600" alt="이미지">
+      <div class="card-body"><h3>AI 이미지 생성기 비교 리뷰</h3><p>Midjourney vs DALL-E vs Stable Diffusion.</p></div>
     </a>
-
-    <a href="best-ai-for-writing-2026.html" class="blog-card" data-tags="guide">
-      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600" alt="Writing">
-      <div class="card-body">
-        <span class="card-tag">Guide</span>
-        <h3>Best AI Tools for Writing in 2026</h3>
-        <p>Claude, Jasper, and Grammarly ranked by use cases.</p>
-      </div>
+    <a href="best-ai-video-generators-2026-ko.html" class="blog-card" data-tags="video">
+      <img src="https://images.unsplash.com/photo-1536240478700-b869ad10e2eb?auto=format&fit=crop&w=600" alt="영상">
+      <div class="card-body"><h3>2026 최고의 AI 영상 생성기</h3><p>Sora와 Runway 등 주요 영상 AI 성능 비교.</p></div>
     </a>
-
-    <a href="how-to-use-ai-for-productivity.html" class="blog-card" data-tags="tutorial">
-      <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=600" alt="Productivity">
-      <div class="card-body">
-        <span class="card-tag">Tutorial</span>
-        <h3>10x Productivity with AI</h3>
-        <p>Daily workflows that save hours every week.</p>
-      </div>
+    <a href="best-ai-tools-for-students-2026-ko.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600" alt="학생">
+      <div class="card-body"><h3>학생용 최고의 AI 학습 도구</h3><p>공부 시간을 단축해주는 스마트한 AI 활용법.</p></div>
     </a>
-
-    <a href="best-ai-image-generators-2026.html" class="blog-card" data-tags="video image">
-      <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600" alt="Image AI">
-      <div class="card-body">
-        <span class="card-tag">Image</span>
-        <h3>Best AI Image Generators</h3>
-        <p>Midjourney vs DALL-E vs Stable Diffusion.</p>
-      </div>
+    <a href="how-to-write-better-ai-prompts-ko.html" class="blog-card" data-tags="tutorial">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600" alt="프롬프트">
+      <div class="card-body"><h3>AI 프롬프트 잘 쓰는 비법</h3><p>원하는 결과물을 얻기 위한 6가지 핵심 기술.</p></div>
     </a>
-
-    <a href="best-ai-video-generators-2026.html" class="blog-card" data-tags="video image">
-      <img src="https://images.unsplash.com/photo-1536240478700-b869ad10e2eb?auto=format&fit=crop&w=600" alt="Video AI">
-      <div class="card-body">
-        <span class="card-tag">Video</span>
-        <h3>Best AI Video Generators</h3>
-        <p>Cinematic quality tested: Sora vs Runway vs Pika.</p>
-      </div>
+    <a href="best-ai-tools-for-small-business-2026-ko.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600" alt="비즈니스">
+      <div class="card-body"><h3>소상공인 AI 비즈니스 스택</h3><p>비용은 줄이고 효율은 높이는 AI 도구 모음.</p></div>
     </a>
-
-    <a href="best-ai-tools-for-students-2026.html" class="blog-card" data-tags="guide">
-      <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600" alt="Students">
-      <div class="card-body">
-        <span class="card-tag">Students</span>
-        <h3>AI Tools for Students 2026</h3>
-        <p>Study smarter with research and essay tools.</p>
-      </div>
+    <a href="blog-top5-tools-2026-ko.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600" alt="초보">
+      <div class="card-body"><h3>초보자 필수 AI 도구 TOP 5</h3><p>AI 입문자가 가장 먼저 써봐야 할 도구들.</p></div>
     </a>
-
-    <a href="how-to-write-better-ai-prompts.html" class="blog-card" data-tags="tutorial">
-      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600" alt="Prompts">
-      <div class="card-body">
-        <span class="card-tag">Tutorial</span>
-        <h3>How to Write Better AI Prompts</h3>
-        <p>6 techniques to get better results from any AI.</p>
-      </div>
+    <a href="gpt4o-vs-claude35-sonnet-ko.html" class="blog-card" data-tags="comparison">
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600" alt="실전비교">
+      <div class="card-body"><h3>GPT-4o vs Claude 3.5 실전비교</h3><p>2026년 성능 벤치마크 심층 분석 리포트.</p></div>
     </a>
-
-    <a href="best-ai-tools-for-small-business-2026.html" class="blog-card" data-tags="guide">
-      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600" alt="Business">
-      <div class="card-body">
-        <span class="card-tag">Business</span>
-        <h3>AI Tools for Small Business</h3>
-        <p>Save time and cut costs with the perfect stack.</p>
-      </div>
+    <a href="best-free-ai-images-2026-ko.html" class="blog-card" data-tags="image">
+      <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600" alt="무료이미지">
+      <div class="card-body"><h3>최고의 무료 AI 이미지 생성기</h3><p>저작권 걱정 없는 고퀄리티 무료 도구 TOP 3.</p></div>
     </a>
-
-    <a href="blog-top5-tools-2026.html" class="blog-card" data-tags="guide">
-      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600" alt="Beginner">
-      <div class="card-body">
-        <span class="card-tag">Guide</span>
-        <h3>Top 5 Essential AI Tools</h3>
-        <p>Selection of must-have tools for every beginner.</p>
-      </div>
+    <a href="sora-vs-runway-ko.html" class="blog-card" data-tags="video">
+      <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=600" alt="영상비교">
+      <div class="card-body"><h3>Sora vs Runway: 영상 AI 비교</h3><p>품질과 가격 면에서 당신의 선택은?</p></div>
     </a>
-
-    <a href="gpt4o-vs-claude35-sonnet.html" class="blog-card" data-tags="comparison">
-      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600" alt="GPT4o">
-      <div class="card-body">
-        <span class="card-tag">Comparison</span>
-        <h3>GPT-4o vs Claude 3.5 Sonnet</h3>
-        <p>Real-world performance benchmarks for 2026.</p>
-      </div>
+    <a href="ai-job-replacement-2026-ko.html" class="blog-card" data-tags="guide">
+      <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=600" alt="일자리">
+      <div class="card-body"><h3>AI가 내 직업을 대체할까?</h3><p>고위험 직종 분석과 미래 생존 전략 리포트.</p></div>
     </a>
-
-    <a href="best-free-ai-images-2026.html" class="blog-card" data-tags="video image">
-      <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600" alt="Free Image">
-      <div class="card-body">
-        <span class="card-tag">Image</span>
-        <h3>Best Free AI Image Generators</h3>
-        <p>Find the perfect tool without a subscription fee.</p>
-      </div>
+    <a href="blog-claude-vs-gpt-2026-ko.html" class="blog-card" data-tags="comparison">
+      <div class="card-body" style="padding-top:2rem"><h3>Claude 4 vs GPT-5.4 대결</h3><p>차세대 모델들이 보여주는 놀라운 인지 능력 비교.</p></div>
     </a>
-
-    <a href="sora-vs-runway.html" class="blog-card" data-tags="video comparison">
-      <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=600" alt="Sora vs Runway">
-      <div class="card-body">
-        <span class="card-tag">Video</span>
-        <h3>Sora vs Runway Gen-3 Comparison</h3>
-        <p>Ultimate guide to the best video AI generator.</p>
-      </div>
+    <a href="ai-video-sora-beyond-ko.html" class="blog-card" data-tags="video">
+      <div class="card-body" style="padding-top:2rem"><h3>시네마틱 AI 영상의 시대</h3><p>Sora 이후 미디어 산업의 거대한 변화 탐구.</p></div>
     </a>
-
-    <a href="ai-job-replacement-2026.html" class="blog-card" data-tags="guide">
-      <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=600" alt="Jobs">
-      <div class="card-body">
-        <span class="card-tag">Insight</span>
-        <h3>Will AI Replace Your Job?</h3>
-        <p>High-risk professions and adaptation strategies.</p>
-      </div>
-    </a>
-
-    <a href="blog-claude-vs-gpt-2026.html" class="blog-card" data-tags="comparison">
-      <div class="card-body" style="padding-top:2rem; min-height: 200px;">
-        <span class="card-tag">Comparison</span>
-        <h3>Claude 4 vs. GPT-5.4 Showdown</h3>
-        <p>Head-to-head testing creative reasoning abilities.</p>
-      </div>
-    </a>
-
-    <a href="ai-video-sora-beyond.html" class="blog-card" data-tags="video">
-      <div class="card-body" style="padding-top:2rem; min-height: 200px;">
-        <span class="card-tag">Video</span>
-        <h3>The Rise of AI Video: Sora & Beyond</h3>
-        <p>Impact of cinematic AI on the media industry.</p>
-      </div>
-    </a>
-
-    <a href="ai-for-productivity.html" class="blog-card" data-tags="tutorial">
-      <div class="card-body" style="padding-top:2rem; min-height: 200px;">
-        <span class="card-tag">Productivity</span>
-        <h3>How to Maximize Productivity</h3>
-        <p>Practical tips for integrating AI assistants.</p>
-      </div>
-    </a>
-
-    <a href="blog-ai-coding-tools-2026.html" class="blog-card" data-tags="coding">
-      <div class="card-body" style="padding-top:2rem; min-height: 200px;">
-        <span class="card-tag">Coding</span>
-        <h3>Expert Coding with AI</h3>
-        <p>Full agentic development workflows for pros.</p>
-      </div>
+    <a href="ai-for-productivity-ko.html" class="blog-card" data-tags="tutorial">
+      <div class="card-body" style="padding-top:2rem"><h3>AI 어시스턴트 활용 팁</h3><p>일상 업무를 혁신하는 실질적인 생산성 팁.</p></div>
     </a>
 
   </div>
 </main>
-
-<footer>© 2026 AI Tool Compare. All rights reserved.</footer>
 
 <script>
 function filterPosts(tag, btn) {
