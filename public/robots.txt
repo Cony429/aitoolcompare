@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+
+# Sitemap
 Sitemap: https://bestaitoolcompare.com/sitemap.xml
+
+# Block unnecessary files
+Disallow: /ai-tools.json
+Disallow: /ai-tools-ko.json
