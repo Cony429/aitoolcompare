@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Your Perfect AI Tool | AI Tool Compare</title>
+  <meta name="description" content="Answer 5 quick questions and discover the exact AI tools built for your needs. Free personalized AI recommendation quiz."/>
+  <meta property="og:title" content="Which AI Tool Is Right for You? Take the Quiz"/>
+  <meta property="og:description" content="5 questions. Instant recommendation. Find your perfect AI match."/>
+  <meta property="og:url" content="https://bestaitoolcompare.com/find-my-ai.html"/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://bestaitoolcompare.com/find-my-ai.html"/>
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="comparison.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Find Your Perfect AI Tool Quiz",
+    "description":"Personalized AI tool recommendation quiz — answer 5 questions and get your perfect AI stack.",
+    "url":"https://bestaitoolcompare.com/find-my-ai.html"
+  }
+  </script>
+  <style>
+    :root {
+      --accent:#007bff; --accent-light:#e8f4ff; --accent-hover:#0066dd;
+      --success:#16a34a; --success-light:#dcfce7;
+      --text:#1a1a2e; --muted:#6b7280; --border:#e5e7eb;
+      --surface:#f9fafb; --white:#ffffff; --radius:14px;
+    }
+    body { background:#fff; color:var(--text); font-family:'Pretendard','Helvetica Neue',Arial,sans-serif; line-height:1.7; }
+
+    /* HERO */
+    .quiz-hero { background:linear-gradient(135deg,#f0f7ff 0%,#fff 55%); border-bottom:1px solid var(--border); text-align:center; padding:4rem 1.5rem 3.5rem; }
+    .quiz-badge { display:inline-block; background:var(--accent-light); color:var(--accent); font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:.3rem .9rem; border-radius:100px; margin-bottom:1.2rem; border:1px solid rgba(0,123,255,.15); }
+    .quiz-hero h1 { font-family:'Syne',sans-serif; font-size:clamp(1.9rem,4.5vw,3rem); font-weight:800; color:var(--text); margin-bottom:.8rem; letter-spacing:-.02em; line-height:1.2; }
+    .quiz-hero h1 span { color:var(--accent); }
+    .quiz-hero p { font-size:1.05rem; color:var(--muted); max-width:460px; margin:0 auto 2rem; }
+    .start-btn { display:inline-block; background:var(--accent); color:#fff; font-weight:700; font-size:1rem; padding:.85rem 2.2rem; border-radius:100px; border:none; cursor:pointer; transition:background .15s,transform .15s,box-shadow .15s; box-shadow:0 4px 14px rgba(0,123,255,.25); }
+    .start-btn:hover { background:var(--accent-hover); transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,123,255,.35); }
+
+    /* QUIZ BODY */
+    .quiz-wrap { max-width:660px; margin:0 auto; padding:2.5rem 1.5rem 5rem; }
+
+    /* PROGRESS */
+    .progress-wrap { display:none; margin-bottom:2rem; }
+    .progress-label { display:flex; justify-content:space-between; font-size:.8rem; color:var(--muted); margin-bottom:.5rem; font-weight:500; }
+    .progress-bar { height:4px; background:var(--border); border-radius:10px; overflow:hidden; }
+    .progress-fill { height:100%; background:linear-gradient(90deg,var(--accent),#38bdf8); border-radius:10px; transition:width .4s ease; }
+
+    /* QUESTION */
+    .question-card { display:none; background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:2rem; box-shadow:0 2px 12px rgba(0,0,0,.05); animation:fadeUp .3s ease both; }
+    .question-card.active { display:block; }
+    .q-number { font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:.7rem; }
+    .q-text { font-family:'Syne',sans-serif; font-size:1.3rem; font-weight:700; color:var(--text); margin-bottom:1.4rem; line-height:1.35; }
+    .options { display:grid; gap:.6rem; }
+    .option-btn { display:flex; align-items:center; gap:.9rem; background:var(--surface); border:1.5px solid var(--border); border-radius:10px; padding:.85rem 1.1rem; cursor:pointer; transition:all .16s; text-align:left; color:var(--text); font-size:.93rem; font-family:inherit; }
+    .option-btn:hover { border-color:var(--accent); background:var(--accent-light); transform:translateX(3px); }
+    .option-btn.selected { border-color:var(--accent); background:var(--accent-light); }
+    .option-btn.selected .option-label { color:var(--accent); }
+    .option-icon { font-size:1.25rem; flex-shrink:0; }
+    .option-label { font-weight:600; color:var(--text); font-size:.93rem; }
+    .option-sub { font-size:.8rem; color:var(--muted); margin-top:.1rem; }
+    .q-nav { display:flex; justify-content:flex-end; margin-top:1.3rem; }
+    .next-btn { background:var(--accent); color:#fff; font-weight:700; font-size:.9rem; padding:.65rem 1.7rem; border-radius:100px; border:none; cursor:pointer; opacity:.35; pointer-events:none; transition:opacity .2s,transform .15s; font-family:inherit; }
+    .next-btn.ready { opacity:1; pointer-events:auto; }
+    .next-btn.ready:hover { background:var(--accent-hover); transform:translateY(-1px); }
+
+    /* RESULT */
+    #result { display:none; animation:fadeUp .4s ease both; }
+    .result-header { text-align:center; margin-bottom:2rem; padding:2rem 1.5rem; background:linear-gradient(135deg,#f0f7ff,#fff); border:1px solid var(--border); border-radius:var(--radius); }
+    .result-header h2 { font-family:'Syne',sans-serif; font-size:clamp(1.6rem,4vw,2.2rem); font-weight:800; color:var(--text); margin:.8rem 0 .4rem; }
+    .result-header p { color:var(--muted); font-size:.92rem; }
+    .result-stack { display:grid; gap:1rem; margin-bottom:1.5rem; }
+    .tool-card { background:var(--white); border:1.5px solid var(--border); border-radius:var(--radius); padding:1.3rem 1.4rem; display:flex; align-items:flex-start; gap:1.1rem; transition:border-color .2s,box-shadow .2s,transform .2s; }
+    .tool-card:hover { border-color:var(--accent); box-shadow:0 4px 16px rgba(0,123,255,.1); transform:translateY(-2px); }
+    .tool-card:first-child { border-color:var(--accent); background:var(--accent-light); }
+    .tool-rank { font-family:'Syne',sans-serif; font-size:1.6rem; font-weight:800; color:var(--border); line-height:1; min-width:2.2rem; text-align:center; padding-top:.1rem; }
+    .tool-card:first-child .tool-rank { color:var(--accent); }
+    .tool-card:nth-child(2) .tool-rank { color:#38bdf8; }
+    .tool-card:nth-child(3) .tool-rank { color:#a78bfa; }
+    .tool-info { flex:1; }
+    .tool-name { font-weight:800; font-size:1.05rem; color:var(--text); margin-bottom:.25rem; }
+    .tool-why { font-size:.87rem; color:var(--muted); line-height:1.6; margin-bottom:.6rem; }
+    .tool-tags { display:flex; flex-wrap:wrap; gap:.35rem; }
+    .tag { font-size:.68rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:.18rem .5rem; border-radius:4px; background:var(--surface); border:1px solid var(--border); color:var(--muted); }
+    .tag.free { color:var(--success); border-color:rgba(22,163,74,.25); background:var(--success-light); }
+    .tool-link { align-self:center; white-space:nowrap; font-size:.82rem; font-weight:700; color:var(--accent); text-decoration:none; border:1.5px solid rgba(0,123,255,.3); border-radius:100px; padding:.42rem .95rem; transition:background .15s; flex-shrink:0; }
+    .tool-link:hover { background:var(--accent-light); border-color:var(--accent); }
+
+    /* SHARE */
+    .share-box { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:1.3rem 1.4rem; text-align:center; margin-top:1.2rem; }
+    .share-box p { font-size:.87rem; color:var(--muted); margin-bottom:.8rem; }
+    .share-btns { display:flex; gap:.55rem; justify-content:center; flex-wrap:wrap; }
+    .share-btn { font-size:.82rem; font-weight:600; padding:.48rem 1rem; border-radius:100px; border:1.5px solid var(--border); background:var(--white); color:var(--text); cursor:pointer; transition:border-color .15s,color .15s; text-decoration:none; display:inline-block; font-family:inherit; }
+    .share-btn:hover { border-color:var(--accent); color:var(--accent); }
+    .result-actions { display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem; }
+    .action-btn { font-size:.92rem; font-weight:700; padding:.72rem 1.6rem; border-radius:100px; border:none; cursor:pointer; transition:transform .15s,box-shadow .15s; font-family:inherit; }
+    .action-btn:hover { transform:translateY(-1px); }
+    .action-primary { background:var(--accent); color:#fff; box-shadow:0 3px 10px rgba(0,123,255,.2); }
+    .action-primary:hover { background:var(--accent-hover); box-shadow:0 5px 16px rgba(0,123,255,.35); }
+    .action-secondary { background:var(--white); color:var(--text); border:1.5px solid var(--border)!important; }
+
+    @keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+      <img src="favicon.png" alt="Logo" style="width:32px;height:32px;border-radius:6px;object-fit:contain;">
+      <span style="font-size:1.4rem;font-weight:800;color:#1a1a2e;">AI Tool Compare</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="compare.html">Compare</a>
+      <a href="blog.html">Blog</a>
+      <a href="news.html">News</a>
+      <a href="find-my-ai.html" class="active" style="color:#007bff;font-weight:700;">🎯 Find My AI</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="find-my-ai.html">EN</a> | <a href="find-my-ai-ko.html">KO</a>
+    </div>
+  </div>
+</header>
+
+<div class="quiz-hero" id="intro">
+  <div class="quiz-badge">✦ Free · 2 min</div>
+  <h1>Which AI Tool Is<br><span>Right for You?</span></h1>
+  <p>Answer 5 quick questions and get a personalized AI stack — built exactly for what you do.</p>
+  <button class="start-btn" onclick="startQuiz()">Find My AI →</button>
+</div>
+
+<div class="quiz-wrap">
+  <div class="progress-wrap" id="progress-wrap">
+    <div class="progress-label"><span id="progress-text">Question 1 of 5</span><span id="progress-pct">0%</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  </div>
+
+  <div class="question-card" id="q1">
+    <div class="q-number">Question 01 / 05</div>
+    <div class="q-text">What's your main goal with AI?</div>
+    <div class="options">
+      <button class="option-btn" onclick="pick(this,'q1','writing')"><span class="option-icon">✍️</span><div><div class="option-label">Writing & Content</div><div class="option-sub">Blog posts, emails, copywriting, essays</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q1','coding')"><span class="option-icon">💻</span><div><div class="option-label">Coding & Development</div><div class="option-sub">Build apps, debug, review code</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q1','image')"><span class="option-icon">🎨</span><div><div class="option-label">Image & Design</div><div class="option-sub">Generate visuals, logos, creative art</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q1','video')"><span class="option-icon">🎬</span><div><div class="option-label">Video Creation</div><div class="option-sub">AI video, avatars, editing</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q1','research')"><span class="option-icon">🔍</span><div><div class="option-label">Research & Analysis</div><div class="option-sub">Summarize docs, fact-check, search</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q1','productivity')"><span class="option-icon">⚡</span><div><div class="option-label">Productivity & Automation</div><div class="option-sub">Meetings, workflows, scheduling</div></div></button>
+    </div>
+    <div class="q-nav"><button class="next-btn" id="next1" onclick="nextQ(1)">Next →</button></div>
+  </div>
+
+  <div class="question-card" id="q2">
+    <div class="q-number">Question 02 / 05</div>
+    <div class="q-text">What's your budget?</div>
+    <div class="options">
+      <button class="option-btn" onclick="pick(this,'q2','free')"><span class="option-icon">🆓</span><div><div class="option-label">Free only</div><div class="option-sub">No subscriptions, free tiers only</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q2','low')"><span class="option-icon">💰</span><div><div class="option-label">Under $20/month</div><div class="option-sub">Willing to pay for the right tool</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q2','any')"><span class="option-icon">💳</span><div><div class="option-label">Budget isn't a concern</div><div class="option-sub">Best tool wins, price doesn't matter</div></div></button>
+    </div>
+    <div class="q-nav"><button class="next-btn" id="next2" onclick="nextQ(2)">Next →</button></div>
+  </div>
+
+  <div class="question-card" id="q3">
+    <div class="q-number">Question 03 / 05</div>
+    <div class="q-text">How do you describe your tech comfort level?</div>
+    <div class="options">
+      <button class="option-btn" onclick="pick(this,'q3','beginner')"><span class="option-icon">🌱</span><div><div class="option-label">Beginner</div><div class="option-sub">I prefer simple, easy-to-use tools</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q3','mid')"><span class="option-icon">🚀</span><div><div class="option-label">Intermediate</div><div class="option-sub">Comfortable with most software</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q3','pro')"><span class="option-icon">⚙️</span><div><div class="option-label">Power user / Developer</div><div class="option-sub">Love APIs, CLI, advanced settings</div></div></button>
+    </div>
+    <div class="q-nav"><button class="next-btn" id="next3" onclick="nextQ(3)">Next →</button></div>
+  </div>
+
+  <div class="question-card" id="q4">
+    <div class="q-number">Question 04 / 05</div>
+    <div class="q-text">How will you mainly use it?</div>
+    <div class="options">
+      <button class="option-btn" onclick="pick(this,'q4','personal')"><span class="option-icon">🧑</span><div><div class="option-label">Personal use</div><div class="option-sub">Just for myself, hobbies, learning</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q4','work')"><span class="option-icon">💼</span><div><div class="option-label">Work / Freelance</div><div class="option-sub">Client work, productivity, solo business</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q4','team')"><span class="option-icon">👥</span><div><div class="option-label">Team / Company</div><div class="option-sub">Multiple people, shared workflows</div></div></button>
+    </div>
+    <div class="q-nav"><button class="next-btn" id="next4" onclick="nextQ(4)">Next →</button></div>
+  </div>
+
+  <div class="question-card" id="q5">
+    <div class="q-number">Question 05 / 05</div>
+    <div class="q-text">What matters most to you?</div>
+    <div class="options">
+      <button class="option-btn" onclick="pick(this,'q5','quality')"><span class="option-icon">🏆</span><div><div class="option-label">Best output quality</div><div class="option-sub">I want the absolute best results</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q5','speed')"><span class="option-icon">⚡</span><div><div class="option-label">Speed & efficiency</div><div class="option-sub">Fast responses, streamlined workflow</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q5','privacy')"><span class="option-icon">🔒</span><div><div class="option-label">Privacy & data control</div><div class="option-sub">My data stays safe and private</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q5','easy')"><span class="option-icon">😊</span><div><div class="option-label">Ease of use</div><div class="option-sub">Just works, no learning curve</div></div></button>
+    </div>
+    <div class="q-nav"><button class="next-btn" id="next5" onclick="showResult()">See My Results →</button></div>
+  </div>
+
+  <div id="result">
+    <div class="result-header">
+      <div class="quiz-badge">✦ Your Personalized AI Stack</div>
+      <h2 id="result-headline">Your Perfect AI Match</h2>
+      <p id="result-sub">Based on your answers, here are the best AI tools for you.</p>
+    </div>
+    <div class="result-stack" id="result-stack"></div>
+    <div class="share-box">
+      <p>Share your result with friends 👇</p>
+      <div class="share-btns">
+        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">𝕏 Share on X</a>
+        <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">in LinkedIn</a>
+        <button class="share-btn" onclick="copyLink()">🔗 Copy Link</button>
+      </div>
+    </div>
+    <div class="result-actions">
+      <button class="action-btn action-primary" onclick="location.href='compare.html'">Compare These Tools →</button>
+      <button class="action-btn action-secondary" onclick="resetQuiz()">Retake Quiz</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a>
+    </div>
+    <p class="copyright">&copy; 2026 AI Tool Compare. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+const answers={};
+const TOOLS={
+  chatgpt:   {name:'ChatGPT',      why:'The most versatile AI — handles writing, coding, research, and more in one place.',               tags:['Free','Paid'],  free:true,  link:'https://chat.openai.com',            score:0},
+  claude:    {name:'Claude',       why:'Best for long documents and nuanced writing. Lowest hallucination rate of any frontier model.',   tags:['Free','Paid'],  free:true,  link:'https://claude.ai',                  score:0},
+  gemini:    {name:'Gemini',       why:'Deep Google integration — Gmail, Docs, Drive. Best-in-class for multimodal tasks.',               tags:['Free','Paid'],  free:true,  link:'https://gemini.google.com',          score:0},
+  perplexity:{name:'Perplexity AI',why:'AI research engine with real-time web citations. Perfect for fact-checking.',                     tags:['Free','Paid'],  free:true,  link:'https://perplexity.ai',              score:0},
+  copilot:   {name:'GitHub Copilot',why:'Gold standard AI coding in VS Code & JetBrains. 2,000 free completions/month.',                 tags:['Free','Paid'],  free:true,  link:'https://github.com/features/copilot',score:0},
+  cursor:    {name:'Cursor',       why:'AI-native IDE that understands your entire codebase. Fastest-growing dev tool in 2026.',          tags:['Free','Paid'],  free:true,  link:'https://cursor.sh',                  score:0},
+  midjourney:{name:'Midjourney',   why:'Gold standard for AI image generation. Unmatched artistic quality in version 7.',                tags:['Paid'],         free:false, link:'https://midjourney.com',             score:0},
+  leonardo:  {name:'Leonardo.ai',  why:'Best free image generator — 150 daily tokens, no watermarks, multiple styles.',                  tags:['Free'],         free:true,  link:'https://leonardo.ai',                score:0},
+  canva:     {name:'Canva AI',     why:'Easiest AI design tool. Magic Design generates branded graphics without design skills.',          tags:['Free','Paid'],  free:true,  link:'https://canva.com',                  score:0},
+  sora:      {name:'Sora',         why:"OpenAI's cinematic video generator. Highest quality AI video in 2026.",                          tags:['Paid'],         free:false, link:'https://sora.com',                   score:0},
+  heygen:    {name:'HeyGen',       why:'Business avatar videos in 40+ languages with accurate lip-sync.',                                tags:['Free','Paid'],  free:true,  link:'https://www.heygen.com',             score:0},
+  runway:    {name:'Runway Gen-3', why:"Professional AI video with motion brushes and frame-level editing. Filmmaker's choice.",         tags:['Free','Paid'],  free:true,  link:'https://runwayml.com',               score:0},
+  notion:    {name:'Notion AI',    why:'AI in your workspace — summarizes notes, drafts content, automates tasks.',                      tags:['Paid'],         free:false, link:'https://notion.so',                  score:0},
+  otter:     {name:'Otter.ai',     why:'Auto-records, transcribes, and summarizes Zoom/Meet/Teams meetings in real time.',               tags:['Free','Paid'],  free:true,  link:'https://otter.ai',                   score:0},
+  zapier:    {name:'Zapier',       why:'Connect 8,000+ apps with AI-powered automation. Build workflows without coding.',                 tags:['Free','Paid'],  free:true,  link:'https://zapier.com',                 score:0},
+  deepseek:  {name:'DeepSeek',     why:'Open-source frontier AI at near-zero cost. Great for math, coding, and technical analysis.',     tags:['Free'],         free:true,  link:'https://deepseek.com',               score:0},
+  notebooklm:{name:'NotebookLM',   why:"Google's AI that becomes an expert on YOUR documents. Ask questions about your PDFs.",           tags:['Free'],         free:true,  link:'https://notebooklm.google.com',      score:0},
+  jasper:    {name:'Jasper',       why:'Professional AI content for marketing teams. Brand voice + SEO optimization.',                   tags:['Paid'],         free:false, link:'https://jasper.ai',                  score:0},
+};
+
+function calcScores(){
+  const t=JSON.parse(JSON.stringify(TOOLS));const a=answers;
+  if(a.q1==='writing')    {t.claude.score+=5;t.chatgpt.score+=4;t.jasper.score+=4;t.notion.score+=3;}
+  if(a.q1==='coding')     {t.cursor.score+=5;t.copilot.score+=5;t.chatgpt.score+=3;t.deepseek.score+=3;}
+  if(a.q1==='image')      {t.midjourney.score+=5;t.leonardo.score+=4;t.canva.score+=4;t.chatgpt.score+=2;}
+  if(a.q1==='video')      {t.sora.score+=5;t.heygen.score+=4;t.runway.score+=4;}
+  if(a.q1==='research')   {t.perplexity.score+=5;t.notebooklm.score+=5;t.claude.score+=4;t.chatgpt.score+=3;}
+  if(a.q1==='productivity'){t.zapier.score+=5;t.notion.score+=4;t.otter.score+=4;t.chatgpt.score+=3;}
+  if(a.q2==='free'){Object.keys(t).forEach(k=>{if(!t[k].free)t[k].score-=4;});t.chatgpt.score+=1;t.claude.score+=1;t.gemini.score+=1;t.deepseek.score+=2;t.leonardo.score+=1;}
+  if(a.q2==='any'){t.midjourney.score+=1;t.sora.score+=1;t.cursor.score+=1;}
+  if(a.q3==='beginner'){t.canva.score+=2;t.chatgpt.score+=2;t.notebooklm.score+=1;t.deepseek.score-=2;}
+  if(a.q3==='pro'){t.deepseek.score+=3;t.cursor.score+=2;t.zapier.score+=2;t.copilot.score+=2;}
+  if(a.q4==='team'){t.notion.score+=2;t.zapier.score+=2;t.jasper.score+=1;}
+  if(a.q5==='quality'){t.claude.score+=2;t.midjourney.score+=2;}
+  if(a.q5==='privacy'){t.deepseek.score+=3;t.notebooklm.score+=1;}
+  if(a.q5==='easy'){t.canva.score+=2;t.chatgpt.score+=2;}
+  if(a.q5==='speed'){t.perplexity.score+=2;t.chatgpt.score+=1;}
+  return Object.entries(t).sort((a,b)=>b[1].score-a[1].score).filter(([,v])=>v.score>0).slice(0,3);
+}
+
+function startQuiz(){document.getElementById('intro').style.display='none';document.getElementById('progress-wrap').style.display='block';showQ(1);}
+function showQ(n){
+  document.querySelectorAll('.question-card').forEach(c=>c.classList.remove('active'));
+  document.getElementById(`q${n}`).classList.add('active');
+  const p=Math.round(((n-1)/5)*100);
+  document.getElementById('progress-text').textContent=`Question ${n} of 5`;
+  document.getElementById('progress-pct').textContent=p+'%';
+  document.getElementById('progress-fill').style.width=p+'%';
+}
+function pick(btn,qid,value){
+  document.querySelectorAll(`#${qid} .option-btn`).forEach(b=>b.classList.remove('selected'));
+  btn.classList.add('selected');answers[qid]=value;
+  document.getElementById(`next${qid.replace('q','')}`).classList.add('ready');
+}
+function nextQ(n){if(!answers[`q${n}`])return;showQ(n+1);}
+function showResult(){
+  if(!answers.q5)return;
+  document.querySelectorAll('.question-card').forEach(c=>c.classList.remove('active'));
+  document.getElementById('progress-wrap').style.display='none';
+  const top=calcScores();
+  const lbl={writing:'Writer',coding:'Developer',image:'Visual Creator',video:'Video Creator',research:'Researcher',productivity:'Productivity Pro'};
+  document.getElementById('result-headline').textContent=`Your ${lbl[answers.q1]||'AI'} Stack`;
+  document.getElementById('result-sub').textContent='Based on your answers, here are the top AI tools built for you.';
+  const stack=document.getElementById('result-stack');stack.innerHTML='';
+  ['01','02','03'].forEach((rank,i)=>{
+    if(!top[i])return;const[,tool]=top[i];
+    const div=document.createElement('div');div.className='tool-card';
+    const tags=tool.tags.map(t=>`<span class="tag ${t==='Free'?'free':''}">${t}</span>`).join('');
+    div.innerHTML=`<div class="tool-rank">${rank}</div><div class="tool-info"><div class="tool-name">${tool.name}</div><div class="tool-why">${tool.why}</div><div class="tool-tags">${tags}</div></div><a class="tool-link" href="${tool.link}" target="_blank" rel="noopener">Visit →</a>`;
+    stack.appendChild(div);
+  });
+  const txt=encodeURIComponent(`My AI stack: ${top.map(([,t])=>t.name).join(', ')} — Find yours at`);
+  const url=encodeURIComponent('https://bestaitoolcompare.com/find-my-ai.html');
+  document.getElementById('share-twitter').href=`https://twitter.com/intent/tweet?text=${txt}&url=${url}`;
+  document.getElementById('share-linkedin').href=`https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+  document.getElementById('result').style.display='block';
+  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copyLink(){navigator.clipboard.writeText('https://bestaitoolcompare.com/find-my-ai.html').then(()=>alert('Link copied!'));}
+function resetQuiz(){
+  Object.keys(answers).forEach(k=>delete answers[k]);
+  document.getElementById('result').style.display='none';
+  document.querySelectorAll('.option-btn').forEach(b=>b.classList.remove('selected'));
+  document.querySelectorAll('.next-btn').forEach(b=>b.classList.remove('ready'));
+  document.getElementById('intro').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
