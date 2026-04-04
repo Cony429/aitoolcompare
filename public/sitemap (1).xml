@@ -1,0 +1,583 @@
+di<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ============================
+       MAIN PAGES
+       ============================ -->
+
+  <url>
+    <loc>https://bestaitoolcompare.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/index-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/index-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/index-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/compare.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/compare-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/compare-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/compare-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/news.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/news.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/news-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/news-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/news.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/news-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================
+       BLOG INDEX
+       ============================ -->
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ============================
+       BLOG POSTS — NEW (April 2026)
+       ============================ -->
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-ai-agents-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-ai-agents-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-ai-agents-2026-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-ai-agents-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-ai-agents-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-ai-agents-2026-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-multimodal-ai-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-multimodal-ai-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-multimodal-ai-2026-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-multimodal-ai-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-multimodal-ai-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-multimodal-ai-2026-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-ai-coding-tools-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-ai-coding-tools-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-ai-coding-tools-2026-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-ai-coding-tools-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-ai-coding-tools-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-ai-coding-tools-2026-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-ai-healthcare-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-ai-healthcare-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-ai-healthcare-2026-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-ai-healthcare-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-ai-healthcare-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-ai-healthcare-2026-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-open-source-ai-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-open-source-ai-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-open-source-ai-2026-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-open-source-ai-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-open-source-ai-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-open-source-ai-2026-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================
+       BLOG POSTS — EXISTING
+       ============================ -->
+
+  <url>
+    <loc>https://bestaitoolcompare.com/chatgpt-vs-claude-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/chatgpt-vs-claude-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/chatgpt-vs-claude-2026-ko.html"/>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/chatgpt-vs-claude-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/chatgpt-vs-claude-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/chatgpt-vs-claude-2026-ko.html"/>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-free-ai-tools-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-free-ai-tools-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-free-ai-tools-2026-ko.html"/>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-free-ai-tools-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-free-ai-tools-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-free-ai-tools-2026-ko.html"/>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-for-writing-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-for-writing-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-for-writing-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-for-writing-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-for-writing-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-for-writing-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-for-coding-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-for-coding-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-for-coding-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-for-coding-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-for-coding-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-for-coding-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/how-to-use-ai-for-productivity.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/how-to-use-ai-for-productivity.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/how-to-use-ai-for-productivity-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/how-to-use-ai-for-productivity-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/how-to-use-ai-for-productivity.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/how-to-use-ai-for-productivity-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-image-generators-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-image-generators-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-image-generators-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-image-generators-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-image-generators-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-image-generators-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-video-generators-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-video-generators-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-video-generators-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-video-generators-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-video-generators-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-video-generators-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-tools-for-students-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-tools-for-students-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-tools-for-students-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-tools-for-students-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-tools-for-students-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-tools-for-students-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/how-to-write-better-ai-prompts.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/how-to-write-better-ai-prompts.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/how-to-write-better-ai-prompts-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/how-to-write-better-ai-prompts-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/how-to-write-better-ai-prompts.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/how-to-write-better-ai-prompts-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-tools-for-small-business-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-tools-for-small-business-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-tools-for-small-business-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-ai-tools-for-small-business-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-ai-tools-for-small-business-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-ai-tools-for-small-business-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-top5-tools-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-top5-tools-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-top5-tools-2026-ko.html"/>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-top5-tools-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-top5-tools-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-top5-tools-2026-ko.html"/>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/gpt4o-vs-claude35-sonnet.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/gpt4o-vs-claude35-sonnet.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/gpt4o-vs-claude35-sonnet-ko.html"/>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/gpt4o-vs-claude35-sonnet-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/gpt4o-vs-claude35-sonnet.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/gpt4o-vs-claude35-sonnet-ko.html"/>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-free-ai-images-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-free-ai-images-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-free-ai-images-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/best-free-ai-images-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/best-free-ai-images-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/best-free-ai-images-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/sora-vs-runway.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/sora-vs-runway.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/sora-vs-runway-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/sora-vs-runway-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/sora-vs-runway.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/sora-vs-runway-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/ai-job-replacement-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/ai-job-replacement-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/ai-job-replacement-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/ai-job-replacement-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/ai-job-replacement-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/ai-job-replacement-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-claude-vs-gpt-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-claude-vs-gpt-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-claude-vs-gpt-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/blog-claude-vs-gpt-2026-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/blog-claude-vs-gpt-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/blog-claude-vs-gpt-2026-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/ai-video-sora-beyond.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/ai-video-sora-beyond.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/ai-video-sora-beyond-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/ai-video-sora-beyond-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/ai-video-sora-beyond.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/ai-video-sora-beyond-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/ai-for-productivity.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/ai-for-productivity.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/ai-for-productivity-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/ai-for-productivity-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/ai-for-productivity.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/ai-for-productivity-ko.html"/>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================
+       POLICY & INFO PAGES
+       ============================ -->
+
+  <url>
+    <loc>https://bestaitoolcompare.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/about-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/about-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/about-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/contact-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/contact-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/contact-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/privacy-policy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/privacy-policy-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/privacy-policy-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/privacy-policy-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/terms-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://bestaitoolcompare.com/terms-ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bestaitoolcompare.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bestaitoolcompare.com/terms-ko.html"/>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
