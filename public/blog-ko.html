@@ -12,6 +12,7 @@
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
+/* 한국어 가독성 및 카드 레이아웃 최적화 */
 body { background:#fff; color:#333; font-family:'Pretendard', sans-serif; word-break: keep-all; }
 
 .hero-section {
@@ -47,10 +48,12 @@ body { background:#fff; color:#333; font-family:'Pretendard', sans-serif; word-b
 
 .blog-grid {
   display:grid;
+  /* 5열 그리드 유지 */
   grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
   gap:20px;
 }
 
+/* 모든 카드 스타일 통일 */
 .blog-card {
   border:1px solid #e5e7eb;
   border-radius:14px;
@@ -69,7 +72,7 @@ body { background:#fff; color:#333; font-family:'Pretendard', sans-serif; word-b
 
 .blog-card img {
   width:100%;
-  height:140px;
+  height:150px; /* 이미지 높이 고정 */
   object-fit:cover;
 }
 
@@ -91,6 +94,7 @@ body { background:#fff; color:#333; font-family:'Pretendard', sans-serif; word-b
   font-size:14px;
   margin:8px 0;
   line-height: 1.4;
+  font-weight: 800;
 }
 
 .blog-card p {
@@ -182,25 +186,24 @@ body { background:#fff; color:#333; font-family:'Pretendard', sans-serif; word-b
 <div class="section-divider">🔥 인기 급상승 아티클</div>
 <div class="blog-grid">
 
-    <!-- NEW ARTICLE 1: ChatGPT Prompts -->
-<a href="blog-chatgpt-prompts-business-2026-ko.html" class="article-card">
-  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600" alt="ChatGPT Prompts for Business" loading="lazy"/>
-  <div class="article-content">
-    <span class="tag" style="background:#fff0f0;color:#ef4444;">프롬프트 🔥</span>
+<a href="blog-chatgpt-prompts-business-2026-ko.html" class="blog-card" data-tags="tutorial">
+  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600" alt="ChatGPT Prompts" loading="lazy"/>
+  <div class="card-body">
+    <span class="card-tag">프롬프트 🔥</span>
     <h3>비즈니스를 위한 최고의 ChatGPT 프롬프트 (2026)</h3>
     <p>마케팅, 영업, HR, 재무 — 복사해서 바로 쓰는 실전 프롬프트.</p>
   </div>
 </a>
 
-<!-- NEW ARTICLE 2: Passive Income -->
-<a href="blog-passive-income-ai-2026-ko.html" class="article-card">
-  <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=600" alt="Passive Income with AI" loading="lazy"/>
-  <div class="article-content">
-    <span class="tag" style="background:#fef3c7;color:#d97706;">수입 HOT</span>
+<a href="blog-passive-income-ai-2026-ko.html" class="blog-card" data-tags="guide">
+  <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=600" alt="Passive Income AI" loading="lazy"/>
+  <div class="card-body">
+    <span class="card-tag">수입 HOT</span>
     <h3>AI로 패시브 인컴 만드는 방법 (2026 가이드)</h3>
     <p>Etsy, 유튜브, 제휴 사이트, 마이크로 SaaS — 현실적인 타임라인 포함.</p>
   </div>
 </a>
+
 <a href="blog-make-money-with-ai-2026-ko.html" class="blog-card" data-tags="guide">
 <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?auto=format&fit=crop&w=600">
 <div class="card-body">
@@ -252,51 +255,46 @@ body { background:#fff; color:#333; font-family:'Pretendard', sans-serif; word-b
 
 <div class="blog-grid" id="blog-grid">
 
-<!-- NEW ARTICLE 1: ChatGPT Prompts -->
-<a href="blog-chatgpt-prompts-business-2026-ko.html" class="article-card">
-  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600" alt="ChatGPT Prompts for Business" loading="lazy"/>
-  <div class="article-content">
-    <span class="tag" style="background:#fff0f0;color:#ef4444;">프롬프트 🔥</span>
+<a href="blog-chatgpt-prompts-business-2026-ko.html" class="blog-card" data-tags="tutorial">
+  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600" alt="ChatGPT Prompts" loading="lazy"/>
+  <div class="card-body">
+    <span class="card-tag">프롬프트 🔥</span>
     <h3>비즈니스를 위한 최고의 ChatGPT 프롬프트 (2026)</h3>
     <p>마케팅, 영업, HR, 재무 — 복사해서 바로 쓰는 실전 프롬프트.</p>
   </div>
 </a>
 
-<!-- NEW ARTICLE 2: Passive Income -->
-<a href="blog-passive-income-ai-2026-ko.html" class="article-card">
+<a href="blog-passive-income-ai-2026-ko.html" class="blog-card" data-tags="guide">
   <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=600" alt="Passive Income with AI" loading="lazy"/>
-  <div class="article-content">
-    <span class="tag" style="background:#fef3c7;color:#d97706;">수입 HOT</span>
+  <div class="card-body">
+    <span class="card-tag">수입 HOT</span>
     <h3>AI로 패시브 인컴 만드는 방법 (2026 가이드)</h3>
     <p>Etsy, 유튜브, 제휴 사이트, 마이크로 SaaS — 현실적인 타임라인 포함.</p>
   </div>
 </a>
 
-<!-- NEW ARTICLE 3: Automation Tools -->
-<a href="blog-ai-automation-tools-replace-work-2026-ko.html" class="article-card">
+<a href="blog-ai-automation-tools-replace-work-2026-ko.html" class="blog-card" data-tags="guide">
   <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600" alt="AI Automation Tools" loading="lazy"/>
-  <div class="article-content">
-    <span class="tag">자동화 NEW</span>
+  <div class="card-body">
+    <span class="card-tag">자동화 NEW</span>
     <h3>업무를 대체하는 AI 자동화 도구 (2026)</h3>
     <p>AI가 이미 대체하고 있는 작업과 인간이 여전히 이기는 곳.</p>
   </div>
 </a>
 
-<!-- NEW ARTICLE 4: Free AI Tools -->
-<a href="blog-best-free-ai-tools-beginners-2026-ko.html" class="article-card">
+<a href="blog-best-free-ai-tools-beginners-2026-ko.html" class="blog-card" data-tags="guide">
   <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=600" alt="Free AI Tools for Beginners" loading="lazy"/>
-  <div class="article-content">
-    <span class="tag" style="background:#dcfce7;color:#16a34a;">무료 NEW</span>
+  <div class="card-body">
+    <span class="card-tag" style="color:#16a34a;">무료 NEW</span>
     <h3>초보자를 위한 최고의 무료 AI 도구 (코딩 불필요)</h3>
     <p>2026년 최고의 무료 AI 도구 — 신용카드 없이, 코딩 없이 오늘 시작.</p>
   </div>
 </a>
 
-<!-- NEW ARTICLE 5: AI Startup -->
-<a href="blog-how-to-build-ai-startup-2026-ko.html" class="article-card">
+<a href="blog-how-to-build-ai-startup-2026-ko.html" class="blog-card" data-tags="guide">
   <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600" alt="How to Build AI Startup" loading="lazy"/>
-  <div class="article-content">
-    <span class="tag" style="background:#ede9fe;color:#7c3aed;">스타트업 NEW</span>
+  <div class="card-body">
+    <span class="card-tag" style="color:#7c3aed;">스타트업 NEW</span>
     <h3>2026년 AI 스타트업 만드는 방법 (단계별 가이드)</h3>
     <p>아이디어에서 출시까지 — 검증, MVP, 가격 설정, 펀딩 & 성장.</p>
   </div>
@@ -440,11 +438,9 @@ body { background:#fff; color:#333; font-family:'Pretendard', sans-serif; word-b
 
 <script>
 function filterPosts(tag, btn) {
-    // 버튼 활성화 클래스 처리
     document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     
-    // 전체 블로그 카드 필터링 (id가 아닌 클래스로 전체 선택)
     document.querySelectorAll('.blog-card').forEach(card => {
         const cat = card.getAttribute('data-tags') || '';
         if (tag === 'all' || cat.includes(tag)) {
@@ -456,4 +452,4 @@ function filterPosts(tag, btn) {
 }
 </script>
 </body>
-</html>
+</html> 
