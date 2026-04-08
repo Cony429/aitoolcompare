@@ -181,7 +181,7 @@
     <div class="q-text">월 예산은 어느 정도인가요?</div>
     <div class="options">
       <button class="option-btn" onclick="pick(this,'q2','free')"><span class="option-icon">🆓</span><div><div class="option-label">무료만</div><div class="option-sub">구독 없이 무료 플랜만 사용</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q2','low')"><span class="option-icon">💰</span><div><div class="option-label">월 3만원 이하</div><div class="option-sub">가치 있는 도구라면 결제 가능</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q2','low')"><span class="option-icon">💰</span><div><div class="option-label">$20/월 이하</div><div class="option-sub">가치 있는 도구라면 결제 가능</div></div></button>
       <button class="option-btn" onclick="pick(this,'q2','any')"><span class="option-icon">💳</span><div><div class="option-label">예산 상관없음</div><div class="option-sub">최고의 도구면 비용은 문제없음</div></div></button>
     </div>
     <div class="q-nav"><button class="next-btn" id="next2" onclick="nextQ(2)">다음 →</button></div>
@@ -258,15 +258,15 @@
         <div class="control-row">
           <div class="control-label">
             월 예산
-            <span id="budget-display">월 약 3만원</span>
+            <span id="budget-display">~$20/월</span>
           </div>
           <input type="range" class="budget-slider" id="budget-slider" min="0" max="3" value="1"
             oninput="updateBudgetDisplay(this.value)" style="--pct:33%"/>
           <div class="budget-ticks">
             <span>무료</span>
-            <span>~3만원</span>
-            <span>~7만원</span>
-            <span>10만원+</span>
+            <span>~$20</span>
+            <span>~$50</span>
+            <span>$100+</span>
           </div>
         </div>
 
@@ -322,7 +322,7 @@
 const answers = {};
 let selectedGoals = new Set(['writing']);
 
-const budgetLabels = ['무료만', '월 약 3만원', '월 약 7만원', '월 10만원+'];
+const budgetLabels = ['무료만', '~$20/월', '~$50/월', '$100+/월'];
 const budgetPcts   = ['0%','33%','66%','100%'];
 function updateBudgetDisplay(v){
   document.getElementById('budget-display').textContent = budgetLabels[v];
@@ -337,83 +337,100 @@ function toggleGoal(btn, goal){
   }
 }
 
-const STACK_TOOLS = {
-  claude:       {name:'Claude',         emoji:'🤖', desc:'장문 글쓰기, 문서 분석, 낮은 환각률의 최강 AI',            goal:['writing','research','business'], price:0,   priceLbl:'무료',          paid:false, link:'https://claude.ai'},
-  chatgpt:      {name:'ChatGPT',        emoji:'💬', desc:'글쓰기·코딩·리서치 전부 가능한 가장 범용적인 AI',          goal:['writing','coding','research','business','productivity'], price:0, priceLbl:'무료', paid:false, link:'https://chat.openai.com'},
-  chatgpt_plus: {name:'ChatGPT Plus',   emoji:'💬', desc:'GPT-4o + 이미지 생성 + 웹 검색. 최고의 올인원',          goal:['writing','coding','research','business','image'], price:20, priceLbl:'월 $20', paid:true, link:'https://chat.openai.com'},
-  claude_pro:   {name:'Claude Pro',     emoji:'🤖', desc:'무제한 Claude + 5배 사용량 + 우선 접속',                 goal:['writing','research','business'], price:20, priceLbl:'월 $20', paid:true, link:'https://claude.ai'},
-  jasper:       {name:'Jasper',         emoji:'✍️', desc:'마케팅 팀을 위한 브랜드 보이스 AI 콘텐츠',               goal:['writing','business'], price:49, priceLbl:'월 $49', paid:true, link:'https://jasper.ai'},
-  copilot_free: {name:'GitHub Copilot', emoji:'💻', desc:'VS Code에서 월 2,000회 무료 AI 코드 완성',              goal:['coding'], price:0, priceLbl:'무료', paid:false, link:'https://github.com/features/copilot'},
-  cursor:       {name:'Cursor Pro',     emoji:'💻', desc:'전체 코드베이스를 이해하는 AI 네이티브 IDE',              goal:['coding'], price:20, priceLbl:'월 $20', paid:true, link:'https://cursor.sh'},
-  deepseek:     {name:'DeepSeek',       emoji:'🔧', desc:'거의 무료 오픈소스 AI. 코딩·수학에 탁월',               goal:['coding','research'], price:0, priceLbl:'무료', paid:false, link:'https://deepseek.com'},
-  leonardo:     {name:'Leonardo.ai',    emoji:'🎨', desc:'하루 150 토큰 무료 — 최고의 무료 이미지 생성기',         goal:['image'], price:0, priceLbl:'무료', paid:false, link:'https://leonardo.ai'},
-  midjourney:   {name:'Midjourney',     emoji:'🎨', desc:'AI 이미지 품질의 황금 기준. 예술적 결과물 최강',         goal:['image'], price:10, priceLbl:'월 $10', paid:true, link:'https://midjourney.com'},
-  canva:        {name:'Canva AI',       emoji:'✨', desc:'Magic Design으로 디자인 지식 없이 브랜드 그래픽 제작',    goal:['image','business','writing'], price:0, priceLbl:'무료', paid:false, link:'https://canva.com'},
-  capcut:       {name:'CapCut AI',      emoji:'🎬', desc:'무료 AI 영상 편집 — 자동 자막 + B-롤 생성',             goal:['video'], price:0, priceLbl:'무료', paid:false, link:'https://capcut.com'},
-  runway:       {name:'Runway Gen-3',   emoji:'🎬', desc:'모션 브러시가 있는 전문 AI 영상 플랫폼',                goal:['video'], price:15, priceLbl:'월 $15', paid:true, link:'https://runwayml.com'},
-  heygen:       {name:'HeyGen',         emoji:'🧑', desc:'40개 이상 언어 AI 아바타 영상 — 비즈니스 최적',         goal:['video','business'], price:29, priceLbl:'월 $29', paid:true, link:'https://heygen.com'},
-  perplexity:   {name:'Perplexity AI',  emoji:'🔍', desc:'출처 인용이 있는 실시간 AI 검색. 무료',                  goal:['research','business'], price:0, priceLbl:'무료', paid:false, link:'https://perplexity.ai'},
-  notebooklm:   {name:'NotebookLM',     emoji:'📓', desc:'내 문서를 학습하는 구글 AI — PDF에 질문하기',            goal:['research','writing'], price:0, priceLbl:'무료', paid:false, link:'https://notebooklm.google.com'},
-  otter:        {name:'Otter.ai',       emoji:'🎙️', desc:'Zoom/Meet 회의 자동 녹음·전사·요약',                    goal:['productivity','business'], price:0, priceLbl:'무료', paid:false, link:'https://otter.ai'},
-  zapier:       {name:'Zapier',         emoji:'⚡', desc:'8,000개 앱 연결 — 코딩 없이 워크플로우 자동화',         goal:['productivity','business'], price:0, priceLbl:'무료 티어', paid:false, link:'https://zapier.com'},
-  fathom:       {name:'Fathom',         emoji:'📝', desc:'회의 후 즉시 AI 노트 자동 발송. 완전 무료',              goal:['productivity','business'], price:0, priceLbl:'무료', paid:false, link:'https://fathom.video'},
-  notion_ai:    {name:'Notion AI',      emoji:'📋', desc:'워크스페이스 내장 AI — 초안, 요약, 태스크',              goal:['productivity','writing','business'], price:10, priceLbl:'월 $10 추가', paid:true, link:'https://notion.so'},
+// ── 목표별 × 예산별 큐레이션 스택 (완전히 다른 조합) ──
+const CURATED = {
+  writing: [
+    [{name:'Claude',emoji:'🤖',desc:'무료 글쓰기 AI 최강 — 장문, 이메일, 에세이. 환각률 최저',priceLbl:'무료',free:true,link:'https://claude.ai'},{name:'ChatGPT',emoji:'💬',desc:'GPT-4o 미니 무료 — 빠른 초안, 브레인스토밍, 리라이팅',priceLbl:'무료',free:true,link:'https://chat.openai.com'},{name:'Grammarly',emoji:'📝',desc:'AI 문법·톤 교정기 — Claude가 놓친 것 잡아줌',priceLbl:'무료',free:true,link:'https://grammarly.com'},{name:'Canva AI',emoji:'✨',desc:'글을 비주얼로 — 카드뉴스, 프레젠테이션 자동 제작',priceLbl:'무료',free:true,link:'https://canva.com'}],
+    [{name:'Claude Pro',emoji:'🤖',desc:'무제한 Claude + 우선 접속 — 헤비 라이터의 필수 업그레이드',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'Grammarly Pro',emoji:'📝',desc:'전문가 수준 AI 리라이팅 + 표절 검사 + 스타일 제안',priceLbl:'월 $12',free:false,link:'https://grammarly.com'},{name:'Canva Pro',emoji:'✨',desc:'브랜드 킷 + Magic Write + 무제한 AI 이미지 생성',priceLbl:'무료 체험',free:false,link:'https://canva.com'}],
+    [{name:'Claude Pro',emoji:'🤖',desc:'최고의 AI 작가 — 장문 문서, 분석, 섬세한 문체. 무제한',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'ChatGPT Plus',emoji:'💬',desc:'GPT-4o — Claude와 다른 목소리로 A/B 테스트 가능',priceLbl:'월 $20',free:false,link:'https://chat.openai.com'},{name:'Grammarly Pro',emoji:'📝',desc:'AI 결과물 위에 전문 편집 레이어 추가',priceLbl:'월 $12',free:false,link:'https://grammarly.com'},{name:'Notion AI',emoji:'📋',desc:'노트 안에서 AI가 바로 초안 작성 — 복붙 필요 없음',priceLbl:'월 $10 추가',free:false,link:'https://notion.so'}],
+    [{name:'Claude Pro',emoji:'🤖',desc:'주력 AI 작가 — 브랜드 일관성 있는 장문 콘텐츠 무제한',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'ChatGPT Plus',emoji:'💬',desc:'보조 AI + DALL-E 이미지 생성 — 모든 포맷 커버',priceLbl:'월 $20',free:false,link:'https://chat.openai.com'},{name:'Jasper',emoji:'✍️',desc:'팀 단위 AI — 브랜드 보이스 학습 + 마케팅 콘텐츠 대량 생산',priceLbl:'월 $49',free:false,link:'https://jasper.ai'},{name:'Grammarly Pro',emoji:'📝',desc:'모든 AI 결과물의 최종 품질 관리 레이어',priceLbl:'월 $12',free:false,link:'https://grammarly.com'}]
+  ],
+  coding: [
+    [{name:'GitHub Copilot',emoji:'💻',desc:'VS Code에서 월 2,000회 무료 AI 코드 완성 — 시작점의 표준',priceLbl:'무료',free:true,link:'https://github.com/features/copilot'},{name:'Claude',emoji:'🤖',desc:'복잡한 디버깅, 아키텍처 결정, 코드 설명 최강 무료 AI',priceLbl:'무료',free:true,link:'https://claude.ai'},{name:'DeepSeek',emoji:'🔧',desc:'무료 오픈소스 AI — 알고리즘, 수학, 시스템 설계 탁월',priceLbl:'무료',free:true,link:'https://deepseek.com'}],
+    [{name:'Cursor Pro',emoji:'💻',desc:'전체 코드베이스 이해하는 AI 네이티브 IDE — 생산성 최대 점프',priceLbl:'월 $20',free:false,link:'https://cursor.sh'},{name:'Claude',emoji:'🤖',desc:'Cursor 옆에서 무료 Claude — 아키텍처 질문과 긴 설명',priceLbl:'무료',free:true,link:'https://claude.ai'},{name:'DeepSeek',emoji:'🔧',desc:'수학·알고리즘 문제용 무료 보조 AI',priceLbl:'무료',free:true,link:'https://deepseek.com'}],
+    [{name:'Cursor Pro',emoji:'💻',desc:'최고의 AI 코딩 IDE — 멀티파일 편집, 에이전트 모드',priceLbl:'월 $20',free:false,link:'https://cursor.sh'},{name:'Claude Pro',emoji:'🤖',desc:'IDE 밖에서 아키텍처, 코드 리뷰, 디버깅 무제한',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'GitHub Copilot',emoji:'💻',desc:'Pro 티어 — 무제한 완성 + PR 요약 + GitHub 코드 리뷰',priceLbl:'월 $10',free:false,link:'https://github.com/features/copilot'}],
+    [{name:'Cursor Pro',emoji:'💻',desc:'주력 코딩 환경 — 전문 AI 개발자들이 선택하는 IDE',priceLbl:'월 $20',free:false,link:'https://cursor.sh'},{name:'Claude Pro',emoji:'🤖',desc:'아키텍처 파트너 & 시니어 리뷰어 — 가장 어려운 기술 질문',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'GitHub Copilot',emoji:'💻',desc:'Pro — 무제한 완성 + 팀 코드 리뷰 GitHub 내장',priceLbl:'월 $10',free:false,link:'https://github.com/features/copilot'},{name:'Devin',emoji:'🤖',desc:'자율 AI 소프트웨어 엔지니어 — 티켓 주면 빌드·테스트·PR',priceLbl:'월 $20',free:false,link:'https://devin.ai'}]
+  ],
+  image: [
+    [{name:'Leonardo.ai',emoji:'🎨',desc:'하루 150 토큰 무료 — 워터마크 없는 최고의 무료 옵션',priceLbl:'무료',free:true,link:'https://leonardo.ai'},{name:'Ideogram',emoji:'🔤',desc:'이미지 안에 읽기 쉬운 텍스트 — 로고, 카드뉴스 최강',priceLbl:'무료',free:true,link:'https://ideogram.ai'},{name:'Canva AI',emoji:'✨',desc:'바로 쓸 수 있는 그래픽 자동 생성 — SNS, 프레젠테이션',priceLbl:'무료',free:true,link:'https://canva.com'}],
+    [{name:'Midjourney',emoji:'🎨',desc:'AI 이미지 품질의 황금 기준 — 예술적 비주얼 넘버원',priceLbl:'월 $10',free:false,link:'https://midjourney.com'},{name:'Adobe Firefly',emoji:'🔥',desc:'저작권 안전 AI 이미지 — Photoshop 통합, 상업적 사용 OK',priceLbl:'월 ~$10',free:false,link:'https://firefly.adobe.com'},{name:'Canva Pro',emoji:'✨',desc:'무제한 배경 제거 + AI 이미지 + 브랜드 킷',priceLbl:'무료 체험',free:false,link:'https://canva.com'}],
+    [{name:'Midjourney',emoji:'🎨',desc:'2026년 최고 이미지 품질 — 사실적·예술적 모든 스타일',priceLbl:'월 $10',free:false,link:'https://midjourney.com'},{name:'Adobe Firefly',emoji:'🔥',desc:'Photoshop 내 상업 안전 이미지 — 프로 디자인 표준',priceLbl:'월 ~$10',free:false,link:'https://firefly.adobe.com'},{name:'ChatGPT Plus',emoji:'💬',desc:'DALL-E 3 — 이미지 안에 텍스트가 정확하게 들어가는 유일한 AI',priceLbl:'월 $20',free:false,link:'https://chat.openai.com'},{name:'Canva Pro',emoji:'✨',desc:'AI 이미지를 모든 플랫폼용으로 — 원클릭 리사이즈',priceLbl:'월 $15',free:false,link:'https://canva.com'}],
+    [{name:'Midjourney Pro',emoji:'🎨',desc:'프로 플랜 — v7 영화적 품질, 빠른 GPU, 프라이빗 모드',priceLbl:'월 $30',free:false,link:'https://midjourney.com'},{name:'Adobe Firefly',emoji:'🔥',desc:'Photoshop 통합 프로덕션급 상업 이미지',priceLbl:'월 ~$10',free:false,link:'https://firefly.adobe.com'},{name:'ChatGPT Plus',emoji:'💬',desc:'DALL-E 3 텍스트인이미지 + GPT-4o 프롬프트 엔지니어링',priceLbl:'월 $20',free:false,link:'https://chat.openai.com'},{name:'Stable Diffusion',emoji:'⚙️',desc:'자체 호스팅 무제한 생성 — 나만의 시그니처 스타일 파인튜닝',priceLbl:'API ~$20/월',free:false,link:'https://stability.ai'}]
+  ],
+  video: [
+    [{name:'CapCut AI',emoji:'🎬',desc:'자동 자막, B-롤 생성, 배경 제거 — AI 내장 무료 영상 편집기',priceLbl:'무료',free:true,link:'https://capcut.com'},{name:'Pika',emoji:'🎞️',desc:'월 250 크레딧 무료 — 텍스트·이미지로 AI 영상 클립 생성',priceLbl:'무료 티어',free:true,link:'https://pika.art'},{name:'ElevenLabs',emoji:'🎙️',desc:'월 10,000자 무료 AI 보이스오버 — 가장 자연스러운 AI 목소리',priceLbl:'무료',free:true,link:'https://elevenlabs.io'}],
+    [{name:'Runway Gen-3',emoji:'🎬',desc:'모션 브러시 + 키프레임 영상 — 영화감독급 AI 결과물',priceLbl:'월 $15',free:false,link:'https://runwayml.com'},{name:'ElevenLabs',emoji:'🎙️',desc:'상업용 보이스오버 플랜 — 월 3만자 + 다양한 목소리',priceLbl:'월 $5',free:false,link:'https://elevenlabs.io'},{name:'CapCut AI',emoji:'🎬',desc:'무료 숏폼 편집 — 틱톡·릴스용 빠른 처리',priceLbl:'무료',free:true,link:'https://capcut.com'}],
+    [{name:'Runway Gen-3',emoji:'🎬',desc:'영상 제작자 최고 AI 영상 — 모션 브러시, 스타일 트랜스퍼',priceLbl:'월 $15',free:false,link:'https://runwayml.com'},{name:'ChatGPT Plus',emoji:'💬',desc:'Sora 접속 포함 — 2026년 최고 품질 AI 영상 클립',priceLbl:'월 $20',free:false,link:'https://chat.openai.com'},{name:'ElevenLabs',emoji:'🎙️',desc:'크리에이터 플랜 — 월 10만자 + 목소리 클로닝',priceLbl:'월 $11',free:false,link:'https://elevenlabs.io'},{name:'CapCut AI',emoji:'🎬',desc:'Runway 불필요한 숏폼은 무료 CapCut으로',priceLbl:'무료',free:true,link:'https://capcut.com'}],
+    [{name:'HeyGen',emoji:'🧑',desc:'AI 아바타 대변인 영상 — 40개 언어 완벽 립싱크, 비즈니스 최적',priceLbl:'월 $29',free:false,link:'https://heygen.com'},{name:'Runway Pro',emoji:'🎬',desc:'전문 영화급 AI 영상 — 프로 영상팀이 실제 쓰는 도구',priceLbl:'월 $35',free:false,link:'https://runwayml.com'},{name:'ElevenLabs Pro',emoji:'🎙️',desc:'월 50만자 + 커스텀 목소리 클로닝 + API 접속',priceLbl:'월 $22',free:false,link:'https://elevenlabs.io'},{name:'Descript',emoji:'✂️',desc:'텍스트 편집으로 영상 편집 — AI 필러워드 제거 + 목소리 클로닝',priceLbl:'월 $24',free:false,link:'https://descript.com'}]
+  ],
+  research: [
+    [{name:'Perplexity AI',emoji:'🔍',desc:'최고의 무료 AI 검색 — 실시간 웹 답변 + 클릭 가능한 출처',priceLbl:'무료',free:true,link:'https://perplexity.ai'},{name:'NotebookLM',emoji:'📓',desc:'PDF 업로드 후 질문하기 — 구글 AI가 내 문서 전문가로',priceLbl:'무료',free:true,link:'https://notebooklm.google.com'},{name:'Claude',emoji:'🤖',desc:'대용량 문서 분석·종합 — 200K 컨텍스트 창',priceLbl:'무료',free:true,link:'https://claude.ai'},{name:'Consensus',emoji:'📚',desc:'학술 논문 AI 검색 — 근거 기반 답변 + 과학 인용',priceLbl:'무료',free:true,link:'https://consensus.app'}],
+    [{name:'Perplexity Pro',emoji:'🔍',desc:'Pro Search + Claude/GPT-4o 추론 + 무제한 파일 분석',priceLbl:'월 $20',free:false,link:'https://perplexity.ai'},{name:'NotebookLM',emoji:'📓',desc:'무료 — 연구 문서로 AI 팟캐스트 오디오 생성',priceLbl:'무료',free:true,link:'https://notebooklm.google.com'},{name:'Claude',emoji:'🤖',desc:'무료 Claude — 여러 출처 종합 및 장문 분석',priceLbl:'무료',free:true,link:'https://claude.ai'}],
+    [{name:'Perplexity Pro',emoji:'🔍',desc:'최고 AI 리서치 엔진 — 심층 추론 + 파일 업로드 + API',priceLbl:'월 $20',free:false,link:'https://perplexity.ai'},{name:'Claude Pro',emoji:'🤖',desc:'대용량 문서 종합 무제한 — 2026년 최고 200K 컨텍스트',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'NotebookLM',emoji:'📓',desc:'개인 리서치 사서 — 보고서 라이브러리 통째로 업로드 후 쿼리',priceLbl:'무료',free:true,link:'https://notebooklm.google.com'},{name:'Consensus',emoji:'📚',desc:'프리미엄 학술 검색 — 과학 문헌 무제한 근거 기반 쿼리',priceLbl:'월 $9',free:false,link:'https://consensus.app'}],
+    [{name:'Perplexity Pro',emoji:'🔍',desc:'주력 리서치 엔진 — 심층 추론 모델로 실시간 데이터',priceLbl:'월 $20',free:false,link:'https://perplexity.ai'},{name:'Claude Pro',emoji:'🤖',desc:'주력 종합기 — 논문, 책, 보고서 전체를 한 세션에서',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'ChatGPT Plus',emoji:'💬',desc:'데이터 분석 + Python으로 리서치 데이터셋 처리',priceLbl:'월 $20',free:false,link:'https://chat.openai.com'},{name:'Consensus',emoji:'📚',desc:'과학 문헌 검색 — 어떤 연구 주장이든 논문으로 검증',priceLbl:'월 $9',free:false,link:'https://consensus.app'}]
+  ],
+  productivity: [
+    [{name:'Fathom',emoji:'📝',desc:'영구 무료 AI 회의 녹음 — 통화 후 모든 참석자에게 요약 자동 발송',priceLbl:'무료',free:true,link:'https://fathom.video'},{name:'Zapier',emoji:'⚡',desc:'월 100회 무료 자동화 — 코딩 없이 앱 연결',priceLbl:'무료',free:true,link:'https://zapier.com'},{name:'Notion AI',emoji:'📋',desc:'무료 Notion 티어 — AI가 노트·태스크·프로젝트 문서 안에서 작성',priceLbl:'무료',free:true,link:'https://notion.so'},{name:'Claude',emoji:'🤖',desc:'이메일 초안, 문서 요약, 프로젝트 계획 — 무료 생산성 AI',priceLbl:'무료',free:true,link:'https://claude.ai'}],
+    [{name:'Fathom',emoji:'📝',desc:'무료 회의 AI — Zoom/Meet/Teams 노트 자동 처리',priceLbl:'무료',free:true,link:'https://fathom.video'},{name:'Zapier Starter',emoji:'⚡',desc:'월 750회 — 하루를 잡아먹는 반복 워크플로우 자동화',priceLbl:'월 $20',free:false,link:'https://zapier.com'},{name:'Claude',emoji:'🤖',desc:'무료 Claude — 초안 작성, 요약, 복잡한 문제 해결',priceLbl:'무료',free:true,link:'https://claude.ai'}],
+    [{name:'Zapier Pro',emoji:'⚡',desc:'월 2,000회 — 이메일 분류, 보고서, 데이터 워크플로우 완전 자동화',priceLbl:'월 $49',free:false,link:'https://zapier.com'},{name:'Claude Pro',emoji:'🤖',desc:'무제한 AI — 생각, 글쓰기, 요약. 항상 켜진 AI 어시스턴트',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'Fathom',emoji:'📝',desc:'무료 회의 노트 — Claude Pro와 쌍으로 즉시 회의 액션 아이템',priceLbl:'무료',free:true,link:'https://fathom.video'}],
+    [{name:'Zapier Pro',emoji:'⚡',desc:'풀 자동화 스위트 — 월 2,000회+ 모든 도구 연결',priceLbl:'월 $49',free:false,link:'https://zapier.com'},{name:'Claude Pro',emoji:'🤖',desc:'무제한 AI 사고 파트너 — 가장 복잡한 문서·결정 처리',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'Notion AI',emoji:'📋',desc:'AI 워크스페이스 — 팀 위키, 프로젝트 관리, AI 문서',priceLbl:'월 $16+$10 AI',free:false,link:'https://notion.so'},{name:'Reclaim.ai',emoji:'🗓️',desc:'AI 캘린더 — 집중 시간 자동 블록 + 회의 자동 재스케줄',priceLbl:'월 $8',free:false,link:'https://reclaim.ai'}]
+  ],
+  business: [
+    [{name:'Claude',emoji:'🤖',desc:'비즈니스 글쓰기, 분석, 고객 이메일, 전략 문서용 무료 AI',priceLbl:'무료',free:true,link:'https://claude.ai'},{name:'Canva AI',emoji:'✨',desc:'무료 전문 그래픽 — 프레젠테이션, 제안서, SNS 콘텐츠',priceLbl:'무료',free:true,link:'https://canva.com'},{name:'Perplexity AI',emoji:'🔍',desc:'무료 경쟁 인텔리전스 — 업계 뉴스 + 경쟁사 동향 실시간 모니터',priceLbl:'무료',free:true,link:'https://perplexity.ai'},{name:'Fathom',emoji:'📝',desc:'무료 회의 노트 — 모든 클라이언트 콜이 명확한 액션 아이템으로',priceLbl:'무료',free:true,link:'https://fathom.video'}],
+    [{name:'Claude Pro',emoji:'🤖',desc:'무제한 Claude — 제안서, 보고서, 클라이언트 이메일, 전략 분석',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'Canva Pro',emoji:'✨',desc:'풀 브랜드 킷 + 무제한 AI 디자인 — 디자인팀 있는 것처럼',priceLbl:'월 $15',free:false,link:'https://canva.com'},{name:'Fathom',emoji:'📝',desc:'무료 회의 AI — 모든 클라이언트 콜 자동 캡처·요약',priceLbl:'무료',free:true,link:'https://fathom.video'}],
+    [{name:'Claude Pro',emoji:'🤖',desc:'주력 비즈니스 AI — 장문 분석, 제안서, 전략 문서',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'ChatGPT Plus',emoji:'💬',desc:'GPT-4o — 클라이언트 이메일, 프레젠테이션, 데이터 분석',priceLbl:'월 $20',free:false,link:'https://chat.openai.com'},{name:'Canva Pro',emoji:'✨',desc:'전문 디자인 — 브랜드 제안서, 피치덱, SNS 콘텐츠',priceLbl:'월 $15',free:false,link:'https://canva.com'},{name:'Fathom',emoji:'📝',desc:'무료 AI 회의 노트 — 모든 클라이언트 미팅을 전문적으로',priceLbl:'무료',free:true,link:'https://fathom.video'}],
+    [{name:'Claude Pro',emoji:'🤖',desc:'주력 AI 브레인 — 전략, 제안서, 리서치, 임원 커뮤니케이션',priceLbl:'월 $20',free:false,link:'https://claude.ai'},{name:'ChatGPT Plus',emoji:'💬',desc:'보조 AI + DALL-E 이미지 + 고급 데이터 분석',priceLbl:'월 $20',free:false,link:'https://chat.openai.com'},{name:'Jasper',emoji:'✍️',desc:'콘텐츠 스케일 — 브랜드 보이스 학습 + 팀 마케팅 워크플로우',priceLbl:'월 $49',free:false,link:'https://jasper.ai'},{name:'HeyGen',emoji:'🧑',desc:'AI 대변인 영상 — 영업, 온보딩, 마케팅. 카메라 불필요',priceLbl:'월 $29',free:false,link:'https://heygen.com'}]
+  ]
 };
+
+const TIER_META = [
+  {title:'무료 AI 스택',       subtitle:'구독 없이 100% 무료',             costLabel:'$0/월',      insight:'2026년에는 무료만으로도 놀랍도록 많은 일을 할 수 있습니다. 이 조합이 그 증거예요.'},
+  {title:'$20/월 AI 스택',  subtitle:'전략적 유료 구독 1개로 대도약',    costLabel:'~$20/월',    insight:'$20에 하나의 유료 도구가 전체 워크플로우를 바꿉니다. 임팩트 최고인 것으로 골랐어요.'},
+  {title:'$50/월 AI 스택',  subtitle:'파워유저 프로급 — 최고의 가성비',  costLabel:'~$40-55/월', insight:'이 구간이 진짜 차별화됩니다. 무료+유료가 지능적으로 조합돼 서로의 빈틈을 메웁니다.'},
+  {title:'프리미엄 AI 스택',   subtitle:'풀 프로 세팅 — 최대 결과물 품질', costLabel:'~월 $80-120',insight:'이 수준에서 AI 스택은 실질적인 경쟁 우위입니다. 몇 주 안에 ROI가 눈에 보입니다.'},
+];
 
 function buildStack(){
   const budgetLevel = parseInt(document.getElementById('budget-slider').value);
-  const budgets = [0, 20, 50, 100];
-  const maxBudget = budgets[budgetLevel];
   const goals = [...selectedGoals];
-  let candidates = Object.entries(STACK_TOOLS).map(([id,tool])=>{
-    let score = 0;
-    goals.forEach(g=>{ if(tool.goal.includes(g)) score+=10; });
-    if(budgetLevel===0 && tool.paid) score=-999;
-    if(tool.price > maxBudget) score=-999;
-    if(!tool.paid) score+=2;
-    return {id,tool,score};
-  }).filter(c=>c.score>0).sort((a,b)=>b.score-a.score);
+  const primaryGoal = goals[0] || 'writing';
+  const goalKey = CURATED[primaryGoal] ? primaryGoal : 'writing';
+  const stack = CURATED[goalKey][budgetLevel];
+  const meta  = TIER_META[budgetLevel];
 
-  const chosen=[];
-  const seenNames=new Set();
-  const basePairs={chatgpt_plus:'chatgpt',claude_pro:'claude'};
-  for(const c of candidates){
-    if(chosen.length>=5) break;
-    const base=basePairs[c.id];
-    if(base && seenNames.has(base)) continue;
-    if(seenNames.has(c.id)) continue;
-    if(Object.values(basePairs).includes(c.id)){
-      const pv=Object.entries(basePairs).find(([k,v])=>v===c.id)?.[0];
-      if(pv && seenNames.has(pv)) continue;
+  let finalStack = [...stack];
+  if(goals.length > 1){
+    const secondaryGoal = goals.find(g => g !== primaryGoal && CURATED[g]);
+    if(secondaryGoal){
+      const secStack = CURATED[secondaryGoal][budgetLevel];
+      const existing = new Set(finalStack.map(t=>t.name));
+      const bonus = secStack.find(t=>!existing.has(t.name));
+      if(bonus && finalStack.length < 5) finalStack.push({...bonus, isBonus:true, bonusLabel:secondaryGoal});
     }
-    seenNames.add(c.id);
-    chosen.push(c);
   }
 
-  if(chosen.length===0){
-    alert('해당 조건에 맞는 도구가 없습니다. 예산이나 목표를 조정해보세요!');
-    return;
-  }
-
-  const totalCost = chosen.reduce((s,c)=>s+c.tool.price,0);
-  const stackTitles = ['완전 무료 AI 스택','월 3만원대 AI 스택','월 7만원대 AI 스택','프리미엄 AI 스택'];
-  document.getElementById('stack-title').textContent = stackTitles[budgetLevel];
-  document.getElementById('stack-cost').textContent = totalCost===0 ? '완전 무료' : `월 $${totalCost} (~${Math.round(totalCost*1350).toLocaleString()}원)`;
-  document.getElementById('stack-tools-count').textContent = `${chosen.length}개 도구`;
-  document.getElementById('stack-savings').textContent = totalCost===0 ? '100% 무료 스택' : `비용 대비 최고 효율 조합`;
+  const goalNames = {writing:'글쓰기',coding:'코딩',image:'이미지',video:'영상',research:'리서치',productivity:'생산성',business:'비즈니스'};
+  document.getElementById('stack-title').textContent = meta.title;
+  const totalCost = finalStack.filter(t=>!t.free).reduce((s,t)=>{
+    const m=t.priceLbl.match(/\$(\d+)/); return s+(m?parseInt(m[1]):0);
+  },0);
+  document.getElementById('stack-cost').textContent = totalCost===0 ? '완전 무료' : `~$${totalCost}/월`;
+  document.getElementById('stack-tools-count').textContent = `${finalStack.length}개 도구`;
+  document.getElementById('stack-savings').textContent = meta.insight;
 
   const container = document.getElementById('stack-items');
   container.innerHTML='';
-  chosen.forEach(({tool})=>{
+  finalStack.forEach((tool)=>{
     const div=document.createElement('div'); div.className='stack-item';
+    const bonusBadge = tool.isBonus ? `<span style="font-size:.65rem;background:#f0fdf4;color:#16a34a;border:1px solid rgba(22,163,74,.2);border-radius:4px;padding:.1rem .4rem;font-weight:700;margin-left:.4rem;">+${goalNames[tool.bonusLabel]||''}</span>` : '';
     div.innerHTML=`
       <div class="si-emoji">${tool.emoji}</div>
       <div class="si-info">
-        <div class="si-name">${tool.name}</div>
+        <div class="si-name">${tool.name}${bonusBadge}</div>
         <div class="si-desc">${tool.desc}</div>
       </div>
       <div class="si-right">
-        <div class="si-price ${!tool.paid?'free':''}">${tool.priceLbl}</div>
+        <div class="si-price ${tool.free?'free':''}">${tool.priceLbl}</div>
         <a class="si-link" href="${tool.link}" target="_blank" rel="noopener">방문 →</a>
       </div>`;
     container.appendChild(div);

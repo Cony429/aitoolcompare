@@ -367,112 +367,211 @@ function toggleGoal(btn, goal) {
   }
 }
 
-// ── Tool database for stack builder ──
-const STACK_TOOLS = {
-  // Writing
-  claude:      { name:'Claude',         emoji:'🤖', desc:'Best for long-form writing, documents & analysis',          goal:['writing','research','business'], price:0,  priceLbl:'Free',       paid:false, link:'https://claude.ai' },
-  chatgpt:     { name:'ChatGPT',        emoji:'💬', desc:'Most versatile — writing, coding, research in one place',   goal:['writing','coding','research','business','productivity'], price:0, priceLbl:'Free', paid:false, link:'https://chat.openai.com' },
-  chatgpt_plus:{ name:'ChatGPT Plus',   emoji:'💬', desc:'GPT-4o + image gen + web search. Best all-rounder',        goal:['writing','coding','research','business','image'], price:20, priceLbl:'$20/mo', paid:true, link:'https://chat.openai.com' },
-  claude_pro:  { name:'Claude Pro',     emoji:'🤖', desc:'Unlimited Claude + 5x usage + priority access',            goal:['writing','research','business'], price:20, priceLbl:'$20/mo', paid:true, link:'https://claude.ai' },
-  jasper:      { name:'Jasper',         emoji:'✍️', desc:'Professional marketing copy with brand voice training',     goal:['writing','business'], price:49, priceLbl:'$49/mo', paid:true, link:'https://jasper.ai' },
-  // Coding
-  copilot_free:{ name:'GitHub Copilot', emoji:'💻', desc:'2,000 free AI completions/month in VS Code',               goal:['coding'], price:0, priceLbl:'Free', paid:false, link:'https://github.com/features/copilot' },
-  cursor:      { name:'Cursor Pro',     emoji:'💻', desc:'AI-native IDE — understands your full codebase',            goal:['coding'], price:20, priceLbl:'$20/mo', paid:true, link:'https://cursor.sh' },
-  deepseek:    { name:'DeepSeek',       emoji:'🔧', desc:'Open-source AI — excellent for coding at zero cost',        goal:['coding','research'], price:0, priceLbl:'Free', paid:false, link:'https://deepseek.com' },
-  // Image
-  leonardo:    { name:'Leonardo.ai',    emoji:'🎨', desc:'150 free tokens/day — best free image generator',          goal:['image'], price:0, priceLbl:'Free', paid:false, link:'https://leonardo.ai' },
-  midjourney:  { name:'Midjourney',     emoji:'🎨', desc:'Gold standard image quality — unmatched artistic results', goal:['image'], price:10, priceLbl:'$10/mo', paid:true, link:'https://midjourney.com' },
-  canva:       { name:'Canva AI',       emoji:'✨', desc:'Magic Design + background removal — no skills needed',      goal:['image','business','writing'], price:0, priceLbl:'Free', paid:false, link:'https://canva.com' },
-  adobe_ff:    { name:'Adobe Firefly',  emoji:'🔥', desc:'Commercially safe AI images — professional standard',      goal:['image','business'], price:10, priceLbl:'~$10/mo', paid:true, link:'https://firefly.adobe.com' },
-  // Video
-  capcut:      { name:'CapCut AI',      emoji:'🎬', desc:'Free AI video editing — auto captions + B-roll',           goal:['video'], price:0, priceLbl:'Free', paid:false, link:'https://capcut.com' },
-  runway:      { name:'Runway Gen-3',   emoji:'🎬', desc:'Professional AI video with motion brush editing',          goal:['video'], price:15, priceLbl:'$15/mo', paid:true, link:'https://runwayml.com' },
-  heygen:      { name:'HeyGen',         emoji:'🧑', desc:'AI avatar videos in 40+ languages for business',           goal:['video','business'], price:29, priceLbl:'$29/mo', paid:true, link:'https://heygen.com' },
-  sora:        { name:'Sora',           emoji:'🎥', desc:'Cinematic AI video — highest quality in 2026',             goal:['video'], price:20, priceLbl:'(+ChatGPT Plus)', paid:true, link:'https://sora.com' },
-  // Research
-  perplexity:  { name:'Perplexity AI',  emoji:'🔍', desc:'Real-time web search with cited sources — free',           goal:['research','business'], price:0, priceLbl:'Free', paid:false, link:'https://perplexity.ai' },
-  notebooklm:  { name:'NotebookLM',     emoji:'📓', desc:'AI expert on YOUR documents — ask questions about PDFs',   goal:['research','writing'], price:0, priceLbl:'Free', paid:false, link:'https://notebooklm.google.com' },
-  // Productivity
-  otter:       { name:'Otter.ai',       emoji:'🎙️', desc:'Auto-transcribes Zoom/Meet/Teams meetings in real-time',  goal:['productivity','business'], price:0, priceLbl:'Free', paid:false, link:'https://otter.ai' },
-  zapier:      { name:'Zapier',         emoji:'⚡', desc:'Connect 8,000+ apps — automate workflows without code',    goal:['productivity','business'], price:0, priceLbl:'Free tier', paid:false, link:'https://zapier.com' },
-  notion_ai:   { name:'Notion AI',      emoji:'📋', desc:'AI inside your workspace — drafts, summaries, tasks',     goal:['productivity','writing','business'], price:10, priceLbl:'$10/mo add-on', paid:true, link:'https://notion.so' },
-  fathom:      { name:'Fathom',         emoji:'📝', desc:'Free meeting recorder + AI notes sent instantly after calls',goal:['productivity','business'], price:0, priceLbl:'Free', paid:false, link:'https://fathom.video' },
+// ── CURATED STACKS: each budget tier has hand-picked distinct combinations ──
+// Structure: CURATED[goal][budgetLevel] = array of tool objects
+// budgetLevel: 0=Free, 1=$20, 2=$50, 3=$100+
+
+const CURATED = {
+  writing: [
+    // Free
+    [ {name:'Claude',        emoji:'🤖', desc:'Best free AI for writing — long docs, emails, essays with the lowest hallucination rate', priceLbl:'Free',        free:true,  link:'https://claude.ai'},
+      {name:'ChatGPT',       emoji:'💬', desc:'GPT-4o mini free tier — great for quick drafts, brainstorming, and rewrites',            priceLbl:'Free',        free:true,  link:'https://chat.openai.com'},
+      {name:'Grammarly',     emoji:'📝', desc:'AI grammar & tone editor — catches what Claude misses, works in every browser',          priceLbl:'Free',        free:true,  link:'https://grammarly.com'},
+      {name:'Canva AI',      emoji:'✨', desc:'Turn your writing into visuals — quotes, presentations, social graphics in seconds',     priceLbl:'Free',        free:true,  link:'https://canva.com'} ],
+    // $20
+    [ {name:'Claude Pro',    emoji:'🤖', desc:'Unlimited Claude + priority access — the go-to upgrade for heavy writers',               priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'Grammarly Pro', emoji:'📝', desc:'Full AI rewriting, style suggestions, plagiarism check — essential for professionals',   priceLbl:'$12/mo',      free:false, link:'https://grammarly.com'},
+      {name:'Canva Pro',     emoji:'✨', desc:'Brand kit + Magic Write + unlimited AI image generation for your content',               priceLbl:'Free (trial)',free:false,  link:'https://canva.com'} ],
+    // $50
+    [ {name:'Claude Pro',    emoji:'🤖', desc:'Best AI writer — long-form documents, analysis, and nuanced prose. Unlimited usage',     priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'ChatGPT Plus',  emoji:'💬', desc:'GPT-4o for versatile writing tasks — different voice from Claude, great for A/B testing', priceLbl:'$20/mo',     free:false, link:'https://chat.openai.com'},
+      {name:'Grammarly Pro', emoji:'📝', desc:'Professional-grade editing layer on top of your AI output — catches tone and style',     priceLbl:'$12/mo',      free:false, link:'https://grammarly.com'},
+      {name:'Notion AI',     emoji:'📋', desc:'AI-powered workspace — drafts live inside your notes, no copy-pasting needed',           priceLbl:'$10/mo add-on',free:false, link:'https://notion.so'} ],
+    // $100+
+    [ {name:'Claude Pro',    emoji:'🤖', desc:'Primary AI writer — unmatched for long documents and brand-consistent copy',             priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'ChatGPT Plus',  emoji:'💬', desc:'Secondary writer + DALL-E image generation — cover all content formats',                priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
+      {name:'Jasper',        emoji:'✍️', desc:'Team-level AI with brand voice training — scales content output across your organization', priceLbl:'$49/mo',   free:false, link:'https://jasper.ai'},
+      {name:'Grammarly Pro', emoji:'📝', desc:'Enterprise editing layer — ensures consistent quality across all AI-generated content',  priceLbl:'$12/mo',      free:false, link:'https://grammarly.com'} ]
+  ],
+  coding: [
+    // Free
+    [ {name:'GitHub Copilot',emoji:'💻', desc:'2,000 free AI completions/month in VS Code — the standard starting point for AI coding', priceLbl:'Free',        free:true,  link:'https://github.com/features/copilot'},
+      {name:'Claude',        emoji:'🤖', desc:'Best free AI for explaining code, architecture decisions, and complex debugging',        priceLbl:'Free',        free:true,  link:'https://claude.ai'},
+      {name:'DeepSeek',      emoji:'🔧', desc:'Free open-source frontier model — outstanding at math, algorithms, and system design',   priceLbl:'Free',        free:true,  link:'https://deepseek.com'} ],
+    // $20
+    [ {name:'Cursor Pro',    emoji:'💻', desc:'AI-native IDE that reads your entire codebase — the biggest productivity jump in coding', priceLbl:'$20/mo',     free:false, link:'https://cursor.sh'},
+      {name:'Claude',        emoji:'🤖', desc:'Free Claude alongside Cursor — use it for architecture questions and long explanations',  priceLbl:'Free',        free:true,  link:'https://claude.ai'},
+      {name:'DeepSeek',      emoji:'🔧', desc:'Free fallback for math-heavy or algorithm problems — different strengths from Claude',   priceLbl:'Free',        free:true,  link:'https://deepseek.com'} ],
+    // $50
+    [ {name:'Cursor Pro',    emoji:'💻', desc:'Best AI coding IDE — multi-file edits, codebase awareness, and agent mode for full tasks', priceLbl:'$20/mo',    free:false, link:'https://cursor.sh'},
+      {name:'Claude Pro',    emoji:'🤖', desc:'Unlimited Claude for architecture, code review, and debugging outside the IDE',          priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'GitHub Copilot',emoji:'💻', desc:'Pro tier unlocks unlimited completions + PR summaries + code review in GitHub',          priceLbl:'$10/mo',      free:false, link:'https://github.com/features/copilot'} ],
+    // $100+
+    [ {name:'Cursor Pro',    emoji:'💻', desc:'Primary coding environment — the IDE that professional AI developers swear by',          priceLbl:'$20/mo',      free:false, link:'https://cursor.sh'},
+      {name:'Claude Pro',    emoji:'🤖', desc:'Architecture partner and senior reviewer — handles your hardest technical questions',    priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'GitHub Copilot',emoji:'💻', desc:'Pro tier for unlimited completions + team code review features inside GitHub',           priceLbl:'$10/mo',      free:false, link:'https://github.com/features/copilot'},
+      {name:'Devin',         emoji:'🤖', desc:'Autonomous AI software engineer — assigns it a ticket and it builds, tests, and opens a PR', priceLbl:'$20/mo', free:false, link:'https://devin.ai'} ]
+  ],
+  image: [
+    // Free
+    [ {name:'Leonardo.ai',   emoji:'🎨', desc:'150 free tokens daily — generate multiple styles with no watermark. Best free option',  priceLbl:'Free',        free:true,  link:'https://leonardo.ai'},
+      {name:'Ideogram',      emoji:'🔤', desc:'Best for images with readable text inside — logos, quotes, social graphics',            priceLbl:'Free',        free:true,  link:'https://ideogram.ai'},
+      {name:'Canva AI',      emoji:'✨', desc:'Magic Design for ready-to-use graphics — social posts, presentations, ads',              priceLbl:'Free',        free:true,  link:'https://canva.com'} ],
+    // $20
+    [ {name:'Midjourney',    emoji:'🎨', desc:'Gold standard for artistic image quality — nothing else comes close for creative visuals', priceLbl:'$10/mo',    free:false, link:'https://midjourney.com'},
+      {name:'Adobe Firefly', emoji:'🔥', desc:'Commercially safe AI images — zero copyright risk, integrates with Photoshop',          priceLbl:'~$10/mo',     free:false, link:'https://firefly.adobe.com'},
+      {name:'Canva Pro',     emoji:'✨', desc:'Unlimited background removal, AI image generation, and brand kit for professional output', priceLbl:'Free trial',free:false, link:'https://canva.com'} ],
+    // $50
+    [ {name:'Midjourney',    emoji:'🎨', desc:'Best image quality in 2026 — photorealistic and artistic styles, all resolutions',      priceLbl:'$10/mo',      free:false, link:'https://midjourney.com'},
+      {name:'Adobe Firefly', emoji:'🔥', desc:'Commercial-safe images inside Photoshop — the professional design standard',            priceLbl:'~$10/mo',     free:false, link:'https://firefly.adobe.com'},
+      {name:'ChatGPT Plus',  emoji:'💬', desc:'DALL-E 3 access — best for images that need accurate text rendering inside them',       priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
+      {name:'Canva Pro',     emoji:'✨', desc:'Turn AI images into ready-to-publish designs for every platform — one-click resize',    priceLbl:'$15/mo',      free:false, link:'https://canva.com'} ],
+    // $100+
+    [ {name:'Midjourney',    emoji:'🎨', desc:'Primary artistic image AI — v7 delivers cinematic quality with precise prompt control',  priceLbl:'$30/mo (Pro)',free:false, link:'https://midjourney.com'},
+      {name:'Adobe Firefly', emoji:'🔥', desc:'Professional + Photoshop integration — production-ready commercial images',             priceLbl:'~$10/mo',     free:false, link:'https://firefly.adobe.com'},
+      {name:'ChatGPT Plus',  emoji:'💬', desc:'DALL-E 3 for text-in-image + GPT-4o for prompt engineering your visual concepts',       priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
+      {name:'Stable Diffusion',emoji:'⚙️',desc:'Self-hosted unlimited generation — fine-tune your own model for a signature style',   priceLbl:'API ~$20/mo', free:false, link:'https://stability.ai'} ]
+  ],
+  video: [
+    // Free
+    [ {name:'CapCut AI',     emoji:'🎬', desc:'Auto captions, B-roll generation, background removal — the free video editor with AI built in', priceLbl:'Free', free:true, link:'https://capcut.com'},
+      {name:'Pika',          emoji:'🎞️', desc:'250 free credits/month — generate short AI video clips from text or images',            priceLbl:'Free tier',   free:true,  link:'https://pika.art'},
+      {name:'ElevenLabs',    emoji:'🎙️', desc:'10,000 free characters of AI voiceover/month — the most realistic AI voice available',  priceLbl:'Free',        free:true,  link:'https://elevenlabs.io'} ],
+    // $20
+    [ {name:'Runway Gen-3',  emoji:'🎬', desc:'Professional AI video with motion brush and keyframe control — filmmaker-grade output',  priceLbl:'$15/mo',      free:false, link:'https://runwayml.com'},
+      {name:'ElevenLabs',    emoji:'🎙️', desc:'Commercial voiceover plan — 30,000 chars/month, multiple voices and languages',         priceLbl:'$5/mo',       free:false, link:'https://elevenlabs.io'},
+      {name:'CapCut AI',     emoji:'🎬', desc:'Free AI editing for short-form — handles TikTok and Reels at speed',                    priceLbl:'Free',        free:true,  link:'https://capcut.com'} ],
+    // $50
+    [ {name:'Runway Gen-3',  emoji:'🎬', desc:'Best professional AI video for filmmakers — motion brush, style transfer, frame editing', priceLbl:'$15/mo',     free:false, link:'https://runwayml.com'},
+      {name:'ChatGPT Plus',  emoji:'💬', desc:'Sora access for cinematic AI video — highest quality short clips in 2026',               priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
+      {name:'ElevenLabs',    emoji:'🎙️', desc:'Creator plan — 100,000 chars/month + voice cloning for consistent narration',           priceLbl:'$11/mo',      free:false, link:'https://elevenlabs.io'},
+      {name:'CapCut AI',     emoji:'🎬', desc:'Short-form editing layer for social — handles everything Runway doesn\'t need to',      priceLbl:'Free',        free:true,  link:'https://capcut.com'} ],
+    // $100+
+    [ {name:'HeyGen',        emoji:'🧑', desc:'AI avatar spokesperson videos — 40+ languages, perfect lip-sync, ideal for business',   priceLbl:'$29/mo',      free:false, link:'https://heygen.com'},
+      {name:'Runway Gen-3',  emoji:'🎬', desc:'Pro cinematic AI video — the tool professional video teams use in production',          priceLbl:'$35/mo (Pro)',free:false, link:'https://runwayml.com'},
+      {name:'ElevenLabs',    emoji:'🎙️', desc:'Professional plan — 500,000 chars/month + custom voice cloning + API access',           priceLbl:'$22/mo',      free:false, link:'https://elevenlabs.io'},
+      {name:'Descript',      emoji:'✂️', desc:'Edit video like a doc — AI filler word removal, voice cloning, and screen recording',   priceLbl:'$24/mo',      free:false, link:'https://descript.com'} ]
+  ],
+  research: [
+    // Free
+    [ {name:'Perplexity AI', emoji:'🔍', desc:'Best free AI search — real-time web answers with clickable citations, no ads',          priceLbl:'Free',        free:true,  link:'https://perplexity.ai'},
+      {name:'NotebookLM',    emoji:'📓', desc:'Upload your PDFs and ask questions — Google\'s AI becomes an expert on your documents', priceLbl:'Free',        free:true,  link:'https://notebooklm.google.com'},
+      {name:'Claude',        emoji:'🤖', desc:'Analyze large documents and synthesize complex information — 200K context window',      priceLbl:'Free',        free:true,  link:'https://claude.ai'},
+      {name:'Consensus',     emoji:'📚', desc:'AI search across peer-reviewed papers — evidence-based answers with scientific citations', priceLbl:'Free',      free:true,  link:'https://consensus.app'} ],
+    // $20
+    [ {name:'Perplexity Pro',emoji:'🔍', desc:'Pro Search with Claude/GPT-4o reasoning + unlimited uploads + file analysis',          priceLbl:'$20/mo',      free:false, link:'https://perplexity.ai'},
+      {name:'NotebookLM',    emoji:'📓', desc:'Free upgrade — create AI podcast audio from your research documents',                   priceLbl:'Free',        free:true,  link:'https://notebooklm.google.com'},
+      {name:'Claude',        emoji:'🤖', desc:'Free Claude for synthesis and long-form analysis across multiple sources',              priceLbl:'Free',        free:true,  link:'https://claude.ai'} ],
+    // $50
+    [ {name:'Perplexity Pro',emoji:'🔍', desc:'Best AI research engine — Pro Search with deep reasoning + file uploads + API',        priceLbl:'$20/mo',      free:false, link:'https://perplexity.ai'},
+      {name:'Claude Pro',    emoji:'🤖', desc:'Unlimited Claude for synthesizing large documents — best 200K context window in 2026', priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'NotebookLM',    emoji:'📓', desc:'Your personal research librarian — upload entire report libraries and query them',      priceLbl:'Free',        free:true,  link:'https://notebooklm.google.com'},
+      {name:'Consensus',     emoji:'📚', desc:'Premium academic search — unlimited evidence-based queries across scientific literature', priceLbl:'$9/mo',      free:false, link:'https://consensus.app'} ],
+    // $100+
+    [ {name:'Perplexity Pro',emoji:'🔍', desc:'Primary research engine — real-time data with deep reasoning models',                  priceLbl:'$20/mo',      free:false, link:'https://perplexity.ai'},
+      {name:'Claude Pro',    emoji:'🤖', desc:'Primary synthesizer — process full research papers, books, and reports in one session', priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'ChatGPT Plus',  emoji:'💬', desc:'Data analysis + Advanced Data Analysis for processing research datasets with Python',   priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
+      {name:'Consensus',     emoji:'📚', desc:'Scientific literature search — verify any research claim against peer-reviewed papers', priceLbl:'$9/mo',       free:false, link:'https://consensus.app'} ]
+  ],
+  productivity: [
+    // Free
+    [ {name:'Fathom',        emoji:'📝', desc:'Forever free AI meeting recorder — auto-sends summaries to all attendees after calls',  priceLbl:'Free',        free:true,  link:'https://fathom.video'},
+      {name:'Zapier',        emoji:'⚡', desc:'100 free automated tasks/month — connect your apps without writing a single line of code', priceLbl:'Free',     free:true,  link:'https://zapier.com'},
+      {name:'Notion AI',     emoji:'📋', desc:'Free Notion tier — AI writes inside your notes, tasks, and project docs',               priceLbl:'Free (Notion)', free:true, link:'https://notion.so'},
+      {name:'Claude',        emoji:'🤖', desc:'Draft emails, summarize documents, plan projects — the ultimate free productivity AI',  priceLbl:'Free',        free:true,  link:'https://claude.ai'} ],
+    // $20
+    [ {name:'Fathom',        emoji:'📝', desc:'Free meeting AI — handles Zoom/Meet/Teams note-taking automatically',                   priceLbl:'Free',        free:true,  link:'https://fathom.video'},
+      {name:'Zapier Starter',emoji:'⚡', desc:'750 tasks/month — automate the repetitive workflows that eat your day',                 priceLbl:'$19.99/mo',   free:false, link:'https://zapier.com'},
+      {name:'Claude',        emoji:'🤖', desc:'Free Claude for drafting, summarizing, and thinking through complex problems',          priceLbl:'Free',        free:true,  link:'https://claude.ai'} ],
+    // $50
+    [ {name:'Zapier Pro',    emoji:'⚡', desc:'2,000 tasks/month — fully automate email triage, reporting, and data workflows',        priceLbl:'$49/mo',      free:false, link:'https://zapier.com'},
+      {name:'Claude Pro',    emoji:'🤖', desc:'Unlimited AI for thinking, writing, summarizing — your always-on AI assistant',        priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'Fathom',        emoji:'📝', desc:'Free meeting notes — pairs with Claude Pro for instant post-meeting action items',      priceLbl:'Free',        free:true,  link:'https://fathom.video'} ],
+    // $100+
+    [ {name:'Zapier Pro',    emoji:'⚡', desc:'Full automation suite — 2,000+ tasks/month connecting every tool in your stack',        priceLbl:'$49/mo',      free:false, link:'https://zapier.com'},
+      {name:'Claude Pro',    emoji:'🤖', desc:'Unlimited AI thinking partner — handles your most complex documents and decisions',     priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'Notion AI',     emoji:'📋', desc:'AI workspace — team wikis, project management, and AI-assisted docs in one place',     priceLbl:'$16/mo + $10 AI', free:false, link:'https://notion.so'},
+      {name:'Reclaim.ai',    emoji:'🗓️', desc:'AI calendar that automatically blocks focus time and reschedules meetings',             priceLbl:'$8/mo',       free:false, link:'https://reclaim.ai'} ]
+  ],
+  business: [
+    // Free
+    [ {name:'Claude',        emoji:'🤖', desc:'Free AI for business writing, analysis, customer emails, and strategy documents',       priceLbl:'Free',        free:true,  link:'https://claude.ai'},
+      {name:'Canva AI',      emoji:'✨', desc:'Free professional graphics — presentations, proposals, social content without a designer', priceLbl:'Free',     free:true,  link:'https://canva.com'},
+      {name:'Perplexity AI', emoji:'🔍', desc:'Free competitive intelligence — monitor industry news and competitor moves in real time', priceLbl:'Free',      free:true,  link:'https://perplexity.ai'},
+      {name:'Fathom',        emoji:'📝', desc:'Free meeting notes — auto-sends summaries so every team call produces clear action items', priceLbl:'Free',     free:true,  link:'https://fathom.video'} ],
+    // $20
+    [ {name:'Claude Pro',    emoji:'🤖', desc:'Unlimited Claude for proposals, reports, client emails, and strategic analysis',        priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'Canva Pro',     emoji:'✨', desc:'Full brand kit + unlimited AI design — looks like you have a design team',              priceLbl:'$15/mo',      free:false, link:'https://canva.com'},
+      {name:'Fathom',        emoji:'📝', desc:'Free meeting AI — every client call automatically captured and summarized',             priceLbl:'Free',        free:true,  link:'https://fathom.video'} ],
+    // $50
+    [ {name:'Claude Pro',    emoji:'🤖', desc:'Primary business AI — long-form analysis, proposals, and strategy documents',          priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'ChatGPT Plus',  emoji:'💬', desc:'GPT-4o for versatile business tasks — client emails, presentations, data analysis',     priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
+      {name:'Canva Pro',     emoji:'✨', desc:'Professional design for all business content — branded proposals, pitch decks, socials', priceLbl:'$15/mo',     free:false, link:'https://canva.com'},
+      {name:'Fathom',        emoji:'📝', desc:'Free AI meeting notes — no cost to make every client meeting more professional',        priceLbl:'Free',        free:true,  link:'https://fathom.video'} ],
+    // $100+
+    [ {name:'Claude Pro',    emoji:'🤖', desc:'Primary AI brain — strategy, client proposals, research, and executive communications', priceLbl:'$20/mo',      free:false, link:'https://claude.ai'},
+      {name:'ChatGPT Plus',  emoji:'💬', desc:'Secondary AI + DALL-E image gen + Advanced Data Analysis for business intelligence',    priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
+      {name:'Jasper',        emoji:'✍️', desc:'Scale your content — brand voice training + team workflows for consistent marketing',   priceLbl:'$49/mo',      free:false, link:'https://jasper.ai'},
+      {name:'HeyGen',        emoji:'🧑', desc:'AI spokesperson videos for sales, onboarding, and marketing — no camera needed',        priceLbl:'$29/mo',      free:false, link:'https://heygen.com'} ]
+  ]
 };
+
+// Tier metadata shown at the top of results
+const TIER_META = [
+  { title:'Your Free AI Stack',     subtitle:'100% free — zero subscriptions needed', costLabel:'$0/mo', insight:'You\'d be surprised how much you can do for free in 2026. These tools cover everything.' },
+  { title:'Your $20/mo Stack',      subtitle:'One strategic subscription unlocks a major upgrade', costLabel:'~$20/mo', insight:'At $20, one paid tool transforms your workflow. We picked the one with the highest impact.' },
+  { title:'Your $50/mo Stack',      subtitle:'Professional-grade — the sweet spot for power users', costLabel:'~$40–55/mo', insight:'This is where free + paid starts to combine intelligently. Each tool fills a gap the others leave.' },
+  { title:'Your Premium Stack',     subtitle:'Full professional setup — maximum output quality', costLabel:'$80–120/mo', insight:'At this level, your AI stack is a serious competitive advantage. ROI is measurable within weeks.' },
+];
 
 function buildStack() {
   const budgetLevel = parseInt(document.getElementById('budget-slider').value);
-  const budgets = [0, 20, 50, 100];
-  const maxBudget = budgets[budgetLevel];
   const goals = [...selectedGoals];
 
-  // Score and filter tools
-  let candidates = Object.entries(STACK_TOOLS).map(([id, tool]) => {
-    let score = 0;
-    goals.forEach(g => { if (tool.goal.includes(g)) score += 10; });
-    if (budgetLevel === 0 && tool.paid) score = -999; // free only
-    if (tool.price > maxBudget) score = -999;         // over budget
-    // Prefer free if budget is 0
-    if (!tool.paid) score += 2;
-    return { id, tool, score };
-  }).filter(c => c.score > 0).sort((a, b) => b.score - a.score);
+  // Pick primary goal (first selected, or fallback to writing)
+  const primaryGoal = goals[0] || 'writing';
+  const goalKey = CURATED[primaryGoal] ? primaryGoal : 'writing';
+  const stack = CURATED[goalKey][budgetLevel];
+  const meta  = TIER_META[budgetLevel];
 
-  // Pick non-overlapping tools (no ChatGPT + ChatGPT Plus together, etc.)
-  const chosen = [];
-  const seenNames = new Set();
-  const goalsCovered = new Set();
-  const basePairs = { chatgpt_plus: 'chatgpt', claude_pro: 'claude' };
-
-  for (const c of candidates) {
-    if (chosen.length >= 5) break;
-    const base = basePairs[c.id];
-    if (base && seenNames.has(base)) continue;
-    if (seenNames.has(c.id)) continue;
-    // avoid base if paid version already chosen
-    if (Object.values(basePairs).includes(c.id)) {
-      const paidVersion = Object.entries(basePairs).find(([k,v]) => v === c.id)?.[0];
-      if (paidVersion && seenNames.has(paidVersion)) continue;
+  // If multiple goals selected, add one bonus tool from secondary goal
+  let finalStack = [...stack];
+  if (goals.length > 1) {
+    const secondaryGoal = goals.find(g => g !== primaryGoal && CURATED[g]);
+    if (secondaryGoal) {
+      const secondaryStack = CURATED[secondaryGoal][budgetLevel];
+      // Find a tool not already in finalStack
+      const existing = new Set(finalStack.map(t => t.name));
+      const bonus = secondaryStack.find(t => !existing.has(t.name));
+      if (bonus && finalStack.length < 5) finalStack.push({...bonus, isBonus: true});
     }
-    seenNames.add(c.id);
-    chosen.push(c);
-    c.tool.goal.forEach(g => goalsCovered.add(g));
   }
 
-  if (chosen.length === 0) {
-    alert('No tools found for this combination. Try a different budget or goals!');
-    return;
-  }
-
-  // Render
-  const totalCost = chosen.reduce((s, c) => s + c.tool.price, 0);
-  const fullCost  = chosen.reduce((s, c) => {
-    const maxP = c.tool.price || 0;
-    return s + (maxP > 0 ? maxP * 1.5 : 0);
+  // Render header
+  document.getElementById('stack-title').textContent = meta.title;
+  const totalCost = finalStack.filter(t => !t.free).reduce((s, t) => {
+    const m = t.priceLbl.match(/\$(\d+)/);
+    return s + (m ? parseInt(m[1]) : 0);
   }, 0);
-  const savings = Math.round(fullCost - totalCost);
+  document.getElementById('stack-cost').textContent = totalCost === 0 ? 'Completely Free' : `~$${totalCost}/mo`;
+  document.getElementById('stack-tools-count').textContent = `${finalStack.length} tools`;
+  document.getElementById('stack-savings').textContent = meta.insight;
 
-  document.getElementById('stack-title').textContent =
-    budgetLevel === 0 ? 'Your Free AI Stack' :
-    budgetLevel === 1 ? 'Your $20/mo AI Stack' :
-    budgetLevel === 2 ? 'Your $50/mo AI Stack' : 'Your Premium AI Stack';
-  document.getElementById('stack-cost').textContent =
-    totalCost === 0 ? 'Completely Free' : `$${totalCost}/mo`;
-  document.getElementById('stack-tools-count').textContent = `${chosen.length} tools`;
-  document.getElementById('stack-savings').textContent =
-    savings > 0 ? `Saves ~$${savings}/mo vs full price` : '100% free stack';
-
+  // Render items
   const container = document.getElementById('stack-items');
   container.innerHTML = '';
-  chosen.forEach(({ tool }) => {
+  finalStack.forEach((tool, i) => {
     const div = document.createElement('div');
     div.className = 'stack-item';
+    const bonusBadge = tool.isBonus ? `<span style="font-size:.68rem;background:#f0fdf4;color:#16a34a;border:1px solid rgba(22,163,74,.2);border-radius:4px;padding:.1rem .45rem;font-weight:700;margin-left:.4rem;">+${goals[1]}</span>` : '';
     div.innerHTML = `
       <div class="si-emoji">${tool.emoji}</div>
       <div class="si-info">
-        <div class="si-name">${tool.name}</div>
+        <div class="si-name">${tool.name}${bonusBadge}</div>
         <div class="si-desc">${tool.desc}</div>
       </div>
       <div class="si-right">
-        <div class="si-price ${!tool.paid ? 'free' : ''}">${tool.priceLbl}</div>
+        <div class="si-price ${tool.free ? 'free' : ''}">${tool.priceLbl}</div>
         <a class="si-link" href="${tool.link}" target="_blank" rel="noopener">Visit →</a>
       </div>`;
     container.appendChild(div);
