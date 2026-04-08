@@ -4,11 +4,10 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>나에게 맞는 AI 찾기 | AI Tool Compare</title>
-  <meta name="description" content="5가지 질문에 답하고 나에게 딱 맞는 AI 도구를 추천받으세요. 무료 맞춤형 AI 추천 퀴즈."/>
+  <meta name="description" content="5가지 질문에 답하고 나에게 딱 맞는 AI 도구를 추천받으세요. 예산별 AI 스택 자동 구성 기능 포함."/>
   <meta property="og:title" content="나에게 맞는 AI는? 퀴즈로 찾아보세요"/>
-  <meta property="og:description" content="5개 질문. 즉시 추천. 나만의 AI 스택을 찾아보세요."/>
+  <meta property="og:description" content="5개 질문 → 즉시 추천 + 예산별 최적 AI 조합 자동 구성."/>
   <meta property="og:url" content="https://bestaitoolcompare.com/find-my-ai-ko.html"/>
-  <meta property="og:type" content="website"/>
   <link rel="canonical" href="https://bestaitoolcompare.com/find-my-ai-ko.html"/>
   <link rel="icon" type="image/png" href="favicon.png"/>
   <link rel="stylesheet" href="style.css"/>
@@ -62,7 +61,7 @@
     .tool-name{font-weight:800;font-size:1.05rem;color:var(--text);margin-bottom:.25rem;}
     .tool-why{font-size:.87rem;color:var(--muted);line-height:1.6;margin-bottom:.6rem;}
     .tool-tags{display:flex;flex-wrap:wrap;gap:.35rem;}
-    .tag{font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.18rem .5rem;border-radius:4px;background:var(--surface);border:1px solid var(--border);color:var(--muted);}
+    .tag{font-size:.68rem;font-weight:700;letter-spacing:.04em;padding:.18rem .5rem;border-radius:4px;background:var(--surface);border:1px solid var(--border);color:var(--muted);}
     .tag.free{color:var(--success);border-color:rgba(22,163,74,.25);background:var(--success-light);}
     .tool-link{align-self:center;white-space:nowrap;font-size:.82rem;font-weight:700;color:var(--accent);text-decoration:none;border:1.5px solid rgba(0,123,255,.3);border-radius:100px;padding:.42rem .95rem;transition:background .15s;flex-shrink:0;}
     .tool-link:hover{background:var(--accent-light);border-color:var(--accent);}
@@ -77,6 +76,53 @@
     .action-primary{background:var(--accent);color:#fff;box-shadow:0 3px 10px rgba(0,123,255,.2);}
     .action-primary:hover{background:var(--accent-hover);}
     .action-secondary{background:var(--white);color:var(--text);border:1.5px solid var(--border)!important;}
+
+    /* ===== 예산별 스택 빌더 ===== */
+    .budget-section{margin-top:3rem;border-top:2px dashed var(--border);padding-top:2.5rem;}
+    .budget-section-head{text-align:center;margin-bottom:2rem;}
+    .budget-badge{display:inline-block;background:#1a1a2e;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:100px;margin-bottom:1rem;}
+    .budget-section-head h2{font-family:'Syne',sans-serif;font-size:clamp(1.35rem,3.5vw,1.9rem);font-weight:800;color:var(--text);margin-bottom:.5rem;}
+    .budget-section-head p{color:var(--muted);font-size:.92rem;max-width:460px;margin:0 auto;}
+    .budget-controls{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.6rem 1.8rem;margin-bottom:1.5rem;}
+    .control-row{margin-bottom:1.4rem;}
+    .control-row:last-child{margin-bottom:0;}
+    .control-label{font-size:.82rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.8rem;display:flex;justify-content:space-between;align-items:center;}
+    .control-label span{font-weight:400;text-transform:none;letter-spacing:0;color:var(--accent);font-size:.9rem;}
+    .budget-slider{width:100%;height:4px;-webkit-appearance:none;appearance:none;background:linear-gradient(90deg,var(--accent) var(--pct,33%),var(--border) var(--pct,33%));border-radius:10px;outline:none;cursor:pointer;}
+    .budget-slider::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 2px 8px rgba(0,123,255,.35);cursor:pointer;transition:transform .15s;}
+    .budget-slider::-webkit-slider-thumb:hover{transform:scale(1.2);}
+    .budget-ticks{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);margin-top:.4rem;}
+    .goal-pills{display:flex;flex-wrap:wrap;gap:.5rem;}
+    .goal-pill{background:var(--white);border:1.5px solid var(--border);border-radius:100px;padding:.38rem .9rem;font-size:.83rem;font-weight:600;color:var(--text);cursor:pointer;transition:all .15s;font-family:inherit;}
+    .goal-pill:hover{border-color:var(--accent);color:var(--accent);}
+    .goal-pill.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+    .generate-btn{width:100%;background:var(--text);color:#fff;font-weight:700;font-size:.95rem;padding:.85rem;border-radius:100px;border:none;cursor:pointer;margin-top:1.4rem;transition:background .15s,transform .15s;font-family:inherit;}
+    .generate-btn:hover{background:#2d2d4e;transform:translateY(-1px);}
+    #stack-result{display:none;animation:fadeUp .4s ease both;}
+    .stack-header{background:var(--text);color:#fff;border-radius:var(--radius) var(--radius) 0 0;padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;}
+    .stack-header h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;margin:0;}
+    .stack-total{font-size:.85rem;color:rgba(255,255,255,.7);}
+    .stack-total strong{color:#fff;}
+    .stack-items{border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius) var(--radius);overflow:hidden;}
+    .stack-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.3rem;border-bottom:1px solid var(--border);background:var(--white);transition:background .15s;}
+    .stack-item:last-child{border-bottom:none;}
+    .stack-item:hover{background:var(--accent-light);}
+    .si-emoji{font-size:1.3rem;flex-shrink:0;width:2rem;text-align:center;}
+    .si-info{flex:1;}
+    .si-name{font-weight:700;font-size:.95rem;color:var(--text);}
+    .si-desc{font-size:.8rem;color:var(--muted);margin-top:.1rem;line-height:1.4;}
+    .si-right{display:flex;flex-direction:column;align-items:flex-end;gap:.3rem;flex-shrink:0;}
+    .si-price{font-size:.82rem;font-weight:700;color:var(--text);}
+    .si-price.free{color:var(--success);}
+    .si-link{font-size:.78rem;font-weight:700;color:var(--accent);text-decoration:none;border:1px solid rgba(0,123,255,.25);border-radius:100px;padding:.2rem .6rem;white-space:nowrap;}
+    .si-link:hover{background:var(--accent-light);}
+    .stack-summary{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.4rem;margin-top:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;}
+    .ss-left{font-size:.88rem;color:var(--muted);}
+    .ss-left strong{color:var(--text);font-size:1rem;}
+    .ss-right{font-size:.82rem;color:var(--success);font-weight:700;}
+    .stack-cta{margin-top:.8rem;text-align:center;}
+    .stack-retry{background:none;border:1.5px solid var(--border);border-radius:100px;padding:.5rem 1.3rem;font-size:.83rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;transition:border-color .15s,color .15s;}
+    .stack-retry:hover{border-color:var(--accent);color:var(--accent);}
     @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
   </style>
 </head>
@@ -102,9 +148,9 @@
 </header>
 
 <div class="quiz-hero" id="intro">
-  <div class="quiz-badge">✦ 무료 · 2분 소요</div>
-  <h1>나에게 딱 맞는<br><span>AI는 무엇일까?</span></h1>
-  <p>5가지 질문에 답하면 내 상황에 최적화된 AI 스택을 즉시 추천해드립니다.</p>
+  <div class="quiz-badge">✦ 무료 · 2분</div>
+  <h1>나에게 딱 맞는<br><span>AI는 뭘까?</span></h1>
+  <p>5가지 질문에 답하면 나에게 최적화된 AI 스택을 즉시 추천해드립니다.</p>
   <button class="start-btn" onclick="startQuiz()">내 AI 찾기 →</button>
 </div>
 
@@ -114,85 +160,152 @@
     <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
   </div>
 
+  <!-- Q1 -->
   <div class="question-card" id="q1">
     <div class="q-number">질문 01 / 05</div>
-    <div class="q-text">AI를 주로 무엇에 사용하고 싶으세요?</div>
+    <div class="q-text">AI로 주로 하고 싶은 일이 뭔가요?</div>
     <div class="options">
       <button class="option-btn" onclick="pick(this,'q1','writing')"><span class="option-icon">✍️</span><div><div class="option-label">글쓰기 & 콘텐츠</div><div class="option-sub">블로그, 이메일, 카피라이팅, 에세이</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q1','coding')"><span class="option-icon">💻</span><div><div class="option-label">코딩 & 개발</div><div class="option-sub">앱 개발, 디버깅, 코드 리뷰</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q1','coding')"><span class="option-icon">💻</span><div><div class="option-label">코딩 & 개발</div><div class="option-sub">앱 만들기, 디버깅, 코드 리뷰</div></div></button>
       <button class="option-btn" onclick="pick(this,'q1','image')"><span class="option-icon">🎨</span><div><div class="option-label">이미지 & 디자인</div><div class="option-sub">이미지 생성, 로고, 크리에이티브 아트</div></div></button>
       <button class="option-btn" onclick="pick(this,'q1','video')"><span class="option-icon">🎬</span><div><div class="option-label">영상 제작</div><div class="option-sub">AI 영상, 아바타, 영상 편집</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q1','research')"><span class="option-icon">🔍</span><div><div class="option-label">리서치 & 분석</div><div class="option-sub">문서 요약, 팩트체크, 정보 검색</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q1','productivity')"><span class="option-icon">⚡</span><div><div class="option-label">생산성 & 자동화</div><div class="option-sub">회의 요약, 워크플로우, 일정 관리</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q1','research')"><span class="option-icon">🔍</span><div><div class="option-label">리서치 & 분석</div><div class="option-sub">문서 요약, 팩트체크, 검색</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q1','productivity')"><span class="option-icon">⚡</span><div><div class="option-label">생산성 & 자동화</div><div class="option-sub">회의, 워크플로우, 일정 관리</div></div></button>
     </div>
     <div class="q-nav"><button class="next-btn" id="next1" onclick="nextQ(1)">다음 →</button></div>
   </div>
 
+  <!-- Q2 -->
   <div class="question-card" id="q2">
     <div class="q-number">질문 02 / 05</div>
-    <div class="q-text">예산은 어느 정도인가요?</div>
+    <div class="q-text">월 예산은 어느 정도인가요?</div>
     <div class="options">
-      <button class="option-btn" onclick="pick(this,'q2','free')"><span class="option-icon">🆓</span><div><div class="option-label">무료만 사용</div><div class="option-sub">구독 없이 무료 플랜만 사용</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q2','low')"><span class="option-icon">💰</span><div><div class="option-label">월 3만원 이하</div><div class="option-sub">가치 있다면 약간의 비용은 괜찮아요</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q2','any')"><span class="option-icon">💳</span><div><div class="option-label">가격 무관</div><div class="option-sub">최고의 도구라면 비용은 상관없어요</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q2','free')"><span class="option-icon">🆓</span><div><div class="option-label">무료만</div><div class="option-sub">구독 없이 무료 플랜만 사용</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q2','low')"><span class="option-icon">💰</span><div><div class="option-label">월 3만원 이하</div><div class="option-sub">가치 있는 도구라면 결제 가능</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q2','any')"><span class="option-icon">💳</span><div><div class="option-label">예산 상관없음</div><div class="option-sub">최고의 도구면 비용은 문제없음</div></div></button>
     </div>
     <div class="q-nav"><button class="next-btn" id="next2" onclick="nextQ(2)">다음 →</button></div>
   </div>
 
+  <!-- Q3 -->
   <div class="question-card" id="q3">
     <div class="q-number">질문 03 / 05</div>
-    <div class="q-text">본인의 기술 수준을 선택해주세요.</div>
+    <div class="q-text">기술 수준을 어떻게 표현하시겠어요?</div>
     <div class="options">
-      <button class="option-btn" onclick="pick(this,'q3','beginner')"><span class="option-icon">🌱</span><div><div class="option-label">입문자</div><div class="option-sub">쉽고 직관적인 도구가 좋아요</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q3','mid')"><span class="option-icon">🚀</span><div><div class="option-label">중급자</div><div class="option-sub">대부분의 소프트웨어를 편하게 사용해요</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q3','pro')"><span class="option-icon">⚙️</span><div><div class="option-label">개발자 / 파워유저</div><div class="option-sub">API, CLI, 고급 설정도 거뜬해요</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q3','beginner')"><span class="option-icon">🌱</span><div><div class="option-label">초보자</div><div class="option-sub">간단하고 쉬운 도구를 선호해요</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q3','mid')"><span class="option-icon">🚀</span><div><div class="option-label">중급자</div><div class="option-sub">대부분의 소프트웨어는 편하게 씁니다</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q3','pro')"><span class="option-icon">⚙️</span><div><div class="option-label">파워유저 / 개발자</div><div class="option-sub">API, CLI, 고급 설정도 즐겨 씁니다</div></div></button>
     </div>
     <div class="q-nav"><button class="next-btn" id="next3" onclick="nextQ(3)">다음 →</button></div>
   </div>
 
+  <!-- Q4 -->
   <div class="question-card" id="q4">
     <div class="q-number">질문 04 / 05</div>
-    <div class="q-text">주로 어떤 상황에서 사용할 예정인가요?</div>
+    <div class="q-text">주로 어떤 용도로 사용하실 건가요?</div>
     <div class="options">
-      <button class="option-btn" onclick="pick(this,'q4','personal')"><span class="option-icon">🧑</span><div><div class="option-label">개인 사용</div><div class="option-sub">취미, 학습, 개인 프로젝트</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q4','work')"><span class="option-icon">💼</span><div><div class="option-label">업무 / 프리랜서</div><div class="option-sub">클라이언트 작업, 1인 비즈니스</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q4','team')"><span class="option-icon">👥</span><div><div class="option-label">팀 / 회사</div><div class="option-sub">여러 명이 함께 사용, 공유 워크플로우</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q4','personal')"><span class="option-icon">🧑</span><div><div class="option-label">개인 사용</div><div class="option-sub">나 혼자, 취미, 공부 목적</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q4','work')"><span class="option-icon">💼</span><div><div class="option-label">업무 / 프리랜서</div><div class="option-sub">클라이언트 작업, 생산성, 1인 비즈니스</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q4','team')"><span class="option-icon">👥</span><div><div class="option-label">팀 / 회사</div><div class="option-sub">여러 명이 함께 쓰는 공유 워크플로우</div></div></button>
     </div>
     <div class="q-nav"><button class="next-btn" id="next4" onclick="nextQ(4)">다음 →</button></div>
   </div>
 
+  <!-- Q5 -->
   <div class="question-card" id="q5">
     <div class="q-number">질문 05 / 05</div>
-    <div class="q-text">AI 도구에서 가장 중요한 것은 무엇인가요?</div>
+    <div class="q-text">가장 중요하게 생각하는 것은?</div>
     <div class="options">
-      <button class="option-btn" onclick="pick(this,'q5','quality')"><span class="option-icon">🏆</span><div><div class="option-label">최고의 결과물 품질</div><div class="option-sub">최고 수준의 아웃풋이 필요해요</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q5','speed')"><span class="option-icon">⚡</span><div><div class="option-label">속도 & 효율</div><div class="option-sub">빠른 응답과 간결한 워크플로우</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q5','privacy')"><span class="option-icon">🔒</span><div><div class="option-label">개인정보 & 데이터 보안</div><div class="option-sub">내 데이터가 안전하게 보호되어야 해요</div></div></button>
-      <button class="option-btn" onclick="pick(this,'q5','easy')"><span class="option-icon">😊</span><div><div class="option-label">사용 편의성</div><div class="option-sub">배우기 쉽고 바로 쓸 수 있어야 해요</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q5','quality')"><span class="option-icon">🏆</span><div><div class="option-label">최고의 결과물 품질</div><div class="option-sub">절대적으로 최고의 결과를 원합니다</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q5','speed')"><span class="option-icon">⚡</span><div><div class="option-label">속도 & 효율</div><div class="option-sub">빠른 응답, 군더더기 없는 워크플로우</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q5','privacy')"><span class="option-icon">🔒</span><div><div class="option-label">프라이버시 & 데이터 보안</div><div class="option-sub">내 데이터가 안전하게 보호되길 원합니다</div></div></button>
+      <button class="option-btn" onclick="pick(this,'q5','easy')"><span class="option-icon">😊</span><div><div class="option-label">사용 편의성</div><div class="option-sub">그냥 바로 되는 것, 러닝커브 없는 것</div></div></button>
     </div>
     <div class="q-nav"><button class="next-btn" id="next5" onclick="showResult()">결과 보기 →</button></div>
   </div>
 
+  <!-- 결과 -->
   <div id="result">
     <div class="result-header">
-      <div class="quiz-badge">✦ 나의 맞춤 AI 스택</div>
-      <h2 id="result-headline">맞춤 AI 추천 결과</h2>
-      <p id="result-sub">답변을 바탕으로 최적의 AI 도구를 추천해드립니다.</p>
+      <div class="quiz-badge">✦ 나만의 AI 스택</div>
+      <h2 id="result-headline">추천 AI 결과</h2>
+      <p id="result-sub">답변을 바탕으로 최적의 AI 도구 3가지를 추천해드립니다.</p>
     </div>
     <div class="result-stack" id="result-stack"></div>
     <div class="share-box">
-      <p>친구들에게 결과를 공유해보세요 👇</p>
+      <p>결과를 친구들과 공유해보세요 👇</p>
       <div class="share-btns">
-        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">𝕏 X에서 공유</a>
+        <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">𝕏 X에 공유</a>
         <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">in LinkedIn</a>
         <button class="share-btn" onclick="copyLink()">🔗 링크 복사</button>
       </div>
     </div>
     <div class="result-actions">
-      <button class="action-btn action-primary" onclick="location.href='compare-ko.html'">도구 상세 비교하기 →</button>
-      <button class="action-btn action-secondary" onclick="resetQuiz()">다시 풀기</button>
+      <button class="action-btn action-primary" onclick="location.href='compare-ko.html'">도구 비교하기 →</button>
+      <button class="action-btn action-secondary" onclick="resetQuiz()">다시 하기</button>
     </div>
-  </div>
+
+    <!-- ===== 예산별 AI 스택 빌더 ===== -->
+    <div class="budget-section">
+      <div class="budget-section-head">
+        <div class="budget-badge">✦ 신기능</div>
+        <h2>예산별 AI 스택 자동 구성</h2>
+        <p>월 예산과 목표를 설정하면, 비용 대비 최고의 AI 도구 조합을 자동으로 만들어드립니다.</p>
+      </div>
+
+      <div class="budget-controls">
+        <!-- 예산 슬라이더 -->
+        <div class="control-row">
+          <div class="control-label">
+            월 예산
+            <span id="budget-display">월 약 3만원</span>
+          </div>
+          <input type="range" class="budget-slider" id="budget-slider" min="0" max="3" value="1"
+            oninput="updateBudgetDisplay(this.value)" style="--pct:33%"/>
+          <div class="budget-ticks">
+            <span>무료</span>
+            <span>~3만원</span>
+            <span>~7만원</span>
+            <span>10만원+</span>
+          </div>
+        </div>
+
+        <!-- 목표 선택 -->
+        <div class="control-row">
+          <div class="control-label">목표 선택 <span style="color:var(--muted);font-size:.78rem">(여러 개 가능)</span></div>
+          <div class="goal-pills">
+            <button class="goal-pill active" onclick="toggleGoal(this,'writing')">✍️ 글쓰기</button>
+            <button class="goal-pill" onclick="toggleGoal(this,'coding')">💻 코딩</button>
+            <button class="goal-pill" onclick="toggleGoal(this,'image')">🎨 이미지</button>
+            <button class="goal-pill" onclick="toggleGoal(this,'video')">🎬 영상</button>
+            <button class="goal-pill" onclick="toggleGoal(this,'research')">🔍 리서치</button>
+            <button class="goal-pill" onclick="toggleGoal(this,'productivity')">⚡ 생산성</button>
+            <button class="goal-pill" onclick="toggleGoal(this,'business')">💼 비즈니스</button>
+          </div>
+        </div>
+
+        <button class="generate-btn" onclick="buildStack()">내 스택 만들기 →</button>
+      </div>
+
+      <!-- 스택 결과 -->
+      <div id="stack-result">
+        <div class="stack-header">
+          <h3 id="stack-title">최적화된 AI 스택</h3>
+          <div class="stack-total">총 비용: <strong id="stack-cost">무료</strong></div>
+        </div>
+        <div class="stack-items" id="stack-items"></div>
+        <div class="stack-summary">
+          <div class="ss-left"><strong id="stack-tools-count">3개 도구</strong>가 목표에 딱 맞게 선택됐습니다</div>
+          <div class="ss-right" id="stack-savings"></div>
+        </div>
+        <div class="stack-cta">
+          <button class="stack-retry" onclick="document.getElementById('stack-result').style.display='none'">← 설정 다시 하기</button>
+        </div>
+      </div>
+    </div>
+    <!-- 예산별 스택 빌더 끝 -->
+
+  </div><!-- end #result -->
 </div>
 
 <footer class="site-footer">
@@ -206,26 +319,131 @@
 </footer>
 
 <script>
-const answers={};
+const answers = {};
+let selectedGoals = new Set(['writing']);
+
+const budgetLabels = ['무료만', '월 약 3만원', '월 약 7만원', '월 10만원+'];
+const budgetPcts   = ['0%','33%','66%','100%'];
+function updateBudgetDisplay(v){
+  document.getElementById('budget-display').textContent = budgetLabels[v];
+  document.getElementById('budget-slider').style.setProperty('--pct', budgetPcts[v]);
+}
+function toggleGoal(btn, goal){
+  if(selectedGoals.has(goal)){
+    if(selectedGoals.size===1) return;
+    selectedGoals.delete(goal); btn.classList.remove('active');
+  } else {
+    selectedGoals.add(goal); btn.classList.add('active');
+  }
+}
+
+const STACK_TOOLS = {
+  claude:       {name:'Claude',         emoji:'🤖', desc:'장문 글쓰기, 문서 분석, 낮은 환각률의 최강 AI',            goal:['writing','research','business'], price:0,   priceLbl:'무료',          paid:false, link:'https://claude.ai'},
+  chatgpt:      {name:'ChatGPT',        emoji:'💬', desc:'글쓰기·코딩·리서치 전부 가능한 가장 범용적인 AI',          goal:['writing','coding','research','business','productivity'], price:0, priceLbl:'무료', paid:false, link:'https://chat.openai.com'},
+  chatgpt_plus: {name:'ChatGPT Plus',   emoji:'💬', desc:'GPT-4o + 이미지 생성 + 웹 검색. 최고의 올인원',          goal:['writing','coding','research','business','image'], price:20, priceLbl:'월 $20', paid:true, link:'https://chat.openai.com'},
+  claude_pro:   {name:'Claude Pro',     emoji:'🤖', desc:'무제한 Claude + 5배 사용량 + 우선 접속',                 goal:['writing','research','business'], price:20, priceLbl:'월 $20', paid:true, link:'https://claude.ai'},
+  jasper:       {name:'Jasper',         emoji:'✍️', desc:'마케팅 팀을 위한 브랜드 보이스 AI 콘텐츠',               goal:['writing','business'], price:49, priceLbl:'월 $49', paid:true, link:'https://jasper.ai'},
+  copilot_free: {name:'GitHub Copilot', emoji:'💻', desc:'VS Code에서 월 2,000회 무료 AI 코드 완성',              goal:['coding'], price:0, priceLbl:'무료', paid:false, link:'https://github.com/features/copilot'},
+  cursor:       {name:'Cursor Pro',     emoji:'💻', desc:'전체 코드베이스를 이해하는 AI 네이티브 IDE',              goal:['coding'], price:20, priceLbl:'월 $20', paid:true, link:'https://cursor.sh'},
+  deepseek:     {name:'DeepSeek',       emoji:'🔧', desc:'거의 무료 오픈소스 AI. 코딩·수학에 탁월',               goal:['coding','research'], price:0, priceLbl:'무료', paid:false, link:'https://deepseek.com'},
+  leonardo:     {name:'Leonardo.ai',    emoji:'🎨', desc:'하루 150 토큰 무료 — 최고의 무료 이미지 생성기',         goal:['image'], price:0, priceLbl:'무료', paid:false, link:'https://leonardo.ai'},
+  midjourney:   {name:'Midjourney',     emoji:'🎨', desc:'AI 이미지 품질의 황금 기준. 예술적 결과물 최강',         goal:['image'], price:10, priceLbl:'월 $10', paid:true, link:'https://midjourney.com'},
+  canva:        {name:'Canva AI',       emoji:'✨', desc:'Magic Design으로 디자인 지식 없이 브랜드 그래픽 제작',    goal:['image','business','writing'], price:0, priceLbl:'무료', paid:false, link:'https://canva.com'},
+  capcut:       {name:'CapCut AI',      emoji:'🎬', desc:'무료 AI 영상 편집 — 자동 자막 + B-롤 생성',             goal:['video'], price:0, priceLbl:'무료', paid:false, link:'https://capcut.com'},
+  runway:       {name:'Runway Gen-3',   emoji:'🎬', desc:'모션 브러시가 있는 전문 AI 영상 플랫폼',                goal:['video'], price:15, priceLbl:'월 $15', paid:true, link:'https://runwayml.com'},
+  heygen:       {name:'HeyGen',         emoji:'🧑', desc:'40개 이상 언어 AI 아바타 영상 — 비즈니스 최적',         goal:['video','business'], price:29, priceLbl:'월 $29', paid:true, link:'https://heygen.com'},
+  perplexity:   {name:'Perplexity AI',  emoji:'🔍', desc:'출처 인용이 있는 실시간 AI 검색. 무료',                  goal:['research','business'], price:0, priceLbl:'무료', paid:false, link:'https://perplexity.ai'},
+  notebooklm:   {name:'NotebookLM',     emoji:'📓', desc:'내 문서를 학습하는 구글 AI — PDF에 질문하기',            goal:['research','writing'], price:0, priceLbl:'무료', paid:false, link:'https://notebooklm.google.com'},
+  otter:        {name:'Otter.ai',       emoji:'🎙️', desc:'Zoom/Meet 회의 자동 녹음·전사·요약',                    goal:['productivity','business'], price:0, priceLbl:'무료', paid:false, link:'https://otter.ai'},
+  zapier:       {name:'Zapier',         emoji:'⚡', desc:'8,000개 앱 연결 — 코딩 없이 워크플로우 자동화',         goal:['productivity','business'], price:0, priceLbl:'무료 티어', paid:false, link:'https://zapier.com'},
+  fathom:       {name:'Fathom',         emoji:'📝', desc:'회의 후 즉시 AI 노트 자동 발송. 완전 무료',              goal:['productivity','business'], price:0, priceLbl:'무료', paid:false, link:'https://fathom.video'},
+  notion_ai:    {name:'Notion AI',      emoji:'📋', desc:'워크스페이스 내장 AI — 초안, 요약, 태스크',              goal:['productivity','writing','business'], price:10, priceLbl:'월 $10 추가', paid:true, link:'https://notion.so'},
+};
+
+function buildStack(){
+  const budgetLevel = parseInt(document.getElementById('budget-slider').value);
+  const budgets = [0, 20, 50, 100];
+  const maxBudget = budgets[budgetLevel];
+  const goals = [...selectedGoals];
+  let candidates = Object.entries(STACK_TOOLS).map(([id,tool])=>{
+    let score = 0;
+    goals.forEach(g=>{ if(tool.goal.includes(g)) score+=10; });
+    if(budgetLevel===0 && tool.paid) score=-999;
+    if(tool.price > maxBudget) score=-999;
+    if(!tool.paid) score+=2;
+    return {id,tool,score};
+  }).filter(c=>c.score>0).sort((a,b)=>b.score-a.score);
+
+  const chosen=[];
+  const seenNames=new Set();
+  const basePairs={chatgpt_plus:'chatgpt',claude_pro:'claude'};
+  for(const c of candidates){
+    if(chosen.length>=5) break;
+    const base=basePairs[c.id];
+    if(base && seenNames.has(base)) continue;
+    if(seenNames.has(c.id)) continue;
+    if(Object.values(basePairs).includes(c.id)){
+      const pv=Object.entries(basePairs).find(([k,v])=>v===c.id)?.[0];
+      if(pv && seenNames.has(pv)) continue;
+    }
+    seenNames.add(c.id);
+    chosen.push(c);
+  }
+
+  if(chosen.length===0){
+    alert('해당 조건에 맞는 도구가 없습니다. 예산이나 목표를 조정해보세요!');
+    return;
+  }
+
+  const totalCost = chosen.reduce((s,c)=>s+c.tool.price,0);
+  const stackTitles = ['완전 무료 AI 스택','월 3만원대 AI 스택','월 7만원대 AI 스택','프리미엄 AI 스택'];
+  document.getElementById('stack-title').textContent = stackTitles[budgetLevel];
+  document.getElementById('stack-cost').textContent = totalCost===0 ? '완전 무료' : `월 $${totalCost} (~${Math.round(totalCost*1350).toLocaleString()}원)`;
+  document.getElementById('stack-tools-count').textContent = `${chosen.length}개 도구`;
+  document.getElementById('stack-savings').textContent = totalCost===0 ? '100% 무료 스택' : `비용 대비 최고 효율 조합`;
+
+  const container = document.getElementById('stack-items');
+  container.innerHTML='';
+  chosen.forEach(({tool})=>{
+    const div=document.createElement('div'); div.className='stack-item';
+    div.innerHTML=`
+      <div class="si-emoji">${tool.emoji}</div>
+      <div class="si-info">
+        <div class="si-name">${tool.name}</div>
+        <div class="si-desc">${tool.desc}</div>
+      </div>
+      <div class="si-right">
+        <div class="si-price ${!tool.paid?'free':''}">${tool.priceLbl}</div>
+        <a class="si-link" href="${tool.link}" target="_blank" rel="noopener">방문 →</a>
+      </div>`;
+    container.appendChild(div);
+  });
+
+  const sr=document.getElementById('stack-result');
+  sr.style.display='block';
+  sr.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// ── 퀴즈 로직 ──
 const TOOLS={
-  chatgpt:   {name:'ChatGPT',      why:'가장 다재다능한 AI — 글쓰기, 코딩, 리서치를 한 곳에서 처리합니다.',              tags:['무료','유료'], free:true,  link:'https://chat.openai.com',            score:0},
-  claude:    {name:'Claude',       why:'장문 문서와 섬세한 글쓰기에 최강. 환각 비율이 가장 낮은 AI입니다.',               tags:['무료','유료'], free:true,  link:'https://claude.ai',                  score:0},
-  gemini:    {name:'Gemini',       why:'Gmail, Docs, Drive와 통합된 구글 AI. 멀티모달 작업에서 최고의 성능.',             tags:['무료','유료'], free:true,  link:'https://gemini.google.com',          score:0},
-  perplexity:{name:'Perplexity AI',why:'실시간 출처 인용 AI 검색 엔진. 팩트체크와 최신 정보 검색에 탁월합니다.',          tags:['무료','유료'], free:true,  link:'https://perplexity.ai',              score:0},
-  copilot:   {name:'GitHub Copilot',why:'VS Code, JetBrains의 AI 코딩 표준. 무료 플랜으로 월 2,000회 코드 완성.',        tags:['무료','유료'], free:true,  link:'https://github.com/features/copilot',score:0},
-  cursor:    {name:'Cursor',       why:'전체 코드베이스를 이해하는 AI 네이티브 IDE. 2026년 가장 빠르게 성장하는 개발 도구.', tags:['무료','유료'], free:true,  link:'https://cursor.sh',                  score:0},
-  midjourney:{name:'Midjourney',   why:'AI 이미지 생성의 황금 기준. 버전 7에서 예술적 품질이 대폭 향상됐습니다.',          tags:['유료'],        free:false, link:'https://midjourney.com',             score:0},
-  leonardo:  {name:'Leonardo.ai',  why:'최고의 무료 이미지 생성기 — 하루 150 토큰, 워터마크 없음.',                       tags:['무료'],        free:true,  link:'https://leonardo.ai',                score:0},
-  canva:     {name:'Canva AI',     why:'디자인 지식 없이도 Magic Design으로 브랜드 그래픽을 자동 생성.',                   tags:['무료','유료'], free:true,  link:'https://canva.com',                  score:0},
-  sora:      {name:'Sora',         why:'OpenAI의 영화급 AI 영상. 2026년 최고 품질. ChatGPT Plus 포함.',                   tags:['유료'],        free:false, link:'https://sora.com',                   score:0},
-  heygen:    {name:'HeyGen',       why:'40개 이상 언어의 정확한 립싱크 AI 아바타 영상 제작.',                              tags:['무료','유료'], free:true,  link:'https://www.heygen.com',             score:0},
-  runway:    {name:'Runway Gen-3', why:'모션 브러시와 프레임별 편집의 전문 AI 영상 플랫폼.',                               tags:['무료','유료'], free:true,  link:'https://runwayml.com',               score:0},
-  notion:    {name:'Notion AI',    why:'워크스페이스 내장 AI. 노트 요약, 콘텐츠 초안, 반복 작업 자동화.',                  tags:['유료'],        free:false, link:'https://notion.so',                  score:0},
-  otter:     {name:'Otter.ai',     why:'Zoom/Meet/Teams 회의를 자동으로 녹음·전사·요약하는 AI 회의 어시스턴트.',           tags:['무료','유료'], free:true,  link:'https://otter.ai',                   score:0},
-  zapier:    {name:'Zapier',       why:'8,000개 이상 앱을 AI 자동화로 연결. 코딩 없이 복잡한 워크플로우 구축.',             tags:['무료','유료'], free:true,  link:'https://zapier.com',                 score:0},
-  deepseek:  {name:'DeepSeek',     why:'거의 무료에 가까운 비용의 오픈소스 AI. 수학, 코딩, 기술 분석에 탁월.',             tags:['무료'],        free:true,  link:'https://deepseek.com',               score:0},
-  notebooklm:{name:'NotebookLM',   why:'내가 업로드한 문서만을 기반으로 작동하는 구글 AI. PDF를 팟캐스트로 변환.',          tags:['무료'],        free:true,  link:'https://notebooklm.google.com',      score:0},
-  jasper:    {name:'Jasper',       why:'마케팅 팀을 위한 전문 AI 콘텐츠 플랫폼. 브랜드 보이스 + SEO 최적화.',             tags:['유료'],        free:false, link:'https://jasper.ai',                  score:0},
+  chatgpt:   {name:'ChatGPT',       why:'가장 다재다능한 AI — 글쓰기, 코딩, 리서치를 한 곳에서.',                   tags:['무료','유료'], free:true,  link:'https://chat.openai.com',            score:0},
+  claude:    {name:'Claude',        why:'장문 문서와 세밀한 글쓰기에 최적. 최전선 모델 중 최저 환각률.',              tags:['무료','유료'], free:true,  link:'https://claude.ai',                  score:0},
+  gemini:    {name:'Gemini',        why:'Gmail, Docs, Drive 깊은 통합. 멀티모달 작업 최강.',                          tags:['무료','유료'], free:true,  link:'https://gemini.google.com',          score:0},
+  perplexity:{name:'Perplexity AI', why:'실시간 출처 인용 AI 검색 엔진. 팩트체크와 최신 정보 검색에 탁월.',          tags:['무료','유료'], free:true,  link:'https://perplexity.ai',              score:0},
+  copilot:   {name:'GitHub Copilot',why:'VS Code, JetBrains의 AI 코딩 표준. 무료 플랜으로 월 2,000회 코드 완성.',    tags:['무료','유료'], free:true,  link:'https://github.com/features/copilot',score:0},
+  cursor:    {name:'Cursor',        why:'전체 코드베이스를 이해하는 AI 네이티브 IDE. 2026년 가장 빠르게 성장.',       tags:['무료','유료'], free:true,  link:'https://cursor.sh',                  score:0},
+  midjourney:{name:'Midjourney',    why:'AI 이미지 생성의 황금 기준. 버전 7에서 예술적 품질 대폭 향상.',             tags:['유료'],        free:false, link:'https://midjourney.com',             score:0},
+  leonardo:  {name:'Leonardo.ai',   why:'최고의 무료 이미지 생성기 — 하루 150 토큰, 워터마크 없음.',                 tags:['무료'],        free:true,  link:'https://leonardo.ai',                score:0},
+  canva:     {name:'Canva AI',      why:'디자인 지식 없이도 Magic Design으로 브랜드 그래픽을 자동 생성.',             tags:['무료','유료'], free:true,  link:'https://canva.com',                  score:0},
+  sora:      {name:'Sora',          why:'OpenAI의 영화급 AI 영상. 2026년 최고 품질. ChatGPT Plus 포함.',             tags:['유료'],        free:false, link:'https://sora.com',                   score:0},
+  heygen:    {name:'HeyGen',        why:'40개 이상 언어의 정확한 립싱크 AI 아바타 영상 제작.',                        tags:['무료','유료'], free:true,  link:'https://www.heygen.com',             score:0},
+  runway:    {name:'Runway Gen-3',  why:'모션 브러시와 프레임별 편집의 전문 AI 영상 플랫폼.',                         tags:['무료','유료'], free:true,  link:'https://runwayml.com',               score:0},
+  notion:    {name:'Notion AI',     why:'워크스페이스 내장 AI. 노트 요약, 콘텐츠 초안, 반복 작업 자동화.',            tags:['유료'],        free:false, link:'https://notion.so',                  score:0},
+  otter:     {name:'Otter.ai',      why:'Zoom/Meet/Teams 회의를 자동으로 녹음·전사·요약하는 AI 어시스턴트.',          tags:['무료','유료'], free:true,  link:'https://otter.ai',                   score:0},
+  zapier:    {name:'Zapier',        why:'8,000개 이상 앱을 AI 자동화로 연결. 코딩 없이 복잡한 워크플로우 구축.',      tags:['무료','유료'], free:true,  link:'https://zapier.com',                 score:0},
+  deepseek:  {name:'DeepSeek',      why:'거의 무료에 가까운 비용의 오픈소스 AI. 수학, 코딩, 기술 분석에 탁월.',       tags:['무료'],        free:true,  link:'https://deepseek.com',               score:0},
+  notebooklm:{name:'NotebookLM',    why:'내가 업로드한 문서만을 기반으로 작동하는 구글 AI. PDF를 팟캐스트로 변환.',    tags:['무료'],        free:true,  link:'https://notebooklm.google.com',      score:0},
+  jasper:    {name:'Jasper',        why:'마케팅 팀을 위한 전문 AI 콘텐츠 플랫폼. 브랜드 보이스 + SEO 최적화.',       tags:['유료'],        free:false, link:'https://jasper.ai',                  score:0},
 };
 
 function calcScores(){
@@ -279,6 +497,20 @@ function showResult(){
     div.innerHTML=`<div class="tool-rank">${rank}</div><div class="tool-info"><div class="tool-name">${tool.name}</div><div class="tool-why">${tool.why}</div><div class="tool-tags">${tags}</div></div><a class="tool-link" href="${tool.link}" target="_blank" rel="noopener">방문 →</a>`;
     stack.appendChild(div);
   });
+  // 퀴즈 답변을 스택 빌더에 자동 반영
+  const quizGoal=answers.q1;
+  if(quizGoal){
+    document.querySelectorAll('.goal-pill').forEach(p=>p.classList.remove('active'));
+    selectedGoals.clear();
+    const goalMap={writing:'글쓰기',coding:'코딩',image:'이미지',video:'영상',research:'리서치',productivity:'생산성'};
+    const pills=[...document.querySelectorAll('.goal-pill')];
+    const match=pills.find(p=>p.getAttribute('onclick').includes(`'${quizGoal}'`));
+    if(match){match.classList.add('active');selectedGoals.add(quizGoal);}
+    const bmap={free:0,low:1,any:2};
+    const bv=bmap[answers.q2]??1;
+    const sl=document.getElementById('budget-slider');
+    sl.value=bv;updateBudgetDisplay(bv);
+  }
   const txt=encodeURIComponent(`내 AI 스택: ${top.map(([,t])=>t.name).join(', ')} — 나만의 AI를 찾아보세요`);
   const url=encodeURIComponent('https://bestaitoolcompare.com/find-my-ai-ko.html');
   document.getElementById('share-twitter').href=`https://twitter.com/intent/tweet?text=${txt}&url=${url}`;
@@ -290,6 +522,7 @@ function copyLink(){navigator.clipboard.writeText('https://bestaitoolcompare.com
 function resetQuiz(){
   Object.keys(answers).forEach(k=>delete answers[k]);
   document.getElementById('result').style.display='none';
+  document.getElementById('stack-result').style.display='none';
   document.querySelectorAll('.option-btn').forEach(b=>b.classList.remove('selected'));
   document.querySelectorAll('.next-btn').forEach(b=>b.classList.remove('ready'));
   document.getElementById('intro').style.display='block';
