@@ -1,5 +1,30 @@
 [
   {
+    "name": "Meta AI",
+    "description": "Meta's Muse Spark — built by Meta Superintelligence Labs. Instant and Thinking modes, parallel multi-agent architecture, strong multimodal perception. Rolling out across WhatsApp, Instagram, Facebook, and Messenger.",
+    "category": [
+      "Chatbot",
+      "Image",
+      "Productivity"
+    ],
+    "rating": 4.4,
+    "pricing": [
+      "Free",
+      "Paid"
+    ],
+    "link": "https://ai.meta.com",
+    "keywords": [
+      "meta",
+      "facebook",
+      "instagram",
+      "messenger",
+      "chatbot",
+      "llama",
+      "multimodal",
+      "social ai"
+    ]
+  },
+  {
     "name": "ChatGPT",
     "description": "OpenAI's flagship AI assistant powered by GPT-5.4. Handles conversation, coding, data analysis, image generation, and real-time web search. The most widely used AI tool in the world.",
     "category": [
