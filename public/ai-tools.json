@@ -37,7 +37,7 @@
   },
   {
     "name": "Grok",
-    "description": "xAI's AI assistant with real-time X (Twitter) data access. Known for up-to-the-minute news, unfiltered answers, and strong reasoning capabilities via Grok 4.20 — multi-agent parallel architecture, the latest from xAI.",
+    "description": "xAI's Grok 4.20 with real-time X (Twitter) data access. Multi-agent parallel architecture — 4 agents working simultaneously. Strong coding benchmarks and up-to-the-minute news.",
     "category": ["Chatbot"],
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
@@ -82,7 +82,7 @@
   },
   {
     "name": "DALL-E 4",
-    "description": "OpenAI's DALL-E 4 image model built into ChatGPT Plus. Major upgrade in prompt accuracy and photorealism over DALL-E 4. Best-in-class for text rendering within images.",
+    "description": "OpenAI's DALL-E 4 image model built into ChatGPT Plus. Major upgrade in prompt accuracy and photorealism over DALL-E 3. Best-in-class for text rendering within images.",
     "category": ["Image"],
     "rating": 4.7,
     "pricing": ["Paid"],
@@ -145,7 +145,7 @@
   },
   {
     "name": "Runway Gen-4",
-    "description": "Runway Gen-4 — professional AI video platform with motion brushes, frame-level editing, and style controls. Significantly improved motion realism. The filmmaker's AI of choice in 2026.Runway Gen-4 — professional AI video platform with motion brushes, frame-level editing, and style controls. Significantly improved motion realism. The filmmaker's AI of choice in 2026.",
+    "description": "Runway Gen-4 — professional AI video platform with motion brushes, frame-level editing, and style controls. Significantly improved motion realism. The filmmaker's AI of choice in 2026.",
     "category": ["Video"],
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
@@ -163,7 +163,8 @@
   },
   {
     "name": "Kling AI",
-    "description": "Kuaishou's AI video model producing high-quality cinematic videos up to 2 minutes. Strong Sora competitor with impressive motion realism, a free tier, and rapidly improving quality.",
+    "description": "Kling AI 2.0 — Kuaishou's AI video model producing cinematic videos up to 3 minutes. Dramatically improved motion realism in v2.0. Strong Sora competitor with a generous free tier.
+",
     "category": ["Video"],
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
