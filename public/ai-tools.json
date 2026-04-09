@@ -1,7 +1,7 @@
 [
   {
     "name": "ChatGPT",
-    "description": "OpenAI's flagship AI assistant powered by GPT-4o. Handles conversation, coding, data analysis, image generation, and real-time web search. The most widely used AI tool in the world.",
+    "description": "OpenAI's flagship AI assistant powered by GPT-5.4. Handles conversation, coding, data analysis, image generation, and real-time web search. The most widely used AI tool in the world.",
     "category": ["Chatbot", "Writing", "Coding"],
     "rating": 5.0,
     "pricing": ["Free", "Paid"],
@@ -10,7 +10,7 @@
   },
   {
     "name": "Claude",
-    "description": "Anthropic's advanced AI assistant with a 200K token context window. Top choice for long-document analysis, nuanced writing, and coding with the lowest hallucination rate.",
+    "description": "Anthropic's Claude Sonnet 4.6 — 1M token context window (beta). Top choice for long-document analysis, nuanced writing, and coding. Leads GDPval-AA real-world benchmark with 1,633 Elo.",
     "category": ["Chatbot", "Writing", "Coding"],
     "rating": 4.9,
     "pricing": ["Free", "Paid"],
@@ -19,7 +19,7 @@
   },
   {
     "name": "Gemini",
-    "description": "Google's multimodal AI with a 1M token context window, integrated across Gmail, Docs, and Drive. Best for Google Workspace users and processing extremely long documents.",
+    "description": "Google's Gemini 3.1 Pro — 2M token context window, leads ARC-AGI-2 reasoning at 77.1%, best-value frontier model ($2/$12 per 1M tokens). Integrated across Gmail, Docs, and Drive.",
     "category": ["Chatbot", "Writing", "Coding"],
     "rating": 4.8,
     "pricing": ["Free", "Paid"],

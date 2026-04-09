@@ -34,8 +34,8 @@ const CONFIG = {
     schemaName:   'Best AI Tools 2026',
     schemaDesc:   'A curated directory of the best AI tools in 2026, covering chatbots, video generators, image generators, writing assistants, coding tools, and audio tools.',
     meta: {
-      title:       'AI Tool Compare 2026 | Sora, Claude 3.5, Gemini Performance & Pricing',
-      description: 'Compare the latest AI tools of 2026 at a glance. A professional AI comparison site with daily updates on the performance, ratings, and pricing of Sora, Claude 3.5, and Gemini 1.5 Pro.',
+      title:       'AI Tool Compare 2026 | GPT-5.4, Claude Sonnet 4.6, Gemini 3.1 Pro Comparison',
+      description: 'Compare the latest AI tools of 2026 at a glance. A professional AI comparison site with daily updates on the performance, ratings, and pricing of GPT-5.4, Claude Sonnet 4.6, Gemini 3.1 Pro, Grok 4.20.',
       keywords:    'ai compare, ai tool comparison, best ai tools 2026, Sora vs Runway, AI tool comparison, AI recommendations',
     },
     nav: { home:'Home', compare:'Compare', blog:'Blog', news:'News' },
@@ -58,7 +58,7 @@ const CONFIG = {
       items: [
         { q:'What is the best AI tool in 2026?',          a:'ChatGPT by OpenAI is rated the best all-around AI tool in 2026 with a 5.0/5 rating, followed closely by Claude (4.9) and Sora (4.9).' },
         { q:'What is the best free AI tool in 2026?',     a:'The best free AI tools in 2026 are ChatGPT, Claude, Gemini, Perplexity AI, and ElevenLabs — all offer powerful features on their free tier.' },
-        { q:'Which AI tool is best for video generation?',a:'Sora by OpenAI (4.9/5) leads for cinematic quality. Runway Gen-3 (4.6/5) offers professional editing control, and HeyGen (4.5/5) is ideal for business avatar videos.' },
+        { q:'Which AI tool is best for video generation?',a:'Sora by OpenAI (4.9/5) leads for cinematic quality. Runway Gen-4 (4.6/5) offers professional editing control, and HeyGen (4.5/5) is ideal for business avatar videos.' },
         { q:'What is the best AI image generator?',       a:'Midjourney (4.8/5) produces the most artistic results. Leonardo.ai (4.6/5) is great for game assets, and Canva AI (4.6/5) is the easiest for non-designers.' },
         { q:'What is the best AI tool for writing?',      a:'Grammarly (4.5/5) is best for editing and proofreading, Jasper (4.5/5) for marketing content at scale, and Claude (4.9/5) for long-form writing and document analysis.' },
       ]
@@ -68,7 +68,7 @@ const CONFIG = {
     schemaFaq: [
       { q:'What is the best AI tool in 2026?',          a:'ChatGPT by OpenAI is rated the best all-around AI tool in 2026 with a 5.0/5 rating, followed closely by Claude (4.9) and Sora (4.9).' },
       { q:'What is the best free AI tool in 2026?',     a:'The best free AI tools in 2026 are ChatGPT, Claude, Gemini, Perplexity AI, and ElevenLabs — all offer powerful features on their free tier.' },
-      { q:'Which AI tool is best for video generation?',a:'Sora by OpenAI (4.9/5) leads for cinematic quality. Runway Gen-3 (4.6/5) offers professional editing control, and HeyGen (4.5/5) is ideal for business avatar videos.' },
+      { q:'Which AI tool is best for video generation?',a:'Sora by OpenAI (4.9/5) leads for cinematic quality. Runway Gen-4 (4.6/5) offers professional editing control, and HeyGen (4.5/5) is ideal for business avatar videos.' },
       { q:'What is the best AI image generator?',       a:'Midjourney (4.8/5) produces the most artistic results. Leonardo.ai (4.6/5) is great for game assets, and Canva AI (4.6/5) is the easiest for non-designers.' },
       { q:'What is the best AI tool for writing?',      a:'Grammarly (4.5/5) is best for editing and proofreading, Jasper (4.5/5) for marketing content at scale, and Claude (4.9/5) for long-form writing and document analysis.' },
     ],
