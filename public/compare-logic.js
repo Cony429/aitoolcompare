@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pricing: 'Subscription-based, starting at $10/month.'
         },
         'dalle3': {
-            name: 'DALL-E 3',
+            name: 'DALL-E 4',
             category: 'Image Generation',
             core_strength: 'Natively integrated with ChatGPT Plus.',
             use_case: 'Easy to use with natural language prompts.',

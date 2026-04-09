@@ -424,12 +424,12 @@ const CURATED = {
     // $50
     [ {name:'Midjourney',    emoji:'🎨', desc:'Best image quality in 2026 — photorealistic and artistic styles, all resolutions',      priceLbl:'$10/mo',      free:false, link:'https://midjourney.com'},
       {name:'Adobe Firefly', emoji:'🔥', desc:'Commercial-safe images inside Photoshop — the professional design standard',            priceLbl:'~$10/mo',     free:false, link:'https://firefly.adobe.com'},
-      {name:'ChatGPT Plus',  emoji:'💬', desc:'DALL-E 3 access — best for images that need accurate text rendering inside them',       priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
+      {name:'ChatGPT Plus',  emoji:'💬', desc:'DALL-E 4 access — best for images that need accurate text rendering inside them',       priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
       {name:'Canva Pro',     emoji:'✨', desc:'Turn AI images into ready-to-publish designs for every platform — one-click resize',    priceLbl:'$15/mo',      free:false, link:'https://canva.com'} ],
     // $100+
     [ {name:'Midjourney',    emoji:'🎨', desc:'Primary artistic image AI — v7 delivers cinematic quality with precise prompt control',  priceLbl:'$30/mo (Pro)',free:false, link:'https://midjourney.com'},
       {name:'Adobe Firefly', emoji:'🔥', desc:'Professional + Photoshop integration — production-ready commercial images',             priceLbl:'~$10/mo',     free:false, link:'https://firefly.adobe.com'},
-      {name:'ChatGPT Plus',  emoji:'💬', desc:'DALL-E 3 for text-in-image + GPT-4o for prompt engineering your visual concepts',       priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
+      {name:'ChatGPT Plus',  emoji:'💬', desc:'DALL-E 4 for text-in-image + GPT-4o for prompt engineering your visual concepts',       priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
       {name:'Stable Diffusion',emoji:'⚙️',desc:'Self-hosted unlimited generation — fine-tune your own model for a signature style',   priceLbl:'API ~$20/mo', free:false, link:'https://stability.ai'} ]
   ],
   video: [
@@ -438,17 +438,17 @@ const CURATED = {
       {name:'Pika',          emoji:'🎞️', desc:'250 free credits/month — generate short AI video clips from text or images',            priceLbl:'Free tier',   free:true,  link:'https://pika.art'},
       {name:'ElevenLabs',    emoji:'🎙️', desc:'10,000 free characters of AI voiceover/month — the most realistic AI voice available',  priceLbl:'Free',        free:true,  link:'https://elevenlabs.io'} ],
     // $20
-    [ {name:'Runway Gen-3',  emoji:'🎬', desc:'Professional AI video with motion brush and keyframe control — filmmaker-grade output',  priceLbl:'$15/mo',      free:false, link:'https://runwayml.com'},
+    [ {name:'Runway Gen-4',  emoji:'🎬', desc:'Professional AI video with motion brush and keyframe control — filmmaker-grade output',  priceLbl:'$15/mo',      free:false, link:'https://runwayml.com'},
       {name:'ElevenLabs',    emoji:'🎙️', desc:'Commercial voiceover plan — 30,000 chars/month, multiple voices and languages',         priceLbl:'$5/mo',       free:false, link:'https://elevenlabs.io'},
       {name:'CapCut AI',     emoji:'🎬', desc:'Free AI editing for short-form — handles TikTok and Reels at speed',                    priceLbl:'Free',        free:true,  link:'https://capcut.com'} ],
     // $50
-    [ {name:'Runway Gen-3',  emoji:'🎬', desc:'Best professional AI video for filmmakers — motion brush, style transfer, frame editing', priceLbl:'$15/mo',     free:false, link:'https://runwayml.com'},
+    [ {name:'Runway Gen-4',  emoji:'🎬', desc:'Best professional AI video for filmmakers — motion brush, style transfer, frame editing', priceLbl:'$15/mo',     free:false, link:'https://runwayml.com'},
       {name:'ChatGPT Plus',  emoji:'💬', desc:'Sora access for cinematic AI video — highest quality short clips in 2026',               priceLbl:'$20/mo',      free:false, link:'https://chat.openai.com'},
       {name:'ElevenLabs',    emoji:'🎙️', desc:'Creator plan — 100,000 chars/month + voice cloning for consistent narration',           priceLbl:'$11/mo',      free:false, link:'https://elevenlabs.io'},
       {name:'CapCut AI',     emoji:'🎬', desc:'Short-form editing layer for social — handles everything Runway doesn\'t need to',      priceLbl:'Free',        free:true,  link:'https://capcut.com'} ],
     // $100+
     [ {name:'HeyGen',        emoji:'🧑', desc:'AI avatar spokesperson videos — 40+ languages, perfect lip-sync, ideal for business',   priceLbl:'$29/mo',      free:false, link:'https://heygen.com'},
-      {name:'Runway Gen-3',  emoji:'🎬', desc:'Pro cinematic AI video — the tool professional video teams use in production',          priceLbl:'$35/mo (Pro)',free:false, link:'https://runwayml.com'},
+      {name:'Runway Gen-4',  emoji:'🎬', desc:'Pro cinematic AI video — the tool professional video teams use in production',          priceLbl:'$35/mo (Pro)',free:false, link:'https://runwayml.com'},
       {name:'ElevenLabs',    emoji:'🎙️', desc:'Professional plan — 500,000 chars/month + custom voice cloning + API access',           priceLbl:'$22/mo',      free:false, link:'https://elevenlabs.io'},
       {name:'Descript',      emoji:'✂️', desc:'Edit video like a doc — AI filler word removal, voice cloning, and screen recording',   priceLbl:'$24/mo',      free:false, link:'https://descript.com'} ]
   ],
@@ -595,7 +595,7 @@ const TOOLS = {
   canva:      {name:'Canva AI',      why:'Easiest AI design tool. Magic Design generates branded graphics without design skills.',        tags:['Free','Paid'], free:true,  link:'https://canva.com',                  score:0},
   sora:       {name:'Sora',          why:"OpenAI's cinematic video generator. Highest quality AI video in 2026.",                        tags:['Paid'],        free:false, link:'https://sora.com',                   score:0},
   heygen:     {name:'HeyGen',        why:'Business avatar videos in 40+ languages with accurate lip-sync.',                              tags:['Free','Paid'], free:true,  link:'https://www.heygen.com',             score:0},
-  runway:     {name:'Runway Gen-3',  why:"Professional AI video with motion brushes and frame-level editing. Filmmaker's choice.",       tags:['Free','Paid'], free:true,  link:'https://runwayml.com',               score:0},
+  runway:     {name:'Runway Gen-4',  why:"Professional AI video with motion brushes and frame-level editing. Filmmaker's choice.",       tags:['Free','Paid'], free:true,  link:'https://runwayml.com',               score:0},
   notion:     {name:'Notion AI',     why:'AI in your workspace — summarizes notes, drafts content, automates tasks.',                   tags:['Paid'],        free:false, link:'https://notion.so',                  score:0},
   otter:      {name:'Otter.ai',      why:'Auto-records, transcribes, and summarizes Zoom/Meet/Teams meetings in real time.',            tags:['Free','Paid'], free:true,  link:'https://otter.ai',                   score:0},
   zapier:     {name:'Zapier',        why:'Connect 8,000+ apps with AI-powered automation. Build workflows without coding.',             tags:['Free','Paid'], free:true,  link:'https://zapier.com',                 score:0},

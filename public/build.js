@@ -56,7 +56,7 @@ const CONFIG = {
     faq: {
       title: 'Frequently Asked Questions',
       items: [
-        { q:'What is the best AI tool in 2026?',          a:'ChatGPT by OpenAI is rated the best all-around AI tool in 2026 with a 5.0/5 rating, followed closely by Claude (4.9) and Sora (4.9).' },
+        { q:'What is the best AI tool in 2026?',          a:'ChatGPT by OpenAI is rated the best all-around AI tool in 2026 with a 5.0/5 rating, followed closely by Claude Sonnet 4.6 (4.9) and Sora 2 (4.9).' },
         { q:'What is the best free AI tool in 2026?',     a:'The best free AI tools in 2026 are ChatGPT, Claude, Gemini, Perplexity AI, and ElevenLabs — all offer powerful features on their free tier.' },
         { q:'Which AI tool is best for video generation?',a:'Sora by OpenAI (4.9/5) leads for cinematic quality. Runway Gen-4 (4.6/5) offers professional editing control, and HeyGen (4.5/5) is ideal for business avatar videos.' },
         { q:'What is the best AI image generator?',       a:'Midjourney (4.8/5) produces the most artistic results. Leonardo.ai (4.6/5) is great for game assets, and Canva AI (4.6/5) is the easiest for non-designers.' },
@@ -66,7 +66,7 @@ const CONFIG = {
     footer: { copy:'2026 AI Tool Compare. All rights reserved.', about:'About', contact:'Contact', privacy:'Privacy Policy' },
     footerLinks: { about:'about.html', contact:'contact.html', privacy:'privacy.html' },
     schemaFaq: [
-      { q:'What is the best AI tool in 2026?',          a:'ChatGPT by OpenAI is rated the best all-around AI tool in 2026 with a 5.0/5 rating, followed closely by Claude (4.9) and Sora (4.9).' },
+      { q:'What is the best AI tool in 2026?',          a:'ChatGPT by OpenAI is rated the best all-around AI tool in 2026 with a 5.0/5 rating, followed closely by Claude Sonnet 4.6 (4.9) and Sora 2 (4.9).' },
       { q:'What is the best free AI tool in 2026?',     a:'The best free AI tools in 2026 are ChatGPT, Claude, Gemini, Perplexity AI, and ElevenLabs — all offer powerful features on their free tier.' },
       { q:'Which AI tool is best for video generation?',a:'Sora by OpenAI (4.9/5) leads for cinematic quality. Runway Gen-4 (4.6/5) offers professional editing control, and HeyGen (4.5/5) is ideal for business avatar videos.' },
       { q:'What is the best AI image generator?',       a:'Midjourney (4.8/5) produces the most artistic results. Leonardo.ai (4.6/5) is great for game assets, and Canva AI (4.6/5) is the easiest for non-designers.' },
@@ -85,7 +85,7 @@ const CONFIG = {
     schemaName:   '2026년 최고의 AI 도구',
     schemaDesc:   '2026년 챗봇, 영상 생성, 이미지 생성, 글쓰기, 코딩, 오디오 분야 최고의 AI 도구 디렉토리입니다.',
     meta: {
-      title:       'AI 도구 비교 2026 | Sora, Claude 3.5, Gemini 성능 & 가격 비교',
+      title:       'AI 도구 비교 2026 | GPT-5.4, Claude Sonnet 4.6, Gemini 3.1 Pro 비교',
       description: '2026년 최신 AI 도구를 한눈에 비교하세요. Sora, Claude 3.5, Gemini 1.5 Pro의 성능, 평점, 가격을 매일 업데이트하는 전문 AI 비교 사이트입니다.',
       keywords:    'AI 비교, AI 도구 비교, 2026 최고의 AI 도구, Sora vs Runway, AI 도구 추천, 무료 AI',
     },
@@ -109,7 +109,7 @@ const CONFIG = {
       items: [
         { q:'2026년 가장 좋은 AI 도구는 무엇인가요?',         a:'OpenAI의 ChatGPT가 5.0/5 평점으로 2026년 최고의 올라운드 AI 도구로 평가됩니다. Claude(4.9)와 Sora(4.9)가 그 뒤를 잇습니다.' },
         { q:'2026년 최고의 무료 AI 도구는 무엇인가요?',       a:'2026년 최고의 무료 AI 도구는 ChatGPT, Claude, Gemini, Perplexity AI, ElevenLabs입니다. 모두 유료 구독 없이도 강력한 기능을 무료로 제공합니다.' },
-        { q:'영상 생성에 가장 좋은 AI 도구는 무엇인가요?',    a:'OpenAI의 Sora(4.9/5)가 영화 수준의 영상 품질로 1위입니다. Runway Gen-3(4.6/5)는 전문 편집에, HeyGen(4.5/5)은 비즈니스 아바타 영상에 최적화되어 있습니다.' },
+        { q:'영상 생성에 가장 좋은 AI 도구는 무엇인가요?',    a:'OpenAI의 Sora(4.9/5)가 영화 수준의 영상 품질로 1위입니다. Runway Gen-4(4.6/5)는 전문 편집에, HeyGen(4.5/5)은 비즈니스 아바타 영상에 최적화되어 있습니다.' },
         { q:'최고의 AI 이미지 생성 도구는 무엇인가요?',       a:'Midjourney(4.8/5)가 예술적 품질에서 압도적 1위입니다. Leonardo.ai(4.6/5)는 게임 에셋에, Canva AI(4.6/5)는 비디자이너에게 가장 쉬운 선택입니다.' },
         { q:'글쓰기에 가장 좋은 AI 도구는 무엇인가요?',       a:'교정·편집에는 Grammarly(4.5/5), 마케팅 콘텐츠 대량 생성에는 Jasper(4.5/5), 장문 글쓰기와 문서 분석에는 Claude(4.9/5)가 최고입니다.' },
       ]
@@ -119,7 +119,7 @@ const CONFIG = {
     schemaFaq: [
       { q:'2026년 가장 좋은 AI 도구는 무엇인가요?',         a:'OpenAI의 ChatGPT가 5.0/5 평점으로 2026년 최고의 올라운드 AI 도구입니다.' },
       { q:'2026년 최고의 무료 AI 도구는 무엇인가요?',       a:'ChatGPT, Claude, Gemini, Perplexity AI, ElevenLabs 모두 무료 플랜을 제공합니다.' },
-      { q:'영상 생성에 가장 좋은 AI 도구는 무엇인가요?',    a:'Sora(4.9/5)가 1위이며, Runway Gen-3(4.6/5)와 HeyGen(4.5/5)이 뒤를 잇습니다.' },
+      { q:'영상 생성에 가장 좋은 AI 도구는 무엇인가요?',    a:'Sora(4.9/5)가 1위이며, Runway Gen-4(4.6/5)와 HeyGen(4.5/5)이 뒤를 잇습니다.' },
       { q:'최고의 AI 이미지 생성 도구는 무엇인가요?',       a:'Midjourney(4.8/5)가 최고이며, Leonardo.ai(4.6/5)와 Canva AI(4.6/5)가 추천됩니다.' },
       { q:'글쓰기에 가장 좋은 AI 도구는 무엇인가요?',       a:'Grammarly(4.5/5), Jasper(4.5/5), Claude(4.9/5)가 용도별 최고의 글쓰기 AI입니다.' },
     ],

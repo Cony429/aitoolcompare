@@ -28,7 +28,7 @@
   },
   {
     "name": "Perplexity AI",
-    "description": "AI-powered search engine delivering real-time, cited answers from multiple web sources. Best for research, fact-checking, and getting current information without sifting through ads.",
+    "description": "Perplexity AI orchestrates 19 AI models with live web search for source-cited answers. Perplexity Computer (Feb 2026) handles complex multi-step workflows autonomously. The best AI research tool.",
     "category": ["Chatbot"],
     "rating": 4.7,
     "pricing": ["Free", "Paid"],
@@ -37,7 +37,7 @@
   },
   {
     "name": "Grok",
-    "description": "xAI's AI assistant with real-time X (Twitter) data access. Known for up-to-the-minute news, unfiltered answers, and strong reasoning capabilities via the Grok 3 model.",
+    "description": "xAI's AI assistant with real-time X (Twitter) data access. Known for up-to-the-minute news, unfiltered answers, and strong reasoning capabilities via Grok 4.20 — multi-agent parallel architecture, the latest from xAI.",
     "category": ["Chatbot"],
     "rating": 4.5,
     "pricing": ["Free", "Paid"],
@@ -81,12 +81,12 @@
     "keywords": ["image", "art", "design", "illustration", "creative", "text-to-image", "midjourney v7"]
   },
   {
-    "name": "DALL-E 3",
-    "description": "OpenAI's image model built into ChatGPT Plus. Best-in-class for accurate text rendering within images and photorealistic portraits. No separate subscription needed with ChatGPT Plus.",
+    "name": "DALL-E 4",
+    "description": "OpenAI's DALL-E 4 image model built into ChatGPT Plus. Major upgrade in prompt accuracy and photorealism over DALL-E 4. Best-in-class for text rendering within images.",
     "category": ["Image"],
     "rating": 4.7,
     "pricing": ["Paid"],
-    "link": "https://openai.com/dall-e-3",
+    "link": "https://openai.com/dall-e-4",
     "keywords": ["image", "openai", "dall-e", "text rendering", "photorealistic", "portrait"]
   },
   {
@@ -118,7 +118,7 @@
   },
   {
     "name": "Stable Diffusion",
-    "description": "The leading open-source image model. Run locally for free, unlimited generation. Maximum customization via LoRA models and ComfyUI. Requires GPU and technical setup.",
+    "description": "Stable Diffusion 3.5 — the leading open-source image model. Run locally for free with unlimited generation. Maximum customization via LoRA fine-tuning and ComfyUI workflows.",
     "category": ["Image"],
     "rating": 4.4,
     "pricing": ["Free"],
@@ -136,7 +136,7 @@
   },
   {
     "name": "Sora",
-    "description": "OpenAI's text-to-video model producing cinematic, physically realistic video up to 60 seconds. The highest-quality AI video available in 2026. Included with ChatGPT Plus.",
+    "description": "OpenAI's Sora 2 — cinematic, physically realistic video up to 60 seconds with significantly improved quality and consistency. The highest-quality AI video in 2026. Included with ChatGPT Plus.",
     "category": ["Video"],
     "rating": 4.9,
     "pricing": ["Paid"],
@@ -144,8 +144,8 @@
     "keywords": ["video", "text-to-video", "openai", "cinematic", "generate", "sora"]
   },
   {
-    "name": "Runway Gen-3",
-    "description": "Professional AI video platform with motion brushes, frame-level editing, and style controls. Preferred by filmmakers integrating AI into production workflows.",
+    "name": "Runway Gen-4",
+    "description": "Runway Gen-4 — professional AI video platform with motion brushes, frame-level editing, and style controls. Significantly improved motion realism. The filmmaker's AI of choice in 2026.Runway Gen-4 — professional AI video platform with motion brushes, frame-level editing, and style controls. Significantly improved motion realism. The filmmaker's AI of choice in 2026.",
     "category": ["Video"],
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
@@ -325,7 +325,7 @@
   },
   {
     "name": "Cursor",
-    "description": "AI-native code editor and the fastest-growing developer tool in 2026. Cmd+K edits code from natural language; Composer generates entire features across multiple files simultaneously.",
+    "description": "AI-native code editor — the #1 choice for AI-assisted development in 2026. Powered by Claude Sonnet 4.6. Agent mode handles full tasks across your entire codebase autonomously.",
     "category": ["Coding"],
     "rating": 4.8,
     "pricing": ["Free", "Paid"],
@@ -334,7 +334,7 @@
   },
   {
     "name": "Windsurf",
-    "description": "AI code editor from Codeium with Cascade agentic mode. Understands and autonomously edits across your entire codebase. A strong Cursor alternative with a generous free tier.",
+    "description": "Windsurf Wave 13 from Codeium — ranked #1 AI dev tool in March 2026. Arena Mode for side-by-side model comparison, parallel multi-agent sessions with Git worktrees. Strong free tier.",
     "category": ["Coding"],
     "rating": 4.6,
     "pricing": ["Free", "Paid"],
