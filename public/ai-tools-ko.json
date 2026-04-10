@@ -1,30 +1,5 @@
 [
   {
-    "name": "Meta AI (메타 AI)",
-    "description": "메타(Meta)의 최신 인공지능 Muse Spark입니다. 메타 초지능 연구소(Superintelligence Labs)에서 개발했으며, 즉각적인 답변 모드와 심층 추론 모드를 모두 지원합니다. 강력한 멀티모달 인식 기능과 병렬 멀티 에이전트 구조를 통해 왓츠앱, 인스타그램, 페이스북 등 메타의 모든 플랫폼에 통합되어 제공됩니다.",
-    "category": [
-      "Chatbot",
-      "Image",
-      "Productivity"
-    ],
-    "rating": 4.4,
-    "pricing": [
-      "무료",
-      "유료"
-    ],
-    "link": "https://ai.meta.com",
-    "keywords": [
-      "메타",
-      "페이스북",
-      "인스타그램",
-      "챗봇",
-      "라마",
-      "이미지 생성",
-      "멀티모달",
-      "소셜 AI"
-    ]
-  },
-  {
     "name": "Meta AI",
     "description": "메타(Meta)의 최신 인공지능 Muse Spark입니다. 메타 초지능 연구소(Superintelligence Labs)에서 개발했으며, 즉각적인 답변 모드와 심층 추론 모드를 모두 지원합니다. 강력한 멀티모달 인식 기능과 병렬 멀티 에이전트 구조를 통해 왓츠앱, 인스타그램, 페이스북 등 메타의 모든 플랫폼에 통합되어 제공됩니다.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 완전 무료</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 카카오톡 수준</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 30억+ 사용자</span></div>",
     "category": [
