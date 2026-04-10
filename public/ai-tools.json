@@ -1,7 +1,7 @@
 [
   {
     "name": "Meta AI",
-    "description": "Meta's Muse Spark — built by Meta Superintelligence Labs. Instant and Thinking modes, parallel multi-agent architecture, strong multimodal perception. Rolling out across WhatsApp, Instagram, Facebook, and Messenger.",
+    "description": "Meta's Muse Spark — built by Meta Superintelligence Labs. Instant and Thinking modes, parallel multi-agent architecture, strong multimodal perception. Rolling out across WhatsApp, Instagram, Facebook, and Messenger.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Completely Free</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ WhatsApp Built-in</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 3B+ Users</span></div>",
     "category": [
       "Chatbot",
       "Image",
@@ -26,7 +26,7 @@
   },
   {
     "name": "ChatGPT",
-    "description": "OpenAI's flagship AI assistant powered by GPT-5.4. Handles conversation, coding, data analysis, image generation, and real-time web search. The most widely used AI tool in the world.",
+    "description": "OpenAI's flagship AI assistant powered by GPT-5.4. Handles conversation, coding, data analysis, image generation, and real-time web search. The most widely used AI tool in the world.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">🏆 Most Popular</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Image Generation</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -50,7 +50,7 @@
   },
   {
     "name": "Claude",
-    "description": "Anthropic's Claude Sonnet 4.6 — 1M token context window (beta). Top choice for long-document analysis, nuanced writing, and coding. Leads GDPval-AA real-world benchmark with 1,633 Elo.",
+    "description": "Anthropic's Claude Sonnet 4.6 — 1M token context window (beta). Top choice for long-document analysis, nuanced writing, and coding. Leads GDPval-AA real-world benchmark with 1,633 Elo.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Best for Writing</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 1M Token Context</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -75,7 +75,7 @@
   },
   {
     "name": "Gemini",
-    "description": "Google's Gemini 3.1 Pro — 2M token context window, leads ARC-AGI-2 reasoning at 77.1%, best-value frontier model ($2/$12 per 1M tokens). Integrated across Gmail, Docs, and Drive.",
+    "description": "Google's Gemini 3.1 Pro — 2M token context window, leads ARC-AGI-2 reasoning at 77.1%, best-value frontier model ($2/$12 per 1M tokens). Integrated across Gmail, Docs, and Drive.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Best Value</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Google Integration</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -98,7 +98,7 @@
   },
   {
     "name": "Perplexity AI",
-    "description": "Perplexity AI orchestrates 19 AI models with live web search for source-cited answers. Perplexity Computer (Feb 2026) handles complex multi-step workflows autonomously. The best AI research tool.",
+    "description": "Perplexity AI orchestrates 19 AI models with live web search for source-cited answers. Perplexity Computer (Feb 2026) handles complex multi-step workflows autonomously. The best AI research tool.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Best for Research</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Source Citations</span></div>",
     "category": [
       "Chatbot"
     ],
@@ -119,7 +119,7 @@
   },
   {
     "name": "Grok",
-    "description": "xAI's Grok 4.20 with real-time X (Twitter) data access. Multi-agent parallel architecture — 4 agents working simultaneously. Strong coding benchmarks and up-to-the-minute news.",
+    "description": "xAI's Grok 4.20 with real-time X (Twitter) data access. Multi-agent parallel architecture — 4 agents working simultaneously. Strong coding benchmarks and up-to-the-minute news.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Real-Time News</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ X/Twitter Data</span></div>",
     "category": [
       "Chatbot"
     ],
@@ -141,7 +141,7 @@
   },
   {
     "name": "Microsoft Copilot",
-    "description": "AI assistant integrated into Microsoft 365 — Excel, Word, PowerPoint, Teams, and Outlook. Automates workflows, summarizes meetings, and generates on-brand content within your Microsoft stack.",
+    "description": "AI assistant integrated into Microsoft 365 — Excel, Word, PowerPoint, Teams, and Outlook. Automates workflows, summarizes meetings, and generates on-brand content within your Microsoft stack.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Office 365 Built-in</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Enterprise Ready</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -166,7 +166,7 @@
   },
   {
     "name": "DeepSeek",
-    "description": "High-performance open-source AI from China with frontier-level reasoning at a fraction of the cost. Exceptional for math, coding, and technical analysis. Available free via API.",
+    "description": "High-performance open-source AI from China with frontier-level reasoning at a fraction of the cost. Exceptional for math, coding, and technical analysis. Available free via API.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Completely Free</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Open Source</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Strong Coding</span></div>",
     "category": [
       "Chatbot",
       "Coding"
@@ -189,7 +189,7 @@
   },
   {
     "name": "NotebookLM",
-    "description": "Google's AI research assistant that creates a grounded AI expert from your uploaded documents. Features Audio Overviews — turning PDFs into podcast-style conversations.",
+    "description": "Google's AI research assistant that creates a grounded AI expert from your uploaded documents. Features Audio Overviews — turning PDFs into podcast-style conversations.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Completely Free</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ No Hallucinations</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Audio Overview</span></div>",
     "category": [
       "Chatbot"
     ],
@@ -212,7 +212,7 @@
   },
   {
     "name": "Midjourney",
-    "description": "The gold standard for AI image generation. Produces cinematic, artistic visuals with unmatched texture and lighting coherence. Version 7 dramatically improved prompt accuracy.",
+    "description": "The gold standard for AI image generation. Produces cinematic, artistic visuals with unmatched texture and lighting coherence. Version 7 dramatically improved prompt accuracy.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">🏆 Best Image Quality</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Version 7</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Artistic Style</span></div>",
     "category": [
       "Image"
     ],
@@ -233,7 +233,7 @@
   },
   {
     "name": "DALL-E 4",
-    "description": "OpenAI's DALL-E 4 image model built into ChatGPT Plus. Major upgrade in prompt accuracy and photorealism over DALL-E 3. Best-in-class for text rendering within images.",
+    "description": "OpenAI's DALL-E 4 image model built into ChatGPT Plus. Major upgrade in prompt accuracy and photorealism over DALL-E 3. Best-in-class for text rendering within images.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ ChatGPT Plus</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Text in Images</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Photorealistic</span></div>",
     "category": [
       "Image"
     ],
@@ -253,7 +253,7 @@
   },
   {
     "name": "Leonardo.ai",
-    "description": "Image generation platform optimized for creative assets, concept art, and game development. Provides 150 free daily tokens with no watermarks — the best free online image generator.",
+    "description": "Image generation platform optimized for creative assets, concept art, and game development. Provides 150 free daily tokens with no watermarks — the best free online image generator.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 150 Free Daily</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ No Watermark</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Game Assets</span></div>",
     "category": [
       "Image"
     ],
@@ -275,7 +275,7 @@
   },
   {
     "name": "Canva AI",
-    "description": "AI design platform used by 170M+ people. Magic Design auto-generates branded graphics; background removal and Magic Eraser make image editing effortless. No design experience needed.",
+    "description": "AI design platform used by 170M+ people. Magic Design auto-generates branded graphics; background removal and Magic Eraser make image editing effortless. No design experience needed.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 170M+ Users</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ No Design Skills</span></div>",
     "category": [
       "Image",
       "Writing"
@@ -298,7 +298,7 @@
   },
   {
     "name": "Adobe Firefly",
-    "description": "Adobe's AI image generator integrated into Photoshop and Illustrator. Commercially safe outputs with zero copyright risk — the professional standard for designers needing safe AI imagery.",
+    "description": "Adobe's AI image generator integrated into Photoshop and Illustrator. Commercially safe outputs with zero copyright risk — the professional standard for designers needing safe AI imagery.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Copyright Safe</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Photoshop Built-in</span></div>",
     "category": [
       "Image"
     ],
@@ -320,7 +320,7 @@
   },
   {
     "name": "Stable Diffusion",
-    "description": "Stable Diffusion 3.5 — the leading open-source image model. Run locally for free with unlimited generation. Maximum customization via LoRA fine-tuning and ComfyUI workflows.",
+    "description": "Stable Diffusion 3.5 — the leading open-source image model. Run locally for free with unlimited generation. Maximum customization via LoRA fine-tuning and ComfyUI workflows.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Completely Free</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Open Source</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Unlimited</span></div>",
     "category": [
       "Image"
     ],
@@ -364,7 +364,7 @@
   },
   {
     "name": "Sora",
-    "description": "OpenAI's Sora 2 — cinematic, physically realistic video up to 60 seconds with significantly improved quality and consistency. The highest-quality AI video in 2026. Included with ChatGPT Plus.",
+    "description": "OpenAI's Sora 2 — cinematic, physically realistic video up to 60 seconds with significantly improved quality and consistency. The highest-quality AI video in 2026. Included with ChatGPT Plus.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">🏆 Best Video Quality</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 60 Seconds</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ ChatGPT Plus</span></div>",
     "category": [
       "Video"
     ],
@@ -384,7 +384,7 @@
   },
   {
     "name": "Runway Gen-4",
-    "description": "Runway Gen-4 — professional AI video platform with motion brushes, frame-level editing, and style controls. Significantly improved motion realism. The filmmaker's AI of choice in 2026.",
+    "description": "Runway Gen-4 — professional AI video platform with motion brushes, frame-level editing, and style controls. Significantly improved motion realism. The filmmaker's AI of choice in 2026.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Frame Editing</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Pro Filmmakers</span></div>",
     "category": [
       "Video"
     ],
@@ -406,7 +406,7 @@
   },
   {
     "name": "HeyGen",
-    "description": "AI video generator for business. Create realistic AI avatar spokesperson videos in 40+ languages with accurate lip-sync. Used by thousands of companies for training and marketing.",
+    "description": "AI video generator for business. Create realistic AI avatar spokesperson videos in 40+ languages with accurate lip-sync. Used by thousands of companies for training and marketing.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 40+ Languages</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ AI Avatar</span></div>",
     "category": [
       "Video"
     ],
@@ -428,7 +428,7 @@
   },
   {
     "name": "Kling AI",
-    "description": "Kling AI 2.0 — Kuaishou's AI video model producing cinematic videos up to 3 minutes. Dramatically improved motion realism in v2.0. Strong Sora competitor with a generous free tier. ",
+    "description": "Kling AI 2.0 — Kuaishou's AI video model producing cinematic videos up to 3 minutes. Dramatically improved motion realism in v2.0. Strong Sora competitor with a generous free tier. <div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 3 Min Videos</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ v2.0</span></div>",
     "category": [
       "Video"
     ],
@@ -562,7 +562,7 @@
   },
   {
     "name": "ElevenLabs",
-    "description": "Industry-leading AI voice synthesis in 30+ languages. Features voice cloning, real-time TTS, and a conversational AI voice API. The professional standard for audio content creation.",
+    "description": "Industry-leading AI voice synthesis in 30+ languages. Features voice cloning, real-time TTS, and a conversational AI voice API. The professional standard for audio content creation.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Voice Cloning</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 30+ Languages</span></div>",
     "category": [
       "Audio"
     ],
@@ -584,7 +584,7 @@
   },
   {
     "name": "Suno",
-    "description": "Leading AI music platform. Generate complete songs with vocals, instruments, and lyrics from a text prompt. Free plan includes 50 song credits per day.",
+    "description": "Leading AI music platform. Generate complete songs with vocals, instruments, and lyrics from a text prompt. Free plan includes 50 song credits per day.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Full Songs</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 50 Credits/Day</span></div>",
     "category": [
       "Audio"
     ],
@@ -650,7 +650,7 @@
   },
   {
     "name": "Jasper",
-    "description": "Professional AI content platform for marketing teams. Generates SEO-optimized blog posts, ad copy, and social content at scale with advanced brand voice and Surfer SEO integration.",
+    "description": "Professional AI content platform for marketing teams. Generates SEO-optimized blog posts, ad copy, and social content at scale with advanced brand voice and Surfer SEO integration.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 7-Day Trial</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ SEO Optimized</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Brand Voice</span></div>",
     "category": [
       "Writing"
     ],
@@ -737,7 +737,7 @@
   },
   {
     "name": "Grammarly",
-    "description": "AI writing assistant checking grammar, tone, clarity, and style in real time. Integrates into browsers, Google Docs, and email. The standard proofreading tool for professionals.",
+    "description": "AI writing assistant checking grammar, tone, clarity, and style in real time. Integrates into browsers, Google Docs, and email. The standard proofreading tool for professionals.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 30M+ Users</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Browser Extension</span></div>",
     "category": [
       "Writing"
     ],
@@ -802,7 +802,7 @@
   },
   {
     "name": "GitHub Copilot",
-    "description": "AI pair programmer with real-time code completions and a built-in chat assistant. Integrates into VS Code, JetBrains, and more. Free tier now includes 2,000 monthly completions.",
+    "description": "AI pair programmer with real-time code completions and a built-in chat assistant. Integrates into VS Code, JetBrains, and more. Free tier now includes 2,000 monthly completions.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Tier</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ VS Code Built-in</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 2000/mo Free</span></div>",
     "category": [
       "Coding"
     ],
@@ -825,7 +825,7 @@
   },
   {
     "name": "Cursor",
-    "description": "AI-native code editor — the #1 choice for AI-assisted development in 2026. Powered by Claude Sonnet 4.6. Agent mode handles full tasks across your entire codebase autonomously.",
+    "description": "AI-native code editor — the #1 choice for AI-assisted development in 2026. Powered by Claude Sonnet 4.6. Agent mode handles full tasks across your entire codebase autonomously.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ #1 AI IDE 2026</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Agent Mode</span></div>",
     "category": [
       "Coding"
     ],
@@ -1003,7 +1003,7 @@
   },
   {
     "name": "Manus",
-    "description": "Agentic AI that executes multi-step tasks autonomously — building websites, creating slides, designing assets, and navigating the web on your behalf. One of 2026's most capable AI agents.",
+    "description": "Agentic AI that executes multi-step tasks autonomously — building websites, creating slides, designing assets, and navigating the web on your behalf. One of 2026's most capable AI agents.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Tier</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Autonomous Tasks</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ AI Agent</span></div>",
     "category": [
       "Productivity",
       "Chatbot"
