@@ -305,7 +305,7 @@
             { label: 'Rating',      key: 'rating',      format: v => v ? `${'⭐'.repeat(Math.round(v))} ${Number(v).toFixed(1)} / 5` : 'N/A' },
             { label: 'Pricing',     key: 'pricing',     format: v => Array.isArray(v) ? v.map(p => `<span class="tag ${p.toLowerCase()}-tag">${p}</span>`).join(' ') : v },
             { label: 'Free Plan',   key: 'pricing',     format: v => Array.isArray(v) && v.map(x=>x.toLowerCase()).includes('free') ? '✅ Yes' : '❌ No' },
-            { label: 'Website',     key: 'link',        format: v => v ? `<a href="${v}" target="_blank" rel="noopener" style="color:#007bff;font-weight:700;">Visit →</a>` : 'N/A' },
+            { label: 'Website',     key: 'link',        format: v => v ? `<a href="${v}" target="_blank" rel="noopener" style="color:#007bff;font-weight:700;">Try Free →</a>` : 'N/A' },
         ];
 
         features.forEach(f => {
@@ -314,6 +314,38 @@
             const row = tbody.insertRow();
             row.innerHTML = `<td class="feature-name">${f.label}</td><td>${v1 || 'N/A'}</td><td>${v2 || 'N/A'}</td>`;
         });
+
+        // Winner 결정 (rating 기준)
+        const winner = tool1.rating >= tool2.rating ? tool1 : tool2;
+        const loser  = tool1.rating >= tool2.rating ? tool2 : tool1;
+
+        // 기존 Winner 박스 제거 후 새로 삽입
+        const oldWinner = document.getElementById('winner-box');
+        if (oldWinner) oldWinner.remove();
+
+        const winnerBox = document.createElement('div');
+        winnerBox.id = 'winner-box';
+        winnerBox.style.cssText = 'background:#0d0d0d;color:#fff;border-radius:16px;padding:28px 32px;margin-top:28px;text-align:center;';
+        winnerBox.innerHTML = `
+          <div style="font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fbbf24;margin-bottom:10px;">🏆 Our Verdict</div>
+          <h3 style="font-size:1.5rem;margin:0 0 10px;color:#fff;">${winner.name} wins for most users</h3>
+          <p style="color:#9ca3af;font-size:.95rem;margin:0 0 24px;max-width:480px;margin-left:auto;margin-right:auto;">
+            ${winner.name} scores ${winner.rating.toFixed(1)}/5 vs ${loser.name}'s ${loser.rating.toFixed(1)}/5.
+            ${winner.rating === loser.rating ? 'Both tools are equally rated — your choice depends on use case.' : winner.name + ' leads on our real-world benchmark ratings.'}
+          </p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href="${winner.link}" target="_blank" rel="noopener"
+               style="display:inline-block;padding:12px 28px;background:#007bff;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:.95rem;">
+              Try ${winner.name} Free →
+            </a>
+            <a href="${loser.link}" target="_blank" rel="noopener"
+               style="display:inline-block;padding:12px 28px;background:rgba(255,255,255,.1);color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:.95rem;">
+              Try ${loser.name} →
+            </a>
+          </div>
+        `;
+
+        document.getElementById('result-display-area').appendChild(winnerBox);
 
         const area = document.getElementById('result-display-area');
         area.style.display = 'block';
