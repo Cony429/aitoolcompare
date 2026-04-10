@@ -305,7 +305,7 @@
             { label: '평점',      key: 'rating',      format: v => v ? `${'⭐'.repeat(Math.round(v))} ${Number(v).toFixed(1)} / 5` : 'N/A' },
             { label: '가격',     key: 'pricing',     format: v => Array.isArray(v) ? v.map(p => `<span class="tag ${p.toLowerCase()}-tag">${p}</span>`).join(' ') : v },
             { label: '무료 플랜',   key: 'pricing',     format: v => Array.isArray(v) && v.map(x=>x.toLowerCase()).includes('free') ? '✅ Yes' : '❌ No' },
-            { label: '웹사이트',     key: 'link',        format: v => v ? `<a href="${v}" target="_blank" rel="noopener" style="color:#007bff;font-weight:700;">Visit →</a>` : 'N/A' },
+            { label: '웹사이트',     key: 'link',        format: v => v ? `<a href="${v}" target="_blank" rel="noopener" style="color:#007bff;font-weight:700;">무료 시작 →</a>` : 'N/A' },
         ];
 
         features.forEach(f => {
@@ -314,6 +314,37 @@
             const row = tbody.insertRow();
             row.innerHTML = `<td class="feature-name">${f.label}</td><td>${v1 || 'N/A'}</td><td>${v2 || 'N/A'}</td>`;
         });
+
+        // Winner 결정 (rating 기준)
+        const winner = tool1.rating >= tool2.rating ? tool1 : tool2;
+        const loser  = tool1.rating >= tool2.rating ? tool2 : tool1;
+
+        const oldWinner = document.getElementById('winner-box');
+        if (oldWinner) oldWinner.remove();
+
+        const winnerBox = document.createElement('div');
+        winnerBox.id = 'winner-box';
+        winnerBox.style.cssText = 'background:#0d0d0d;color:#fff;border-radius:16px;padding:28px 32px;margin-top:28px;text-align:center;';
+        winnerBox.innerHTML = `
+          <div style="font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fbbf24;margin-bottom:10px;">🏆 최종 결론</div>
+          <h3 style="font-size:1.5rem;margin:0 0 10px;color:#fff;">대부분의 사용자에게는 ${winner.name} 추천</h3>
+          <p style="color:#9ca3af;font-size:.95rem;margin:0 0 24px;max-width:480px;margin-left:auto;margin-right:auto;">
+            ${winner.name} 평점 ${winner.rating.toFixed(1)}/5 vs ${loser.name} ${loser.rating.toFixed(1)}/5.
+            ${winner.rating === loser.rating ? '두 도구의 평점이 동일합니다 — 사용 목적에 따라 선택하세요.' : winner.name + '이(가) 실제 업무 벤치마크에서 더 높은 평점을 받았습니다.'}
+          </p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href="${winner.link}" target="_blank" rel="noopener"
+               style="display:inline-block;padding:12px 28px;background:#007bff;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:.95rem;">
+              ${winner.name} 무료 시작 →
+            </a>
+            <a href="${loser.link}" target="_blank" rel="noopener"
+               style="display:inline-block;padding:12px 28px;background:rgba(255,255,255,.1);color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:.95rem;">
+              ${loser.name} 시작하기 →
+            </a>
+          </div>
+        `;
+
+        document.getElementById('result-display-area').appendChild(winnerBox);
 
         const area = document.getElementById('result-display-area');
         area.style.display = 'block';
