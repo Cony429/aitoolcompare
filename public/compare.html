@@ -333,6 +333,24 @@
             ${winner.name} scores ${winner.rating.toFixed(1)}/5 vs ${loser.name}'s ${loser.rating.toFixed(1)}/5.
             ${winner.rating === loser.rating ? 'Both tools are equally rated — your choice depends on use case.' : winner.name + ' leads on our real-world benchmark ratings.'}
           </p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 24px;text-align:left;">
+            <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:16px;">
+              <div style="font-size:.72rem;font-weight:700;color:#60a5fa;text-transform:uppercase;margin-bottom:8px;">✅ Try ${winner.name} if...</div>
+              <div style="font-size:.84rem;color:#d1d5db;line-height:1.8;">
+                → You want the higher-rated AI tool<br>
+                → ${winner.name} scores better on real-world benchmarks<br>
+                → You need the most recommended option for general use
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:16px;">
+              <div style="font-size:.72rem;font-weight:700;color:#f87171;text-transform:uppercase;margin-bottom:8px;">✅ Try ${loser.name} if...</div>
+              <div style="font-size:.84rem;color:#d1d5db;line-height:1.8;">
+                → You prefer a strong alternative<br>
+                → ${loser.name} fits your specific workflow better<br>
+                → You want to test both before committing
+              </div>
+            </div>
+          </div>
           <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
             <a href="${winner.link}" target="_blank" rel="noopener"
                style="display:inline-block;padding:12px 28px;background:#007bff;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:.95rem;">
