@@ -333,6 +333,27 @@
             ${winner.name} scores ${winner.rating.toFixed(1)}/5 vs ${loser.name}'s ${loser.rating.toFixed(1)}/5.
             ${winner.rating === loser.rating ? 'Both tools are equally rated — your choice depends on use case.' : winner.name + ' leads on our real-world benchmark ratings.'}
           </p>
+          <!-- Use if 결정 가이드 -->
+          ${(()=>{
+            const w = useIfMap[winner.name];
+            const l = useIfMap[loser.name];
+            if (!w && !l) return '';
+            let html = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 24px 0;text-align:left;">';
+            if (w) html += \`<div style="background:rgba(255,255,255,.07);border-radius:10px;padding:16px;">
+              <div style="font-size:.75rem;font-weight:700;color:#60a5fa;text-transform:uppercase;margin-bottom:10px;">✅ Use \${winner.name} if...</div>
+              \${w.use.map(u=>\`<div style="font-size:.85rem;color:#d1d5db;margin-bottom:6px;">→ \${u}</div>\`).join('')}
+              <div style="font-size:.75rem;font-weight:700;color:#f87171;text-transform:uppercase;margin:10px 0 8px;">❌ Skip if...</div>
+              \${w.skip.map(s=>\`<div style="font-size:.85rem;color:#9ca3af;margin-bottom:6px;">→ \${s}</div>\`).join('')}
+            </div>\`;
+            if (l) html += \`<div style="background:rgba(255,255,255,.07);border-radius:10px;padding:16px;">
+              <div style="font-size:.75rem;font-weight:700;color:#60a5fa;text-transform:uppercase;margin-bottom:10px;">✅ Use \${loser.name} if...</div>
+              \${l.use.map(u=>\`<div style="font-size:.85rem;color:#d1d5db;margin-bottom:6px;">→ \${u}</div>\`).join('')}
+              <div style="font-size:.75rem;font-weight:700;color:#f87171;text-transform:uppercase;margin:10px 0 8px;">❌ Skip if...</div>
+              \${l.skip.map(s=>\`<div style="font-size:.85rem;color:#9ca3af;margin-bottom:6px;">→ \${s}</div>\`).join('')}
+            </div>\`;
+            html += '</div>';
+            return html;
+          })()}
           <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
             <a href="${winner.link}" target="_blank" rel="noopener"
                style="display:inline-block;padding:12px 28px;background:#007bff;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:.95rem;">
@@ -351,6 +372,70 @@
         area.style.display = 'block';
         area.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+
+
+const useIfMap = {
+  'ChatGPT': {
+    use: ['You need image generation (DALL-E 4)', 'You want real-time web search', 'You need the GPT plugin ecosystem', 'You want the most versatile all-in-one AI'],
+    skip: ['Your main task is long-form writing', 'You need to analyze large documents', 'You want fewer AI hallucinations']
+  },
+  'Claude': {
+    use: ['You write long-form content — essays, reports, articles', 'You need to analyze large documents or codebases', 'You want more natural, less robotic writing'],
+    skip: ['You need image generation', 'You rely on real-time web search', 'You need the GPT plugin ecosystem']
+  },
+  'Gemini': {
+    use: ['You live in Google Workspace — Gmail, Docs, Drive', 'You need the best reasoning benchmark performance', 'You want the best value frontier model'],
+    skip: ['You prefer a more conversational AI personality', 'Creative writing is your main use case']
+  },
+  'Perplexity AI': {
+    use: ['You need cited, sourced answers for research', 'You want real-time web data with references', 'You fact-check information regularly'],
+    skip: ['You need creative writing or long-form content', 'You want image generation']
+  },
+  'Midjourney': {
+    use: ['You need the highest quality AI art and images', 'You create visual content for brands or campaigns', 'Image aesthetics are your top priority'],
+    skip: ['You need text generation', 'You want a free tier']
+  },
+  'Grok': {
+    use: ['You need real-time X/Twitter data and news', 'You want the cheapest paid AI ($8/mo)', 'You follow current events closely'],
+    skip: ['News and X data are not important to you', 'You need strong creative writing']
+  },
+  'DeepSeek': {
+    use: ['You need a completely free AI for coding or math', 'Budget is your primary constraint', 'You work with technical analysis'],
+    skip: ['Speed is critical — DeepSeek can be slow', 'You need real-time data']
+  },
+  'Canva AI': {
+    use: ['You need visual designs and graphics', 'You manage social media content', 'You want AI images integrated into designs'],
+    skip: ['You need text-heavy AI assistance', 'Image quality is your top priority']
+  },
+  'Stable Diffusion': {
+    use: ['You want unlimited free image generation', 'You have a GPU and technical skills', 'Maximum customization is your priority'],
+    skip: ["You want a simple, no-setup tool", 'You need fast results without configuration']
+  },
+  'Leonardo.ai': {
+    use: ['You need 150 free AI images per day', 'You create game assets or concept art', 'You want Midjourney quality for free'],
+    skip: ['You need text inside images', 'Commercial safety certification is required']
+  },
+  'DALL-E 4': {
+    use: ['You need the best text-in-image rendering', 'You already use ChatGPT Plus', 'Photorealistic outputs are your priority'],
+    skip: ['You need a free image generator', 'Artistic style is more important than photorealism']
+  },
+  'Sora': {
+    use: ['You need the highest quality AI video generation', 'You have ChatGPT Plus already', 'Cinematic video quality is your priority'],
+    skip: ['You need a free video tool', 'Short quick clips are enough']
+  },
+  'Runway Gen-4': {
+    use: ['You are a filmmaker or video professional', 'You need frame-level video editing control', 'Motion realism is critical'],
+    skip: ['You are a beginner to AI video', 'Budget is your primary concern']
+  },
+  'ElevenLabs': {
+    use: ['You need realistic AI voice cloning', 'You produce podcasts, audiobooks, or voiceovers', 'You need 30+ language support'],
+    skip: ['You only need basic text-to-speech', 'Music generation is your goal']
+  },
+  'Grammarly': {
+    use: ['You want AI-powered grammar and style checking', 'You write professional content regularly', 'You use Gmail, Google Docs, or a CMS'],
+    skip: ['You need content generation — Grammarly only edits', 'You write in languages other than English primarily']
+  },
+};
 
     initialize();
 </script>
