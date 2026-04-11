@@ -332,6 +332,24 @@
             ${winner.name} 평점 ${winner.rating.toFixed(1)}/5 vs ${loser.name} ${loser.rating.toFixed(1)}/5.
             ${winner.rating === loser.rating ? '두 도구의 평점이 동일합니다 — 사용 목적에 따라 선택하세요.' : winner.name + '이(가) 실제 업무 벤치마크에서 더 높은 평점을 받았습니다.'}
           </p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 24px;text-align:left;">
+            <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:16px;">
+              <div style="font-size:.72rem;font-weight:700;color:#60a5fa;text-transform:uppercase;margin-bottom:8px;">✅ ${winner.name} 추천 상황</div>
+              <div style="font-size:.84rem;color:#d1d5db;line-height:1.8;">
+                → 더 높은 평점의 AI 도구를 원할 때<br>
+                → ${winner.name}이 실제 업무 벤치마크에서 앞설 때<br>
+                → 대부분의 용도에 가장 추천되는 도구가 필요할 때
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:16px;">
+              <div style="font-size:.72rem;font-weight:700;color:#f87171;text-transform:uppercase;margin-bottom:8px;">✅ ${loser.name} 추천 상황</div>
+              <div style="font-size:.84rem;color:#d1d5db;line-height:1.8;">
+                → 강력한 대안을 원할 때<br>
+                → ${loser.name}이 내 워크플로우에 더 잘 맞을 때<br>
+                → 결정 전에 두 도구를 모두 테스트하고 싶을 때
+              </div>
+            </div>
+          </div>
           <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
             <a href="${winner.link}" target="_blank" rel="noopener"
                style="display:inline-block;padding:12px 28px;background:#007bff;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:.95rem;">
