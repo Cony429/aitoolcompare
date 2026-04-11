@@ -333,16 +333,6 @@
             ${winner.name} scores ${winner.rating.toFixed(1)}/5 vs ${loser.name}'s ${loser.rating.toFixed(1)}/5.
             ${winner.rating === loser.rating ? 'Both tools are equally rated — your choice depends on use case.' : winner.name + ' leads on our real-world benchmark ratings.'}
           </p>
-          ${(function(){
-            const w = useIfMap[winner.name];
-            const l = useIfMap[loser.name];
-            if (!w && !l) return '';
-            let s = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 24px;text-align:left;">';
-            if (w) s += '<div style="background:rgba(255,255,255,.07);border-radius:10px;padding:16px;"><div style="font-size:.72rem;font-weight:700;color:#60a5fa;text-transform:uppercase;margin-bottom:8px;">✅ Use ' + winner.name + ' if...</div>' + w.use.map(u=>'<div style="font-size:.83rem;color:#d1d5db;margin-bottom:5px;">→ ' + u + '</div>').join('') + '<div style="font-size:.72rem;font-weight:700;color:#f87171;text-transform:uppercase;margin:10px 0 8px;">❌ Skip if...</div>' + w.skip.map(s=>'<div style="font-size:.83rem;color:#9ca3af;margin-bottom:5px;">→ ' + s + '</div>').join('') + '</div>';
-            if (l) s += '<div style="background:rgba(255,255,255,.07);border-radius:10px;padding:16px;"><div style="font-size:.72rem;font-weight:700;color:#60a5fa;text-transform:uppercase;margin-bottom:8px;">✅ Use ' + loser.name + ' if...</div>' + l.use.map(u=>'<div style="font-size:.83rem;color:#d1d5db;margin-bottom:5px;">→ ' + u + '</div>').join('') + '<div style="font-size:.72rem;font-weight:700;color:#f87171;text-transform:uppercase;margin:10px 0 8px;">❌ Skip if...</div>' + l.skip.map(s=>'<div style="font-size:.83rem;color:#9ca3af;margin-bottom:5px;">→ ' + s + '</div>').join('') + '</div>';
-            s += '</div>';
-            return s;
-          })()}
           <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
             <a href="${winner.link}" target="_blank" rel="noopener"
                style="display:inline-block;padding:12px 28px;background:#007bff;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:.95rem;">
