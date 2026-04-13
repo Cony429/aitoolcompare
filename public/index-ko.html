@@ -1617,6 +1617,60 @@
   </p>
 </section>
 
+
+<!-- 이메일 수집 배너 -->
+<section style="background:linear-gradient(135deg,#0d0d0d,#1a1a2e);padding:48px 20px;text-align:center;margin:0;">
+  <div style="max-width:560px;margin:0 auto;">
+    <div style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fbbf24;margin-bottom:12px;">📬 주간 AI 뉴스레터</div>
+    <h2 style="font-size:1.6rem;font-weight:800;color:#fff;margin:0 0 10px;line-height:1.3;">매주 주목할 AI 도구 TOP 3 받기</h2>
+    <p style="color:#9ca3af;font-size:.95rem;margin:0 0 24px;">허풍 없이. 유료 순위 없이. 이번 주 알아둘 AI 도구 3가지만 — 매주 월요일 무료로.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+      <input type="email" id="email-input-ko" placeholder="your@email.com"
+        style="padding:13px 18px;border-radius:10px;border:1.5px solid #374151;background:#1f2937;color:#fff;font-size:.95rem;width:260px;outline:none;"
+        onkeypress="if(event.key==='Enter')subscribeEmailKo()">
+      <button onclick="subscribeEmailKo()"
+        style="padding:13px 28px;background:#007bff;color:#fff;border:none;border-radius:10px;font-weight:700;font-size:.95rem;cursor:pointer;">
+        무료 구독 →
+      </button>
+    </div>
+    <p id="email-msg-ko" style="margin:12px 0 0;font-size:.85rem;color:#4ade80;display:none;">✅ 구독 완료! 받은 편지함을 확인하세요.</p>
+    <p style="color:#6b7280;font-size:.78rem;margin:12px 0 0;">스팸 없음. 언제든지 구독 취소 가능.</p>
+  </div>
+</section>
+
+<script>
+async function subscribeEmailKo() {
+  const email = document.getElementById('email-input-ko').value.trim();
+  if (!email || !email.includes('@')) {
+    alert('올바른 이메일 주소를 입력해주세요.');
+    return;
+  }
+  const btn = document.querySelector('[onclick="subscribeEmailKo()"]');
+  btn.textContent = '구독 중...';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://email-subscribe.conybridge.workers.dev', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email })
+    });
+    if (res.ok) {
+      document.getElementById('email-msg-ko').style.display = 'block';
+      document.getElementById('email-input-ko').value = '';
+      btn.textContent = '✅ 구독 완료!';
+    } else {
+      btn.textContent = '무료 구독 →';
+      btn.disabled = false;
+      alert('오류가 발생했습니다. 다시 시도해주세요.');
+    }
+  } catch(e) {
+    btn.textContent = '무료 구독 →';
+    btn.disabled = false;
+    alert('오류가 발생했습니다. 다시 시도해주세요.');
+  }
+}
+</script>
+
     <h2 class="section-title">AI 도구 디렉토리</h2>
     <div class="table-container">
       <table id="tool-table">
