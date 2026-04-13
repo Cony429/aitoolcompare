@@ -261,7 +261,8 @@
       <p id="result-sub">Based on your answers, here are the best AI tools for you.</p>
     </div>
     <div class="result-stack" id="result-stack"></div>
-    <div class="share-box">
+    <div class="share-box" style="background:linear-gradient(135deg,#f0f7ff,#fff);border:1.5px solid #bfdbfe;">
+      <p style="font-weight:700;color:#0d0d0d;font-size:.95rem;margin-bottom:4px;">🎯 Share your result!</p>
       <p>Share your result with friends 👇</p>
       <div class="share-btns">
         <a class="share-btn" id="share-twitter" href="#" target="_blank" rel="noopener">𝕏 Share on X</a>
@@ -673,12 +674,25 @@ function showResult() {
   }
   const txt=encodeURIComponent(`My AI stack: ${top.map(([,t])=>t.name).join(', ')} — Find yours at`);
   const url=encodeURIComponent('https://bestaitoolcompare.com/find-my-ai.html');
-  document.getElementById('share-twitter').href=`https://twitter.com/intent/tweet?text=${txt}&url=${url}`;
-  document.getElementById('share-linkedin').href=`https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+  // 결과 포함한 공유 텍스트
+  const toolName = document.querySelector('.result-header h2')?.textContent || '';
+  const shareText = `I just found my perfect AI tool: ${toolName} 🎯\n\nFind yours in 60 seconds →`;
+  const tweetText = encodeURIComponent(shareText);
+  document.getElementById('share-twitter').href=`https://twitter.com/intent/tweet?text=${tweetText}&url=${url}`;
+  document.getElementById('share-linkedin').href=`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://bestaitoolcompare.com/find-my-ai.html')}&title=${tweetText}`;
   document.getElementById('result').style.display='block';
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
 }
-function copyLink(){ navigator.clipboard.writeText('https://bestaitoolcompare.com/find-my-ai.html').then(()=>alert('Link copied!')); }
+function copyLink(){
+  const toolName = document.querySelector('.result-header h2')?.textContent || 'my perfect AI';
+  const text = `I found my perfect AI: ${toolName} 🎯\nFind yours → https://bestaitoolcompare.com/find-my-ai.html`;
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn = document.querySelector('[onclick="copyLink()"]');
+    const orig = btn.textContent;
+    btn.textContent = '✅ Copied!';
+    setTimeout(()=>btn.textContent=orig, 2000);
+  });
+}
 function resetQuiz(){
   Object.keys(answers).forEach(k=>delete answers[k]);
   document.getElementById('result').style.display='none';
