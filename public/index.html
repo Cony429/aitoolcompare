@@ -238,7 +238,7 @@ async function subscribeEmail() {
   btn.textContent = 'Subscribing...';
   btn.disabled = true;
   try {
-    const res = await fetch('https://subscribe.bestaitoolcompare.com/subscribe', {
+    const res = await fetch('https://email-subscribe.conybridge.workers.dev', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email })
