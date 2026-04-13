@@ -479,3 +479,19 @@ footer {
   font-size: .9rem;
 }
 .footer-content nav a:hover { color: #007bff; }
+
+/* Top 3 카드 모바일 */
+@media (max-width: 767px) {
+  .top3-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* 툴 테이블 모바일 스크롤 힌트 */
+  .table-container::after {
+    content: '← 스크롤하여 더 보기';
+    display: block;
+    text-align: center;
+    font-size: .75rem;
+    color: #999;
+    padding: 8px;
+  }
+}
