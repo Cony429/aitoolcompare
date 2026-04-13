@@ -244,3 +244,238 @@ footer {
   line-height: 1.2;
   font-size: 1.3rem;
 }
+/* =============================================
+   모바일 최적화 (Mobile Responsive)
+   ============================================= */
+
+/* 공통 모바일 기본 */
+* { box-sizing: border-box; }
+
+/* 네비게이션 모바일 */
+@media (max-width: 767px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 16px;
+    gap: 8px;
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .nav-links a {
+    margin: 0 6px;
+    font-size: .85rem;
+  }
+  .lang-switch {
+    font-size: .85rem;
+  }
+
+  /* 히어로 섹션 */
+  .hero-section {
+    padding: 40px 16px;
+  }
+  .hero-section h1 {
+    font-size: 1.6rem;
+    letter-spacing: -.5px;
+  }
+  .subtitle {
+    font-size: .95rem;
+    margin-bottom: 20px;
+  }
+  .search-box {
+    width: 100%;
+  }
+  .search-box input {
+    padding: 14px 16px;
+    font-size: .95rem;
+  }
+
+  /* 필터 버튼 */
+  .filter-buttons {
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .filter-btn {
+    padding: 7px 14px;
+    font-size: .82rem;
+  }
+
+  /* 메인 컨텐츠 */
+  main, .container {
+    padding: 24px 16px !important;
+    width: 100% !important;
+  }
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+  }
+
+  /* 툴 테이블 — 모바일에서 스크롤 */
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #tool-table {
+    min-width: 600px;
+  }
+  #tool-table th,
+  #tool-table td {
+    padding: 12px 10px;
+    font-size: .82rem;
+  }
+
+  /* Top 3 추천 섹션 */
+  .top3-grid,
+  section > div[style*="grid-template-columns:repeat(3"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* 블로그 그리드 */
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .blog-card {
+    width: 100% !important;
+  }
+
+  /* 블로그 포스트 */
+  .blog-post {
+    flex-direction: column;
+  }
+
+  /* 신뢰 배너 */
+  section[style*="background:#0d0d0d"] > div {
+    gap: 12px !important;
+    flex-direction: column !important;
+  }
+
+  /* 이메일 배너 */
+  #email-input, [id="email-input-ko"] {
+    width: 100% !important;
+  }
+
+  /* 푸터 */
+  footer {
+    padding: 40px 16px !important;
+    margin-top: 60px !important;
+  }
+  .footer-links {
+    gap: 12px;
+  }
+  .footer-content nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+/* 태블릿 (768px ~ 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  main, .container {
+    padding: 40px 24px !important;
+  }
+  #tool-table th,
+  #tool-table td {
+    padding: 14px 12px;
+    font-size: .9rem;
+  }
+}
+
+/* 블로그 그리드 기본 설정 */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+@media (max-width: 767px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 블로그 카드 */
+.blog-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .2s;
+}
+.blog-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,.1);
+}
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-tag {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #007bff;
+  margin-bottom: 8px;
+}
+.blog-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  line-height: 1.4;
+  color: #0d0d0d;
+}
+.blog-card p {
+  font-size: .85rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+.new-badge {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: .68rem;
+  margin-left: 4px;
+}
+
+/* 푸터 내부 정렬 */
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+.footer-content nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+.footer-content nav a {
+  color: #555;
+  text-decoration: none;
+  font-size: .9rem;
+}
+.footer-content nav a:hover { color: #007bff; }
