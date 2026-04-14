@@ -638,6 +638,8 @@ function showQ(n) {
   document.getElementById('progress-fill').style.width=p+'%';
 }
 function pick(btn,qid,value) {
+  if (!window._quizAnswers) window._quizAnswers = {};
+  window._quizAnswers[qid] = value;
   document.querySelectorAll(`#${qid} .option-btn`).forEach(b=>b.classList.remove('selected'));
   btn.classList.add('selected'); answers[qid]=value;
   document.getElementById(`next${qid.replace('q','')}`).classList.add('ready');
