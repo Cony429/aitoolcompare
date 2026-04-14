@@ -495,3 +495,14 @@ footer {
     padding: 8px;
   }
 }
+
+/* 가격 태그 한줄 고정 */
+td[data-label="가격"],
+td[data-label="Price"] {
+  white-space: nowrap;
+}
+td[data-label="가격"] .tag,
+td[data-label="Price"] .tag {
+  display: inline-block;
+  white-space: nowrap;
+}
