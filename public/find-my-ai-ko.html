@@ -501,7 +501,20 @@ function pick(btn,qid,value){
   document.getElementById(`next${qid.replace('q','')}`).classList.add('ready');
 }
 function nextQ(n){if(!answers[`q${n}`])return;showQ(n+1);}
+function trackQuizAnswers() {
+  try {
+    if (Object.keys(answers).length > 0) {
+      fetch('https://email-subscribe.conybridge.workers.dev/quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(answers)
+      });
+    }
+  } catch(e) {}
+}
+
 function showResult(){
+  trackQuizAnswers();
   if(!answers.q5)return;
   document.querySelectorAll('.question-card').forEach(c=>c.classList.remove('active'));
   document.getElementById('progress-wrap').style.display='none';
