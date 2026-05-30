@@ -506,3 +506,34 @@ td[data-label="Price"] .tag {
   display: inline-block;
   white-space: nowrap;
 }
+
+/* ── 모바일 메뉴 ── */
+.mobile-nav {
+  display: none;
+}
+.mobile-nav.open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 999;
+  padding: 80px 24px 24px;
+  gap: 16px;
+}
+.mobile-nav a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.mobile-lang {
+  margin-top: 16px;
+  font-size: 1rem;
+  color: #666;
+}
