@@ -2281,6 +2281,14 @@ async function subscribeEmailKo() {
         event.target.classList.add('active');
         currentCategory = categoryMap[category] || category;
         render(document.getElementById('search-input').value);
+        // 특정 카테고리 선택 시 결과 테이블로 부드럽게 스크롤
+        if (category !== 'All') {
+            const tbl = document.getElementById('tool-table');
+            if (tbl) {
+                const y = tbl.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        }
     }
 
     document.getElementById('search-btn').addEventListener('click', () => render(document.getElementById('search-input').value));
