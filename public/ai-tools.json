@@ -1115,5 +1115,88 @@
       "student",
       "peer reviewed"
     ]
+  },
+  {
+    "name": "Google Veo",
+    "description": "Google's flagship AI video generator. Creates cinematic 4K video from text and image prompts with realistic motion and native audio. Integrated into the Gemini app and Google Flow.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 4K Video</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Native Audio</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Gemini Built-in</span></div>",
+    "category": [
+      "Video"
+    ],
+    "rating": 4.7,
+    "pricing": [
+      "Paid"
+    ],
+    "link": "https://deepmind.google/models/veo/",
+    "keywords": [
+      "google",
+      "veo",
+      "video",
+      "text to video",
+      "ai video",
+      "cinematic",
+      "gemini"
+    ]
+  },
+  {
+    "name": "Higgsfield AI",
+    "description": "All-in-one creative platform combining unlimited image generation with video. Popular for short films, ads, and creative concepts — test new models instantly and move from image to video in one ecosystem.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Image + Video</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ All-in-One</span></div>",
+    "category": [
+      "Image",
+      "Video"
+    ],
+    "rating": 4.5,
+    "pricing": [
+      "Paid"
+    ],
+    "link": "https://higgsfield.ai",
+    "keywords": [
+      "higgsfield",
+      "image",
+      "video",
+      "creative",
+      "short film",
+      "all in one"
+    ]
+  },
+  {
+    "name": "Claude Code",
+    "description": "Anthropic's agentic coding tool. Handles entire features end-to-end from the terminal, IDE, or command line — not just autocomplete. A favorite for complex, multi-file development work.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Agentic Coding</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Terminal & IDE</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Multi-file</span></div>",
+    "category": [
+      "Coding"
+    ],
+    "rating": 4.8,
+    "pricing": [
+      "Paid"
+    ],
+    "link": "https://claude.com/claude-code",
+    "keywords": [
+      "claude code",
+      "anthropic",
+      "coding",
+      "agent",
+      "terminal",
+      "developer"
+    ]
+  },
+  {
+    "name": "Google Stitch",
+    "description": "Google's free AI UI and app design tool. Turns text prompts into UI designs and front-end code, making it easy for non-designers to build app interfaces fast.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ UI Design</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Code Export</span></div>",
+    "category": [
+      "Coding",
+      "Productivity"
+    ],
+    "rating": 4.3,
+    "pricing": [
+      "Free"
+    ],
+    "link": "https://stitch.withgoogle.com",
+    "keywords": [
+      "google",
+      "stitch",
+      "ui design",
+      "app builder",
+      "front end",
+      "free"
+    ]
   }
 ]

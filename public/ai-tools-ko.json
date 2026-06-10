@@ -1110,5 +1110,91 @@
       "학생",
       "동료 심사"
     ]
+  },
+  {
+    "name": "Google Veo",
+    "description": "구글의 대표 AI 영상 생성 도구입니다. 텍스트와 이미지 프롬프트로 사실적인 움직임과 네이티브 오디오가 포함된 시네마틱 4K 영상을 만들어냅니다. Gemini 앱과 Google Flow에 통합되어 있습니다.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 4K 영상</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 오디오 생성</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Gemini 내장</span></div>",
+    "category": [
+      "Video"
+    ],
+    "rating": 4.7,
+    "pricing": [
+      "Paid"
+    ],
+    "link": "https://deepmind.google/models/veo/",
+    "keywords": [
+      "구글",
+      "veo",
+      "영상",
+      "텍스트 영상 변환",
+      "ai 영상",
+      "시네마틱",
+      "gemini"
+    ]
+  },
+  {
+    "name": "Higgsfield AI",
+    "description": "무제한 이미지 생성과 영상 제작을 결합한 올인원 창작 플랫폼입니다. 단편 영화, 광고, 창작 콘셉트 작업에 인기가 많으며, 새 모델을 즉시 테스트하고 이미지에서 영상으로 한 생태계 안에서 이동할 수 있습니다.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 이미지 + 영상</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 올인원</span></div>",
+    "category": [
+      "Image",
+      "Video"
+    ],
+    "rating": 4.5,
+    "pricing": [
+      "Paid"
+    ],
+    "link": "https://higgsfield.ai",
+    "keywords": [
+      "힉스필드",
+      "higgsfield",
+      "이미지",
+      "영상",
+      "창작",
+      "단편 영화",
+      "올인원"
+    ]
+  },
+  {
+    "name": "Claude Code",
+    "description": "Anthropic의 에이전트형 코딩 도구입니다. 자동완성을 넘어 터미널, IDE, 명령줄에서 전체 기능을 처음부터 끝까지 처리합니다. 복잡한 멀티파일 개발 작업에서 특히 인기가 많습니다.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 에이전트 코딩</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 터미널 & IDE</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 멀티파일</span></div>",
+    "category": [
+      "Coding"
+    ],
+    "rating": 4.8,
+    "pricing": [
+      "Paid"
+    ],
+    "link": "https://claude.com/claude-code",
+    "keywords": [
+      "클로드 코드",
+      "claude code",
+      "anthropic",
+      "코딩",
+      "에이전트",
+      "터미널",
+      "개발자"
+    ]
+  },
+  {
+    "name": "Google Stitch",
+    "description": "구글의 무료 AI UI·앱 디자인 도구입니다. 텍스트 프롬프트를 UI 디자인과 프론트엔드 코드로 변환해, 디자이너가 아니어도 앱 인터페이스를 빠르게 만들 수 있습니다.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 무료</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ UI 디자인</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 코드 내보내기</span></div>",
+    "category": [
+      "Coding",
+      "Productivity"
+    ],
+    "rating": 4.3,
+    "pricing": [
+      "Free"
+    ],
+    "link": "https://stitch.withgoogle.com",
+    "keywords": [
+      "구글",
+      "stitch",
+      "스티치",
+      "ui 디자인",
+      "앱 빌더",
+      "프론트엔드",
+      "무료"
+    ]
   }
 ]
