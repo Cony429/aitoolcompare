@@ -23,7 +23,7 @@
   },
   {
     "name": "ChatGPT",
-    "description": "GPT-5.4 기반 OpenAI의 대표 AI 어시스턴트. 대화, 코딩, 데이터 분석, 이미지 생성, 실시간 웹 검색까지 — 전 세계에서 가장 많이 사용되는 AI 도구.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">🏆 가장 인기</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 무료 플랜</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 이미지 생성</span></div>",
+    "description": "OpenAI의 대표 AI 어시스턴트입니다. 2026년 7월 GPT-5.6 패밀리(Sol·Terra·Luna)가 출시됐으며, Sol이 코딩과 에이전트 작업에서 가장 강력합니다. 무료 사용자는 GPT-5.5 Instant를, 유료 플랜은 추론 설정을 통해 Sol을 사용할 수 있습니다.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">최고 인기</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">무료 플랜</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">GPT-5.6 Sol</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -38,15 +38,17 @@
     "keywords": [
       "openai",
       "gpt",
+      "gpt-5.6",
+      "sol",
       "챗봇",
+      "대화",
       "코딩",
-      "글쓰기",
-      "gpt-4o"
+      "글쓰기"
     ]
   },
   {
     "name": "Claude",
-    "description": "Anthropic의 Claude Sonnet 4.6 — 100만 토큰 컨텍스트 창(베타). 장문 문서 분석, 섬세한 글쓰기, 코딩 최강. GDPval-AA 실제 업무 벤치마크 1위(1,633 Elo).<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 무료 플랜</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 글쓰기 최강</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 100만 토큰</span></div>",
+    "description": "Anthropic의 AI 어시스턴트입니다. Claude Sonnet 5가 무료·Pro 사용자의 기본 모델이며, Opus 4.8은 복잡한 코딩과 에이전트 작업을, Fable 5는 최상위 티어를 담당합니다. 긴 문서 분석과 섬세한 글쓰기에서 가장 뛰어납니다.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">무료 플랜</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">글쓰기 최강</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">100만 토큰</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -60,18 +62,19 @@
     "link": "https://claude.ai",
     "keywords": [
       "anthropic",
+      "클로드",
       "claude",
+      "sonnet 5",
+      "opus 4.8",
+      "fable 5",
       "챗봇",
       "글쓰기",
-      "장문 분석",
-      "코딩",
-      "소네트",
-      "오퍼스"
+      "코딩"
     ]
   },
   {
     "name": "Gemini",
-    "description": "구글 Gemini 3.1 Pro — 200만 토큰 컨텍스트 창. ARC-AGI-2 추론 1위(77.1%). 최고 가성비 프론티어 모델($2/$12/100만 토큰). Gmail, Docs, Drive 완전 통합.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 무료 플랜</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 최고 가성비</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 구글 통합</span></div>",
+    "description": "Google의 AI 어시스턴트입니다. Gemini 3.5 Flash가 최신 정식 출시 모델로, 에이전트·코딩 작업에 강력하며 100만 토큰 컨텍스트를 지원합니다. Gmail, 문서, 드라이브, 안드로이드에 깊이 통합되어 있습니다.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">무료 플랜</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">최고의 가성비</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">구글 통합</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -84,12 +87,13 @@
     ],
     "link": "https://gemini.google.com",
     "keywords": [
-      "google",
+      "구글",
+      "제미나이",
       "gemini",
+      "gemini 3.5 flash",
       "멀티모달",
       "챗봇",
-      "구글 워크스페이스",
-      "100만 토큰"
+      "구글 워크스페이스"
     ]
   },
   {

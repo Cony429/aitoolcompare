@@ -26,7 +26,7 @@
   },
   {
     "name": "ChatGPT",
-    "description": "OpenAI's flagship AI assistant powered by GPT-5.4. Handles conversation, coding, data analysis, image generation, and real-time web search. The most widely used AI tool in the world.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">🏆 Most Popular</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Image Generation</span></div>",
+    "description": "OpenAI's flagship AI assistant. The GPT-5.6 family (Sol, Terra, Luna) launched July 2026 with Sol leading on coding and agentic work. Free users get GPT-5.5 Instant; paid plans unlock Sol through reasoning settings.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Most Popular</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">GPT-5.6 Sol</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -41,16 +41,17 @@
     "keywords": [
       "openai",
       "gpt",
+      "gpt-5.6",
+      "sol",
       "chatbot",
       "conversation",
       "coding",
-      "writing",
-      "gpt-4o"
+      "writing"
     ]
   },
   {
     "name": "Claude",
-    "description": "Anthropic's Claude Sonnet 4.6 — 1M token context window (beta). Top choice for long-document analysis, nuanced writing, and coding. Leads GDPval-AA real-world benchmark with 1,633 Elo.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Best for Writing</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ 1M Token Context</span></div>",
+    "description": "Anthropic's AI assistant. Claude Sonnet 5 is the default for Free and Pro users, Opus 4.8 handles complex coding and agentic work, and Fable 5 sits at the top tier. The strongest choice for long-document analysis and nuanced writing.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Best for Writing</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">1M Context</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -65,17 +66,18 @@
     "keywords": [
       "anthropic",
       "claude",
+      "sonnet 5",
+      "opus 4.8",
+      "fable 5",
       "chatbot",
       "writing",
-      "long document",
       "coding",
-      "sonnet",
-      "opus"
+      "long context"
     ]
   },
   {
     "name": "Gemini",
-    "description": "Google's Gemini 3.1 Pro — 2M token context window, leads ARC-AGI-2 reasoning at 77.1%, best-value frontier model ($2/$12 per 1M tokens). Integrated across Gmail, Docs, and Drive.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Best Value</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">✔ Google Integration</span></div>",
+    "description": "Google's AI assistant. Gemini 3.5 Flash is the latest generally available model, strong on agentic and coding tasks with a 1M token context window. Deeply integrated across Gmail, Docs, Drive, and Android.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Best Value</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Google Integration</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -90,6 +92,7 @@
     "keywords": [
       "google",
       "gemini",
+      "gemini 3.5 flash",
       "multimodal",
       "chatbot",
       "google workspace",
