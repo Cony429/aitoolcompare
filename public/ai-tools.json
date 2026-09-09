@@ -26,7 +26,7 @@
   },
   {
     "name": "ChatGPT",
-    "description": "OpenAI's flagship AI assistant. The GPT-5.6 family (Sol, Terra, Luna) launched July 2026 with Sol leading on coding and agentic work. Free users get GPT-5.5 Instant; paid plans unlock Sol through reasoning settings.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Most Popular</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">GPT-5.6 Sol</span></div>",
+    "description": "OpenAI's flagship AI assistant. GPT-6 Astra (September 2026) is the newest model, rolling out to paid tiers, with the GPT-5.6 family (Sol, Terra, Luna) powering most everyday use. Free users get GPT-5.6 Luna by default. The most widely used AI tool in the world.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Most Popular</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">GPT-6 Astra</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -51,7 +51,7 @@
   },
   {
     "name": "Claude",
-    "description": "Anthropic's AI assistant. Claude Opus 5 (launched July 2026) is the new flagship — approaching Fable 5-level intelligence at half the price, and the strongest model on the Pro plan. Sonnet 5 remains the fast default for Free and Pro users. The top choice for coding and long-document work.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Best for Coding</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Opus 5</span></div>",
+    "description": "Anthropic's AI assistant. Claude Fable 5.1 (September 2026) leads on coding and knowledge work, with Opus 5 in the tier below and Sonnet 5 as the fast default for Free and Pro users. The top choice for coding, long-document analysis, and nuanced writing.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Best for Coding</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Fable 5.1</span></div>",
     "category": [
       "Chatbot",
       "Writing",
@@ -77,7 +77,7 @@
   },
   {
     "name": "Gemini",
-    "description": "Google's AI assistant. Gemini 3.6 Flash (July 2026) is the latest efficient workhorse model, while Gemini 3.1 Pro remains the flagship for research-heavy and long-context work. Deeply integrated across Gmail, Docs, Drive, and Android.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Best Value</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Google Integration</span></div>",
+    "description": "Google's AI assistant. Gemini 3.8 Flash (September 2026) is the latest generally available model — fast and efficient for multimodal and agentic tasks. Deeply integrated across Gmail, Docs, Drive, and Android.<div style=\"margin-top:8px;\"><span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Free Plan</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Best Value</span> <span style=\"display:inline-block;padding:2px 8px;border-radius:100px;font-size:0.7rem;font-weight:700;margin:2px 2px 0 0;background:#e8f4ff;color:#007bff;\">Gemini 3.8 Flash</span></div>",
     "category": [
       "Chatbot",
       "Writing",
