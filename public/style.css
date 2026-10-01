@@ -537,3 +537,12 @@ td[data-label="Price"] .tag {
   font-size: 1rem;
   color: #666;
 }
+
+/* Related Articles fix (pages where block was below footer) */
+.related-fix{max-width:780px;margin:3rem auto 2rem;padding:0 1.5rem;}
+.related-fix h3{font-size:1.2rem;font-weight:800;margin:0 0 1rem;color:#1a1a2e;}
+.related-fix .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;}
+.related-fix .related-card{display:block;padding:14px 16px;border:1px solid #e5e7eb;border-radius:10px;background:#fff;color:#1a1a2e;text-decoration:none;transition:box-shadow .2s;}
+.related-fix .related-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);}
+.related-fix .related-card span{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#007bff;}
+.related-fix .related-card p{margin:.3rem 0 0;font-size:.92rem;font-weight:600;line-height:1.4;}
